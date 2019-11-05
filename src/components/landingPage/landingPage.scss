@@ -1,5 +1,6 @@
 // Style the Landing Page
+@import "../../styles/colors";
 
 .hello {
-    color: red;
+    color: $primaryColor;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
 import LandingPage from './components/landingPage/landingPage';
 
 const App: React.FC = () => {
