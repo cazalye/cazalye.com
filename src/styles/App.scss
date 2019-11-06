@@ -1,6 +1,11 @@
 
 @import "colors";
 
+@font-face {
+  font-family: "Quentin";
+  src: url("/fonts/Quentin.otf") format("opentype"),
+}
+
 .App {
   font-size: calc(10px + 2vmin);
   color: white;

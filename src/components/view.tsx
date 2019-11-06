@@ -5,8 +5,8 @@ import {Switch, Route} from 'react-router-dom';
 
 const View = () => (
     <Switch>
-        <Route exact path="/" component={LandingPage}/>
+        <Route exact={true} path="/" component={LandingPage}/>
     </Switch>
-)
+);
 
 export default View;
