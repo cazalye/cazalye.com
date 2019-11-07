@@ -1,0 +1,28 @@
+@import "../../styles/colors";
+
+
+body .mdl-layout{
+    height: 100px;
+    width: 100%;
+    color: $primaryColor;
+
+    .mdl-navigation__link{
+        color: $primaryColor;
+        font-size: 16px;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .header-title{
+        color:$primaryColor;
+        font-family: "Quentin";
+        font-size: 55px;
+        text-decoration: none;
+        position: fixed;
+        left:20px;
+        top:10px;
+    }
+
+    // need to fix the search- style and function
+    .search{
+        color:red;
+    }
+}

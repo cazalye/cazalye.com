@@ -6,6 +6,34 @@
   src: url("/fonts/Quentin.otf") format("opentype"),
 }
 
+@font-face {
+  font-family: "WildYouth";
+  src: url("/fonts/WildYouth/WildYouth-Regular.otf") format("opentype"),
+}
+
+
+body h1 {
+  margin-top:30px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 60px;
+}
+body h2{  
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+body h3{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+}
+
+body a{}
+body a:hover{}
+
+
 .App {
   font-size: calc(10px + 2vmin);
   color: white;
@@ -18,7 +46,3 @@
 .App-link {
   color: $primaryColor;
 }
-
-.h1{}
-.h2{}
-.h3{}

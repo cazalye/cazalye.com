@@ -1,38 +1,58 @@
 // Style the Landing Page
 @import "../../styles/colors";
 
-// .hello {
-//     color: $primaryColor;
-// }
-
 #landing{
     #landing1{
-        background-image: url("/tst_img/beachSepia.jpg");
+        // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.2)40%,transparent 70%), url("/tst_img/beachSepia.jpg");
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.2)40%,transparent 70%), url("/tst_img/background_sepia_cropped.jpg");
         background-size: cover;
         height: 100vh;
         width: 100%;
-        // background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2),transparent), url("/img_tst/beachSepia.jpg");
-
         .mission{
-            position: fixed;
-            left:60px;
-            top:40px;
-            margin-right:500px;
-            text-align: left;
-            font-family: 'Quentin';
-        }
-        .photoDiaries{
-            position: fixed;
-            right:30px;
-            top:0px;
+            position:fixed;
+            left:350px;
+            top:60px;
+            color:$accentColor; 
+            font-family: 'Cormorant Garamond', serif;
+            h2{
+                font-family: 'Cormorant Garamond';
+                font-weight: 300;
+                font-size: 50px;
+                margin-bottom: 0px;
+                // font-family: 'Quentin';
+                // font-size: 18px;
+                // left:220px;
+                // top:50px;
+            }
+            h3{
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 40px;
+                margin-top:0px;
+                margin-left:40px;
+            }
         }
 
-        
         .leftLinks{
             position: fixed;
-            left:20px;
-            top:260px;
+            left:200px;
+            top:520px;
+            // text-decoration: underline;
+            h3{
+                margin-top:5px;
+                margin-bottom:5px;
+            }
+            hr{
+                width: 50%;
+                font-size: 5px;
+            }
         }
+
+                // .photoDiaries{
+        //     position: fixed;
+        //     right:50px;
+        //     top:50px;
+        //     color:$primaryColor;
+        // }
     }
 
 }
