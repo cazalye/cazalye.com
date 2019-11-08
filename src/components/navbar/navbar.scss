@@ -17,12 +17,33 @@ body .mdl-layout{
         font-size: 55px;
         text-decoration: none;
         position: fixed;
-        left:20px;
-        top:10px;
+        left:15px;
+        top:9px;
     }
 
-    // need to fix the search- style and function
+    // .logo{
+    //     position: fixed;
+    //     left:190px;
+    //     top:0px;
+    //     height: 80px;
+    //     width: 80px;
+    // }
+
+    .social-links {
+        text-align: left;
+        position: fixed;
+        top:0px;
+        left:200px;
+        i{
+            color: $accentColor;
+            font-size:22px;
+            padding: 20px;
+            padding-bottom:15px;
+        }
+    }
+
+    // need to fix the function
     .search{
-        color:red;
+        color:$accentColor;
     }
 }
