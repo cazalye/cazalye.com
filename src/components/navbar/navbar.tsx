@@ -10,15 +10,15 @@ class Navbar extends Component {
         return (
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
-                    <div> <p>explore  your  world</p></div>
+                    <div><p>Explore. Create. Discover</p></div>
                         {/* <div className="logo">
                             <img src="/tst_img/Logo_small_transparent.svg" alt="cazalye logo"/>
                         </div> */}
                     <Navigation>
-                        <Link to="/destinations/destinations">Destinations</Link>
-                        <Link to="/photoDiaries/photoDiaries">Photo Diaries</Link>
-                        <Link to="/blog/blog">Blog</Link>
-                        <Link to="/about/about">About</Link>
+                        <Link to="/destinations">Destinations</Link>
+                        <Link to="/photoDiaries">Photo Diaries</Link>
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/about">About</Link>
                         <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-instagram" aria-hidden="true" />
                         </a>
