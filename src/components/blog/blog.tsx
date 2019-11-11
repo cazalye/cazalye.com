@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getTravelPosts } from '../../API/posts';
+import { getBlogPosts } from '../../API/posts';
 import "./blog.scss";
 
 class Blog extends Component<any, any> {
@@ -7,19 +7,22 @@ class Blog extends Component<any, any> {
     constructor(props: any) {
         super(props);
         this.state = {
-            posts: getTravelPosts()
+            posts: []
         };
-
-
+    }
+    async componentDidMount() {
+        const posts = await getBlogPosts();
+        this.setState({
+            posts: posts
+        });
     }
     render() {
-        let postsContent=[];
+        const postsContent=[];
         for (const post of this.state.posts) {
-
 
             postsContent.push(
                 <div className="post-container">
-                    <h1>{post.title.rendered}</h1>
+                    <h1>{post.title}</h1>
                     <h4>{post.date}</h4>
                 </div>
             );

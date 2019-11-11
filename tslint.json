@@ -8,7 +8,9 @@
         "semicolon": true
     },
     "rules": {
-        "semicolon": true
+        "semicolon": true,
+        "object-literal-shorthand": false,
+        "no-conditional-assignment": false
     },
     "rulesDirectory": []
 }
