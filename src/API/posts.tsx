@@ -89,6 +89,15 @@ export async function getPostDetail(id: number): Promise<Post> {
 
     return formatPost(postData);
 }
+export async function getPostDetailBySlug(slug: string): Promise<Post> {
+    const postsData = await axios.get(`${baseUrl}wp/v2/posts?slug=${slug}`);
+
+    if (postsData.data.length) {
+        return formatPost(postsData.data[0]);
+    } else {
+        throw new Error(`can't retrieve post with the slug ${slug}`);
+    }
+}
 
 export function getBlogPosts(categories: number[] = []): Promise<Post[]> {
     categories.push(blogCatID);
