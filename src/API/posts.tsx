@@ -4,6 +4,12 @@ const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 const blogCatID = 200;
 const photoDiaryCatID = 4328;
 
+export interface PostsFilter {
+    categories?: number[];
+    page?: number;
+    limit?: number;
+}
+
 interface Post {
     id: number;
     title: string;
@@ -74,12 +80,16 @@ function formatPost(postData: any): Post {
     return ret;
 }
 
-export async function getPosts(categories: number[] = []): Promise<Post[]> {
-    let filterString = "";
-    for (const category of categories) {
+export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
+    const catFilter = filter.categories || [];
+    const limit = filter.limit || 10;
+    const page = filter.page || 1;
+
+    let filterString = `?page=${page}&per_page=${limit}&categories=`;
+    for (const category of catFilter) {
         filterString += category + ",";
     }
-    const posts = await axios.get(`${baseUrl}wp/v2/posts?categories=${filterString}`);
+    const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
 
     return posts.data.map(formatPost);
 }
@@ -99,15 +109,17 @@ export async function getPostDetailBySlug(slug: string): Promise<Post> {
     }
 }
 
-export function getBlogPosts(categories: number[] = []): Promise<Post[]> {
-    categories.push(blogCatID);
-    return getPosts(categories);
+export function getBlogPosts(filter: PostsFilter = {}): Promise<Post[]> {
+    filter.categories = filter.categories || [];
+    filter.categories.push(blogCatID);
+    return getPosts(filter);
 }
 
 
-export function getPhotoDiaries(categories: number[] = []): Promise<Post[]> {
-    categories.push(photoDiaryCatID);
-    return getPosts(categories);
+export function getPhotoDiaries(filter: PostsFilter = {}): Promise<Post[]> {
+    filter.categories = filter.categories || [];
+    filter.categories.push(photoDiaryCatID);
+    return getPosts(filter);
 }
 
 export async function getRelatedPosts(postId: number): Promise<Post[]> {
