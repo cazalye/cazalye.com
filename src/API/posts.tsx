@@ -9,13 +9,40 @@ interface Post {
     title: string;
     date: Date;
     slug: string;
-    categories: number[];
-    tags: number[];
+    categories?: number[];
+    tags?: number[];
     status: string;
     description: string;
     content: string;
     feature_image_url: string;
-    images: string[];
+    images?: string[];
+}
+
+function formatRelatedPost(postData: any): Post {
+    const regExp = /<img.*?src="(.*?)".*?\/>/gm;
+    const match = regExp.exec(postData.post_content);
+    let m: any;
+    const images: string[] = [];
+    while ((m = regExp.exec(postData.post_content)) !== null) {
+        // This is necessary to avoid infinite loops with zero-width matches
+        if (m.index === regExp.lastIndex) {
+            regExp.lastIndex++;
+        }
+        images.push(m[1]);
+    }
+
+    const ret: Post = {
+        id: postData.ID,
+        title: postData.post_title,
+        date: postData.post_date,
+        slug: postData.post_name,
+        content: postData.post_content,
+        status: postData.post_status,
+        description: postData.post_exerpt,
+        feature_image_url: images.length? images[0] : "", // FIXME
+        images: images,
+    };
+    return ret;
 }
 
 function formatPost(postData: any): Post {
@@ -74,3 +101,9 @@ export function getPhotoDiaries(categories: number[] = []): Promise<Post[]> {
     return getPosts(categories);
 }
 
+export async function getRelatedPosts(postId: number): Promise<Post[]> {
+    const posts = await axios.get(`${baseUrl}cazalye/post/related/${postId}`);
+    // debugger
+
+    return posts.data.map(formatRelatedPost);
+}
