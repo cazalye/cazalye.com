@@ -1,0 +1,38 @@
+@import "../../styles/colors";
+
+.about{ 
+    background: linear-gradient(180deg, rgba(91, 80, 90, 0.3) 10%, rgba(91, 80, 90, 0.4) 15%, rgba(91, 80, 90, 1)60%);
+    position: fixed;
+    height:100vh;
+    width: 100%;
+    .about-content{
+        // position: fixed;
+        // margin: 40px;
+        p{
+            text-align: center;
+            // text-align: justify;
+            padding-right:70px;
+            padding-left:70px;
+        }
+    }
+    .mission{
+        position:fixed;
+        left:50px;
+        bottom: 40px;
+        color: white; 
+        font-family: 'Cormorant Garamond', serif;
+        h2{
+            font-family: 'Cormorant Garamond';
+            font-weight: 300;
+            font-size: 50px;
+            margin-bottom: 0px;
+
+        }
+        h3{
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 40px;
+            margin-top:0px;
+            margin-left:40px;
+        }
+    }
+}
