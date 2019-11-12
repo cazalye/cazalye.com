@@ -1,0 +1,55 @@
+@import "../../styles/colors";
+
+#blogs-page{
+        background: linear-gradient(180deg, rgba(91, 80, 90, 0.3) 10%, rgba(91, 80, 90, 1)60%);
+        position: fixed;
+        height:100vh;
+        width: 100%;
+        
+        h1{ color: $accentColor;
+            font-family: 'Cormorant Garamond';
+            font-weight: 300;
+            font-size: 60px;
+            margin-top: 90px;
+            text-align: center;
+        }
+
+        .post-container{
+            display: flex;
+        }
+
+        .post-content{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 20px;
+            img {
+                // position: relative;
+                height:400px;
+                width: 300px;
+            }
+            h2{
+                position:absolute;
+                z-index:1;
+                text-align: left;
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 100;
+                font-size: 24px;
+                margin:none;
+                padding: none;
+            }
+            td{
+                position: absolute;
+                z-index:1;
+                text-align: left;
+                color:white;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 100;
+                font-size: 14px;
+                margin:none;
+                padding: none;
+            }
+        }
+}

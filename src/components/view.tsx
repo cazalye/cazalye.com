@@ -1,7 +1,7 @@
 import React from 'react';
 import LandingPage from './landingPage/landingPage';
 import {Switch, Route} from 'react-router-dom';
-import Blog from './blog/blog';
+import Blog from './blog/blogList';
 
 
 const View = () => (

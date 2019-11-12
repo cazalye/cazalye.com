@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getBlogPosts } from '../../API/posts';
-import "./blog.scss";
+import "./blogList.scss";
 
 class Blog extends Component<any, any> {
     travelPosts: any;
@@ -22,16 +22,25 @@ class Blog extends Component<any, any> {
 
             postsContent.push(
                 <div className="post-container">
-                    <h1>{post.title}</h1>
-                    <h4>{post.date}</h4>
+                    <h2>{post.title}</h2>
+                    <td>
+                        {new Intl.DateTimeFormat('en-GB', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: '2-digit'
+                        }).format(post.date)}
+                    </td>
+                    <img src={post.feature_image_url} alt=""/>
                 </div>
             );
         }
         return (
             <div id="blogs-page">
-                <h1>Blog Posts</h1>
-                <div className="posts-container">
+                <h1>New on the Blog</h1>
+                <div className="post-container">
+                    <div className="post-content">
                     {postsContent}
+                    </div>
                 </div>
             </div>
         );
