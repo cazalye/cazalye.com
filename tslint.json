@@ -10,7 +10,8 @@
     "rules": {
         "semicolon": true,
         "object-literal-shorthand": false,
-        "no-conditional-assignment": false
+        "no-conditional-assignment": false,
+        "jsx-no-multiline-js": false
     },
     "rulesDirectory": []
 }
