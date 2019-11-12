@@ -8,6 +8,7 @@ export interface PostsFilter {
     categories?: number[];
     page?: number;
     limit?: number;
+    showCategoriesNames?: boolean;
 }
 
 interface Post {
@@ -22,6 +23,7 @@ interface Post {
     content: string;
     feature_image_url: string;
     images?: string[];
+    categoriesNames?: string[];
 }
 
 function formatRelatedPost(postData: any): Post {
@@ -64,6 +66,13 @@ function formatPost(postData: any): Post {
         images.push(m[1]);
     }
 
+    // check if the cat names are available
+    let catsNames: string[] = [];
+    if (postData._embedded && postData._embedded["wp:term"]) {
+        const cats = postData._embedded["wp:term"][0];
+        catsNames = cats.map((cat: any) => cat.name);
+    }
+
     const ret: Post = {
         id: postData.id,
         title: postData.title.rendered,
@@ -76,18 +85,26 @@ function formatPost(postData: any): Post {
         description: postData.excerpt.rendered,
         feature_image_url: postData.jetpack_featured_media_url,
         images: images,
+        categoriesNames: catsNames,
     };
     return ret;
 }
 
 export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
     const catFilter = filter.categories || [];
-    const limit = filter.limit || 10;
-    const page = filter.page || 1;
 
-    let filterString = `?page=${page}&per_page=${limit}&categories=`;
+    let filterString = `?categories=`;
     for (const category of catFilter) {
         filterString += category + ",";
+    }
+    if (filter.limit) {
+        filterString += `&per_page=${filter.limit}`;
+    }
+    if (filter.page) {
+        filterString += `&page=${filter.page}`;
+    }
+    if (filter.showCategoriesNames) {
+        filterString += "&_embed";
     }
     const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
 
