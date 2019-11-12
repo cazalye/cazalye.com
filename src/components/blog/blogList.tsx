@@ -20,8 +20,12 @@ class Blog extends Component<any, any> {
         const postsContent=[];
         for (const post of this.state.posts) {
 
+            const style = {
+                backgroundImage: `url("${post.feature_image_url}")`
+            };
+
             postsContent.push(
-                <div className="post-container">
+                <div style={style} className="post-container">
                     <h2>{post.title}</h2>
                     <td>
                         {new Intl.DateTimeFormat('en-GB', {
@@ -30,17 +34,17 @@ class Blog extends Component<any, any> {
                             day: '2-digit'
                         }).format(post.date)}
                     </td>
-                    <img src={post.feature_image_url} alt=""/>
+                    {/* <img src={post.feature_image_url} alt=""/> */}
                 </div>
             );
         }
         return (
             <div id="blogs-page">
                 <h1>New on the Blog</h1>
-                <div className="post-container">
-                    <div className="post-content">
+                <div className="blog-container">
+                    {/* <div className="posts-content"> */}
                     {postsContent}
-                    </div>
+                    {/* </div> */}
                 </div>
             </div>
         );
