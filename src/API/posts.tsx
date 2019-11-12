@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 const blogCatID = 200;
-const photoDiaryCatID = 4328;
+const photoDiaryCatID = 655242698;
 
 export interface PostsFilter {
     categories?: number[];
@@ -40,7 +40,7 @@ function formatRelatedPost(postData: any): Post {
     const ret: Post = {
         id: postData.ID,
         title: postData.post_title,
-        date: postData.post_date,
+        date: new Date(postData.post_date),
         slug: postData.post_name,
         content: postData.post_content,
         status: postData.post_status,
@@ -67,7 +67,7 @@ function formatPost(postData: any): Post {
     const ret: Post = {
         id: postData.id,
         title: postData.title.rendered,
-        date: postData.date,
+        date: new Date(postData.date),
         slug: postData.slug,
         categories: postData.categories,
         content: postData.content.rendered,
