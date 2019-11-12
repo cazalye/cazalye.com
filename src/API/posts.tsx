@@ -45,7 +45,7 @@ function formatRelatedPost(postData: any): Post {
         content: postData.post_content,
         status: postData.post_status,
         description: postData.post_exerpt,
-        feature_image_url: images.length? images[0] : "", // FIXME
+        feature_image_url: postData.feature_image_url,
         images: images,
     };
     return ret;
