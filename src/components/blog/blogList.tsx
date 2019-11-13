@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getBlogPosts } from '../../API/posts';
+import { getBlogPosts, getRelatedPosts} from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
 
@@ -20,6 +20,8 @@ class Blog extends Component<any, any> {
         this.setState({
             posts: posts
         });
+        const related = await getRelatedPosts(posts[0].id);
+        debugger
     }
 
     scrollIncPage(increment: number) {
