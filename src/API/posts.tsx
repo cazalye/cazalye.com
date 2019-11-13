@@ -78,7 +78,7 @@ function formatPost(postData: any): Post {
 
     // check if the cat names are available
     let featureImageSizes: FeatureImageSizes | null = null;
-    if (postData._embedded && postData._embedded["wp:featuredmedia"] && postData._embedded["wp:featuredmedia"].length && postData._embedded["wp:featuredmedia"][0].media_sizes) {
+    if (postData._embedded && postData._embedded["wp:featuredmedia"] && postData._embedded["wp:featuredmedia"].length && postData._embedded["wp:featuredmedia"][0].media_details) {
         featureImageSizes = {
             thumbnail: postData._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url,
             medium: postData._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url,
