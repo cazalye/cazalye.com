@@ -6,13 +6,39 @@
         height:100vh;
         width: 100%;
 
+        .scroll-button {
+            width: 30px;
+            height: 30px;
+            background: red;
+            position: fixed;
+            right: 20px;
+            top: 100px;
+        }
+        .scroll-button-left {
+            width: 30px;
+            height: 30px;
+            background: red;
+            position: fixed;
+            left: 20px;
+            top: 100px;
+        }
+
         .blog-container{
+            scroll-behavior: smooth;
+            transition-duration: 100ms;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
             align-items: center;
-            margin: 20px;
+            justify-content: space-between;
             height: calc(100% - 270px);
+            width:100%;
+            &:after {
+                content: '';
+                flex: 0 0 1px;
+                height: 1px;
+            }
 
             .post-container {
                 background-size: cover;
@@ -21,6 +47,8 @@
                 height: 100%;
                 margin: 20px;
                 margin-bottom: 36px;
+                flex: 0 0 auto;
+
                 img {
                     // position: relative;
                     height:400px;
@@ -30,6 +58,22 @@
                     color:white;
                     width: calc(100% - 30px);
                     padding: 15px;
+                    padding-bottom: 0px;
+                    margin-bottom:0px;
+                }
+                a {
+                    text-decoration: none;
+                }
+                h3{
+                    position: absolute;
+                    z-index:1;
+                    text-align: left;
+                    color:white;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight: 100;
+                    font-size: 14px;
+                    padding-left: 15px;
+                    padding-top: 30px;
                 }
                 td{
                     position: absolute;
@@ -38,10 +82,23 @@
                     color:white;
                     font-family: 'Open Sans', sans-serif;
                     font-weight: 100;
-                    font-size: 14px;
-                    margin:none;
-                    padding: none;
+                    font-size: 12px;
+                    padding-left: 15px;
+                    margin-top: 20px;
                 }
+                // p{
+                //     position: absolute;
+                //     bottom:10px;
+                //     z-index:1;
+                //     text-align: left;
+                //     color:white;
+                //     font-family: 'Open Sans', sans-serif;
+                //     font-weight: 100;
+                //     font-size: 12px;
+                //     padding-left: 15px;
+                //     margin-top: 30px;
+                    
+                // }
             }
         }
 }

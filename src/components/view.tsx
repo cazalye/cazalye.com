@@ -10,6 +10,7 @@ const View = () => (
         <Route exact={true} path="/" component={LandingPage}/>
         <Route exact={true} path='/blog' component={Blog}/>
         <Route exact={true} path='/about' component={About}/>
+        <Route exact={true} path='/blog/:slug' component={Blog}/>
     </Switch>
 );
 
