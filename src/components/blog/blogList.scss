@@ -48,7 +48,13 @@
                 margin: 20px;
                 margin-bottom: 36px;
                 flex: 0 0 auto;
-
+                text-decoration: none;
+                opacity: 1;
+                &:hover{
+                    opacity: 0.8;
+                    transition: opacity .15s ease-in-out;
+                    // transition: padding .15s ease-in-out;
+                }
                 img {
                     // position: relative;
                     height:400px;
@@ -60,8 +66,6 @@
                     padding: 15px;
                     padding-bottom: 0px;
                     margin-bottom:0px;
-                }
-                a {
                     text-decoration: none;
                 }
                 h3{

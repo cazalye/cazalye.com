@@ -40,16 +40,12 @@ class Blog extends Component<any, any> {
             const style = {
                 backgroundImage: `url("${backgroundImageUrl}")`
             };
-
-            // how do I add the link to blog page to the image?
             
-            // Add loop for category names
+            // Add loop for category names if want these on post
 
             postsContent.push(
-                <div style={style} className="post-container">
-                    <Link to={"blog/" + post.slug}>
-                        <h2>{post.title}</h2>
-                    </Link>
+                <Link to={"blog/" + post.slug} className="post-container" style={style}>
+                    <h2>{post.title}</h2>
                     {/* {categoriesNamesHTML} */}
                     {/* <h3>{post.categoriesNames}</h3> */}
                     <td>
@@ -60,7 +56,7 @@ class Blog extends Component<any, any> {
                         }).format(post.date)}
                     </td>
                     {/* <p>{post.description}</p> */}
-                </div>
+                </Link>
             );
         }
         return (
