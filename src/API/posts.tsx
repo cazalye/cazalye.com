@@ -9,6 +9,15 @@ export interface PostsFilter {
     page?: number;
     limit?: number;
     showCategoriesNames?: boolean;
+    showFeaturedImageSizes?: boolean;
+}
+
+interface FeatureImageSizes {
+    thumbnail: string;
+    medium: string;
+    medium_large: string;
+    large: string;
+    full: string;
 }
 
 interface Post {
@@ -22,6 +31,7 @@ interface Post {
     description: string;
     content: string;
     feature_image_url: string;
+    featureImageSizes?: FeatureImageSizes | null;
     images?: string[];
     categoriesNames?: string[];
 }
@@ -67,6 +77,18 @@ function formatPost(postData: any): Post {
     }
 
     // check if the cat names are available
+    let featureImageSizes: FeatureImageSizes | null = null;
+    if (postData._embedded && postData._embedded["wp:featuredmedia"]) {
+        featureImageSizes = {
+            thumbnail: postData._embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url,
+            medium: postData._embedded["wp:featuredmedia"][0].media_details.sizes.medium.source_url,
+            medium_large: postData._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url,
+            large: postData._embedded["wp:featuredmedia"][0].media_details.sizes.large.source_url,
+            full: postData._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url,
+        };
+    }
+
+    // check if the cat names are available
     let catsNames: string[] = [];
     if (postData._embedded && postData._embedded["wp:term"]) {
         const cats = postData._embedded["wp:term"][0];
@@ -86,6 +108,7 @@ function formatPost(postData: any): Post {
         feature_image_url: postData.jetpack_featured_media_url,
         images: images,
         categoriesNames: catsNames,
+        featureImageSizes: featureImageSizes,
     };
     return ret;
 }
@@ -103,7 +126,7 @@ export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
     if (filter.page) {
         filterString += `&page=${filter.page}`;
     }
-    if (filter.showCategoriesNames) {
+    if (filter.showCategoriesNames || filter.showFeaturedImageSizes) {
         filterString += "&_embed";
     }
     const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
