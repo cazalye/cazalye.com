@@ -36,8 +36,9 @@ class Blog extends Component<any, any> {
         const postsContent=[];
         for (const post of this.state.posts) {
 
+            let backgroundImageUrl = post.featureImageSizes? post.featureImageSizes.medium_large : "";
             const style = {
-                backgroundImage: `url("${post.feature_image_url}")`
+                backgroundImage: `url("${backgroundImageUrl}")`
             };
 
             // how do I add the link to blog page to the image?
