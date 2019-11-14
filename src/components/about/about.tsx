@@ -12,13 +12,13 @@ class About extends Component {
                         <h3>at home and abroad</h3>
                 </div>
                 <div className="about-content">
-                    <p> When it comes to searching for travel and adventure inspiration, you'll find no shortage of posts and videos detailing  destinations, activities and Instagram-worthy locations. But the resultant flood of information can often feel a little overwhelming. With this in mind, I have chosen to limit the amount of information on this site. You won't find comprehensive itineraries or long-form posts that take hours to trawl. You can find all that elsewhere. <hr/>Instead, you will find carefully curated posts taking one of the two forms below. If you have a certain place in mind then head straight to the <Link to="/destinations">'Where to'</Link> section. Here you'll see all the places featured in the photo diaries and blogs on an interactive world map. If you would prefer to browse leisurely for inspiration then follow one of the links below. <hr/><hr/>
+                    <p> When it comes to finding travel and adventure inspiration online, we're often faced with an overwhelming flood of detailed information, making us feel more lost than when we started. Instead, this site offers you carefully curated, short posts full of the most important and exciting information, each with a read time of less than 5 minutes.<hr/>
+                    If you already have a destination in mind then head straight to the <Link to="/destinations">'Where to'</Link> section. Here you'll see all the places featured throughout the website on an interactive world map. If you would prefer to browse leisurely for inspiration, then follow one of the links below. <hr/><hr/>
                     <ul>
-                        <li><Link to="/blog">Blog Posts</Link> briefly describe (in under 5 minutes) lists of the best 5-10 activities in a destination<hr/> </li>
+                        <li><Link to="/blog">Blog Posts</Link> list the best 5-10 activities, sites and coffee/brunch spots in a destination<hr/> </li>
                         <li><Link to="/photoDiaries">Photo Diaries</Link> take you on a visual journey through different countries</li>
                      </ul>
                      <hr/>
-
                     </p>
                 </div>
             </div>
