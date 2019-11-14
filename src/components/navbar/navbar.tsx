@@ -15,7 +15,7 @@ class Navbar extends Component {
                             <img src="/tst_img/Logo_small_transparent.svg" alt="cazalye logo"/>
                         </div> */}
                     <Navigation>
-                        <Link to="/destinations">Destinations</Link>
+                        <Link to="/destinations">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
