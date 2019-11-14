@@ -10,10 +10,6 @@ class Navbar extends Component {
         return (
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
-                    <div><p>Explore. Create. Discover</p></div>
-                        {/* <div className="logo">
-                            <img src="/tst_img/Logo_small_transparent.svg" alt="cazalye logo"/>
-                        </div> */}
                     <Navigation>
                         <Link to="/destinations">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
