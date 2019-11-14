@@ -1,7 +1,7 @@
 @import "../../styles/colors";
 
 #blogs-page{
-        background: linear-gradient(180deg, rgba(91, 80, 90, 0.3) 10%, rgba(91, 80, 90, 1)60%);
+        background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 10%, rgba(91, 80, 90, 1)60%);
         position: fixed;
         height:100vh;
         width: 100%;
@@ -39,7 +39,6 @@
                 flex: 0 0 1px;
                 height: 1px;
             }
-
             .post-container {
                 background-size: cover;
                 position: relative;
@@ -55,54 +54,65 @@
                     transition: opacity .15s ease-in-out;
                     // transition: padding .15s ease-in-out;
                 }
+                a.background-link {
+                    width: 100%;
+                    position: absolute;
+                    height: 100%;
+                }
                 img {
                     // position: relative;
                     height:400px;
                     width: 300px;
                 }
-                h2{
-                    color:white;
-                    width: calc(100% - 30px);
-                    padding: 15px;
-                    padding-bottom: 0px;
-                    margin-bottom:0px;
-                    text-decoration: none;
-                }
-                h3{
+                .text-container{
+                    // background-color: rgba(91, 80, 90, 1);
+                    // opacity: 1;
+                    // background-color: black  ;
                     position: absolute;
-                    z-index:1;
-                    text-align: left;
-                    color:white;
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: 100;
-                    font-size: 14px;
-                    padding-left: 15px;
-                    padding-top: 30px;
+                    bottom:0;
+                    width: 100%;
+                    padding-bottom:5px;
+                    .post-title{
+                        color:white;
+                        font-size:30px;
+                        text-decoration: none;
+                        width: calc(100% - 30px);
+                        padding: 15px;
+                        padding-bottom: 0px;
+                        padding-top: 0px;
+                        margin-bottom:0px;
+                        margin-top:0px;
+                        height:80px;
+                        position: bottom;
+                    }
+                    .post-date{
+                        text-align: left;
+                        color:white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 100;
+                        font-size: 10px;
+                        padding-left: 15px;
+                        height:10px;
+                        margin-top:0px;
+                        margin-bottom:0px;
+                        padding-bottom: 0px;
+                    }
+                    .post-categories{
+                        text-align: left;
+                        color:white;
+                        font-family: 'Open Sans', sans-serif;
+                        font-weight: 100;
+                        font-size: 12px;
+                        padding-left: 15px;
+                        padding-top: 20px;
+                        padding-bottom:0px;
+                        height:20px;
+                        span{
+                            // padding-left:10px;
+                            padding-right:10px;
+                        }
+                    }
                 }
-                td{
-                    position: absolute;
-                    z-index:1;
-                    text-align: left;
-                    color:white;
-                    font-family: 'Open Sans', sans-serif;
-                    font-weight: 100;
-                    font-size: 12px;
-                    padding-left: 15px;
-                    margin-top: 20px;
-                }
-                // p{
-                //     position: absolute;
-                //     bottom:10px;
-                //     z-index:1;
-                //     text-align: left;
-                //     color:white;
-                //     font-family: 'Open Sans', sans-serif;
-                //     font-weight: 100;
-                //     font-size: 12px;
-                //     padding-left: 15px;
-                //     margin-top: 30px;
-                    
-                // }
             }
         }
 }

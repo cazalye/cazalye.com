@@ -40,23 +40,29 @@ class Blog extends Component<any, any> {
             const style = {
                 backgroundImage: `url("${backgroundImageUrl}")`
             };
-            
-            // Add loop for category names if want these on post
+            let categoriesNamesHTML = [];
+            for(const categoryName of post.categoriesNames){
+                categoriesNamesHTML.push(<span>{categoryName}</span>);
+            }
+
 
             postsContent.push(
-                <Link to={"blog/" + post.slug} className="post-container" style={style}>
-                    <h2>{post.title}</h2>
-                    {/* {categoriesNamesHTML} */}
-                    {/* <h3>{post.categoriesNames}</h3> */}
-                    <td>
-                        {new Intl.DateTimeFormat('en-GB', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: '2-digit'
-                        }).format(post.date)}
-                    </td>
-                    {/* <p>{post.description}</p> */}
-                </Link>
+                <div  className="post-container" style={style}>
+                    <Link className="background-link" to={"blog/" + post.slug}/>
+                    <div className="text-container">
+                    <h2 className="post-title">{post.title}</h2>
+                        <h3 className="post-date">
+                            {new Intl.DateTimeFormat('en-GB', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: '2-digit'
+                            }).format(post.date)}
+                        </h3>
+                        <div className="post-categories">
+                            {categoriesNamesHTML}
+                        </div>
+                    </div>
+                </div>
             );
         }
         return (
