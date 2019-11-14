@@ -1,14 +1,13 @@
 @import "../../styles/colors";
 
 
-// make navbar white on this page
 
 .about{ 
-    background: linear-gradient(180deg, rgba(0,0,0, 0.4) 40%, transparent 90%), url("/img/rafting.jpg");
-    // rgba(255,255,255, 0.4) 60%, rgba(255,255,255, 0.2) 70%,
+    background: linear-gradient(180deg, rgba(255,255,255, 0.5) 10%,rgba(255,255,255, 0.4) 7%, rgba(255,255,255, 0.3) 15%, rgba(255,255,255, 0.2) 20%, transparent 80%), url("/img/rafting.jpg");
+    // background-image: url("/img/rafting.jpg");
     // maybe add white layer over top or clip the blacks. Change the nav bar to >?
     background-size: cover;
-    // opacity: 0.8;
+    opacity: 1;
     position: fixed;
     height:100vh;
     width: 100%;
@@ -22,17 +21,26 @@
             color:white;
             text-align: justify;
             font-size: 24px;
-            padding-right:70px;
-            padding-left:70px;
+            padding-right:100px;
+            padding-left:100px;
         }
         hr{
             border-top: none;
         }
+        ul{
+           list-style-type: none; 
+           font-size: 24px;
+           padding-left:100px;
+           padding-right: 100px;
+        }
+        a{
+            color:white;
+        }
     }
     .mission{
         position:fixed;
-        left:50px;
-        bottom: 40px;
+        left:30px;
+        bottom: 5px;
         color: white; 
         font-family: 'Cormorant Garamond', serif;
         h2{
