@@ -32,6 +32,16 @@
             }
         }
 
+        // Decide if want to use below and where it should go on landing page. Link to about page if so
+        .start-here{
+            position:fixed;
+            left: 800px;
+            top: 168px;
+            text-align: center;
+            p{
+                font-size:14px;
+            }
+        }
         .coffee{
             position: fixed;
             right:50px;
