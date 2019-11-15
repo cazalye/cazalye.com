@@ -1,0 +1,60 @@
+#photo-diary-detail {
+    // color: black;
+    h3{
+        margin:50px;  
+    }
+    p{
+        margin:50px;
+    }
+    .left-page-key-details{
+        width: 700px;
+        height: 400px;
+        background-color: black;
+        position: fixed;
+        left: 50px;
+        top: 150px;
+    }
+    .right-page-summary{
+        width: 700px;
+        height: 400px;
+        background-color: black;
+        position: fixed;
+        right: 50px;
+        top: 150px;
+    }
+    .left-page-image{
+        width: 700px;
+        height: 400px;
+        background-color: black;
+        position: fixed;
+        left: 50px;
+        top: 150px;
+    }
+    .right-page-image{
+        width: 700px;
+        height: 400px;
+        background-color: black;
+        position: fixed;
+        right: 50px;
+        top: 150px;
+    }  
+}
+
+.next-section {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+    right: 50px;
+    top: 200px;
+    z-index:10;
+}
+.previous-section {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+    left: 50px;
+    top: 200px;
+    z-index:10;
+}
