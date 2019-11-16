@@ -3,38 +3,45 @@
 
 
 .about{ 
-    background: linear-gradient(180deg, rgba(255,255,255, 0.5) 10%,rgba(255,255,255, 0.4) 7%, rgba(255,255,255, 0.3) 15%, rgba(255,255,255, 0.2) 20%, transparent 60%), url("/img/rafting.jpg");
+    background: linear-gradient(180deg, rgba(255,255,255, 0.8) 50%,rgba(255,255,255, 0.7) 60%, transparent 90%), url("/img/rafting.jpg");
     // background-image: url("/img/rafting.jpg");
-    // maybe add white layer over top or clip the blacks. Change the nav bar to >?
     background-size: cover;
-    opacity: 1;
+    opacity: 0.9;
     position: fixed;
     height:100vh;
     width: 100%;
     h1 {
-        color:white;
-        margin-bottom:40px;
+        color:black;
+        margin-bottom:30px;
+        margin-top:80px;
     }
     .about-content{
         position: fixed;
         p{
-            color:white;
+            color:black;
             text-align: justify;
-            font-size: 24px;
-            padding-right:100px;
-            padding-left:100px;
+            font-size: 18px;
+            font-weight: 300;
+            padding-right:70px;
+            padding-left:70px;
+            strong{
+                font-weight: 400;
+            }
         }
         hr{
             border-top: none;
         }
         ul{
-           list-style-type: none; 
-           font-size: 24px;
-           padding-left:100px;
-           padding-right: 100px;
-        }
-        a{
-            color:white;
+            list-style-type: none; 
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            padding-left:100px;
+            padding-right: 100px;
+            margin-bottom: 10px;
+            li{
+                line-height: 10px;
+            }
         }
     }
     .mission{
