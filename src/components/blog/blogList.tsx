@@ -67,8 +67,12 @@ class Blog extends Component<any, any> {
         }
         return (
             <div id="blogs-page">
-                <div onClick={e => {this.scrollIncPage(1);}} className="scroll-button"/>
-                <div onClick={e => {this.scrollIncPage(-1);}} className="scroll-button-left"/>
+                <div onClick={e => {this.scrollIncPage(1);}}>
+                    <i className="fas fa-chevron-right"/>
+                </div>
+                <div onClick={e => {this.scrollIncPage(-1);}} className="scroll-button-left">
+                    <i className="fas fa-chevron-left"/>
+                </div>/>
                 <h1>New on the Blog</h1>
                 <div className="blog-container">
                         {postsContent}

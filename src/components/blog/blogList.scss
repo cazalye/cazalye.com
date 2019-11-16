@@ -6,21 +6,28 @@
         height:100vh;
         width: 100%;
 
-        .scroll-button {
-            width: 30px;
-            height: 30px;
-            background: red;
+
+        .fas.fa-chevron-right {
+            font-size:50px;
+            text-shadow: 5px 5px 5px black;
             position: fixed;
             right: 20px;
-            top: 100px;
+            top: 50%;
+            z-index:2;
+            &:hover {
+                cursor: pointer;
+            }
         }
         .scroll-button-left {
-            width: 30px;
-            height: 30px;
-            background: red;
+            font-size:50px;
+            text-shadow: 5px 5px 5px black;
             position: fixed;
             left: 20px;
-            top: 100px;
+            top: 50%;
+            z-index:2;
+            &:hover {
+                cursor: pointer;
+            } 
         }
 
         .blog-container{
