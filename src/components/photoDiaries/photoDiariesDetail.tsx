@@ -21,9 +21,11 @@ class PhotoDiariesDetail extends Component<any, any> {
     renderSection() {
         if (this.page === 0) {
             return (
-                <div>
-                    <h1>{this.state.photoDiary.title}</h1>
-                    <img src={this.state.photoDiary.feature_image_url}/>
+                <div className="cover-page">
+                    <div className="photo-page-container">
+                        <h1>{this.state.photoDiary.title}</h1>
+                    </div>
+                    {/* <img src={this.state.photoDiary.feature_image_url}/> */}
                 </div>
             );
         }
@@ -31,10 +33,14 @@ class PhotoDiariesDetail extends Component<any, any> {
             return (
                 <div>
                     <div className="left-page-key-details">{this.page}
-                        <h3>Location<br/>Date<br/>Camera<br/>Lens<br/></h3>
+                        <div className="photo-page-container">
+                            <h3>Location<br/>Date<br/>Camera<br/>Lens<br/></h3>
+                        </div>
                     </div>
                     <div className="right-page-summary">{this.page}
-                        <p>Summary of the place/photo diary</p>
+                        <div className="photo-page-container">
+                            <p>Summary of the place/photo diary</p>
+                        </div>
                     </div>
                 </div>
             );
