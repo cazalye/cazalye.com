@@ -1,5 +1,7 @@
 import "./landingPage.scss";
 import React, { Component } from 'react';
+import Map from "../map/map";
+import Footer from "../footer/footer";
 
 class LandingPage extends Component {
     render() {
@@ -19,6 +21,10 @@ class LandingPage extends Component {
                         {/* <h3> Travel Budgets</h3> */}
                     </div>
                 </div>
+                <div className="landing-section">
+                    <Map/>
+                </div>
+                <Footer/>
             </div>
         );
     }
