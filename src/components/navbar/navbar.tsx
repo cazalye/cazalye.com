@@ -25,9 +25,10 @@ class Navbar extends Component {
                         className="search"
                         value=""
                         onChange={() => {}}
-                        label="Search"
+                        label="search"
+                        placeholder="search"
                         expandable={true}
-                        expandableIcon="search"
+                        expandableIcon=""
                         />
                     </Navigation>
                 </Header>

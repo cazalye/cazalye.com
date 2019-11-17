@@ -53,5 +53,20 @@ body .mdl-layout{
     // need to fix the function
     .search{
         color:$accentColor;
+
+        i {
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-size: 20px;
+            font-variant: normal;
+            text-rendering: auto;
+            font-weight: 900;
+            line-height: 1;
+            font-family: "Font Awesome 5 Pro";
+            &:before {
+                content: "\f002";
+            }
+        }
     }
 }
