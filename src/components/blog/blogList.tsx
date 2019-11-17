@@ -10,7 +10,6 @@ class Blog extends Component<any, any> {
         this.state = {
             posts: []
         };
-
     }
     async componentDidMount() {
         const posts = await getBlogPosts({
@@ -23,7 +22,7 @@ class Blog extends Component<any, any> {
     }
 
     scrollIncPage(increment: number) {
-        let blogContainer = document.getElementsByClassName("blog-container");
+        const blogContainer = document.getElementsByClassName("blog-container");
         if (blogContainer.length) {
             const initPosition = blogContainer[0].scrollLeft;
             const windowWidth = window.innerWidth;
@@ -36,11 +35,11 @@ class Blog extends Component<any, any> {
         const postsContent=[];
         for (const post of this.state.posts) {
 
-            let backgroundImageUrl = post.featureImageSizes? post.featureImageSizes.medium_large : "";
+            const backgroundImageUrl = post.featureImageSizes? post.featureImageSizes.medium_large : "";
             const style = {
                 backgroundImage: `url("${backgroundImageUrl}")`
             };
-            let categoriesNamesHTML = [];
+            const categoriesNamesHTML = [];
             for(const categoryName of post.categoriesNames){
                 categoriesNamesHTML.push(<span>{categoryName}</span>);
             }
@@ -72,11 +71,13 @@ class Blog extends Component<any, any> {
                 </div>
                 <div onClick={e => {this.scrollIncPage(-1);}} className="scroll-button-left">
                     <i className="fas fa-chevron-left"/>
-                </div>/>
+                </div>
                 <h1>New on the Blog</h1>
                 <div className="blog-container">
                         {postsContent}
                 </div>
+
+
             </div>
         );
     }
