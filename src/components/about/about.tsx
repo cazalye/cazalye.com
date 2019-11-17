@@ -21,6 +21,9 @@ class About extends Component {
                      <hr/>
                     </p>
                 </div>
+                <div>
+                    <Link to="/aboutMe" className="about-me-link"><h2>Who is cazalye?</h2></Link>
+                </div>
             </div>
         );
     }

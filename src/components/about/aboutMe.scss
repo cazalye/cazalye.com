@@ -4,7 +4,6 @@
 
 .about{ 
     background: linear-gradient(180deg, rgba(255,255,255, 0.8) 50%,rgba(255,255,255, 0.7) 60%, transparent 90%), url("/img/rafting.jpg");
-    // background-image: url("/img/rafting.jpg");
     background-size: cover;
     opacity: 0.9;
     position: fixed;
@@ -31,18 +30,6 @@
         hr{
             border-top: none;
         }
-        ul{
-            list-style-type: none; 
-            font-size: 20px;
-            font-weight: 300;
-            text-align: center;
-            padding-left:100px;
-            padding-right: 100px;
-            margin-bottom: 10px;
-            li{
-                line-height: 10px;
-            }
-        }
     }
     .mission{
         position:fixed;
@@ -55,23 +42,12 @@
             font-weight: 300;
             font-size: 50px;
             margin-bottom: 0px;
-
         }
         h3{
             font-family: 'Cormorant Garamond', serif;
             font-size: 40px;
             margin-top:0px;
             margin-left:40px;
-        }
-    }
-    .about-me-link{
-        position:fixed;
-        right:200px;
-        bottom: 100px;
-        h2{
-        font-weight: 300;
-        color:white;
-        text-decoration: underline;
         }
     }
 }
