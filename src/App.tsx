@@ -4,7 +4,6 @@ import './styles/App.scss';
 import LandingPage from './components/landingPage/landingPage';
 import View from './components/view';
 import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
 
 
 const App: React.FC = () => {
@@ -12,7 +11,6 @@ const App: React.FC = () => {
   return (
     <div className="App">
         <Navbar/>
-        <Footer/>
         <View/>
     </div>
   );
