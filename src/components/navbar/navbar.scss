@@ -1,9 +1,11 @@
 @import "../../styles/colors";
 
 body .mdl-layout{
-    height: 100px;
+    height: 70px;
     width: 100%;
     color: $primaryColor;
+    position: fixed;
+    z-index: 10;
 
     .mdl-navigation__link{
         color: $primaryColor;
@@ -28,14 +30,6 @@ body .mdl-layout{
         top:44px;
         word-spacing: 20px;
     }
-
-    // .logo{
-    //     position: fixed;
-    //     left:190px;
-    //     top:0px;
-    //     height: 80px;
-    //     width: 80px;
-    // }
 
     .social-links {
         text-align: left;
