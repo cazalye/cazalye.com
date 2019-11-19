@@ -23,9 +23,8 @@ class PhotoDiariesDetail extends Component<any, any> {
         if (this.page === 0) {
             return (
                 <div className="cover-page">
-                    <div className="photo-page-container">
-                    <h1>{this.state.photoDiary.title}</h1>
-                    {/* <img src={this.state.photoDiary.feature_image_url}/> */}
+                    <div className="cover-photo" style={{backgroundImage: `url(${this.state.photoDiary.feature_image_url})`}}>
+                        <h1>{this.state.photoDiary.title}</h1>
                     </div>
                 </div>
             );
@@ -33,12 +32,12 @@ class PhotoDiariesDetail extends Component<any, any> {
         else if  (this.page === 1){
             return (
                 <div className="double-page-spread">
-                    <div className="left-page-key-details">{this.page}
+                    <div className="left-page-key-details book-page">
                         <div className="photo-page-container">
                             <h3>Location<br/>Date<br/>Camera<br/>Lens<br/></h3>
                         </div>
                     </div>
-                    <div className="right-page-summary">{this.page}
+                    <div className="right-page-summary book-page">
                         <div className="photo-page-container">
                             <p>Summary of the place/photo diary</p>
                         </div>
@@ -48,12 +47,14 @@ class PhotoDiariesDetail extends Component<any, any> {
         }
         else {
             return (
-                <div>
-                    <div className="left-page-image">{this.page}
-                        <h3>IMAGE</h3>
+                <div className="double-page-spread">
+                    <div className="left-page-key-details">{this.page}
+                        <div className="photo-page-container">
+                        </div>
                     </div>
-                    <div className="right-page-image">{this.page}
-                    <h3>IMAGE</h3>
+                    <div className="right-page-summary">{this.page}
+                        <div className="photo-page-container">
+                        </div>
                     </div>
                 </div>
             );
@@ -69,11 +70,13 @@ class PhotoDiariesDetail extends Component<any, any> {
     render() {
 
         return (
-            <div id="photo-diary-detail">
-                {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
-                <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
-                <div onClick={e => {this.incPage(1);}} className="fas fa-chevron-right"/>
-                {this.renderSection()}
+            <div id="photo-diary-detail-page">
+                <div id="photo-diary-detail">
+                    {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
+                    <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
+                    <div onClick={e => {this.incPage(1);}} className="fas fa-chevron-right"/>
+                    {this.renderSection()}
+                </div>
                 <Footer/>
             </div>
         );

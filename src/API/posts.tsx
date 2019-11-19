@@ -140,7 +140,7 @@ export async function getPostDetail(id: number): Promise<Post> {
     return formatPost(postData);
 }
 export async function getPostDetailBySlug(slug: string): Promise<Post> {
-    const postsData = await axios.get(`${baseUrl}wp/v2/posts?slug=${slug}`);
+    const postsData = await axios.get(`${baseUrl}wp/v2/posts?slug=${slug}&_embed`);
 
     if (postsData.data.length) {
         return formatPost(postsData.data[0]);

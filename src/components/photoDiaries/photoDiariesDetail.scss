@@ -1,137 +1,163 @@
-#photo-diary-detail {
-    h3{
-        margin:50px; 
-        color:black; 
-        padding:30px;
-    }
-    p{
-        margin:50px;
-        color:black;
-        padding:30px;
-    }
-    .cover-page{
-        $wid: 60;
-        $ar: 2/3;
-        $padtop: $ar*$wid/100;
-        $left: (100 - $wid)/2/100; 
-        width:#{$wid}vw;
-        height: 0px;
-        padding: 0px;
-        padding-top: percentage($padtop);
-        background-color: black;
-        position: absolute;
-        left: percentage($left);
-        top: 50%; 
-        transform: translateY(-50%);
-        // box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
-        // transform-style: preserve-3d;
-        border: 5px solid #666;
-    }  
+@import "../../styles/colors";
 
-    .photo-page-container{
-        h1{
-            padding: 40px;
-            text-align: center;
-            color:white;
+#photo-diary-detail-page {
+    .footer-links{
+        p{
+            color:black;
+        }
+    }
+    #photo-diary-detail {
+        h3{
+            margin:50px; 
+            color:black; 
+            padding:30px;
+        }
+        p{
+            margin:50px;
+            color:black;
+            padding:30px;
+        }
+        .cover-page{
+            $wid: 60;
+            $ar: 2/3;
+            $padtop: $ar*$wid/100;
+            $left: (100 - $wid)/2/100; 
+            width:#{$wid}vw;
+            height: 0px;
+            padding: 0px;
+            padding-top: percentage($padtop);
+            background-color: black;
+            position: absolute;
+            left: percentage($left);
+            top: 50%; 
+            transform: translateY(-50%);
+            border: 5px solid #666;
+            .cover-photo{
+                right: 0px;
+                bottom: 0px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                background-size: cover;
+                h1{
+                    padding: 40px;
+                    text-align: center;
+                    color:white;
+                }
+            }
+        }
+
+
+        .double-page-spread {
+            // variables for setting book dimensions
+            $borderWidth: 17px;
+            $wid: 34;
+            $ar: 4/3;
+            $padtop: $ar*$wid/100;
+            .book-page.left-page-key-details{
+                left: percentage((50 - $wid)/100);
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                .photo-page-container {
+                    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+                }
+                .photo-page-container:before {
+                    border-top-right-radius: 50%;
+                    transform: rotate(-3deg);
+                    left: 1px;
+                }
+                .photo-page-container:after {
+                    border-bottom-right-radius: 50%;
+                    transform: rotate(3deg);
+                    left: 1px;
+                }
+            }
+            .book-page.right-page-summary{
+                right: percentage((50 - $wid)/100);
+                border-left: none;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                .photo-page-container {
+                    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+                }
+                .photo-page-container:before {
+                    border-top-left-radius: 50%;
+                    transform: rotate(3deg);
+                    right: 1px;
+                }
+                .photo-page-container:after {
+                    border-bottom-left-radius: 50%;
+                    transform: rotate(-3deg);
+                    right: 1px;
+                }
+            }
+            .book-page {
+                border: $borderWidth solid black;
+                border-radius: 6px;
+                width:calc(#{$wid}vw - #{$borderWidth});
+                height: 0px;
+                padding: 0px;
+                padding-top: percentage($padtop);
+                background-color: black;
+                position: absolute;
+                // top: 50%; 
+                // transform: translateY(-50%);
+                bottom: 10px;
+                background: white;
+                .photo-page-container{
+                    right: 0px;
+                    bottom: 0px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background-size: cover;
+                    &:before {
+                        width: 100%;
+                        height: 50px;
+                        content: '';
+                        display: block;
+                        margin-top: 10px;
+                        top: -22px;
+                        position: absolute;
+                        background: white;
+                    }
+                    &:after {
+                        width: 100%;
+                        height: 50px;
+                        content: '';
+                        display: block;
+                        margin-bottom: 10px;
+                        bottom: -22px;
+                        position: absolute;
+                        background: white;
+                    }
+                }
+            }
         }
     }
 
-
-    .left-page-key-details{
-        $wid: 30;
-        $ar: 4/3;
-        $padtop: $ar*$wid/100;
-        width:#{$wid}vw;
-        height: 0px;
-        padding: 0px;
-        padding-top: percentage($padtop);
-        // background-color: black;
-        position: absolute;
-        left: 20%;
-        top: 50%; 
-        transform: translateY(-50%);
-        // background: linear-gradient(45deg, #ffffff 0%, #e5e5e5 100%);
-        // adjust this gradient to suite coverig an image. start with white at 0.3 then move the transparetna dn black
-        // 
-        background: linear-gradient(to right, #ffffff 0%, #333 95%);
-        // transform-style: preserve-3d;
-        // transform: translate3d(0px, 0px, 0.02px);
-        // padding-left: 40px;
-        border: 2px solid #333;
+    // FIX so that first section doesn't have bak arrow and last doesn't have forward 
+    .fas.fa-chevron-right {
+        font-size:50px;
+        text-shadow: 5px 5px 5px black;
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        z-index:2;
+        &:hover {
+            cursor: pointer;
+        }
     }
-    .right-page-summary{
-        $wid: 30;
-        $ar: 4/3;
-        $padtop: $ar*$wid/100;
-        width:#{$wid}vw;
-        height: 0px;
-        padding: 0px;
-        padding-top: percentage($padtop);
-        background-color: black;
-        position: absolute;
-        right: 20%;
-        top: 50%; 
-        transform: translateY(-50%);
-        background: linear-gradient(to left, #ffffff 0%, #333 95%);
-        // overflow:hidden;
-        border:2px solid #333;
-    }
-    .left-page-image{
-        $wid: 30;
-        $ar: 4/3;
-        $padtop: $ar*$wid/100;
-        width:#{$wid}vw;
-        height: 0px;
-        padding: 0px;
-        padding-top: percentage($padtop);
-        background-color: black;
-        position: absolute;
-        left: 20%;
-        top: 50%; 
-        transform: translateY(-50%);
-    }
-    .right-page-image{
-        $wid: 30;
-        $ar: 4/3;
-        $padtop: $ar*$wid/100;
-        width:#{$wid}vw;
-        height: 0px;
-        padding: 0px;
-        padding-top: percentage($padtop);
-        background-color: black;
-        position: absolute;
-        right: 20%;
-        top: 50%; 
-        transform: translateY(-50%);
-    }
-    .photo-page-container {
-        position: absolute;
-        top: 0px;
-        left: 0px;
+    .fas.fa-chevron-left {   
+        font-size:50px;
+        text-shadow: 5px 5px 5px black;
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        z-index:2;
+        &:hover {
+            cursor: pointer;
+        } 
     }
 }
-
-// FIX so that first section doesn't have bak arrow and last doesn't have forward 
-.fas.fa-chevron-right {
-    font-size:50px;
-    text-shadow: 5px 5px 5px black;
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    z-index:2;
-    &:hover {
-        cursor: pointer;
-    }
-}
-.fas.fa-chevron-left {   
-    font-size:50px;
-    text-shadow: 5px 5px 5px black;
-    position: fixed;
-    left: 20px;
-    top: 50%;
-    z-index:2;
-    &:hover {
-        cursor: pointer;
-    } 
-}
-
