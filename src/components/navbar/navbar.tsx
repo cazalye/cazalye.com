@@ -11,7 +11,7 @@ class Navbar extends Component {
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
                     <Navigation>
-                        <Link to="/destinations">Where to?</Link>
+                        <Link to="/map">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
@@ -34,7 +34,7 @@ class Navbar extends Component {
                 </Header>
                 {/* <Drawer title={title}>
                     <Navigation>
-                        <Link to="/destinations/destinations">Destinations</Link>
+                        <Link to="/map/map">Where to?</Link>
                         <Link to="/photoDiaries/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog/blog">Blog</Link>
                         <Link to="/about/about">About</Link>
