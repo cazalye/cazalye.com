@@ -1,10 +1,13 @@
 #photo-diary-detail {
-    // color: black;
     h3{
-        margin:50px;  
+        margin:50px; 
+        color:black; 
+        padding:30px;
     }
     p{
         margin:50px;
+        color:black;
+        padding:30px;
     }
     .cover-page{
         $wid: 60;
@@ -19,9 +22,21 @@
         position: absolute;
         left: percentage($left);
         top: 50%; 
-        // transform: translate(-50%,-50%);
         transform: translateY(-50%);
+        // box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+        // transform-style: preserve-3d;
+        border: 5px solid #666;
+    }  
+
+    .photo-page-container{
+        h1{
+            padding: 40px;
+            text-align: center;
+            color:white;
+        }
     }
+
+
     .left-page-key-details{
         $wid: 30;
         $ar: 4/3;
@@ -30,11 +45,19 @@
         height: 0px;
         padding: 0px;
         padding-top: percentage($padtop);
-        background-color: black;
+        // background-color: black;
         position: absolute;
         left: 20%;
         top: 50%; 
         transform: translateY(-50%);
+        // background: linear-gradient(45deg, #ffffff 0%, #e5e5e5 100%);
+        // adjust this gradient to suite coverig an image. start with white at 0.3 then move the transparetna dn black
+        // 
+        background: linear-gradient(to right, #ffffff 0%, #333 95%);
+        // transform-style: preserve-3d;
+        // transform: translate3d(0px, 0px, 0.02px);
+        // padding-left: 40px;
+        border: 2px solid #333;
     }
     .right-page-summary{
         $wid: 30;
@@ -49,22 +72,37 @@
         right: 20%;
         top: 50%; 
         transform: translateY(-50%);
+        background: linear-gradient(to left, #ffffff 0%, #333 95%);
+        // overflow:hidden;
+        border:2px solid #333;
     }
     .left-page-image{
-        width: 700px;
-        height: 400px;
+        $wid: 30;
+        $ar: 4/3;
+        $padtop: $ar*$wid/100;
+        width:#{$wid}vw;
+        height: 0px;
+        padding: 0px;
+        padding-top: percentage($padtop);
         background-color: black;
         position: absolute;
-        left: 50px;
-        top: 150px;
+        left: 20%;
+        top: 50%; 
+        transform: translateY(-50%);
     }
     .right-page-image{
-        width: 700px;
-        height: 400px;
+        $wid: 30;
+        $ar: 4/3;
+        $padtop: $ar*$wid/100;
+        width:#{$wid}vw;
+        height: 0px;
+        padding: 0px;
+        padding-top: percentage($padtop);
         background-color: black;
         position: absolute;
-        right: 50px;
-        top: 150px;
+        right: 20%;
+        top: 50%; 
+        transform: translateY(-50%);
     }
     .photo-page-container {
         position: absolute;
@@ -73,21 +111,27 @@
     }
 }
 
-.next-section {
-    width: 50px;
-    height: 50px;
-    background-color: red;
+// FIX so that first section doesn't have bak arrow and last doesn't have forward 
+.fas.fa-chevron-right {
+    font-size:50px;
+    text-shadow: 5px 5px 5px black;
     position: fixed;
-    right: 50px;
-    top: 200px;
-    z-index:10;
+    right: 20px;
+    top: 50%;
+    z-index:2;
+    &:hover {
+        cursor: pointer;
+    }
 }
-.previous-section {
-    width: 50px;
-    height: 50px;
-    background-color: red;
+.fas.fa-chevron-left {   
+    font-size:50px;
+    text-shadow: 5px 5px 5px black;
     position: fixed;
-    left: 50px;
-    top: 200px;
-    z-index:10;
+    left: 20px;
+    top: 50%;
+    z-index:2;
+    &:hover {
+        cursor: pointer;
+    } 
 }
+

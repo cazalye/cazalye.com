@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {getPostDetailBySlug} from '../../API/posts';
 import "./photoDiariesDetail.scss";
+import Footer from "../footer/footer";
 
 
 class PhotoDiariesDetail extends Component<any, any> {
@@ -23,15 +24,15 @@ class PhotoDiariesDetail extends Component<any, any> {
             return (
                 <div className="cover-page">
                     <div className="photo-page-container">
-                        <h1>{this.state.photoDiary.title}</h1>
-                    </div>
+                    <h1>{this.state.photoDiary.title}</h1>
                     {/* <img src={this.state.photoDiary.feature_image_url}/> */}
+                    </div>
                 </div>
             );
         }
         else if  (this.page === 1){
             return (
-                <div>
+                <div className="double-page-spread">
                     <div className="left-page-key-details">{this.page}
                         <div className="photo-page-container">
                             <h3>Location<br/>Date<br/>Camera<br/>Lens<br/></h3>
@@ -70,13 +71,15 @@ class PhotoDiariesDetail extends Component<any, any> {
         return (
             <div id="photo-diary-detail">
                 {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
-                <div onClick={e => {this.incPage(-1)}} className="previous-section"/>
-                <div onClick={e => {this.incPage(1);}} className="next-section"/>
+                <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
+                <div onClick={e => {this.incPage(1);}} className="fas fa-chevron-right"/>
                 {this.renderSection()}
+                <Footer/>
             </div>
         );
     }
 }
+
 
 export default PhotoDiariesDetail;
 
