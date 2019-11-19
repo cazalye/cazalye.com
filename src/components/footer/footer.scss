@@ -10,11 +10,14 @@
         padding: 20px;
         padding-bottom:15px;
     }
+    .footer-newsletter{
+        position: fixed;
+        bottom: 5px;
+        left:300px;
+        p{
+            color:red;
+        }
+    }
 }
 
 
-.footer-newsletter{
-    position: fixed;
-    bottom: 5px;
-    left: 400px;
-}
