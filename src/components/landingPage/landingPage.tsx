@@ -2,11 +2,13 @@ import "./landingPage.scss";
 import React, { Component } from 'react';
 import Map from "../map/map";
 import Footer from "../footer/footer";
+import Navbar from "../navbar/navbar";
 
 class LandingPage extends Component {
     render() {
         return (
             <div id="landing">
+                <Navbar/>
                 <div id="landing1">
                     <div className="mission">
                         <h2>Inspiration for your adventures</h2>

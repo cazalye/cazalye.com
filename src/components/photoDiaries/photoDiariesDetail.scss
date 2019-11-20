@@ -20,20 +20,21 @@
             padding:30px;
         }
         .cover-page{
-            $wid: 60;
+            $wid: 68;
             $ar: 2/3;
             $padtop: $ar*$wid/100;
             $left: (100 - $wid)/2/100; 
-            width:#{$wid}vw;
+            $borderWidth: 17px;
+            border: 17px solid black;
+            border-radius: 6px;
+            width:calc(#{$wid}% - #{$borderWidth});
             height: 0px;
             padding: 0px;
             padding-top: percentage($padtop);
             background-color: black;
             position: absolute;
+            bottom: 10px;
             left: percentage($left);
-            top: 50%; 
-            transform: translateY(-50%);
-            border: 5px solid #666;
             .cover-photo{
                 right: 0px;
                 bottom: 0px;
@@ -42,9 +43,11 @@
                 left: 0px;
                 background-size: cover;
                 h1{
-                    padding: 40px;
-                    text-align: center;
-                    color:white;
+                    margin-left: 20px;
+                    margin-top:20px;
+                    text-align: left;
+                    color:black;
+                    font-weight: 300;
                 }
             }
         }

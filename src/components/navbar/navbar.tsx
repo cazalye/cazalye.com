@@ -15,6 +15,9 @@ class Navbar extends Component {
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
+                        <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
+                            <i className="fa fa-envelope" aria-hidden="true" />
+                        </a>
                         <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-instagram" aria-hidden="true" />
                         </a>
@@ -32,12 +35,22 @@ class Navbar extends Component {
                         />
                     </Navigation>
                 </Header>
-                {/* <Drawer title={title}>
+
+                {/* <Drawer className="hamburger">
                     <Navigation>
-                        <Link to="/map/map">Where to?</Link>
-                        <Link to="/photoDiaries/photoDiaries">Photo Diaries</Link>
-                        <Link to="/blog/blog">Blog</Link>
-                        <Link to="/about/about">About</Link>
+                        <Link to="/map">Where to?</Link>
+                        <Link to="/photoDiaries">Photo Diaries</Link>
+                        <Link to="/blog">Blog</Link>
+                        <Link to="/about">About</Link>
+                        <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
+                            <i className="fa fa-envelope" aria-hidden="true" />
+                        </a>
+                        <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
+                            <i className="fab fa-instagram" aria-hidden="true" />
+                        </a>
+                        <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
+                            <i className="fab fa-pinterest-p" aria-hidden="true" />
+                        </a>
                     </Navigation>
                 </Drawer> */}
             </Layout>

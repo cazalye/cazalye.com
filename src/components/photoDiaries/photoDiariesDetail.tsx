@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {getPostDetailBySlug} from '../../API/posts';
 import "./photoDiariesDetail.scss";
-import Footer from "../footer/footer";
+// import Footer from "../footer/footer";
 import { url } from 'inspector';
+import NavbarHamburger from "../navbar/navbar_hamburger";
 
 
 class PhotoDiariesDetail extends Component<any, any> {
@@ -74,13 +75,13 @@ class PhotoDiariesDetail extends Component<any, any> {
 
         return (
             <div id="photo-diary-detail-page">
+                <NavbarHamburger/>
                 <div id="photo-diary-detail">
                     {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
                     <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
                     <div onClick={e => {this.incPage(1);}} className="fas fa-chevron-right"/>
                     {this.renderSection()}
                 </div>
-                {/* <Footer/> */}
             </div>
         );
     }

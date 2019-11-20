@@ -3,7 +3,6 @@
 body .mdl-layout{
     height: 70px;
     width: 100%;
-    color: $primaryColor;
     position: fixed;
     z-index: 10;
 
@@ -46,7 +45,7 @@ body .mdl-layout{
 
     // need to fix the function
     .search{
-        color:$accentColor;
+        color:black;
 
         i {
             -webkit-font-smoothing: antialiased;
