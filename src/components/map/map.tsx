@@ -1,40 +1,55 @@
-import "./map.scss";
-import React, { Component } from 'react';
-import MapGL from 'react-map-gl';
-// const MapGL = require("react-map-gl");
+import React, {Component} from 'react';
+import {render} from 'react-dom';
+// @ts-ignore
+import MapGL, {Source, Layer} from 'react-map-gl';
+import {dataLayer} from './map-style.js';
+import dataJson from "./continents.json";
 const MAPBOX_TOKEN = 'pk.eyJ1IjoiY2F6YWx5ZSIsImEiOiJjazM0NDNhbG0wd2FoM21wOWl1M2hpbTFsIn0.4imTAlDw7TvgEd-RjeR7-g';
 
-class Map extends Component {
-    state = {
-        mapStyle: '',
-        viewport: {
-          latitude: 37.805,
-          longitude: -122.447,
-          zoom: 15.5,
-          bearing: 0,
-          pitch: 0
-        }
-      };
-    render() {
-        const {viewport, mapStyle} = this.state;
-        return (
-            <div id="map-section">
-                <MapGL
-                    width="100%"
-                    height="100%"
-                    latitude={41.702599}
-                    longitude={-4.516411}
-                    zoom={1}
-                    scrollZoom={false}
-                    onViewportChange={(viewport) => {
-                        const {width, height, latitude, longitude, zoom} = viewport;
-                        // Optionally call `setState` and use the state to update the map.
-                    }}
-                    mapboxApiAccessToken={MAPBOX_TOKEN}
-                />
-            </div>
-        );
-    }
-}
+export default class Map extends Component<any, any> {
+  state = {
+    year: 2015,
+    data: null,
+    hoveredFeature: null,
+  };
 
-export default Map;
+  componentDidMount() {
+    // transform dataJson, add int values for continents
+    dataJson.features.forEach((feature: any, i) => {
+      feature.properties.index = i;
+    });
+    this.setState({data: dataJson});
+  }
+
+  _onHover = (event: any) => {
+    const {
+      features,
+      srcEvent: {offsetX, offsetY}
+    } = event;
+    const hoveredFeature = features && features.find((f: any) => f.layer.id === 'data');
+
+    this.setState({hoveredFeature, x: offsetX, y: offsetY});
+  }
+
+  render() {
+    const {data} = this.state;
+
+    return (
+      <div style={{height: '100%'}}>
+        <MapGL
+          width="100%"
+          height="100%"
+          latitude={41.702599}
+          longitude={-4.516411}
+          zoom={1}
+          mapboxApiAccessToken={MAPBOX_TOKEN}
+          onHover={this._onHover}
+        >
+          <Source type="geojson" data={data}>
+            <Layer {...dataLayer} />
+          </Source>
+        </MapGL>
+      </div>
+    );
+  }
+}
