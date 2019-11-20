@@ -65,7 +65,7 @@ function formatRelatedPost(postData: any): Post {
 
 function formatPost(postData: any): Post {
     const regExp = /<img.*?src="(.*?)".*?\/>/gm;
-    const match = regExp.exec(postData.content.rendered);
+    // const match = regExp.exec(postData.content.rendered);
     let m: any;
     const images: string[] = [];
     while ((m = regExp.exec(postData.content.rendered)) !== null) {
@@ -164,7 +164,6 @@ export function getPhotoDiaries(filter: PostsFilter = {}): Promise<Post[]> {
 
 export async function getRelatedPosts(postId: number): Promise<Post[]> {
     const posts = await axios.get(`${baseUrl}cazalye/post/related/${postId}`);
-    // debugger
 
     return posts.data.map(formatRelatedPost);
 }
