@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {getPostDetailBySlug} from '../../API/posts';
 import "./photoDiariesDetail.scss";
 import Footer from "../footer/footer";
+import { url } from 'inspector';
 
 
 class PhotoDiariesDetail extends Component<any, any> {
@@ -14,7 +15,7 @@ class PhotoDiariesDetail extends Component<any, any> {
         this.page = 0;
     }
     async componentDidMount() {
-        const photoDiary = await getPostDetailBySlug("helsinki-in-autumn");
+        const photoDiary = await getPostDetailBySlug("");
         this.setState({
             "photoDiary": photoDiary
         });
@@ -48,12 +49,14 @@ class PhotoDiariesDetail extends Component<any, any> {
         else {
             return (
                 <div className="double-page-spread">
-                    <div className="left-page-key-details">{this.page}
+                    <div className="left-page-key-details book-page">
                         <div className="photo-page-container">
+                            <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[0]})`}}/>
                         </div>
                     </div>
-                    <div className="right-page-summary">{this.page}
+                    <div className="right-page-summary book-page">
                         <div className="photo-page-container">
+                            <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[1]})`}}/>
                         </div>
                     </div>
                 </div>
@@ -77,7 +80,7 @@ class PhotoDiariesDetail extends Component<any, any> {
                     <div onClick={e => {this.incPage(1);}} className="fas fa-chevron-right"/>
                     {this.renderSection()}
                 </div>
-                <Footer/>
+                {/* <Footer/> */}
             </div>
         );
     }
@@ -85,6 +88,3 @@ class PhotoDiariesDetail extends Component<any, any> {
 
 
 export default PhotoDiariesDetail;
-
-
-// Add to analogue diary into:  One of my favourite things about travelling to and exploring new places is to wander aimlessly with my camera in hand, capturing local street life, landscapes and foreign feelings. As an introvert, it also gives me some time to myself, to escape the busy and people-filled aspects of travel. As the photographer Alec Soth wonderfully describes it; "I fell in love with photography because it was an excuse to wander around alone"..... Using a film camera heightens the sense of being lost in another culture- you're forced to slow down and really think about the image composition as there's a limited number of (rather expensive) images to shoot.
