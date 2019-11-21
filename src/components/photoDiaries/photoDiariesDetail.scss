@@ -184,10 +184,10 @@
 
     // FIX so that first section doesn't have bak arrow and last doesn't have forward 
     .fas.fa-chevron-right {
-        font-size:50px;
+        font-size:70px;
         // text-shadow: 5px 5px 5px black;
         position: fixed;
-        right: 20px;
+        right: 6%;
         top: 50%;
         z-index:2;
         &:hover {
@@ -195,10 +195,10 @@
         }
     }
     .fas.fa-chevron-left {   
-        font-size:50px;
+        font-size:70px;
         // text-shadow: 5px 5px 5px black;
         position: fixed;
-        left: 20px;
+        left: 6%;
         top: 50%;
         z-index:2;
         &:hover {
