@@ -61,14 +61,36 @@
             $wid: 34;
             $ar: 4/3;
             $padtop: $ar*$wid/100;
+            .photo-inner-shadow {
+                bottom: 0px;
+                position: absolute;
+                top: -10px;
+                bottom: -10px;
+                left: 0px;
+                right: -100%;
+                background:linear-gradient(90deg, transparent 45%,rgba(0, 0, 0, 0.01) 46%, rgba(0, 0, 0, 0.1) 48%,rgba(0, 0, 0, 0.25) 49.7%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.25) 50.3%, rgba(0, 0, 0, 0.1) 52%, rgba(0,0,0, 0.01) 54%, transparent 55%);
+                z-index: 1000;
+                // box-shadow: rgba(0,0,0,0.6) 0 1em 3em;
+            }
+            .photo-outer-shadow {
+                bottom: 0px;
+                position: absolute;
+                top: -17px;
+                bottom: -17px;
+                left: -10%;
+                right: -110%;
+                background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.05) 1%, rgba(0,0,0,0.3) 4%, transparent 0%, transparent 96%, rgba(0,0,0,0.3) 96%, rgba(0,0,0,0.05) 99%, transparent 100%);
+                z-index: 1001;
+            }
             .book-page.left-page-key-details{
+                z-index: 1;
                 left: percentage((50 - $wid)/100);
                 transform: translateX(1px);
                 border-right: none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
                 .photo-page-container {
-                    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+                    // box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
                 }
                 .photo-page-container:before {
                     border-top-right-radius: 50%;
@@ -85,7 +107,7 @@
                 border-top-left-radius: 0;
                 border-bottom-left-radius: 0;
                 .photo-page-container {
-                    box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
+                    // box-shadow: rgba(0,0,0,0.5) 0 1em 3em;
                 }
                 .photo-page-container:before {
                     border-top-left-radius: 50%;

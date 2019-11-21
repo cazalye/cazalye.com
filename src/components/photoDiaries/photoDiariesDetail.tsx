@@ -35,6 +35,8 @@ class PhotoDiariesDetail extends Component<any, any> {
             return (
                 <div className="double-page-spread">
                     <div className="left-page-key-details book-page">
+                        <div className="photo-inner-shadow"/>
+                        <div className="photo-outer-shadow"/>
                         <div className="photo-page-container">
                             <h3>Location<br/>Date<br/>Camera<br/>Lens<br/></h3>
                         </div>
@@ -47,10 +49,13 @@ class PhotoDiariesDetail extends Component<any, any> {
                 </div>
             );
         }
-        else {
+        // CHANGE THIS conditional statement to rely on flag of PORTRAIT / LANSCAPE which come from new API
+        else if (this.page === 2){
             return (
                 <div className="double-page-spread">
                     <div className="left-page-key-details book-page">
+                        <div className="photo-inner-shadow"/>
+                        <div className="photo-outer-shadow"/>
                         <div className="photo-page-container">
                             <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[0]})`}}/>
                         </div>
@@ -59,6 +64,23 @@ class PhotoDiariesDetail extends Component<any, any> {
                         <div className="photo-page-container">
                             <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[1]})`}}/>
                         </div>
+                    </div>
+                </div>
+            );
+        }
+        // CHANGE THIS conditional statement to rely on flag of PORTRAIT / LANSCAPE which come from new API
+        else if (this.page === 3) {
+            return (
+                <div className="double-page-spread landscape">
+                    <div className="left-page-key-details book-page">
+                        <div className="photo-inner-shadow"/>
+                        <div className="photo-outer-shadow"/>
+                        <div className="photo-page-container">
+                            <div className="photo landscape" style={{backgroundImage: `url(${this.state.photoDiary.images[2]})`}}/>
+                        </div>
+                    </div>
+                    <div className="right-page-summary book-page">
+                        <div className="photo-page-container"/>
                     </div>
                 </div>
             );
