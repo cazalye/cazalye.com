@@ -144,15 +144,20 @@
                         width: calc(100% - 20px);
                         height: calc(100% - 20px);
                         background-size: cover;
-                        z-index: 10000;
+                        z-index: 100;
                         position: absolute;
                         left: 50%;
                         top: 50%;
                         transform: translate(-50%, -50%);
                     }
+                    .photo.landscape{
+                        width: calc(200% - 40px);
+                        left: 100%;
+                    }
                 }
             }
         }
+
     }
 
     // FIX so that first section doesn't have bak arrow and last doesn't have forward 

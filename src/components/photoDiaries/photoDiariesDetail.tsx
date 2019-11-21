@@ -63,6 +63,20 @@ class PhotoDiariesDetail extends Component<any, any> {
                 </div>
             );
         }
+        // CHANGE THIS conditional statement to be LAST PAGE
+        // Style as plain black page with statement.. "if you liked this photo diary then you might also like.." 2-4 book cover images of other photo diaries
+        else if (this.page === 4) {
+            return (
+                <div className="double-page-spread">
+                    <div className="left-page-key-details book-page">
+                        <div className="photo-page-container">
+                            <p>if you liked this photo diary then you might also like... </p>
+                            {/* <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[3]})`}}/> */}
+                        </div>
+                    </div>
+                </div>
+            );
+        }
     }
     incPage(increment: number) {
         this.page = this.page + increment;
