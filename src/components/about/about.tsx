@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './about.scss';
-import Footer from '../footer/footer';
-import Navbar from '../navbar/navbar';
 import NavbarHider from '../navbar-hider/NavbarHider';
 
 class About extends Component {
     render() {
         return (
             <div className="about">
-                <NavbarHider hamburgerMode={true}/>
+                <NavbarHider hamburgerMode={true} blueTitle={true}/>
                 <div className="mission">
                         <h2>Inspiration for your adventures</h2>
                         <h3>at home and abroad</h3>
@@ -25,14 +23,14 @@ class About extends Component {
                     <div className="post-icons">
                         <div className="photo-diaries-link">
                             <h3>Photo Diaries</h3>
-                            <p>A visual journey around the world</p>
+                            <p className="blog-post-text">Visual journies<br/> around the world</p>
                             <div className="diary-icon">
                                 <Link to="/photoDiaries"><i className="fas fa-book-open"/></Link>
                             </div>
                         </div>
                         <div className="blog-post-link">
                             <h3>Blog Posts</h3>
-                            <p>The best activities, sites & coffee spots</p>
+                            <p className="blog-post-text">The best activities, <br/>sites & coffee spots</p>
                             <div className="diary-icon" >
                                 <Link to="/blog"><i className="fas fa-list"/></Link>
                             </div>

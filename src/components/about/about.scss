@@ -4,7 +4,7 @@
 .about{ 
     .mdl-layout .mdl-layout__inner-container{
         .header-title{
-            color:$raftingBlue;
+            color:$aboutAccent;
         }
         .mdl-layout__header-row .mdl-navigation{
             // margin-right: 500px;
@@ -49,33 +49,36 @@
         }
         .post-icons{
             display: flex;
+            margin:auto;
             padding-top:10px;
-            padding-left:40px;
+            padding-left:80px;
             padding-right:0px;
+            text-align: center;
             h3{
-                color:$raftingBlue;
+                color:$aboutAccent;
                 margin-bottom:0px;
                 padding-left:0px;
                 text-align:center;
             }
-            p{
+            .blog-post-text{
                 font-size:16px;
                 text-align: center;
+                margin:auto;
                 margin-top:0px;
                 margin-bottom:10px;
                 padding-left:0px;
-                padding-right:50px;
+                padding-right:0px;
+                line-height:20px;
             }
-        }
-        .diary-icon {
-            // padding-left:30px;
-            padding-top:20px;
-            position: absolute;
             i {
-                color:$raftingBlue;
-                font-size: 60px;
+                color:$aboutAccent;
+                font-size: 40px;
+            }
+            .photo-diaries-link{
+                margin-right:150px;
             }
         }
+
 
 
         .about-me-link{
