@@ -3,13 +3,13 @@ import {Link} from 'react-router-dom';
 import './about.scss';
 import Footer from '../footer/footer';
 import Navbar from '../navbar/navbar';
+import NavbarHider from '../navbar-hider/NavbarHider';
 
 class About extends Component {
     render() {
         return (
             <div className="about">
-                <Navbar/>
-                {/* <h1>About</h1> */}
+                <NavbarHider hamburgerMode={true}/>
                 <div className="mission">
                         <h2>Inspiration for your adventures</h2>
                         <h3>at home and abroad</h3>

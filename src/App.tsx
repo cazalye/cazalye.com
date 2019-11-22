@@ -10,6 +10,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
+        <Navbar/>
         <View/>
     </div>
   );

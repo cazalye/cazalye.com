@@ -1,9 +1,15 @@
 @import "../../styles/colors";
 
+body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
+    .mdl-layout__drawer-button {
+        display: block;
+    }
+    .mdl-layout__header .mdl-navigation__link {
+        display: none;
+    }
+}
+
 body .mdl-layout .mdl-layout__inner-container{
-    width: 100%;
-    position: fixed;
-    z-index: 10;
     .mdl-navigation__link{
         color: $primaryColor;
         font-size: 16px;
@@ -46,7 +52,7 @@ body .mdl-layout .mdl-layout__inner-container{
         left: auto;
         right:30px;
         top:15px;
-        display: block;
+        display: none;
         position: absolute;
         margin: 8px 12px;
         cursor: pointer;

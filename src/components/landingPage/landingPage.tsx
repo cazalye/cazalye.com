@@ -8,7 +8,6 @@ class LandingPage extends Component {
     render() {
         return (
             <div id="landing">
-                <Navbar/>
                 <div id="landing1">
                     <div className="mission">
                         <h2>Inspiration for your adventures</h2>

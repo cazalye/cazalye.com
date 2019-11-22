@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {getPostDetailBySlug} from '../../API/posts';
 import "./photoDiariesDetail.scss";
 // import Footer from "../footer/footer";
-import { url } from 'inspector';
-import Navbar from "../navbar/navbar";
+import NavbarHider from '../navbar-hider/NavbarHider';
 
 
 class PhotoDiariesDetail extends Component<any, any> {
@@ -111,7 +110,7 @@ class PhotoDiariesDetail extends Component<any, any> {
 
         return (
             <div id="photo-diary-detail-page">
-                <Navbar/>
+                <NavbarHider hamburgerMode={true}/>
                 <div id="photo-diary-detail">
                     {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
                     <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
