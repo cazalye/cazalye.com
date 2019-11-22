@@ -1,5 +1,11 @@
 @import "../../styles/colors";
 
+body.blue-title .mdl-layout .mdl-layout__inner-container{
+    .header-title{
+        color: $aboutAccent;
+    }
+}
+
 body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
     .mdl-layout__drawer-button {
         display: block;
