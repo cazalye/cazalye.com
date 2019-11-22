@@ -3,10 +3,10 @@
 #photo-diary-detail-page {
     height: 100vh;
     background: #666;
-    .footer-links{
-        p{
-            color:black;
-        }
+    .mdl-navigation__link{
+        display: none;
+    }
+    .mdl-layout__drawer-button{
     }
     #photo-diary-detail {
         h3{

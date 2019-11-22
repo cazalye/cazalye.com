@@ -3,7 +3,7 @@ import {getPostDetailBySlug} from '../../API/posts';
 import "./photoDiariesDetail.scss";
 // import Footer from "../footer/footer";
 import { url } from 'inspector';
-import NavbarHamburger from "../navbar/navbar_hamburger";
+import Navbar from "../navbar/navbar";
 
 
 class PhotoDiariesDetail extends Component<any, any> {
@@ -111,7 +111,7 @@ class PhotoDiariesDetail extends Component<any, any> {
 
         return (
             <div id="photo-diary-detail-page">
-                <NavbarHamburger/>
+                <Navbar/>
                 <div id="photo-diary-detail">
                     {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
                     <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
