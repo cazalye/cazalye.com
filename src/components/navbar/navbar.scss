@@ -1,11 +1,9 @@
 @import "../../styles/colors";
 
-body .mdl-layout{
-    height: 70px;
+body .mdl-layout .mdl-layout__inner-container{
     width: 100%;
     position: fixed;
     z-index: 10;
-
     .mdl-navigation__link{
         color: $primaryColor;
         font-size: 16px;
@@ -20,46 +18,43 @@ body .mdl-layout{
         left:20px;
         top:15px;
     }
-    p{
-        color: $accentColor;
-        font-family: 'Quentin';
-        font-size: 15px;
-        position: fixed;
-        left:20px;
-        top:44px;
-        word-spacing: 20px;
-    }
-
-    .social-links {
-        text-align: left;
-        position: fixed;
-        top:0px;
-        left:200px;
-        i{
-            color: $accentColor;
-            font-size:22px;
-            padding: 20px;
-            padding-bottom:15px;
-        }
-    }
-
     // need to fix the function
+    .mdl-textfield__label:after{
+        background-color: $accentColor;
+        height:1.5px;
+    }
     .search{
-        color:black;
-
+        color:$primaryColor;
         i {
             -webkit-font-smoothing: antialiased;
             display: inline-block;
             font-style: normal;
-            font-size: 20px;
+            font-size: 16px;
             font-variant: normal;
             text-rendering: auto;
             font-weight: 900;
-            line-height: 1;
+            line-height: 1.5;
             font-family: "Font Awesome 5 Pro";
             &:before {
                 content: "\f002";
             }
         }
+    }
+    .mdl-layout__drawer-button{
+        color: white;
+        z-index: 4;
+        left: auto;
+        right:30px;
+        top:15px;
+        display: block;
+        position: absolute;
+        margin: 8px 12px;
+        cursor: pointer;
+        width: 48px;
+        border:none;
+        i{
+            font-size: 40px;   
+        }
+
     }
 }
