@@ -25,13 +25,12 @@ class Navbar extends Component {
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
                         </a>
                         <Textfield
-                        className="search"
-                        value=""
-                        onChange={() => {}}
-                        label="search"
-                        placeholder="search"
-                        expandable={true}
-                        expandableIcon=""
+                            className="search"
+                            value=""
+                            label="search"
+                            placeholder="search"
+                            expandable={true}
+                            expandableIcon=""
                         />
                     </Navigation>
                 </Header>

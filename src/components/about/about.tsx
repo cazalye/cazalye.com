@@ -27,14 +27,14 @@ class About extends Component {
                             <h3>Photo Diaries</h3>
                             <p>A visual journey around the world</p>
                             <div className="diary-icon">
-                                <Link to="/photoDiaries"><i className="fas fa-book-open"></i></Link>
+                                <Link to="/photoDiaries"><i className="fas fa-book-open"/></Link>
                             </div>
                         </div>
                         <div className="blog-post-link">
                             <h3>Blog Posts</h3>
                             <p>The best activities, sites & coffee spots</p>
                             <div className="diary-icon" >
-                                <Link to="/blog"><i className="fas fa-list"></i></Link>
+                                <Link to="/blog"><i className="fas fa-list"/></Link>
                             </div>
                         </div>
                     </div>
