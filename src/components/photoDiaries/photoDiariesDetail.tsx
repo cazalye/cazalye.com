@@ -63,7 +63,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             return (null);
         } else {
             if (this.state.page === 0) {
-                // debugger
+                // COVER PAGE
                 return (
                     <div className="cover-page">
                         <div className="cover-photo" style={{backgroundImage: `url(${this.state.photoDiary.featureMedia.sizes.large})`}}>
@@ -71,8 +71,8 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                         </div>
                     </div>
                 );
-            }
-            else if  (this.state.page === 1){
+            } else if (this.state.page === 1) {
+                // INFO PAGE
                 return (
                     <div className="double-page-spread">
                         <div className="left-page-key-details book-page">
@@ -89,44 +89,49 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                         </div>
                     </div>
                 );
-            }
-            // CHANGE THIS conditional statement to rely on flag of PORTRAIT / LANSCAPE which come from new API
-            else if (this.state.page === 2){
-                return (
-                    <div className="double-page-spread">
-                        <div className="left-page-key-details book-page">
-                            <div className="photo-inner-shadow"/>
-                            <div className="photo-outer-shadow"/>
-                            <div className="photo-page-container">
-                                <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[0].sizes.large})`}}/>
+            } else if (this.state.page <= this.state.photoDiary.spreads.length + 1) {
+                const spread = this.state.photoDiary.spreads[this.state.page - 2];
+                if (spread.aspectRatio === "portrait") {
+                    // PORTRAIT PAGE
+                    let rightPhotoHTML = (null);
+                    if (spread.images.length > 1) {
+                        rightPhotoHTML = (<div className="photo" style={{backgroundImage: `url(${spread.images[1].sizes.large})`}}/>);
+                    }
+                    return (
+                        <div className="double-page-spread">
+                            <div className="left-page-key-details book-page">
+                                <div className="photo-inner-shadow"/>
+                                <div className="photo-outer-shadow"/>
+                                <div className="photo-page-container">
+                                    <div className="photo" style={{backgroundImage: `url(${spread.images[0].sizes.large})`}}/>
+                                </div>
+                            </div>
+                            <div className="right-page-summary book-page">
+                                <div className="photo-page-container">
+                                    {rightPhotoHTML}
+                                </div>
                             </div>
                         </div>
-                        <div className="right-page-summary book-page">
-                            <div className="photo-page-container">
-                                <div className="photo" style={{backgroundImage: `url(${this.state.photoDiary.images[1].sizes.large})`}}/>
+                    );
+                } else {
+                    // LANDSCAPE PAGE
+                    return (
+                        <div className="double-page-spread landscape">
+                            <div className="left-page-key-details book-page">
+                                <div className="photo-inner-shadow"/>
+                                <div className="photo-outer-shadow"/>
+                                <div className="photo-page-container">
+                                    <div className="photo landscape" style={{backgroundImage: `url(${spread.images[0].sizes.large})`}}/>
+                                </div>
+                            </div>
+                            <div className="right-page-summary book-page">
+                                <div className="photo-page-container"/>
                             </div>
                         </div>
-                    </div>
-                );
-            }
-            // CHANGE THIS conditional statement to rely on flag of PORTRAIT / LANSCAPE which come from new API
-            else if (this.state.page === 3) {
-                return (
-                    <div className="double-page-spread landscape">
-                        <div className="left-page-key-details book-page">
-                            <div className="photo-inner-shadow"/>
-                            <div className="photo-outer-shadow"/>
-                            <div className="photo-page-container">
-                                <div className="photo landscape" style={{backgroundImage: `url(${this.state.photoDiary.images[2]})`}}/>
-                            </div>
-                        </div>
-                        <div className="right-page-summary book-page">
-                            <div className="photo-page-container"/>
-                        </div>
-                    </div>
-                );
-            }
-            else if (this.state.page === 4) {
+                    );
+                }
+            } else {
+                // END PAGE
                 let relatedPosthtml: any = [];
                 if (this.state.relatedPhotoDiaries.length > 1) {
                     relatedPosthtml = [
