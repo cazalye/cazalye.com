@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getBlogPosts, getRelatedPosts} from '../../API/posts';
+import { getBlogPosts } from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
 
