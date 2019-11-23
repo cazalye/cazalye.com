@@ -68,6 +68,8 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             });
 
         } catch (err) {
+            // tslint:disable-next-line: no-console
+            console.error(err);
             this.setState({
                 error: true
             });
@@ -84,7 +86,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 // debugger
                 return (
                     <div className="cover-page">
-                        <div className="cover-photo" style={{backgroundImage: `url(${this.state.photoDiary.images[0].sizes.large})`}}>
+                        <div className="cover-photo" style={{backgroundImage: `url(${this.state.photoDiary.featureMedia.sizes.large})`}}>
                             <h1>{this.state.photoDiary.title}</h1>
                         </div>
                     </div>

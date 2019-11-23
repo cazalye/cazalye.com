@@ -45,6 +45,28 @@ function getFeatureImageSizesFromEmbedded(postData: any): FeatureImageSizes | nu
 }
 
 /**
+ * Format a media type i.e. by adding base Url to filename
+ *
+ * @param {*} media
+ * @returns {Media}
+ */
+function formatMedia(media: any): Media {
+    const sizes: any = {};
+    for (const size of Object.keys(media.sizes)) {
+        sizes[size] = baseUrlImages + media.file.substr(0, media.file.lastIndexOf("/") + 1) + media.sizes[size].file;
+    }
+
+    return {
+        aspectRatio:  (media.width > media.height) ? "landscape" : "portrait",
+        height: media.height,
+        width: media.width,
+        file: baseUrlImages + media.file,
+        sizes: sizes
+    };
+
+}
+
+/**
  * Format the post, building feature image, images, and other stuff
  *
  * @export
@@ -53,14 +75,7 @@ function getFeatureImageSizesFromEmbedded(postData: any): FeatureImageSizes | nu
  */
 export function formatPost(postData: any): Post {
 
-    const images = postData.medias;
-    for (const image of images) {
-        for (const size of Object.keys(image.sizes)) {
-            image.sizes[size] = baseUrlImages + image.file.substr(0, image.file.lastIndexOf("/") + 1) + image.sizes[size].file;
-        }
-
-        image.aspectRatio = (image.width > image.height) ? "landscape" : "portrait";
-    }
+    const images: Media[] = postData.medias.map(formatMedia);
 
     return {
         id: postData.id,
@@ -73,8 +88,9 @@ export function formatPost(postData: any): Post {
         description: postData.excerpt.rendered,
         images: images,
         categories: postData.categoriesObjects,
+        featureMedia: formatMedia(postData.feature_image),
         spreads: buildSpreadsFromImages(images)
-    } as Post;
+    };
 }
 
 /**

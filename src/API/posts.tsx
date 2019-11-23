@@ -22,6 +22,7 @@ export interface Post {
     description: string;
     content: string;
     categories: Category[];
+    featureMedia: Media;
     images: Media[];
     spreads: Spread[];
 }
