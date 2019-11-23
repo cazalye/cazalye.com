@@ -173,14 +173,23 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
     render() {
         if (this.state.error) {
             return (<NotFound/>);
+        } else if (!this.state.photoDiary) {
+            return (null);
         } else {
+            let leftArrow = (null);
+            if (this.state.page > 0) {
+                leftArrow = (<div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>);
+            }
+            let rightArrow = (null);
+            if (this.state.page < (this.state.photoDiary.spreads.length + 2)) {
+                rightArrow = (<div onClick={e => {this.incPage(+1);}} className="fas fa-chevron-right"/>);
+            }
             return (
                 <div id="photo-diary-detail-page">
                     <NavbarHider hamburgerMode={true}/>
                     <div id="photo-diary-detail">
-                        {/* TODO: remove previous/next button when page == limits; remove forceUpdate() */}
-                        <div onClick={e => {this.incPage(-1);}} className="fas fa-chevron-left"/>
-                        <div onClick={e => {this.incPage(1);}} className="fas fa-chevron-right"/>
+                        {leftArrow}
+                        {rightArrow}
                         {this.renderSection()}
                     </div>
                 </div>
