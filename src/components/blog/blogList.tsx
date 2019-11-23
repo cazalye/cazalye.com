@@ -13,8 +13,7 @@ class Blog extends Component<any, any> {
     }
     async componentDidMount() {
         const posts = await getBlogPosts({
-            limit: 20,
-            showCategoriesNames: true
+            limit: 20
         });
         this.setState({
             posts: posts

@@ -9,8 +9,6 @@ export interface PostsFilter {
     categories?: number[];
     page?: number;
     limit?: number;
-    showCategoriesNames?: boolean;
-    showFeaturedImageSizes?: boolean;
 }
 
 export interface Post {
@@ -85,9 +83,6 @@ export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
     }
     if (filter.page) {
         filterString += `&page=${filter.page}`;
-    }
-    if (filter.showCategoriesNames || filter.showFeaturedImageSizes) {
-        filterString += "&_embed";
     }
     const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
 
