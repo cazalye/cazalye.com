@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 const blogCatID = 200;
-const photoDiaryCatID = 655242698;
+export const photoDiaryCatID = 655242675;
 
 export interface PostsFilter {
     categories?: number[];
@@ -20,7 +20,7 @@ interface FeatureImageSizes {
     full: string;
 }
 
-interface Post {
+export interface Post {
     id: number;
     title: string;
     date: Date;
@@ -130,7 +130,6 @@ export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
         filterString += "&_embed";
     }
     const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
-
     return posts.data.map(formatPost);
 }
 
