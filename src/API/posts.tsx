@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {formatPost} from "./utils";
+import {formatPost, shuffleArray} from "./utils";
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 export const baseUrlImages = "https://wordpress.cazalye.com/wp-content/uploads/";
@@ -145,4 +145,44 @@ export function getPhotoDiaries(filter: PostsFilter = {}): Promise<Post[]> {
     filter.categories = filter.categories || [];
     filter.categories.push(photoDiaryCatID);
     return getPosts(filter);
+}
+
+/**
+ * Get related photodiaries of a photo Diary
+ *
+ * @export
+ * @param {number} diaryId
+ * @returns {Promise<Post[]>}
+ */
+export async function getRelatedPhotoDiaries(diaryId: number): Promise<Post[]> {
+    let relatedPhotoDiaries = await getPhotoDiaries({
+        limit: 10
+    });
+
+    relatedPhotoDiaries = relatedPhotoDiaries.filter((relatedDiary: Post) => {
+        return !(relatedDiary.id === diaryId);
+    });
+
+    shuffleArray(relatedPhotoDiaries);
+    return relatedPhotoDiaries;
+}
+
+/**
+ * Get related photodiaries of a photo Diary
+ *
+ * @export
+ * @param {number} diaryId
+ * @returns {Promise<Post[]>}
+ */
+export async function getRelatedBlogPosts(diaryId: number): Promise<Post[]> {
+    let relatedBlogPosts = await getBlogPosts({
+        limit: 10
+    });
+
+    relatedBlogPosts = relatedBlogPosts.filter((relatedDiary: Post) => {
+        return !(relatedDiary.id === diaryId);
+    });
+
+    shuffleArray(relatedBlogPosts);
+    return relatedBlogPosts;
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {getPostDetailBySlug, photoDiaryCatID, getPhotoDiaries, Post} from '../../API/posts';
+import {getPostDetailBySlug, Post, getRelatedPhotoDiaries} from '../../API/posts';
 import "./photoDiariesDetail.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 import NotFound from '../404/404';
@@ -10,19 +10,6 @@ interface PhotoDiariesDetailState {
     error: boolean;
     relatedPhotoDiaries: Post[];
     page: number;
-}
-
-/**
- * Randomize array element order in-place.
- * Using Durstenfeld shuffle algorithm.
- */
-function shuffleArray(array: any) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
 }
 
 class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
@@ -54,15 +41,8 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 "photoDiary": photoDiary
             });
 
-            let relatedPhotoDiaries = await getPhotoDiaries({
-                limit: 10
-            });
+            const relatedPhotoDiaries = await getRelatedPhotoDiaries(photoDiary.id);
 
-            relatedPhotoDiaries = relatedPhotoDiaries.filter((relatedDiary: Post) => {
-                return !(relatedDiary.id === photoDiary.id);
-            });
-
-            shuffleArray(relatedPhotoDiaries);
             this.setState({
                 relatedPhotoDiaries: relatedPhotoDiaries
             });
