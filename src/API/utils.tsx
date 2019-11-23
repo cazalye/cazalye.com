@@ -1,4 +1,5 @@
-import {Post, FeatureImageSizes, Media, Spread} from "./posts";
+import {Post, FeatureImageSizes, Media, Spread, baseUrlImages} from "./posts";
+
 
 /**
  * Return the images of the post, given its HTML content
@@ -55,7 +56,7 @@ export function formatPost(postData: any): Post {
     const images = postData.medias;
     for (const image of images) {
         for (const size of Object.keys(image.sizes)) {
-            image.sizes[size] = image.sizes[size].file;
+            image.sizes[size] = baseUrlImages + image.file.substr(0, image.file.lastIndexOf("/") + 1) + image.sizes[size].file;
         }
 
         image.aspectRatio = (image.width > image.height) ? "landscape" : "portrait";

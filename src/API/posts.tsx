@@ -2,6 +2,7 @@ import axios from 'axios';
 import {formatPost} from "./utils";
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
+export const baseUrlImages = "https://wordpress.cazalye.com/wp-content/uploads/";
 const blogCatID = 200;
 export const photoDiaryCatID = 655242675;
 

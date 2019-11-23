@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import { getBlogPosts } from '../../API/posts';
+import { getBlogPosts, Post } from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
 
-class Blog extends Component<any, any> {
+interface BlogState {
+    posts: Post[];
+}
+
+class Blog extends Component<any, BlogState> {
     travelPosts: any;
     constructor(props: any) {
         super(props);
@@ -34,13 +38,13 @@ class Blog extends Component<any, any> {
         const postsContent=[];
         for (const post of this.state.posts) {
 
-            const backgroundImageUrl = post.featureImageSizes? post.featureImageSizes.medium_large : "";
+            const backgroundImageUrl = post.images.length? post.images[0].sizes.medium_large: "";
             const style = {
                 backgroundImage: `url("${backgroundImageUrl}")`
             };
             const categoriesNamesHTML = [];
-            for(const categoryName of post.categoriesNames){
-                categoriesNamesHTML.push(<span>{categoryName}</span>);
+            for(const category of post.categories){
+                categoriesNamesHTML.push(<span>{category.name}</span>);
             }
 
 

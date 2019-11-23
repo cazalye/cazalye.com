@@ -49,8 +49,7 @@ class PhotoDiariesDetail extends Component<any, any> {
             });
 
             let relatedPhotoDiaries = await getPhotoDiaries({
-                limit: 10,
-                showFeaturedImageSizes: true
+                limit: 10
             });
 
             relatedPhotoDiaries = relatedPhotoDiaries.filter((relatedDiary: Post) => {
