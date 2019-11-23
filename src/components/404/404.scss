@@ -1,0 +1,12 @@
+@import "../../styles/colors";
+
+.not-found-component {
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    h1{
+        color: $accentColor;
+        margin: 0px;
+    }
+}

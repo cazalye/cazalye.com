@@ -3,7 +3,7 @@ import {formatPost} from "./utils";
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 const blogCatID = 200;
-const photoDiaryCatID = 655242698;
+export const photoDiaryCatID = 655242675;
 
 export interface PostsFilter {
     categories?: number[];
@@ -85,7 +85,6 @@ export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
         filterString += `&page=${filter.page}`;
     }
     const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
-
     return posts.data.map(formatPost);
 }
 

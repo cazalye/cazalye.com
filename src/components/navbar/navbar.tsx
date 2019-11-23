@@ -10,7 +10,7 @@ class Navbar extends Component {
         return (
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
-                    <Navigation>
+                    <Navigation className="header-nav">
                         <Link to="/map">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
@@ -25,19 +25,17 @@ class Navbar extends Component {
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
                         </a>
                         <Textfield
-                        className="search"
-                        value=""
-                        onChange={() => {}}
-                        label="search"
-                        placeholder="search"
-                        expandable={true}
-                        expandableIcon=""
+                            className="search"
+                            value=""
+                            label="search"
+                            placeholder="search"
+                            expandable={true}
+                            expandableIcon=""
                         />
                     </Navigation>
                 </Header>
-
-                {/* <Drawer className="hamburger">
-                    <Navigation>
+                <Drawer>
+                    <Navigation className="drawer-nav">
                         <Link to="/map">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
@@ -52,7 +50,7 @@ class Navbar extends Component {
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
                         </a>
                     </Navigation>
-                </Drawer> */}
+                </Drawer>
             </Layout>
         );
     }
