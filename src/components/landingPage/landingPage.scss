@@ -1,6 +1,7 @@
 @import "../../styles/colors";
 
 #landing{
+    background-size: cover;
     .mdl-layout__drawer-button{
         display:none;
     }
@@ -11,7 +12,34 @@
         background-size: cover;
         height: 100vh;
         width: 100%;
+        .image-layers-container {
+            height: 100%;
+            .image-layer {
+                transition: opacity 0.7s;
+                position: absolute;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                &.active-layer {
+                    opacity: 1;
+                }
+                .photo-diary-title{
+                    position: absolute;
+                    right:50px;
+                    bottom:200px;
+                    h3{
+                        margin-top:5px;
+                        margin-bottom:5px;
+                        font-weight: 400;
+                        font-size: calc(10px + 2vmin);
+                        color: white;
+                    }
+                }
+            }
+        }
         .mission{
+            z-index: 1;
             position:absolute;
             left:330px;
             top:80px;
@@ -45,16 +73,7 @@
                 font-size:14px;
             }
         }
-        .coffee{
-            position: absolute;
-            right:50px;
-            bottom:200px;
-            h3{
-                margin-top:5px;
-                margin-bottom:5px;
-                font-weight: 400;
-            }
-        }
+
     }
     .landing-section{
         height:100vh;
