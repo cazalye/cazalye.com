@@ -4,6 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import Blog from './blog/blogList';
 import About from './about/about';
 import PhotoDiariesDetail from './photoDiaries/photoDiariesDetail';
+import PhotoDiariesList from './photoDiaries/photoDiariesList';
 
 
 const View = () => (
@@ -12,6 +13,7 @@ const View = () => (
         <Route exact={true} path='/blog' component={Blog}/>
         <Route exact={true} path='/about' component={About}/>
         <Route exact={true} path='/blog/:slug' component={Blog}/>
+        <Route exact={true} path='/photoDiaries' component={PhotoDiariesList}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
     </Switch>
 );
