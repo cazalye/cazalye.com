@@ -1,10 +1,9 @@
 import "./landingPage.scss";
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import Map from "../map/map";
 import Footer from "../footer/footer";
-import Navbar from "../navbar/navbar";
 
-class LandingPage extends Component {
+class LandingPage extends Component<any, any> {
     render() {
         return (
             <div id="landing">
@@ -15,11 +14,6 @@ class LandingPage extends Component {
                     </div>
                     <div className="start-here">
                         <p>Start Here</p>
-                    </div>
-                    <div className="coffee">
-                        <h3>The Best Coffee & Brunch <br/> Spots Around the World</h3>
-                        <hr/>
-                        {/* <h3> Travel Budgets</h3> */}
                     </div>
                 </div>
                 <div className="landing-section">

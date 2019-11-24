@@ -1,6 +1,7 @@
 @import "../../styles/colors";
 
 #landing{
+    background-size: cover;
     .mdl-layout__drawer-button{
         display:none;
     }
@@ -12,6 +13,7 @@
         height: 100vh;
         width: 100%;
         .mission{
+            z-index: 1;
             position:absolute;
             left:330px;
             top:80px;
@@ -45,16 +47,7 @@
                 font-size:14px;
             }
         }
-        .coffee{
-            position: absolute;
-            right:50px;
-            bottom:200px;
-            h3{
-                margin-top:5px;
-                margin-bottom:5px;
-                font-weight: 400;
-            }
-        }
+
     }
     .landing-section{
         height:100vh;
