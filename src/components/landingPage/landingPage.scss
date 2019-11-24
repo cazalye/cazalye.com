@@ -23,6 +23,9 @@
                 opacity: 0;
                 &.active-layer {
                     opacity: 1;
+                    .photo-diary-title {
+                        z-index: 10;
+                    }
                 }
                 .photo-diary-title{
                     position: absolute;
