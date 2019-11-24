@@ -136,12 +136,12 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 if (this.state.relatedPhotoDiaries.length > 1) {
                     relatedPosthtml = [
                         (
-                                <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${this.state.relatedPhotoDiaries[0].images[0].sizes.large})`}}>
+                                <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${this.state.relatedPhotoDiaries[0].featureMedia.sizes.large})`}}>
                                     <h2>{this.state.relatedPhotoDiaries[0].title}</h2>
                                 </Link>
                         ),
                         (
-                            <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${this.state.relatedPhotoDiaries[1].images[0].sizes.large})`}}>
+                            <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${this.state.relatedPhotoDiaries[1].featureMedia.sizes.large})`}}>
                                 <h2>{this.state.relatedPhotoDiaries[1].title}</h2>
                             </Link>
                         )

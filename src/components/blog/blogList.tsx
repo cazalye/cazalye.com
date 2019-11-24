@@ -38,15 +38,13 @@ class Blog extends Component<any, BlogState> {
         const postsContent=[];
         for (const post of this.state.posts) {
 
-            const backgroundImageUrl = post.images.length? post.images[0].sizes.medium_large: "";
             const style = {
-                backgroundImage: `url("${backgroundImageUrl}")`
+                backgroundImage: `url("${post.featureMedia.sizes.medium_large}")`
             };
             const categoriesNamesHTML = [];
             for(const category of post.categories){
                 categoriesNamesHTML.push(<span>{category.name}</span>);
             }
-
 
             postsContent.push(
                 <div  className="post-container" style={style}>
