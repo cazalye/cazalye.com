@@ -51,16 +51,16 @@ class Blog extends Component<any, BlogState> {
                     <Link className="background-link" to={"blog/" + post.slug}/>
                     <div className="text-container">
                     <h2 className="post-title">{post.title}</h2>
-                        <h3 className="post-date">
+                        {/* <h3 className="post-date">
                             {new Intl.DateTimeFormat('en-GB', {
                                 year: 'numeric',
                                 month: 'long',
                                 day: '2-digit'
                             }).format(post.date)}
-                        </h3>
-                        <div className="post-categories">
+                        </h3> */}
+                        {/* <div className="post-categories">
                             {categoriesNamesHTML}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             );

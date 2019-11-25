@@ -9,8 +9,9 @@
 
 
         .fas.fa-chevron-right {
-            font-size:50px;
-            text-shadow: 5px 5px 5px black;
+            font-size:70px;
+            color: rgba(255,255,255,0.8);
+            // text-shadow: 5px 5px 5px black;
             position: fixed;
             right: 20px;
             top: 50%;
@@ -20,8 +21,9 @@
             }
         }
         .scroll-button-left {
-            font-size:50px;
-            text-shadow: 5px 5px 5px black;
+            font-size:70px;
+            color: rgba(255,255,255,0.8);
+            // text-shadow: 5px 5px 5px black;
             position: fixed;
             left: 20px;
             top: 50%;
@@ -93,19 +95,28 @@
                     position: absolute;
                     bottom:0;
                     width: 100%;
-                    padding-bottom:5px;
+                    // padding-bottom:5px;
                     .post-title{
-                        color:white;
-                        font-size:30px;
+                        text-align: center;
+                        color:black;
+                        background-color: rgba(255,255,255,0.8);
+                        font-size:25px;
+                        font-weight: 300;
+                        line-height: 40px;
                         text-decoration: none;
                         width: calc(100% - 30px);
-                        padding: 15px;
-                        padding-bottom: 0px;
-                        padding-top: 0px;
-                        margin-bottom:0px;
-                        margin-top:0px;
+                        padding: 5px;
+                        padding-left:15px;
+                        padding-right:15px;
+                        // padding-bottom: 0px;
+                        // padding-top: 0px;
+                        margin:auto;
                         height:80px;
                         position: bottom;
+                        // position: absolute;
+                        // bottom: 0;
+                        // margin:auto;
+                        // width: 100%;
                     }
                     .post-date{
                         text-align: left;
