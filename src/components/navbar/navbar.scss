@@ -17,18 +17,20 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
 
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-navigation__link{
-        color: $primaryColor;
+        // color: $primaryColor;
+        color: #4d5d54;
         font-size: 16px;
         font-family: 'Open Sans', sans-serif;
     }
     .header-title{
-        color:$primaryColor;
+        // color:$primaryColor;
+        color: #4d5d54;
         font-family: "Quentin";
-        font-size: 55px;
+        font-size: 50px;
         text-decoration: none;
         position: fixed;
         left:20px;
-        top:15px;
+        top:6px;
     }
     // need to fix the function
     .mdl-textfield__label:after{
@@ -36,7 +38,8 @@ body .mdl-layout .mdl-layout__inner-container{
         height:1.5px;
     }
     .search{
-        color:$primaryColor;
+        // color:$primaryColor;
+        color: #4d5d54;
         i {
             -webkit-font-smoothing: antialiased;
             display: inline-block;

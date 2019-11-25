@@ -17,7 +17,7 @@ class Footer extends Component{
                 <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                     <i className="fa fa-envelope" aria-hidden="true" />
                 </a>
-                <p className="footer-newsletter"> SIGN UP TO NEWSLETTER BOX HERE</p>
+                {/* <p className="footer-newsletter"> SIGN UP TO NEWSLETTER BOX HERE</p> */}
             </div>
         );
     }
