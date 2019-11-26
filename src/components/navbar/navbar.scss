@@ -73,3 +73,28 @@ body .mdl-layout .mdl-layout__inner-container{
 
     }
 }
+
+// Responsive Design
+
+// PHONE: 0-768 
+@media (max-width: 768px) {
+    // ADD CSS rules in here, ensure the priority is ok
+    body .mdl-layout .mdl-layout__inner-container {
+        .mdl-layout__drawer-button {
+            display: block;
+        }
+        .mdl-layout__header .mdl-navigation__link {
+            display: none;
+        }
+    }
+}
+
+// TABLET: 769-1024
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+// TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
+@media (min-width: 1025px) and (max-width: 1376px) {
+
+}
