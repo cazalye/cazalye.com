@@ -18,13 +18,13 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-navigation__link{
         // color: $primaryColor;
-        color: #4d5d54;
+        color: $navbarAccent;
         font-size: 16px;
         font-family: 'Open Sans', sans-serif;
     }
     .header-title{
         // color:$primaryColor;
-        color: #4d5d54;
+        color: $navbarAccent;
         font-family: "Quentin";
         font-size: 50px;
         text-decoration: none;
@@ -79,12 +79,35 @@ body .mdl-layout .mdl-layout__inner-container{
 // PHONE: 0-768 
 @media (max-width: 768px) {
     // ADD CSS rules in here, ensure the priority is ok
+
+    // ned to fx this so the transparent header layer stays there
     body .mdl-layout .mdl-layout__inner-container {
+        // .mdl-layout__header--transparent.mdl-layout__header--transparent {
+        //     background-color: transparent;
+        //     box-shadow: none;
+        //     position: fixed;
+        // }   
         .mdl-layout__drawer-button {
+            position:fixed;
             display: block;
+            top:0px;
+            left: 0px;
+            color:black;
+            color:$navbarAccent;
         }
-        .mdl-layout__header .mdl-navigation__link {
-            display: none;
+        .mdl-layout__header{
+            display:block;
+            .header-title{
+                display:block;
+                left:150px;
+                position: fixed;
+            }
+            .header-nav{
+                display:none;
+            }
+            a:hover {
+                color: $navbarAccentHover;
+              }
         }
     }
 }

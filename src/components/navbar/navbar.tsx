@@ -1,12 +1,12 @@
 import "./navbar.scss";
 import React, { Component } from 'react';
-import {Layout, Header, Navigation, Drawer, Content, Textfield} from 'react-mdl';
+import {Layout, Header, Navigation, Drawer, Textfield} from 'react-mdl';
 import {Link} from 'react-router-dom';
 
 
 class Navbar extends Component {
     render() {
-        const title = <Link to="/" className="header-title-drawer"> cazalye </Link> as any;
+        const title = <Link to="/" className="header-title"> cazalye </Link> as any;
         return (
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
@@ -35,7 +35,8 @@ class Navbar extends Component {
                     </Navigation>
                 </Header>
                 <Drawer>
-                    <Navigation className="drawer-nav">
+                {/* <Drawer title={<Link to="/" className="header-title">cazalye </Link>}> */}
+                    <Navigation className="drawer-nav" >
                         <Link to="/map">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
