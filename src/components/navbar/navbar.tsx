@@ -5,6 +5,10 @@ import {Link} from 'react-router-dom';
 
 
 class Navbar extends Component {
+    // hideToggle() {
+    //     const selectorId = document.querySelector('.mdl-layout');
+    //     selectorId.MaterialLayout.toggleDrawer();
+    // }
     render() {
         const title = <Link to="/" className="header-title"> cazalye </Link> as any;
         return (
@@ -34,8 +38,7 @@ class Navbar extends Component {
                         />
                     </Navigation>
                 </Header>
-                <Drawer>
-                {/* <Drawer title={<Link to="/" className="header-title">cazalye </Link>}> */}
+                <Drawer title={<Link to="/" className="header-title">cazalye</Link> as any}>
                     <Navigation className="drawer-nav" >
                         <Link to="/map">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
