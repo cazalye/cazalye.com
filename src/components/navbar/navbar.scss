@@ -32,6 +32,9 @@ body .mdl-layout .mdl-layout__inner-container{
         left:20px;
         top:6px;
     }
+    .drawer-nav{
+        padding-top:80px;
+    }
     // need to fix the function
     .mdl-textfield__label:after{
         background-color: $accentColor;
@@ -70,7 +73,6 @@ body .mdl-layout .mdl-layout__inner-container{
         i{
             font-size: 40px;   
         }
-
     }
 }
 
@@ -81,17 +83,11 @@ body .mdl-layout .mdl-layout__inner-container{
     // ADD CSS rules in here, ensure the priority is ok
 
     // ned to fx this so the transparent header layer stays there
-    body .mdl-layout .mdl-layout__inner-container {
-        // .mdl-layout__header--transparent.mdl-layout__header--transparent {
-        //     background-color: transparent;
-        //     box-shadow: none;
-        //     position: fixed;
-        // }   
+    body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button {
-            position:fixed;
             display: block;
             top:0px;
-            left: 0px;
+            right: 20px;
             color:black;
             color:$navbarAccent;
         }
@@ -99,7 +95,7 @@ body .mdl-layout .mdl-layout__inner-container{
             display:block;
             .header-title{
                 display:block;
-                left:150px;
+                left:15px;
                 position: fixed;
             }
             .header-nav{
