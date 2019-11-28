@@ -59,3 +59,30 @@
 }
 
 
+// PHONE: 0-768 
+@media (max-width: 768px) {
+        #landing #landing1{
+            .mission{
+                position: fixed;
+                left: 15px;
+                margin: auto;
+            }
+            .start-here{
+                top: 270px;
+                p{
+                font-size: 25px;
+                font-weight: 500;
+                }
+            }
+        }
+}
+
+// TABLET: 769-1024
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+// TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
+@media (min-width: 1025px) and (max-width: 1376px) {
+
+}
