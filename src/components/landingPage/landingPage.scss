@@ -51,7 +51,6 @@
                 font-size:30px;
             }
         }
-
     }
     .landing-section{
         height:100vh;
@@ -61,9 +60,10 @@
 
 // PHONE: 0-768 
 @media (max-width: 768px) {
-        #landing #landing1{
+    #landing{ 
+        #landing1{
             .mission{
-                position: fixed;
+                position: absolute;
                 left: 15px;
                 margin: auto;
             }
@@ -75,6 +75,7 @@
                 }
             }
         }
+    }
 }
 
 // TABLET: 769-1024
