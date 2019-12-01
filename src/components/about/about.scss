@@ -2,15 +2,6 @@
 
 
 .about{ 
-    .mdl-layout .mdl-layout__inner-container{
-        .header-title{
-            color:$aboutAccent;
-        }
-        .mdl-layout__header-row .mdl-navigation{
-            // margin-right: 500px;
-            display:none;
-        }
-    }
     background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, transparent 50%), url("/img/rafting.jpg");
     // background-image: url("/img/rafting.jpg");
     background-size: cover;
@@ -45,7 +36,7 @@
             }
         }
         .para3{
-        padding-right:190px;
+        padding-right:220px;
         }
         .post-icons{
             display: flex;
@@ -55,7 +46,7 @@
             padding-right:0px;
             text-align: center;
             h3{
-                color:$aboutAccent;
+                color:$darkGreen;
                 margin-bottom:0px;
                 padding-left:0px;
                 text-align:center;
@@ -69,16 +60,17 @@
                 padding-left:0px;
                 padding-right:0px;
                 line-height:20px;
+                padding-top: 5px;
             }
             i {
-                color:$aboutAccent;
+                color:$darkGreen;
                 font-size: 40px;
+                padding-top: 10px;
             }
             .photo-diaries-link{
                 margin-right:150px;
             }
         }
-
 
 
         .about-me-link{
@@ -98,7 +90,6 @@
         position:absolute;
         right:30px;
         bottom: 0px;
-        // color: $accentColor; 
         color: white; 
         // color:rgba(28, 93, 105,0.5);
         h2{
@@ -116,44 +107,89 @@
             margin-left:40px;
         }
     }
+    // .footer-links{
+    //     display:none;
+    // }
 }
 
 
 // PHONE: 0-768 
 @media (max-width: 768px) {
     .about{
+        position: absolute;
+        height: 200%;
         .mission{
+            position: absolute;
+            top:41%;
+            text-align: right;
+            right:10px;
             h2{
-                font-size: 40px;
+                font-size: 35px;
                 margin-left:88px;
-                // margin-bottom: 0px;
+                margin-bottom: 0px;
+                line-height: 35px;
             }
             h3{
                 font-weight: 300;
-                font-size: 25px;
+                font-size: 20px;
                 margin-top:0px;
                 margin-left:150px;
+                line-height: 25px;
             }
         }
-
-        // ADD SOME SCROLLING
         .about-content{
             width:100%;
-            margin-top:80px;
+            margin-top:110px;
             p{
-                color: white;
-                font-size: 14px;
+                color: black;
+                font-size: 16px;
+                padding-top:10px;
                 padding-right: 20px;
                 padding-left: 30px;
+                margin-bottom: 10px;
+            }
+            .opp-aim{
+                padding-left:30px;
+                display: table;
+                padding-top: 30px;
+                padding-left: 0px;
+                text-align: center;
+            }
+            .para2{
+                padding-right: 41px;
+                padding-top: 25px;
+                font-size: 16px;
             }
             .para3{
-                padding-right: 20px;
-                padding-left: 30px;
+                color: white;
+                padding-top: 296px;
+                padding-right: 11px;
+                padding-left: 133px;
+                font-size: 16px;
+                a{
+                    color:white;
+                }
             }
             .post-icons{
-                display:none;
+                padding-left: 12px;
+                padding-right: 5px;
+                padding-top: 66px;
+                h3{
+                    color:white;
+                }
+                p{
+                    color:white;
+                    padding-top: 20px;
+                }
+                i{
+                    color:white;
+                    padding-top: 20px;
+                }
+                .photo-diaries-link{
+                    margin-right: 60px;
+                }
             }
-        }    
+        }  
     }
 }
 
