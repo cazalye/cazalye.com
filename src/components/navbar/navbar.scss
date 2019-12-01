@@ -1,8 +1,8 @@
 @import "../../styles/colors";
 
-body.blue-title .mdl-layout .mdl-layout__inner-container{
+body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
-        color: $aboutAccent;
+        color: $darkGreen;
     }
 }
 
@@ -17,14 +17,13 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
 
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-navigation__link{
-        // color: $primaryColor;
-        color: $navbarAccent;
+        color: $darkGreen;
         font-size: 16px;
         font-family: 'Open Sans', sans-serif;
     }
     .header-title{
         // color:$primaryColor;
-        color: $navbarAccent;
+        color: $darkGreen;
         font-family: "Quentin";
         font-size: 50px;
         text-decoration: none;
@@ -37,7 +36,7 @@ body .mdl-layout .mdl-layout__inner-container{
     }
     // need to fix the function
     .mdl-textfield__label:after{
-        background-color: $accentColor;
+        background-color: $darkGreen;
         height:1.5px;
     }
     .search{
@@ -80,30 +79,29 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // PHONE: 0-768 
 @media (max-width: 768px) {
-    // ADD CSS rules in here, ensure the priority is ok
-
     // ned to fx this so the transparent header layer stays there
     body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button {
             display: block;
             position:fixed;
-            top:0px;
-            right: 20px;
-            color:black;
-            color:$navbarAccent;
+            top:10px;
+            right: 0px;
+            color:$darkGreen;
+            // margin:0px;
         }
         .mdl-layout__header{
             display:block;
             .header-title{
                 display:block;
-                left:15px;
+                left:20px;
+                top:10px;
                 position: fixed;
             }
             .header-nav{
                 display:none;
             }
             a:hover {
-                color: $navbarAccentHover;
+                color: black;
               }
         }
     }
