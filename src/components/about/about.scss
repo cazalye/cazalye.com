@@ -115,6 +115,7 @@
 
 // PHONE: 0-768 
 @media (max-width: 768px) {
+// @media (max-width: 413px) {
     .about{
         position: absolute;
         height: 200%;
@@ -194,8 +195,36 @@
 }
 
 // TABLET: 769-1024
-@media (min-width: 769px) and (max-width: 1024px) {
 
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mdl-layout__drawer-button{
+        i{
+            color:white;
+        }
+    }
+    .about{ 
+        .about-content{ 
+            .para1{
+                padding-top: 15px;
+                margin-bottom:55px;
+            }
+            .para2{
+                padding-right: 200px;
+                margin-bottom:55px;
+            }
+            .para3{
+                padding-right: 305px;
+                margin-bottom:55px;
+            }
+            .post-icons{
+                padding-left:35px;
+                padding-top:40px;
+                .photo-diaries-link{
+                    margin-right:100px;
+                }
+            }  
+        }  
+    }
 }
 
 // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
