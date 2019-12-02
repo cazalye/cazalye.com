@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { getBlogPosts, Post } from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
+// import {InfiniteScroll} from 'react-infinite-scroll-component';
+
 
 interface BlogState {
     posts: Post[];

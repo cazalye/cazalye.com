@@ -1,6 +1,5 @@
 @import "../../styles/colors";
 
-
 #blogs-page{
         background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 10%, rgba(91, 80, 90, 1)60%);
         position: fixed;
@@ -163,4 +162,68 @@
                 }
             }
         }
+}
+
+// PHONE: 0-768 
+@media (max-width: 768px) {
+    #blogs-page{
+        body h1{
+            font-size: 40px;
+        }
+        .blog-container{
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;        
+            .post-container{
+                width:calc(90% - 40px);
+                .text-container{
+                    height: 25%;
+                    .post-title{
+                        top:45%;
+                        font-size:20px;
+                        line-height: 30px;
+                        max-height: 200px;
+                    }
+                }
+            }
+        }
+        .scroll-button-right{
+            display:none;
+        }
+        .scroll-button-left{
+            display:none;
+        }
+    }    
+}       
+
+// TABLET: 769-1024
+@media (min-width: 769px) and (max-width: 1024px) {
+    #blogs-page{
+        // body h1{
+        //     font-size: 40px;
+        // }
+        .blog-container{
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;        
+            .post-container{
+                width:calc(90% - 40px);
+                .text-container{
+                    height: 25%;
+                    .post-title{
+                        top:45%;
+                        font-size:50px;
+                        line-height: 60px;
+                        max-height: 200px;
+                    }
+                }
+            }
+        }
+        .scroll-button-right{
+            display:none;
+        }
+        .scroll-button-left{
+            display:none;
+        }
+    }   
 }
