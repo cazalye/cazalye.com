@@ -2,6 +2,7 @@ import "./landingPage.scss";
 import React, { Component} from 'react';
 import Map from "../map/map";
 import Footer from "../footer/footer";
+import {Link} from 'react-router-dom';
 
 class LandingPage extends Component<any, any> {
     render() {
@@ -13,7 +14,7 @@ class LandingPage extends Component<any, any> {
                         <h3>at home and abroad</h3>
                     </div>
                     <div className="start-here">
-                        <p>Start Here</p>
+                        <Link to="/about"><p>Start Here</p></Link>
                     </div>
                 </div>
                 <div className="landing-section">

@@ -80,7 +80,33 @@
 
 // TABLET: 769-1024
 @media (min-width: 769px) and (max-width: 1024px) {
-
+    #landing #landing1{ 
+        .mission{
+            left: 185px;
+            top: 143px;
+            h2{
+                font-size:60px;
+            }
+            h3{
+                font-size: 42px;
+                line-height: 62px;
+                padding-left: 19px;
+            }
+        }
+        .start-here{
+            top: 320px;
+            p{
+                font-size:33px;
+            }    
+        }
+    }  
+    .footer-links{
+        i{
+            font-size: 33px;
+            padding:25px;
+            padding-bottom: 15px;
+        }
+    }  
 }
 
 // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
