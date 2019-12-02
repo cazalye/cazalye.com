@@ -1,11 +1,17 @@
 @import "../../styles/colors";
 
+// Need to fix the nav bar colors so that can change between green and black and white for different pages
+body .mdl-layout .mdl-layout__inner-container{
+    .mdl-layout__drawer-button i{
+        color:black;
+    } 
+    .mdl-layout__header .header-title{
+        color:black;
+    }
+}
 #photo-diary-detail-page {
     height: 100vh;
     background: #666;
-    .mdl-navigation__link{
-        display: none;
-    }
     #photo-diary-detail {
         h3{
             margin:50px; 
@@ -241,5 +247,21 @@
         &:hover {
             cursor: pointer;
         } 
+    }
+}
+
+
+// PHONE: 0-768 
+@media (max-width: 768px) {
+    // THIS DOESN"T WORK
+    body .mdl-layout .mdl-layout__inner-container{
+        .mdl-layout__header-row .header-title {
+            display:none;
+        }   
+    }
+    #photo-diary-detail-page #photo-diary-detail .cover-page{
+        .cover-photo h1{
+            font-size: 34px;
+        }
     }
 }

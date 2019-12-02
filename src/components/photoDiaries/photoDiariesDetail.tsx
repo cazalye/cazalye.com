@@ -186,7 +186,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             }
             return (
                 <div id="photo-diary-detail-page">
-                    <NavbarHider hamburgerMode={true}/>
+                    <NavbarHider hamburgerMode={true} greenTitle={false}/>
                     <div id="photo-diary-detail">
                         {leftArrow}
                         {rightArrow}
