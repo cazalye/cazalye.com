@@ -109,7 +109,54 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // TABLET: 769-1024
 @media (min-width: 769px) and (max-width: 1024px) {
-
+    body .mdl-layout .mdl-layout__inner-container {  
+        .mdl-layout__drawer-button {
+            display: block;
+            position:fixed;
+            top:20px;
+            right: 25px;
+            color:$darkGreen;
+            i{
+                font-size:65px;
+            }
+        }
+        .mdl-layout__drawer-button:focus{
+                outline:none;
+        }
+        .mdl-layout__header{
+            display:block;
+            .header-title{
+                display:block;
+                left:25px;
+                top:20px;
+                position: fixed;
+                font-size:67px;
+            }
+            .header-nav{
+                display:none;
+            }
+            a:hover {
+                color: black;
+              }
+        }
+        .mdl-navigation__link{
+            font-size: 30px;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+        .mdl-layout__drawer.is-visible{
+            width: 270px;
+            .mdl-layout-title{
+                padding-top: 18px;
+            }
+            .header-title {
+                left:20px;
+                top:20px;
+                font-size:67px;
+                // color:red;
+            }
+        }
+    }
 }
 
 // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
