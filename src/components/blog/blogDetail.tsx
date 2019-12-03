@@ -15,15 +15,12 @@ class BlogDetail extends Component<any,any>{
         this.setState({
             "detail": detail
         });
-        debugger
     }
 
     render() {
         if (this.state.detail){
         return (
-            <div>
-                {this.state.detail.title}
-            </div>
+            <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
         );
         }
         else{
@@ -37,4 +34,3 @@ class BlogDetail extends Component<any,any>{
 }
 
 export default BlogDetail;
-
