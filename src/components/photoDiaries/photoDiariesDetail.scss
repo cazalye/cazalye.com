@@ -253,15 +253,92 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // PHONE: 0-768 
 @media (max-width: 768px) {
-    // THIS DOESN"T WORK
-    body .mdl-layout .mdl-layout__inner-container{
-        .mdl-layout__header-row .header-title {
-            display:none;
-        }   
+
+    // add note to flip phone
+
+    #photo-diary-detail-page #photo-diary-detail{
+        .fas.fa-chevron-right{
+            font-size: 40px;
+            color: black;
+            right: 5%;
+        }
+        .fas.fa-chevron-left{
+            font-size: 40px;
+            color: black;
+            left: 5%;
+        }
+        .cover-page{
+            padding-top: 265px;
+            .cover-photo h1{
+                font-size: 28px;
+                margin-top: 5px;
+            }
+        }
+        .double-page-spread.back-page-container .left-page-key-details .back-page{
+            h1{
+                font-size: 15px;
+                margin-top: 40px;
+                margin-bottom: 20px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .photo-diary-preview{
+                height: 36%;
+                width: 66%;
+                margin-top:10px;
+                h2{
+                    font-size: 12px;
+                    line-height: 22px;
+                }
+
+            }
+        }
     }
-    #photo-diary-detail-page #photo-diary-detail .cover-page{
-        .cover-photo h1{
-            font-size: 34px;
+}
+
+// TABLET: 769-1024
+@media (min-width: 769px) and (max-width: 1024px) {
+    #photo-diary-detail-page #photo-diary-detail{
+        .fas.fa-chevron-right{
+            font-size: 40px;
+            color: black;
+            right: 5%;
+        }
+        .fas.fa-chevron-left{
+            font-size: 40px;
+            color: black;
+            left: 5%;
+        }
+        .cover-page{
+            padding-top: 469px;
+            width: 72%;
+            left: 12%;
+            top: 20%;
+            .cover-photo h1{
+                font-size: 50px;
+                margin-top: 5px;
+            }
+        }
+        .double-page-spread .book-page{
+            top: 20%;
+        }
+        .double-page-spread.back-page-container .left-page-key-details .back-page{
+            h1{
+                font-size: 22px;
+                margin-top: 40px;
+                margin-bottom: 30px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .photo-diary-preview{
+                height: 35%;
+                width: 66%;
+                margin-top:20px;
+                h2{
+                    font-size: 10px;
+                    line-height: 20px;
+                }
+            }
         }
     }
 }
