@@ -8,7 +8,7 @@ class About extends Component {
     render() {
         return (
             <div className="about">
-                <NavbarHider hamburgerMode={true} greenTitle={true}/>
+                <NavbarHider hamburgerMode={true} whiteDrawer={true} greenTitle={true} hideTitle={false}/>
                 <div className="mission">
                         <h2>Inspiration for your adventures</h2>
                         <h3>at home and abroad</h3>

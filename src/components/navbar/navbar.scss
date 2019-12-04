@@ -1,8 +1,23 @@
 @import "../../styles/colors";
 
+
+// Various navbar hider mode
+
 body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
         color: $darkGreen;
+    }
+    .mdl-layout__drawer-button i{
+        color: $darkGreen;
+    }
+    .mdl-navigation__link{
+        color: $darkGreen;
+    }
+}
+
+body.white-drawer .mdl-layout .mdl-layout__inner-container{
+    .mdl-layout__drawer-button i{
+        color: white;
     }
 }
 
@@ -15,15 +30,23 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
     }
 }
 
+body.hide-title .mdl-layout .mdl-layout__inner-container {
+    .mdl-layout__header .header-title{
+        display:none;
+    }
+}
+
+
+// Regular Navbar css
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-navigation__link{
-        color: $darkGreen;
+        color: white;
         font-size: 16px;
         font-family: 'Open Sans', sans-serif;
     }
     .header-title{
         // color:$primaryColor;
-        color: $darkGreen;
+        color: white;
         font-family: "Quentin";
         font-size: 50px;
         text-decoration: none;
@@ -40,8 +63,8 @@ body .mdl-layout .mdl-layout__inner-container{
         height:1.5px;
     }
     .search{
-        // color:$primaryColor;
-        color: #4d5d54;
+        color:white;
+        // color: #4d5d54;
         i {
             -webkit-font-smoothing: antialiased;
             display: inline-block;
@@ -70,6 +93,7 @@ body .mdl-layout .mdl-layout__inner-container{
         width: 48px;
         border:none;
         i{
+            color:white;
             font-size: 40px;   
         }
     }
