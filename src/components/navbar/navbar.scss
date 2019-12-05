@@ -113,17 +113,20 @@ body .mdl-layout .mdl-layout__inner-container{
         .mdl-layout__drawer-button {
             display: block;
             position:fixed;
-            top:0px;
+            top:5px;
             right: 0px;
             color:$darkGreen;
-            // margin:0px;
+            i{
+                font-size:35px;
+            }
         }
         .mdl-layout__header{
             display:block;
             .header-title{
+                font-size:30px;
                 display:block;
                 left:15px;
-                top:2px;
+                top:15px;
                 position: fixed;
             }
             .header-nav{
@@ -136,12 +139,60 @@ body .mdl-layout .mdl-layout__inner-container{
     }
 }
 
-// PHONE: 0-768 
-// @media (max-width: 768px) {
-
+// PHONE LANDSCAPE: 451-769 
+@media (min-width: 451px) and (max-width: 768px) {
+    body .mdl-layout .mdl-layout__inner-container {  
+        .mdl-layout__drawer-button {
+            display: block;
+            position:fixed;
+            top:7px;
+            right: 25px;
+            i{
+                font-size:45px;
+            }
+        }
+        .mdl-layout__drawer-button:focus{
+                outline:none;
+        }
+        .mdl-layout__header{
+            display:block;
+            .header-title{
+                // display:block;
+                display:none;
+                left:25px;
+                top:15px;
+                position: fixed;
+                font-size:40px;
+            }
+            .header-nav{
+                display:none;
+            }
+            a:hover {
+                color: black;
+              }
+        }
+        .mdl-navigation__link{
+            font-size: 30px;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+        .mdl-layout__drawer.is-visible{
+            width: 270px;
+            .mdl-layout-title{
+                padding-top: 18px;
+            }
+            .header-title {
+                left:20px;
+                top:20px;
+                font-size:67px;
+                // color:red;
+            }
+        }
+    }
+}   
 
 // TABLET: 769-1024
-@media (min-width: 451px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1024px) {
     body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button {
             display: block;
@@ -159,7 +210,8 @@ body .mdl-layout .mdl-layout__inner-container{
         .mdl-layout__header{
             display:block;
             .header-title{
-                display:block;
+                // display:block;
+                display:none;
                 left:25px;
                 top:7px;
                 position: fixed;

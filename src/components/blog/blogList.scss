@@ -156,8 +156,8 @@
         }
 }
 
-// PHONE: 0-768 
-@media (max-width: 768px) {
+// PHONE: 0-450
+@media (max-width: 450px) {
     #blogs-page{
         h1{
             font-size: 50px;
@@ -187,6 +187,32 @@
         }
     }    
 }       
+
+// // PHONE LANDSCAPE: 451-767
+@media (min-width: 451px) and (max-width: 767px) {
+    #blogs-page{
+        .blog-container{
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;    
+            height: 100%;    
+            .post-container{
+                width:calc(85% - 40px);
+                height: 100%;
+                .text-container{
+                    height: 25%;
+                    .post-title{
+                        top:45%;
+                        font-size:20px;
+                        line-height: 30px;
+                        max-height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 // TABLET: 769-1024
 @media (min-width: 768px) and (max-width: 1024px) {
