@@ -1,2 +1,60 @@
 @import "../../styles/colors";
 
+// .mdl-layout__inner-container{
+    #blog-detail{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 50%, rgba(91, 80, 90, 1)50%);
+        background: cover;
+        .blog-content{
+
+
+            h1{
+                position: absolute;
+                left:50%;
+                transform: translate(-50%);
+                // font-size: 54px;
+                padding-top:20px;
+            } 
+            h2{
+                position: absolute;
+                padding-left:5%;
+                padding-right:5%;
+                display:none;
+            }
+            h3{
+                display:none;
+            }
+            h4{
+                position: absolute;
+                padding-left:5%;
+                padding-right:5%;
+                display:none;
+            }
+            h6{
+                display:none;
+            }
+            p{
+                position: absolute;
+                padding-left:5%;
+                padding-right:5%; 
+                display:none;
+            }
+            img{
+                padding-top:15%;
+                width:40%;
+                height: 50%;
+            }
+            figure{
+                padding-top:15%;
+                width:40%;
+                height: 50%;
+            }
+            figcaption{
+                display:none;
+            }
+
+        }
+    }
+// }
