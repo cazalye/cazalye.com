@@ -1,8 +1,7 @@
 @import "../../styles/colors";
 
 
-// Various navbar hider mode
-
+// Various navbar hider modes
 body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
         color: $darkGreen;
@@ -39,76 +38,82 @@ body.hide-title .mdl-layout .mdl-layout__inner-container {
 
 // Regular Navbar css
 body .mdl-layout .mdl-layout__inner-container{
+    .mdl-layout__header .mdl-layout__header--transparent .is-casting-shadow{
+        position:fixed;
+    }
+    .mdl-layout__header-row{
+        position:fixed;
+    }
     .mdl-navigation__link{
-        color: white;
+        position: relative;
+        color: black;
         font-size: 16px;
         font-family: 'Open Sans', sans-serif;
+        .header-title{
+            position: fixed;
+            color: black;
+            font-family: "Quentin";
+            font-size: 50px;
+            text-decoration: none;
+            left:20px;
+            top:6px;
+        }
     }
-    .header-title{
-        // color:$primaryColor;
-        color: white;
-        font-family: "Quentin";
-        font-size: 50px;
-        text-decoration: none;
-        position: fixed;
-        left:20px;
-        top:6px;
-    }
-    .drawer-nav{
-        padding-top:80px;
-    }
-    // need to fix the function
-    .mdl-textfield__label:after{
-        background-color: $darkGreen;
-        height:1.5px;
-    }
-    .search{
-        color:white;
-        // color: #4d5d54;
-        i {
-            -webkit-font-smoothing: antialiased;
-            display: inline-block;
-            font-style: normal;
-            font-size: 16px;
-            font-variant: normal;
-            text-rendering: auto;
-            font-weight: 900;
-            line-height: 1.5;
-            font-family: "Font Awesome 5 Pro";
-            &:before {
-                content: "\f002";
+        .drawer-nav{
+            padding-top:80px;
+        }
+        // need to fix the function
+        .mdl-textfield__label:after{
+            background-color: $darkGreen;
+            height:1.5px;
+        }
+        .search{
+            color:black;
+            // color: #4d5d54;
+            i {
+                -webkit-font-smoothing: antialiased;
+                display: inline-block;
+                font-style: normal;
+                font-size: 16px;
+                font-variant: normal;
+                text-rendering: auto;
+                font-weight: 900;
+                line-height: 1.5;
+                font-family: "Font Awesome 5 Pro";
+                &:before {
+                    content: "\f002";
+                }
+            }
+        }
+        .mdl-layout__drawer-button{
+            color: black;
+            z-index: 4;
+            left: auto;
+            right:30px;
+            top:15px;
+            display: none;
+            position: absolute;
+            margin: 8px 12px;
+            cursor: pointer;
+            width: 48px;
+            border:none;
+            i{
+                color:black;
+                font-size: 40px;   
             }
         }
     }
-    .mdl-layout__drawer-button{
-        color: white;
-        z-index: 4;
-        left: auto;
-        right:30px;
-        top:15px;
-        display: none;
-        position: absolute;
-        margin: 8px 12px;
-        cursor: pointer;
-        width: 48px;
-        border:none;
-        i{
-            color:white;
-            font-size: 40px;   
-        }
-    }
-}
 
 // Responsive Design
 
-// PHONE: 0-768 
-@media (max-width: 768px) {
+// PHONE: 0-450
+@media (max-width: 450px) {
     // ned to fx this so the transparent header layer stays there
     body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button {
             display: block;
             position:fixed;
-            top:10px;
+            top:0px;
             right: 0px;
             color:$darkGreen;
             // margin:0px;
@@ -117,27 +122,31 @@ body .mdl-layout .mdl-layout__inner-container{
             display:block;
             .header-title{
                 display:block;
-                left:20px;
-                top:10px;
+                left:15px;
+                top:2px;
                 position: fixed;
             }
             .header-nav{
                 display:none;
             }
             a:hover {
-                color: black;
+                // color: black;
               }
         }
     }
 }
 
+// PHONE: 0-768 
+// @media (max-width: 768px) {
+
+
 // TABLET: 769-1024
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 451px) and (max-width: 1024px) {
     body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button {
             display: block;
             position:fixed;
-            top:20px;
+            top:7px;
             right: 25px;
             color:$darkGreen;
             i{
@@ -152,7 +161,7 @@ body .mdl-layout .mdl-layout__inner-container{
             .header-title{
                 display:block;
                 left:25px;
-                top:20px;
+                top:7px;
                 position: fixed;
                 font-size:67px;
             }
@@ -183,7 +192,30 @@ body .mdl-layout .mdl-layout__inner-container{
     }
 }
 
-// TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
+// // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
 @media (min-width: 1025px) and (max-width: 1376px) {
-
+    body .mdl-layout .mdl-layout__inner-container { 
+        .mdl-layout__header{
+            display:block;
+            .header-title{
+                display:block;
+                left:25px;
+                top:7px;
+                position: fixed;
+                font-size:67px;
+            }
+            .mdl-navigation__link{
+                font-size: 25px;
+                padding-left: 20px;
+                padding-top: 5px;
+            }
+        }
+        .mdl-button .mdl-js-button .mdl-button--icon{
+            padding-top: 5px;
+        }
+        .search i{
+            font-size: 20px;
+            // padding-top: 2px;
+        }
+    }
 }
