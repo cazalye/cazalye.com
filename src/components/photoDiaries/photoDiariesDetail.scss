@@ -257,6 +257,11 @@ body .mdl-layout .mdl-layout__inner-container{
     // add note to flip phone
 
     #photo-diary-detail-page #photo-diary-detail{
+        body .mdl-layout .mdl-layout__inner-container {
+            .mdl-layout__header .header-title{
+                display:none;
+            }
+        }
         .fas.fa-chevron-right{
             font-size: 40px;
             color: black;
