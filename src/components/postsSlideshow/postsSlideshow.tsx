@@ -64,6 +64,7 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
                     <div className={`image-layer ${activeClass}`} style={style}>
                         <Link className="photo-diary-title" to={`/photoDiaries/${photoDiary.slug}`}>
                             <h3>{photoDiary.title}</h3>
+                            <p>read the diary</p>
                         </Link>
                     </div>
                 );
