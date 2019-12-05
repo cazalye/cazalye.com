@@ -97,7 +97,7 @@ class Blog extends Component<any, BlogState> {
                 <div  className="post-container" style={style}>
                     <Link className="background-link" to={"blog/" + post.slug}/>
                     <div className="text-container">
-                    <h2 className="post-title">{post.title}</h2>
+                    <Link className="post-title" to={"blog/" + post.slug}>{post.title}</Link>
                         {/* <h3 className="post-date">
                             {new Intl.DateTimeFormat('en-GB', {
                                 year: 'numeric',
@@ -114,18 +114,16 @@ class Blog extends Component<any, BlogState> {
         }
         return (
             <div id="blogs-page">
+                <h1>New on the Blog</h1>
                 <div onClick={e => {this.scrollIncPage(1);}} className={`scroll-button-right ${this.state.rightArrowClass}`}>
                     <i className="fas fa-chevron-right"/>
                 </div>
                 <div onClick={e => {this.scrollIncPage(-1);}} className={`scroll-button-left ${this.state.leftArrowClass}`}>
                     <i className="fas fa-chevron-left"/>
                 </div>
-                <h1>New on the Blog</h1>
                 <div onScroll={e => {this.checkScrollArrowsVisibility();}} className="blog-container">
                         {postsContent}
                 </div>
-
-
             </div>
         );
     }
