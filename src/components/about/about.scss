@@ -117,6 +117,7 @@
 @media (max-width: 768px) {
 // @media (max-width: 413px) {
     .about{
+        background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, rgba(0,0,0, 0.7) 50%), url("/img/rafting.jpg");
         position: absolute;
         height: 200%;
         .mission{
