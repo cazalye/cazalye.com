@@ -5,12 +5,21 @@
 body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
         color: $darkGreen;
+        position: fixed;
+        font-family: "Quentin";
+        font-size: 50px;
+        text-decoration: none;
+        left:20px;
+        top:6px;
     }
     .mdl-layout__drawer-button i{
         color: $darkGreen;
     }
     .mdl-navigation__link{
         color: $darkGreen;
+        // position: relative;
+        // font-size: 16px;
+        // font-family: 'Open Sans', sans-serif;
     }
 }
 
@@ -113,20 +122,17 @@ body .mdl-layout .mdl-layout__inner-container{
         .mdl-layout__drawer-button {
             display: block;
             position:fixed;
-            top:5px;
+            top:0px;
             right: 0px;
             color:$darkGreen;
-            i{
-                font-size:35px;
-            }
+            // margin:0px;
         }
         .mdl-layout__header{
             display:block;
             .header-title{
-                font-size:30px;
                 display:block;
                 left:15px;
-                top:15px;
+                top:2px;
                 position: fixed;
             }
             .header-nav{
@@ -139,60 +145,12 @@ body .mdl-layout .mdl-layout__inner-container{
     }
 }
 
-// PHONE LANDSCAPE: 451-769 
-@media (min-width: 451px) and (max-width: 768px) {
-    body .mdl-layout .mdl-layout__inner-container {  
-        .mdl-layout__drawer-button {
-            display: block;
-            position:fixed;
-            top:7px;
-            right: 25px;
-            i{
-                font-size:45px;
-            }
-        }
-        .mdl-layout__drawer-button:focus{
-                outline:none;
-        }
-        .mdl-layout__header{
-            display:block;
-            .header-title{
-                // display:block;
-                display:none;
-                left:25px;
-                top:15px;
-                position: fixed;
-                font-size:40px;
-            }
-            .header-nav{
-                display:none;
-            }
-            a:hover {
-                color: black;
-              }
-        }
-        .mdl-navigation__link{
-            font-size: 30px;
-            line-height: 50px;
-            padding-left: 20px;
-        }
-        .mdl-layout__drawer.is-visible{
-            width: 270px;
-            .mdl-layout-title{
-                padding-top: 18px;
-            }
-            .header-title {
-                left:20px;
-                top:20px;
-                font-size:67px;
-                // color:red;
-            }
-        }
-    }
-}   
+// PHONE: 0-768 
+// @media (max-width: 768px) {
+
 
 // TABLET: 769-1024
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 451px) and (max-width: 1024px) {
     body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button {
             display: block;
@@ -210,8 +168,7 @@ body .mdl-layout .mdl-layout__inner-container{
         .mdl-layout__header{
             display:block;
             .header-title{
-                // display:block;
-                display:none;
+                display:block;
                 left:25px;
                 top:7px;
                 position: fixed;
