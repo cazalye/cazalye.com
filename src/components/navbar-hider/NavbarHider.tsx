@@ -18,7 +18,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.toggle('hamburger-mode', this.props.hamburgerMode);
         document.body.classList.toggle('green-title', this.props.greenTitle);
         document.body.classList.toggle('hide-title', this.props.hideTitle);
-        document.body.classList.toggle('hide-title', this.props.whiteDrawer);
+        document.body.classList.toggle('white-drawer', this.props.whiteDrawer);
     }
     componentWillUnmount() {
         document.body.classList.remove('hamburger-mode');
