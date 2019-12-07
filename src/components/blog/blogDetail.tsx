@@ -22,9 +22,9 @@ class BlogDetail extends Component<any,any>{
         return (
             // <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
             <div id="blog-detail">
-                {/* <div className="blog-title">
+                <div className="blog-title">
                     <h1 dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
-                </div> */}
+                </div>
                 <div className="blog-content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
             </div>
         );

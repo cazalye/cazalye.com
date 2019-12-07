@@ -1,48 +1,52 @@
 @import "../../styles/colors";
 
+
 // .mdl-layout__inner-container{
     #blog-detail{
         position: absolute;
-        height: 100%;
+        // height: 100%;
         width: 100%;
+        overflow-x: hidden;
         background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 50%, rgba(91, 80, 90, 1)50%);
         background: cover;
         .blog-content{
+            .blog-title{
+                body h1{
+                    position: absolute;
+                    left:50%;
+                    transform: translate(-50%);
+                    padding-bottom:5%;
+                } 
+            }
 
-
-            h1{
-                position: absolute;
-                left:50%;
-                transform: translate(-50%);
-                // font-size: 54px;
-                padding-top:20px;
-            } 
             h2{
-                position: absolute;
+                position: relative;
                 padding-left:5%;
                 padding-right:5%;
-                display:none;
+                padding-bottom:10%;
+                // display:none;
             }
             h3{
-                display:none;
+                // display:none;
             }
             h4{
-                position: absolute;
+                position: relative;
                 padding-left:5%;
                 padding-right:5%;
-                display:none;
+                // display:none;
             }
             h6{
                 display:none;
             }
             p{
-                position: absolute;
+                position: relative;
+                // padding-top:5%;
                 padding-left:5%;
                 padding-right:5%; 
-                display:none;
+                // display:none;
             }
             img{
-                padding-top:15%;
+                // padding-top:15%;
                 width:40%;
                 height: 50%;
             }
