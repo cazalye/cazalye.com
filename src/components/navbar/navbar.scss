@@ -6,8 +6,6 @@ body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
         color: $darkGreen;
         position: fixed;
-        font-family: "Quentin";
-        font-size: 50px;
         text-decoration: none;
         left:20px;
         top:6px;
@@ -47,10 +45,8 @@ body.hide-title .mdl-layout .mdl-layout__inner-container {
 
 // Regular Navbar css
 body .mdl-layout .mdl-layout__inner-container{
-    .mdl-layout__header .mdl-layout__header--transparent .is-casting-shadow{
-        position:fixed;
-    }
-    .mdl-layout__header-row{
+    .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
+        background: rgba(255,255,255,0.8);
         position:fixed;
     }
     .mdl-navigation__link{
@@ -58,16 +54,6 @@ body .mdl-layout .mdl-layout__inner-container{
         color: black;
         font-size: 16px;
         font-family: 'Open Sans', sans-serif;
-        .header-title{
-            position: fixed;
-            color: black;
-            font-family: "Quentin";
-            font-size: 50px;
-            text-decoration: none;
-            left:20px;
-            top:6px;
-        }
-    }
         .drawer-nav{
             padding-top:80px;
         }
@@ -76,42 +62,52 @@ body .mdl-layout .mdl-layout__inner-container{
             background-color: $darkGreen;
             height:1.5px;
         }
-        .search{
+    }
+    .search{
+        color:black;
+        // color: #4d5d54;
+        i {
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-size: 16px;
+            font-variant: normal;
+            text-rendering: auto;
+            font-weight: 900;
+            line-height: 1.5;
+            font-family: "Font Awesome 5 Pro";
+            &:before {
+                content: "\f002";
+            }
+        } 
+    }
+    .header-title{
+        position: fixed;
+        color: black;
+        font-family: "Quentin";
+        font-size: 50px;
+        text-decoration: none;
+        left:20px;
+        top:6px;
+    }
+    .mdl-layout__drawer-button{
+        color: black;
+        z-index: 4;
+        left: auto;
+        right:30px;
+        top:15px;
+        display: none;
+        position: absolute;
+        margin: 8px 12px;
+        cursor: pointer;
+        width: 48px;
+        border:none;
+        i{
             color:black;
-            // color: #4d5d54;
-            i {
-                -webkit-font-smoothing: antialiased;
-                display: inline-block;
-                font-style: normal;
-                font-size: 16px;
-                font-variant: normal;
-                text-rendering: auto;
-                font-weight: 900;
-                line-height: 1.5;
-                font-family: "Font Awesome 5 Pro";
-                &:before {
-                    content: "\f002";
-                }
-            }
-        }
-        .mdl-layout__drawer-button{
-            color: black;
-            z-index: 4;
-            left: auto;
-            right:30px;
-            top:15px;
-            display: none;
-            position: absolute;
-            margin: 8px 12px;
-            cursor: pointer;
-            width: 48px;
-            border:none;
-            i{
-                color:black;
-                font-size: 40px;   
-            }
+            font-size: 40px;   
         }
     }
+}
 
 // Responsive Design
 
