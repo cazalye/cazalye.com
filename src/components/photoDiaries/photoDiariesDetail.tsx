@@ -79,12 +79,17 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                             <div className="photo-inner-shadow"/>
                             <div className="photo-outer-shadow"/>
                             <div className="photo-page-container">
-                                <h3>Location<br/>Date<br/>Camera<br/>Lens<br/></h3>
+                                <div className="photo-diary-metadata">
+                                    <h3><strong>Location:</strong> {this.state.photoDiary.photoDiaryData.location}</h3>
+                                    <h3><strong>Date:</strong> {this.state.photoDiary.photoDiaryData.date}</h3>
+                                    <h3><strong>Camera:</strong> {this.state.photoDiary.photoDiaryData.camera}</h3>
+                                    <h3><strong>Lens:</strong> {this.state.photoDiary.photoDiaryData.lens}</h3>
+                                </div>
                             </div>
                         </div>
                         <div className="right-page-summary book-page">
                             <div className="photo-page-container">
-                                <p>Summary of the place/photo diary</p>
+                                <p>{this.state.photoDiary.photoDiaryData.summary}</p>
                             </div>
                         </div>
                     </div>
