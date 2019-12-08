@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getPostDetailBySlug } from '../../API/posts';
 import "./blogDetail.scss";
+import {Link} from 'react-router-dom';
 
 class BlogDetail extends Component<any,any>{
 
@@ -10,26 +11,51 @@ class BlogDetail extends Component<any,any>{
             detail:null,
         };
     }
-    async componentDidMount() {
-        const detail = await getPostDetailBySlug("the-5-best-things-to-do-in-montenegro");
+    componentDidMount() {
+        this.initialize();
+    }
+    componentDidUpdate(prevProps: any, prevState: any, snapshot: any){
+        if (this.props.match.params.slug !== prevProps.match.params.slug) {
+            this.initialize();
+        }
+    }
+    async initialize() {
+        const detail = await getPostDetailBySlug(this.props.match.params.slug);
         this.setState({
             "detail": detail
         });
-    } 
+    }
 
     render() {
         if (this.state.detail){
-        return (
-            // <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
-            <div id="blog-detail">
-                <div className="blog-title">
-                    <h1 dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
+            const categoriesNamesHTML = [];
+            for(const category of this.state.detail.categories){
+                categoriesNamesHTML.push(<Link to={`/blog/category/${category.name}`}>{category.name}</Link>);
+            }
+            return (
+                // <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
+                <div id="blog-detail">
+                    <div className="blog-title">
+                        <h1 dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
+                        {/* <img className="blog-feature-image" src={this.state.detail.featureMedia.sizes.large} /> */}
+                        {/* <img src={`widhwqiudh ${this.state }`} /> */}
+                        {/* <img src={'widhwqiudh' + this.state} /> */}
+                        <h3 className="post-date">
+                            {new Intl.DateTimeFormat('en-GB', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: '2-digit'
+                            }).format(this.state.detail.date)}
+                        </h3>
+                        <div className="post-categories">
+                            {categoriesNamesHTML}
+                        </div>
+                    </div>
+                    <div className="blog-content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
                 </div>
-                <div className="blog-content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
-            </div>
-        );
+            );
         }
-        else{
+        else{{
             return(
             <div>
                 <p> nope</p>
@@ -38,5 +64,5 @@ class BlogDetail extends Component<any,any>{
         }
     }
 }
-
+}
 export default BlogDetail;
