@@ -12,6 +12,14 @@ export interface PostsFilter {
     limit?: number;
 }
 
+export interface PhotoDiaryData {
+    location: string;
+    date: string;
+    camera: string;
+    lens: string;
+    summary: string;
+}
+
 export interface Post {
     id: number;
     title: string;
@@ -25,6 +33,7 @@ export interface Post {
     featureMedia: Media;
     images: Media[];
     spreads: Spread[];
+    photoDiaryData: PhotoDiaryData;
 }
 
 export interface Media {

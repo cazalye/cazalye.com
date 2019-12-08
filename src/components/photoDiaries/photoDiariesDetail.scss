@@ -13,10 +13,17 @@ body .mdl-layout .mdl-layout__inner-container{
     height: 100vh;
     background: #666;
     #photo-diary-detail {
-        h3{
-            margin:50px; 
-            color:black; 
-            padding:30px;
+        .photo-diary-metadata {
+            margin: 50px;
+            font-size: 22px;
+            h3{
+                font-size: 22px;
+                color:black; 
+                padding:30px;
+                margin: 0px;
+                padding-bottom: 0px;
+                padding-top: 0px;
+            }
         }
         p{
             margin:50px;
