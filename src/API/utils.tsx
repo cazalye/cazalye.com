@@ -88,11 +88,19 @@ function formatMedia(media: any): Media {
  */
 function parsePhotoDiaryData(content: string): PhotoDiaryData {
     const root = parse(content) as any;
-    const summaryNode = root.querySelector("h4");
+    const summaryNode1 = root.querySelector("h1");
+    const summaryNode2 = root.querySelector("h2");
+    const summaryNode3 = root.querySelector("h3");
+    const summaryNode4 = root.querySelector("h4");
+    const summaryNode5 = root.querySelector("h5");
     const lis = root.querySelectorAll("ul li");
 
     return {
-        summary: summaryNode ? summaryNode.text : null,
+        summary1: summaryNode1 ? summaryNode1.text : null,
+        summary2: summaryNode2 ? summaryNode2.text : null,
+        summary3: summaryNode3 ? summaryNode3.text : null,
+        summary4: summaryNode4 ? summaryNode4.text : null,
+        summary5: summaryNode5 ? summaryNode5.text : null,
         location: lis.length > 0 ? lis[0].text : null,
         date: lis.length > 1 ? lis[1].text : null,
         camera: lis.length > 2 ? lis[2].text : null,

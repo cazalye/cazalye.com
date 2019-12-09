@@ -80,7 +80,7 @@ class Blog extends Component<any, BlogState> {
             }
         }
     }
-    render() { 
+    render() {
         const postsContent=[];
         for (const post of this.state.posts) {
 
