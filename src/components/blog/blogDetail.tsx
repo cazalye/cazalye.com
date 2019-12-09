@@ -37,9 +37,6 @@ class BlogDetail extends Component<any,any>{
                 <div id="blog-detail">
                     <div className="blog-title">
                         <h1 dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
-                        {/* <img className="blog-feature-image" src={this.state.detail.featureMedia.sizes.large} /> */}
-                        {/* <img src={`widhwqiudh ${this.state }`} /> */}
-                        {/* <img src={'widhwqiudh' + this.state} /> */}
                         <h3 className="post-date">
                             {new Intl.DateTimeFormat('en-GB', {
                                 year: 'numeric',
@@ -51,6 +48,9 @@ class BlogDetail extends Component<any,any>{
                             {categoriesNamesHTML}
                         </div>
                     </div>
+                    {/* <img className="blog-feature-image" src={this.state.detail.featureMedia.sizes.large} /> */}
+                        {/* <img src={`widhwqiudh ${this.state }`} /> */}
+                        {/* <img src={'widhwqiudh' + this.state} /> */}
                     <div className="blog-content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
                 </div>
             );
@@ -58,7 +58,7 @@ class BlogDetail extends Component<any,any>{
         else{{
             return(
             <div>
-                <p> nope</p>
+                <p> error</p>
             </div>
             );
         }
