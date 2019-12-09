@@ -2,6 +2,17 @@
 
 
 // Various navbar hider modes
+
+body.transparent-row-hide{
+    .mdl-layout .mdl-layout__inner-container{
+        .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
+            background: rgba(255,255,255,0);
+            position:fixed;
+        }
+    }
+}
+
+
 body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
         color: $darkGreen;
@@ -196,7 +207,7 @@ body .mdl-layout .mdl-layout__inner-container{
         }
     }
 }
-
+ 
 // // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
 @media (min-width: 1025px) and (max-width: 1376px) {
     body .mdl-layout .mdl-layout__inner-container { 

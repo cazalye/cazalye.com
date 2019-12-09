@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { getBlogPosts, Post } from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
-// import {InfiniteScroll} from 'react-infinite-scroll-component';
-
+import NavbarHider from '../navbar-hider/NavbarHider';
 
 interface BlogState {
     posts: Post[];
@@ -81,7 +80,7 @@ class Blog extends Component<any, BlogState> {
             }
         }
     }
-    render() {
+    render() { 
         const postsContent=[];
         for (const post of this.state.posts) {
 
@@ -114,6 +113,7 @@ class Blog extends Component<any, BlogState> {
         }
         return (
             <div id="blogs-page">
+                <NavbarHider transparent-row-hide={true} hamburgerMode={false} greenTitle={false} hideTitle={false}/>
                 <h1>New on the Blog</h1>
                 <div onClick={e => {this.scrollIncPage(1);}} className={`scroll-button-right ${this.state.rightArrowClass}`}>
                     <i className="fas fa-chevron-right"/>

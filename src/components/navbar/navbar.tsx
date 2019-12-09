@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {Layout, Header, Navigation, Drawer, Textfield} from 'react-mdl';
 import {Link} from 'react-router-dom';
 
-
+ 
 class Navbar extends Component {
     // hideToggle() {
     //     const selectorId = document.querySelector('.mdl-layout');
