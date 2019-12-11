@@ -43,13 +43,19 @@
 
         // Decide if want to use below and where it should go on landing page. Link to about page if so
         .start-here{
-            font-family: 'Cormorant Garamond', serif;
             position: absolute;
             right: 25px;
-            top: 100px;
+            top: 150px;
             text-align: center;
+            h3{
+                // font-family: 'Cormorant Garamond', serif;
+                font-size:15px;
+                color:white;
+                margin-bottom:0px;
+            }
             p{
-                font-size:30px;
+                font-size:25px;
+                line-height: 15px;;
             }
         }
     }
