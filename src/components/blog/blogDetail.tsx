@@ -47,6 +47,9 @@ class BlogDetail extends Component<any,any>{
                         <div className="post-categories">
                             {categoriesNamesHTML}
                         </div>
+                        {/* <div className="blog-summary">
+                            <h4></h4>
+                        </div> */}
                     </div>
                     {/* <img className="blog-feature-image" src={this.state.detail.featureMedia.sizes.large} /> */}
                         {/* <img src={`widhwqiudh ${this.state }`} /> */}
