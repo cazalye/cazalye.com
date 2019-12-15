@@ -96,7 +96,7 @@ class Blog extends Component<any, BlogState> {
                 <div  className="post-container" style={style}>
                     <Link className="background-link" to={"blog/" + post.slug}/>
                     <div className="text-container">
-                    <Link className="post-title" to={"blog/" + post.slug}>{post.title}</Link>
+                    <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={"blog/" + post.slug}/>
                         {/* <h3 className="post-date">
                             {new Intl.DateTimeFormat('en-GB', {
                                 year: 'numeric',

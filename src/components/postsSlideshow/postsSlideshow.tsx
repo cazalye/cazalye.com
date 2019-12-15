@@ -53,7 +53,7 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
         const imageLayers = [];
         if (this.state.initialized) {
             const activePhotoDiary = this.state.posts[this.state.page];
-            titleHtml = (<h3>{this.state.posts[this.state.page].title}</h3>);
+            titleHtml = (<h3 dangerouslySetInnerHTML={{__html: this.state.posts[this.state.page].title}}/>);
 
             for (const photoDiary of this.state.posts) {
                 const style = {
@@ -63,7 +63,7 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
                 imageLayers.push(
                     <div className={`image-layer ${activeClass}`} style={style}>
                         <Link className="photo-diary-title" to={`/photoDiaries/${photoDiary.slug}`}>
-                            <h3>{photoDiary.title}</h3>
+                            <h3 dangerouslySetInnerHTML={{__html: photoDiary.title}}/>
                             <p>read the diary</p>
                         </Link>
                     </div>

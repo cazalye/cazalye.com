@@ -70,7 +70,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 return (
                     <div className="cover-page">
                         <div className="cover-photo" style={style}>
-                            <h1>{this.state.photoDiary.title}</h1>
+                            <h1 dangerouslySetInnerHTML={{__html: this.state.photoDiary.title}}/>
                         </div>
                     </div>
                 );
@@ -153,12 +153,12 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                     relatedPosthtml = [
                         (
                                 <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${backgroundImage0})`}}>
-                                    <h2>{this.state.relatedPhotoDiaries[0].title}</h2>
+                                    <h2 dangerouslySetInnerHTML={{__html: this.state.relatedPhotoDiaries[0].title}}/>
                                 </Link>
                         ),
                         (
                             <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${backgroundImage1})`}}>
-                                <h2>{this.state.relatedPhotoDiaries[1].title}</h2>
+                                <h2 dangerouslySetInnerHTML={{__html: this.state.relatedPhotoDiaries[1].title}}/>
                             </Link>
                         )
                     ];
