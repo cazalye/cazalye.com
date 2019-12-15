@@ -63,10 +63,13 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             return (null);
         } else {
             if (this.state.page === 0) {
+                const style = {
+                    backgroundImage: this.state.photoDiary.featureMedia ? `url("${this.state.photoDiary.featureMedia.sizes.medium_large}")`: ""
+                };
                 // COVER PAGE
                 return (
                     <div className="cover-page">
-                        <div className="cover-photo" style={{backgroundImage: `url(${this.state.photoDiary.featureMedia.sizes.large})`}}>
+                        <div className="cover-photo" style={style}>
                             <h1>{this.state.photoDiary.title}</h1>
                         </div>
                     </div>
@@ -145,14 +148,16 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 // END PAGE
                 let relatedPosthtml: any = [];
                 if (this.state.relatedPhotoDiaries.length > 1) {
+                    const backgroundImage0 = this.state.relatedPhotoDiaries[0].featureMedia ? this.state.relatedPhotoDiaries[0].featureMedia.sizes.large : "";
+                    const backgroundImage1 = this.state.relatedPhotoDiaries[1].featureMedia ? this.state.relatedPhotoDiaries[1].featureMedia.sizes.large : "";
                     relatedPosthtml = [
                         (
-                                <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${this.state.relatedPhotoDiaries[0].featureMedia.sizes.large})`}}>
+                                <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${backgroundImage0})`}}>
                                     <h2>{this.state.relatedPhotoDiaries[0].title}</h2>
                                 </Link>
                         ),
                         (
-                            <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${this.state.relatedPhotoDiaries[1].featureMedia.sizes.large})`}}>
+                            <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${backgroundImage1})`}}>
                                 <h2>{this.state.relatedPhotoDiaries[1].title}</h2>
                             </Link>
                         )

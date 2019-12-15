@@ -130,7 +130,7 @@ export function formatPost(postData: any): Post {
         description: postData.excerpt.rendered,
         images: images,
         categories: postData.categoriesObjects,
-        featureMedia: formatMedia(postData.feature_image),
+        featureMedia: postData.feature_image ? formatMedia(postData.feature_image): null,
         spreads: buildSpreadsFromImages(images),
         photoDiaryData: parsePhotoDiaryData(postData.content.rendered),
     };

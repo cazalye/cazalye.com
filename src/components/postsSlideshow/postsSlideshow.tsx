@@ -57,7 +57,7 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
 
             for (const photoDiary of this.state.posts) {
                 const style = {
-                    backgroundImage: `url(${photoDiary.featureMedia.sizes.large})`
+                    backgroundImage: photoDiary.featureMedia ? `url(${photoDiary.featureMedia.sizes.large})`: ""
                 };
                 const activeClass = photoDiary.id === activePhotoDiary.id ? "active-layer" : "inactive-layer";
                 imageLayers.push(

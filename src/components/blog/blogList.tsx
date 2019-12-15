@@ -85,7 +85,7 @@ class Blog extends Component<any, BlogState> {
         for (const post of this.state.posts) {
 
             const style = {
-                backgroundImage: `url("${post.featureMedia.sizes.medium_large}")`
+                backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.medium_large}")`: ""
             };
             const categoriesNamesHTML = [];
             for(const category of post.categories){

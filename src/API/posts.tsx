@@ -34,7 +34,7 @@ export interface Post {
     description: string;
     content: string;
     categories: Category[];
-    featureMedia: Media;
+    featureMedia: Media | null;
     images: Media[];
     spreads: Spread[];
     photoDiaryData: PhotoDiaryData;
