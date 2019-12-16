@@ -78,15 +78,17 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 // INFO PAGE
                 return (
                     <div className="double-page-spread">
-                        <div className="left-page-key-details book-page">
-                            <div className="photo-inner-shadow"/>
-                            <div className="photo-outer-shadow"/>
-                            <div className="photo-page-container">
-                                <div className="photo-diary-metadata">
-                                    <h3><strong>Location:</strong> {this.state.photoDiary.photoDiaryData.location}</h3>
-                                    <h3><strong>Date:</strong> {this.state.photoDiary.photoDiaryData.date}</h3>
-                                    <h3><strong>Camera:</strong> {this.state.photoDiary.photoDiaryData.camera}</h3>
-                                    <h3><strong>Lens:</strong> {this.state.photoDiary.photoDiaryData.lens}</h3>
+                        <div className="delme">
+                            <div className="left-page-key-details book-page">
+                                <div className="photo-inner-shadow"/>
+                                <div className="photo-outer-shadow"/>
+                                <div className="photo-page-container">
+                                    <div className="photo-diary-metadata">
+                                        <h3><strong>Location:</strong> {this.state.photoDiary.photoDiaryData.location}</h3>
+                                        <h3><strong>Date:</strong> {this.state.photoDiary.photoDiaryData.date}</h3>
+                                        <h3><strong>Camera:</strong> {this.state.photoDiary.photoDiaryData.camera}</h3>
+                                        <h3><strong>Lens:</strong> {this.state.photoDiary.photoDiaryData.lens}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
