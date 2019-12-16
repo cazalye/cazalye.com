@@ -1,3 +1,5 @@
+@import "../../styles/colors";
+
 .posts-slideshow {
     height: 100%;
     .image-layer {
@@ -13,17 +15,58 @@
                 z-index: 10;
             }
         }
-        .photo-diary-title{
+        .photo-diary-text {
             position: absolute;
             right:50px;
             bottom:200px;
-            h3{
-                margin-top:5px;
-                margin-bottom:5px;
-                font-weight: 400;
-                font-size: calc(10px + 2vmin);
-                color: white;
+            .photo-diary-title{
+                h3{
+                    margin-top:5px;
+                    margin-bottom:5px;
+                    font-weight: 400;
+                    font-size: calc(10px + 2vmin);
+                    color: white;
+                }
             }
+        }
+    }
+    .post-numbers-text{
+        position: fixed;
+        bottom:40px;
+        left:30px;
+        h1{
+            font-size: 20px;
+            color:white;
+        }
+    }
+    .posts-numbers{
+        position: fixed;
+        bottom:20px;
+        left:30px;
+        display: flex;
+        color:white;
+        margin:auto;
+        .number-container {
+            background-color: white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            &.active{
+                color:red;
+            }
+        }
+
+        h4{
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+            color:black;
+        }
+
+        h4:hover {
+            cursor: pointer;
+            color:grey;
         }
     }
 }
