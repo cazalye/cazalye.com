@@ -3,12 +3,13 @@ import React, { Component } from 'react';
 import {Layout, Header, Navigation, Drawer, Textfield} from 'react-mdl';
 import {Link} from 'react-router-dom';
 
- 
 class Navbar extends Component {
-    // hideToggle() {
-    //     const selectorId = document.querySelector('.mdl-layout');
-    //     selectorId.MaterialLayout.toggleDrawer();
-    // }
+    hideToggle() {
+        const selectorId = document.querySelector('.mdl-layout') as any;
+        if (selectorId) {
+            selectorId.MaterialLayout.toggleDrawer();
+        }
+    }
     render() {
         const title = <Link to="/" className="header-title"> cazalye </Link> as any;
         return (
@@ -38,12 +39,12 @@ class Navbar extends Component {
                         />
                     </Navigation>
                 </Header>
-                <Drawer title={<Link to="/" className="header-title">cazalye</Link> as any}>
+                <Drawer title={<Link onClick={() => this.hideToggle()} to="/" className="header-title">cazalye</Link> as any}>
                     <Navigation className="drawer-nav" >
-                        <Link to="/map">Where to?</Link>
-                        <Link to="/photoDiaries">Photo Diaries</Link>
-                        <Link to="/blog">Blog</Link>
-                        <Link to="/about">About</Link>
+                        <Link onClick={() => this.hideToggle()} to="/map">Where to?</Link>
+                        <Link onClick={() => this.hideToggle()} to="/photoDiaries">Photo Diaries</Link>
+                        <Link onClick={() => this.hideToggle()} to="/blog">Blog</Link>
+                        <Link onClick={() => this.hideToggle()} to="/about">About</Link>
                         <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                             <i className="fa fa-envelope" aria-hidden="true" />
                         </a>

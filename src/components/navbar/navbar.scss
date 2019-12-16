@@ -101,6 +101,10 @@ body .mdl-layout .mdl-layout__inner-container{
         left:20px;
         top:6px;
     }
+    
+    .mdl-layout__drawer .mdl-navigation{
+        padding-top:70px;
+    }
     .mdl-layout__drawer-button{
         color: black;
         z-index: 4;
@@ -113,10 +117,10 @@ body .mdl-layout .mdl-layout__inner-container{
         cursor: pointer;
         width: 48px;
         border:none;
-        i{
+            i{
             color:black;
             font-size: 40px;   
-        }
+            }
     }
 }
 
