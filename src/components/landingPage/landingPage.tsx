@@ -17,7 +17,7 @@ class LandingPage extends Component<any, any> {
                     </div>
                     <div className="start-here">
                         <Link to="/about">
-                            <h3>A little lost?</h3>
+                            <h3>First time exploring this site?</h3>
                             <p>Start Here</p>
                             </Link>
                     </div>
