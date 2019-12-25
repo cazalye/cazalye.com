@@ -21,6 +21,11 @@ class LandingPage extends Component<any, any> {
                             <p>Start Here</p>
                             </Link>
                     </div>
+                    <div className="stone-paper-link">
+                        <Link to="/stonePaper">
+                            <h3><strong>What is Stone Paper?</strong> &emsp; Find out about eco-friendly travel postcards</h3>
+                            </Link>
+                    </div>
                 </div>
                 <div className="landing-section">
                     <Map/>
