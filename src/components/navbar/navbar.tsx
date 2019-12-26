@@ -20,6 +20,7 @@ class Navbar extends Component {
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
+                        <Link to="/stonePaper">Shop</Link>
                         <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                             <i className="fa fa-envelope" aria-hidden="true" />
                         </a>
@@ -45,6 +46,7 @@ class Navbar extends Component {
                         <Link onClick={() => this.hideToggle()} to="/photoDiaries">Photo Diaries</Link>
                         <Link onClick={() => this.hideToggle()} to="/blog">Blog</Link>
                         <Link onClick={() => this.hideToggle()} to="/about">About</Link>
+                        <Link onClick={() => this.hideToggle()} to="/stonePaper">Shop</Link>
                         <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                             <i className="fa fa-envelope" aria-hidden="true" />
                         </a>
