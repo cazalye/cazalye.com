@@ -6,6 +6,7 @@ import BlogDetail from './blog/blogDetail';
 import About from './about/about';
 import PhotoDiariesDetail from './photoDiaries/photoDiariesDetail';
 import PhotoDiariesList from './photoDiaries/photoDiariesList';
+import StonePaper from './stonePaper/stonePaper';
 
 
 const View = () => (
@@ -16,6 +17,7 @@ const View = () => (
         <Route exact={true} path='/blog/:slug' component={BlogDetail}/>
         <Route exact={true} path='/photoDiaries' component={PhotoDiariesList}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
+        <Route exact={true} path='/stonePaper' component={StonePaper}/>
     </Switch>
 );
 
