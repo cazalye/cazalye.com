@@ -57,7 +57,7 @@ body.hide-title .mdl-layout .mdl-layout__inner-container {
 // Regular Navbar css
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
-        background: rgba(255,255,255,0.8);   // CAN we change this so the opacity goes to 1 when scrolling?
+        background: rgba(255,255,255,1);  
         position:fixed;
     }
     .mdl-navigation__link{
