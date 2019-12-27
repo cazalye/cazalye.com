@@ -9,6 +9,9 @@
         width: 100%;
         height: 100%;
         opacity: 0;
+        &.inactive-layer {
+            z-index: -1;
+        }
         &.active-layer {
             opacity: 1;
             .photo-diary-title {
