@@ -81,6 +81,38 @@ function formatMedia(media: any): Media {
 }
 
 /**
+ * check if the medias are really used by the post
+ * and sort them in the order they are used
+ *
+ * @param {Media[]} medias
+ * @param {string} content
+ * @returns {Media[]}
+ */
+function filterAndSortMedia(medias: Media[], content: string): Media[] {
+    // index input media array by filename
+    // we can access a media obj just using one of its url
+    // i.e. mediasIndex['http://image.jpg']
+    const mediasIndex: any = {};
+    for (const media of medias) {
+        mediasIndex[media.file] = media;
+        const sizes: any = media.sizes;
+        for (const size of Object.keys(sizes)) {
+            mediasIndex[sizes[size]] = media;
+        }
+    }
+
+    // parse images in the rendered content.
+    const imagesFromContent = getImagesFromContent(content);
+    const ret: Media[] = [];
+    for (const image of imagesFromContent) {
+        if (mediasIndex[image]) {
+            ret.push(mediasIndex[image]);
+        }
+    }
+    return ret;
+}
+
+/**
  * Parse content of a post to find photo diary metadatas
  *
  * @param {string} content
@@ -117,7 +149,8 @@ function parsePhotoDiaryData(content: string): PhotoDiaryData {
  */
 export function formatPost(postData: any): Post {
 
-    const images: Media[] = postData.medias.map(formatMedia);
+    let images: Media[] = postData.medias.map(formatMedia);
+    images = filterAndSortMedia(images, postData.content.rendered);
 
     return {
         id: postData.id,
