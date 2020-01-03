@@ -137,6 +137,7 @@ function parsePhotoDiaryData(content: string): PhotoDiaryData {
         date: lis.length > 1 ? lis[1].text : null,
         camera: lis.length > 2 ? lis[2].text : null,
         lens: lis.length > 3 ? lis[3].text : null,
+        photographer: lis.length > 4 ? lis[4].text : null,
     };
 }
 

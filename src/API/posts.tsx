@@ -19,6 +19,7 @@ export interface PhotoDiaryData {
     date: string;
     camera: string;
     lens: string;
+    photographer: string;
     summary1: string;
     summary2: string;
     summary3: string;

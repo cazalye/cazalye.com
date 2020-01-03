@@ -88,6 +88,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                                         <h3><strong>Date:</strong> {this.state.photoDiary.photoDiaryData.date}</h3>
                                         <h3><strong>Camera:</strong> {this.state.photoDiary.photoDiaryData.camera}</h3>
                                         <h3><strong>Lens:</strong> {this.state.photoDiary.photoDiaryData.lens}</h3>
+                                        <h3><strong>Photos taken by:</strong> {this.state.photoDiary.photoDiaryData.photographer}</h3>
                                     </div>
                                 </div>
                             </div>
