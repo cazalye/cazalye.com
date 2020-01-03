@@ -24,21 +24,21 @@ class About extends Component {
                     <div className="post-icons">
                         <div className="photo-diaries-link">
                             <Link to="/photodiaries"><h3>Photo Diaries</h3></Link>
-                            <p className="blog-post-text">Visual journeys<br/> around the world</p>
+                            <Link to="/photodiaries"><p className="blog-post-text">Visual journeys<br/> around the world</p></Link>
                             <div className="diary-icon">
                                 <Link to="/photoDiaries"><i className="fas fa-book-open"/></Link>
                             </div>
                         </div>
                         <div className="blog-post-link">
                             <Link to="/blog"><h3>Blog Posts</h3></Link>
-                            <p className="blog-post-text">The best activities, <br/>sites & coffee spots</p>
+                            <Link to="/blog"><p className="blog-post-text">The best activities, <br/>sites & coffee spots</p></Link>
                             <div className="diary-icon" >
                                 <Link to="/blog"><i className="fas fa-list"/></Link>
                             </div>
                         </div>
                     </div>
                     <div className="about-me-link">
-                        <Link to="/aboutMe">Who is cazalye?</Link>
+                        <Link to="/aboutMe">Who is <strong>cazalye?</strong></Link>
                     </div>
                     {/* <Footer/> */}
                 </div>
