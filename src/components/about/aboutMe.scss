@@ -1,8 +1,7 @@
 @import "../../styles/colors";
 
 
-
-.about{ 
+.about-me{ 
     background: linear-gradient(180deg, rgba(255,255,255, 0.8) 50%,rgba(255,255,255, 0.7) 60%, transparent 90%), url("/img/rafting.jpg");
     background-size: cover;
     opacity: 0.9;
@@ -14,8 +13,10 @@
         margin-bottom:30px;
         margin-top:80px;
     }
-    .about-content{
-        position: fixed;
+    .about-me-content{
+        // position: fixed;
+        width: 900px;
+        margin-top: 172px;
         p{
             color:black;
             text-align: justify;
