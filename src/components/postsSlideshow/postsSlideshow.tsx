@@ -73,7 +73,6 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
 
             for (const photoDiary of this.state.posts) {
 
-        
                 const style = {
                     backgroundImage: photoDiary.featureMedia ? `url(${photoDiary.featureMedia.sizes.large})`: ""
                 };
