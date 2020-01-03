@@ -22,7 +22,7 @@ class Blog extends Component<any, BlogState> {
     }
     async componentDidMount() {
         const posts = await getBlogPosts({
-            limit: 20
+            limit: 100
         });
         this.setState({
             posts: posts
