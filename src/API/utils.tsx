@@ -1,4 +1,4 @@
-import {Post, FeatureImageSizes, Media, Spread, baseUrlImages, PhotoDiaryData} from "./posts";
+import {blogBaseUrl, wordpressBlogBaseUrl, Post, FeatureImageSizes, Media, Spread, baseUrlImages, PhotoDiaryData} from "./posts";
 import { parse } from 'node-html-parser';
 
 /**
@@ -141,6 +141,19 @@ function parsePhotoDiaryData(content: string): PhotoDiaryData {
 }
 
 /**
+ * format content from wp,
+ * i.e. fixing internal links from wp to react
+ *
+ * @param {string} content
+ * @returns {string}
+ */
+function formatContent(content: string): string {
+    const regexp = new RegExp(wordpressBlogBaseUrl, "gi");
+    const ret = content.replace(regexp, blogBaseUrl);
+    return ret;
+}
+
+/**
  * Format the post, building feature image, images, and other stuff
  *
  * @export
@@ -157,7 +170,7 @@ export function formatPost(postData: any): Post {
         title: postData.title.rendered,
         date: new Date(postData.date),
         slug: postData.slug,
-        content: postData.content.rendered,
+        content: formatContent(postData.content.rendered),
         tags: postData.tags,
         status: postData.status,
         description: postData.excerpt.rendered,
