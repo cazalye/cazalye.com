@@ -95,7 +95,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                         </div>
                         <div className="right-page-summary book-page">
                             <div className="photo-page-container">
-                                <div className="photo-diary-summary">
+                                <div className="photo-diary-summary"> 
                                     <p className="p1">{this.state.photoDiary.photoDiaryData.summary1}</p>
                                     <p className="p2">{this.state.photoDiary.photoDiaryData.summary2}</p>
                                     <p className="p3">{this.state.photoDiary.photoDiaryData.summary3}</p>
