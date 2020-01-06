@@ -114,7 +114,7 @@ class Blog extends Component<any, BlogState> {
         return (
             <div id="blogs-page">
                 <NavbarHider transparent-row-hide={true} hamburgerMode={false} greenTitle={false} hideTitle={false}/>
-                <h1>New on the Blog</h1>
+                <h1>Travel Blog</h1>
                 <h3>The Best Activities, Sites and Coffee Spots Around the World</h3>
                 <div onClick={e => {this.scrollIncPage(1);}} className={`scroll-button-right ${this.state.rightArrowClass}`}>
                     <i className="fas fa-chevron-right"/>
