@@ -8,7 +8,7 @@ class PhotoDiariesList extends Component {
     render() {
         return (
             <div>
-                <NavbarHider hamburgerMode={false} greenTitle={false} hideTitle={false}/>
+                <NavbarHider transparentRowHide={false} hamburgerMode={false} greenTitle={false} hideTitle={false}/>
                 <PostsSlideshow/>
             </div>
         );
