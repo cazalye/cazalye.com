@@ -59,6 +59,7 @@ body .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
         background: rgba(255,255,255,1);  
         position:fixed;
+        // height:100px;
     }
     .mdl-navigation__link{
         position: relative;
@@ -162,7 +163,10 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // TABLET: 769-1024
 @media (min-width: 451px) and (max-width: 1024px) {
-    body .mdl-layout .mdl-layout__inner-container {  
+    body .mdl-layout .mdl-layout__inner-container { 
+        .mdl-layout__header-row{
+            height: 80px;
+        }
         .mdl-layout__drawer-button {
             display: block;
             position:fixed;

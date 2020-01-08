@@ -105,3 +105,48 @@
         }
     }
 // }
+
+
+
+// PHONE: 0-450
+@media (max-width: 450px) {
+    #blog-detail{
+        .blog-title{
+            padding-left:5%;
+            padding-right:5%;
+        }
+        .post-date{
+            margin-bottom: 5px;
+        }
+        .post-categories{
+            margin-bottom: 20px;
+        }
+        .blog-content{
+            padding-left:12%;
+            padding-right:12%;
+            padding-top:1%;
+            p{
+                padding:0px;
+            }
+        }
+    }
+}
+
+
+    
+// TABLET: 769-1024
+@media (min-width: 451px) and (max-width: 1024px) {
+    #blog-detail{
+        .blog-content{
+            padding-left:10%;
+            padding-right:10%;
+            padding-top:1%;
+        }
+        .post-date{
+            margin-bottom: 5px;
+        }
+        .post-categories{
+            margin-bottom: 20px;
+        }
+    }
+}

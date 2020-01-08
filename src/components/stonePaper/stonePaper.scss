@@ -4,7 +4,7 @@
     width: 100%;
     overflow: hidden;
     .stone-paper-background{
-    position: absolute;
+    position: fixed;
     // background: url("/img/rafting.jpg");
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.8) 50%, transparent 50%), url(/img/rafting.jpg);
     background-size: cover;
@@ -40,8 +40,8 @@
         text-align: center;
         color: black; 
         position: absolute;
-        top: 55%;
-        right:1%;
+        top: 60%;
+        right:3%;
         &:hover{
             color:#cdcdcd;
         }
@@ -54,9 +54,9 @@
         h3{
             color:white;
             position: relative;
-            left:40px;
+            left:45px;
             margin-right:800px;
-            margin-top:45px;
+            margin-top:40px;
             text-align: left;
         } 
         p{
@@ -79,5 +79,84 @@
             display:none;
             left:40px;
         }
+    }
+}
+
+// iPhone 6/7/8: 0-413
+@media (max-width: 413px) {
+    #stone-paper-about{
+        overflow-y: scroll;
+        .stone-paper-header{
+            h1{
+                position: relative;
+                left: 20px;
+                color:white;
+                font-size: 30px;
+                text-align: left;
+                margin-bottom:0px;
+             }
+            h2{
+                position: relative;
+                text-align: left;
+                left: 12%;
+                padding-right:50px;
+                margin-top: 10px;
+                margin-bottom:0px;
+                color:white;
+                font-size: 20px; 
+                line-height: 25px;
+            }
+        }
+        .etsy-link{ 
+            font-size: 20px; 
+            line-height: 30px;
+            top:25%;
+        }
+        .stone-paper-body{
+            h3{
+                left:40px;
+                margin-right:10px;
+                margin-top:60px;
+                margin-bottom:5px;
+                text-align: left;
+                font-size: 20px;
+            } 
+            p{
+               color:white;
+               position: relative;
+               left:40px;
+               margin-right:80px;
+               text-align: left;
+               font-size: 16px;
+            }
+            ul{
+                color:white;
+                position: relative;
+                margin-right:80px;
+            }
+            li{
+                color:white;
+                position: relative;
+                left:40px;
+            }
+            hr{
+                display:none;
+                left:40px;
+            }
+        }
+    }
+}
+
+// iPhone 6/7/8 Plus: 414-767
+@media (min-width: 414px) and (max-width: 768px) {
+    .stone-paper-header{
+         h2{
+             position: relative;
+             text-align: left;
+             left: 40px;
+             padding-right: 10px;;
+             color:white;
+             font-size: 5px; 
+         }
     }
 }

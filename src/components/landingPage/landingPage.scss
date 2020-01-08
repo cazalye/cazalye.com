@@ -17,10 +17,10 @@
         .mission{
             z-index: 1;
             position:absolute;
-            // left:330px;
-            left:230px;
-            top:80px;
-            // color:$accentColor; 
+            // left:230px;
+            left:15%;
+            // top:80px;
+            top:10%;
             color:white;
             font-family: 'Cormorant Garamond', serif;
             h2{
@@ -28,10 +28,6 @@
                 font-weight: 300;
                 font-size: 50px;
                 margin-bottom: 0px;
-                // font-family: 'Quentin';
-                // font-size: 18px;
-                // left:220px;
-                // top:50px;
             }
             h3{
                 font-family: 'Cormorant Garamond', serif;
@@ -44,42 +40,50 @@
         // Decide if want to use below and where it should go on landing page. Link to about page if so
         .start-here{
             position: absolute;
-            top: 181px;
-            right: 16px;
+            top: 20%;
+            right: 3%;
             text-align: center;
-            padding: 15px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            // border: 2px solid #c5c3d0b8;
-            // border: 2px solid #ffffff66;
-            border: 2px solid #ffffff;
+            padding: .6em;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            border: 1px solid #666;
             border-radius: 25px;
-            // background-color: #031a18b8;
-            // background-color: #031a185c;
-            // background-color: #9fa7a66b;
             background-color: #0113109e;
-            
             h3{
-                font-size:15px;
+                font-size:.6em;
                 color:white;
                 margin-bottom:0px;
                 margin-top:0px;
             }
-            p{
-                font-size:25px;
-                line-height: 15px;;
+            a{
+                p{
+                    font-size:.9em;
+                    line-height: .7em;
+                }
+                .fas .fa-hiking{
+                    color:white;
+                }
+                :hover{
+                    color:#cdcdcd;
+                }
             }
         }
         .stone-paper-link{
             position: absolute;
-            right:220px;
-            bottom:15px;
+            right:3%;
+            // right:220px;
+            bottom:1%;
             margin: auto;
             font-family: 'Open Sans', sans-serif;
             font-weight: 100;
+            padding: .5em;
+            border: 1px solid #333;
+            border-radius: 25px;
+            background-color: #0113109e;
             a{
                 color:white;
-                font-size: 20px;
+                // font-size: 20px;
+                font-size: .6em;
                 margin-bottom: 0px;
             }
             a:hover{
@@ -109,6 +113,9 @@
                 font-weight: 500;
                 }
             }
+            .stone-paper-link{
+                bottom:8%;
+            }
         }
     }
 }
@@ -133,6 +140,9 @@
             p{
                 font-size:33px;
             }    
+        }
+        .stone-paper-link{
+            bottom:4%;
         }
     }  
     .footer-links{
