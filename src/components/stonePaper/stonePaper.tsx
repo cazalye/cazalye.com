@@ -11,9 +11,9 @@ class StonePaper extends Component {
                 <div className="stone-paper-background"/>
                 <div className="stone-paper-header">
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>
-                    <h2>Beautiful, adventure-inspired travel photogrpahy printed on the most eco-friendly paper in existence</h2>
+                    <h2>Adventure-inspired travel photography printed on the most eco-friendly paper in existence</h2>
                 <div/>
-                <a className="etsy-link" href="https://www.etsy.com/au/shop/cazalye"> Visit my store here to order your <br/>Stone Paper Travel Postcards</a>
+                <a className="etsy-link" href="https://www.etsy.com/au/shop/cazalye"> <strong>Order Here!</strong></a>
                 <div className="stone-paper-body">
                     <h3>What is Stone Paper?</h3>
                     <p>Stone Paper is a revolutionary new way to make paper!
