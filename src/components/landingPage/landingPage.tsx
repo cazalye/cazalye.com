@@ -16,9 +16,9 @@ class LandingPage extends Component<any, any> {
                         <h3>at home and abroad</h3>
                     </div>
                     <div className="start-here">
+                        <h3>First time exploring this site?</h3>
                         <Link to="/about">
-                            <h3>First time exploring this site?</h3>
-                            <p>Start Here</p>
+                            <p>Start Here <i className="fas fa-hiking"></i></p>
                         </Link>
                     </div>
                     <div className="stone-paper-link">
