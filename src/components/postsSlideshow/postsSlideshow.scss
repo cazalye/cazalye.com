@@ -39,9 +39,11 @@
         }
     }
     .post-numbers-text{
-        position: fixed;
-        bottom:40px;
-        left:30px;
+        position: absolute;
+        top:276%;
+        right:120px;
+        // bottom:45px;
+        // left:30px;
         h1{
             font-size: 20px;
             color:white;
@@ -51,6 +53,8 @@
         position: absolute;
         top:292%;
         right:30px;
+        // bottom:20px;
+        // left:10px;
         display: flex;
         color:white;
         margin:auto;
