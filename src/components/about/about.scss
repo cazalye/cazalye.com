@@ -13,6 +13,18 @@
         margin-bottom:30px;
         margin-top:80px;
     }
+    .social-links{
+        text-align: left;
+        position: fixed;
+        top:80px;
+        right: 42px;
+        i{
+            color:white;
+            font-size:18px;
+            padding: 15px;
+            padding-bottom:15px;
+        }
+    }
     .about-content{
         width: 900px;
         // margin: auto;
@@ -114,13 +126,114 @@
 }
 
 
-//  iPhone 6/7/8: 0-413 
-@media (max-width: 413px) {
-// @media (max-width: 768px) {
+// iPhone 5: 0-320
+@media (max-width: 320px){
+    .about{
+        background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, rgba(0,0,0, 0.7) 50%), url("/img/rafting.jpg");
+        position: absolute;
+        height: 300%;
+        .social-links{
+            position: absolute;
+            top: 30%;
+            left: 10px;
+            i{
+                color:black;
+            }
+        }
+        .mission{
+            color:black;
+            position: absolute;
+            top: 24%;
+            text-align: right;
+            right:10px;
+            h2{
+                font-size: 25px;
+                margin-left:88px;
+                margin-bottom: 0px;
+                line-height: 25px;
+            }
+            h3{
+                font-weight: 300;
+                font-size: 15px;
+                margin-top:0px;
+                margin-left:150px;
+                line-height: 25px;
+            }
+        }
+        .about-content{
+            width:100%;
+            margin-top:80px;
+            p{
+                color: black;
+                font-size: 12px;
+                padding-top:10px;
+                padding-right: 30px;
+                padding-left: 30px;
+                margin-bottom: 10px;
+            }
+            .opp-aim{
+                padding-left:30px;
+                display: table;
+                padding-top: 10px;
+                padding-left: 0px;
+                text-align: center;
+            }
+            .para2{
+                padding-right: 70px;
+                padding-top: 10px;
+                font-size: 12px;
+            }
+            .para3{
+                color: white;
+                padding-top: 500px;
+                padding-right: 20px;
+                padding-left: 133px;
+                font-size: 12px;
+                a{
+                    color:white;
+                }
+            }
+            .post-icons{
+                padding-left: 15px;
+                padding-right: 5px;
+                padding-top: 30px;
+                h3{
+                    color:white;
+                }
+                p{
+                    color:white;
+                    padding-top: 20px;
+                }
+                i{
+                    color:white;
+                    padding-top: 40px;
+                }
+                .photo-diaries-link{
+                    margin-right: 60px;
+                }
+            }
+            .about-me-link{
+                bottom: 1%;
+                left:50%;
+                transform: translate(-50%);
+                width: 100%;
+                text-align: center;
+            }
+        }  
+    }
+}
+
+//  iPhone 6/7/8: 321-413 
+@media (min-width: 321px) and (max-width: 413px) {
     .about{
         background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, rgba(0,0,0, 0.7) 50%), url("/img/rafting.jpg");
         position: absolute;
         height: 200%;
+        .social-links{
+            position: absolute;
+            top: 46%;
+            left: 10px;
+        }
         .mission{
             color:white;
             position: absolute;
@@ -211,10 +324,15 @@
         position: absolute;
         height: 200%;
         width:100%;  
+        .social-links{
+            position: absolute;
+            top: 47%;
+            left: 10px;
+        }
         .mission{
             color:white;
             position: absolute;
-            top: 41%;
+            top: 39%;
             text-align: right;
             right:10px;
             h2{
