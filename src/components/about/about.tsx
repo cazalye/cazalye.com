@@ -2,13 +2,26 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './about.scss';
 import NavbarHider from '../navbar-hider/NavbarHider';
-import Footer from '../footer/footer';
 
 class About extends Component {
     render() {
         return (
             <div className="about">
                 <NavbarHider hamburgerMode={true} whiteDrawer={true} greenTitle={true} hideTitle={false}/>
+                <div className="social-links">
+                    <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
+                        <i className="fab fa-instagram" aria-hidden="true" />
+                    </a>
+                    <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
+                        <i className="fab fa-pinterest-p" aria-hidden="true" />
+                    </a>
+                    <a href="https://github.com/cazalye" rel="noopener noreferrer" target="_blank">
+                        <i className="fab fa-github" aria-hidden="true" />
+                    </a>
+                    <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
+                        <i className="fa fa-envelope" aria-hidden="true" />
+                    </a>
+                </div>
                 <div className="mission">
                         <h2>Inspiration for your adventures</h2>
                         <h3>at home and abroad</h3>
@@ -40,7 +53,6 @@ class About extends Component {
                     <div className="about-me-link">
                         <Link to="/aboutMe">Who is <strong>cazalye?</strong></Link>
                     </div>
-                    {/* <Footer/> */}
                 </div>
             </div>
         );
