@@ -51,8 +51,9 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
             clearInterval(this.interval);
         }
         this.interval = setInterval(() => {
+            const pagesLimit = Math.min(this.numImages, this.state.posts.length);
             this.setState({
-                page: this.state.page > this.numImages - 2 ? 0 : this.state.page + 1
+                page: this.state.page > pagesLimit - 2 ? 0 : this.state.page + 1
             });
         }, 5000);
     }
