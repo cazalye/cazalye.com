@@ -12,7 +12,7 @@
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 8%, rgba(255, 255, 255, 0.2)5%,transparent 70%), url("/img/rafting.jpg");
         background: url("/img/rafting.jpg");
         background-size: cover;
-        height: 100vh;
+        height: 110vh;
         width: 100%;
         .mission{
             z-index: 1;
@@ -92,10 +92,23 @@
         }
     }
     .landing2-map{
-        height:100vh;
+        height:110vh;
     }
     .landing3-photo-diary{
-        height:100vh;
+        height:110vh;
+    }
+    .landing4-blog{
+        height:110vh;
+    }
+    .section-divider1{
+        hr{
+            border-top: .7px solid $darkGreen;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    }
+    .section-divider2{
+        height: 6px;
     }
 }
 

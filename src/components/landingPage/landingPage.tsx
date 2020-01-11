@@ -5,6 +5,7 @@ import Footer from "../footer/footer";
 import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
+import Blog from "../blog/blogList";
 
 class LandingPage extends Component<any, any> {
     render() {
@@ -26,12 +27,19 @@ class LandingPage extends Component<any, any> {
                             <Link to="/stonePaper"><strong>What is Stone Paper?</strong> &emsp; Find out about eco-friendly travel postcards</Link>
                     </div>
                 </div>
+                <div className="section-divider1"><hr/></div>
                 <div className="landing2-map">
                     <Map/>
                 </div>
+                <div className="section-divider2"/>
                 <div className="landing3-photo-diary">
                     <PostsSlideshow/>
                 </div>
+                <div className="section-divider2"/>
+                <div className="landing4-blog">
+                    <Blog/>
+                </div>
+                <div className="section-divider2"/>
                 <Footer/>
             </div>
         );
