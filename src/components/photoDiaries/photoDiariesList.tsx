@@ -5,20 +5,24 @@ import "./photoDiariesList.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 
 class PhotoDiariesList extends Component {
-    // async componentDidMount() {
-    //     const posts = await getPhotoDiaries({
-    //         limit: 10
-    //     });
-    //     this.setState({
-    //         posts: posts
-    //     });
-    // }
+
     render() {
-        // const postsContent=[];
-        //     for (const photoDiary of this.state.posts) {
-        //         const style = {
-        //             backgroundImage: photoDiary.featureMedia ? `url("${photoDiary.featureMedia.sizes.large}")`: ""
-        //     };
+        // for (const photoDiary of this.state.posts) {
+        //     const style = {
+        //         backgroundImage: photoDiary.featureMedia ? `url("${photoDiary.featureMedia.sizes.large}")`: ""
+        // };
+        // <div  className="photo-cover" style={style}>
+        //     <Link className="photo-cover-link" to={`/photoDiaries/${photoDiary.slug}`}/>
+        //     <div className="photo-diary-text">
+        //         <Link className="photo-diary-title" to={`/photoDiaries/${photoDiary.slug}`}>
+        //             <h3 dangerouslySetInnerHTML={{__html: photoDiary.title}}/>
+        //             <p>read the diary</p>
+        //         </Link>
+        //     </div>
+        // </div>
+
+
+
         return (
             <div id="photo-diary-list">
                 <NavbarHider hamburgerMode={true} greenTitle={true} hideTitle={false}/>
