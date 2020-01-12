@@ -19,7 +19,7 @@ class About extends Component {
         // } else {
         return (
             <div className="about">
-                <NavbarHider hamburgerMode={true} whiteDrawer={true} greenTitle={true} hideTitle={false}/>
+                <NavbarHider transparentRowHide={false} hamburgerMode={false} whiteDrawer={true} greenTitle={true} hideTitle={false}/>
                 <div className="social-links">
                     <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                         <i className="fab fa-instagram" aria-hidden="true" />

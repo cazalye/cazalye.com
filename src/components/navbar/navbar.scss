@@ -13,6 +13,22 @@ body.transparent-row-hide{
 }
 
 
+body.white-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
+    .header-title{
+        color: white;
+        position: fixed;
+        text-decoration: none;
+        left:20px;
+        top:6px;
+    }
+    .mdl-layout__drawer-button i{
+        color: white;
+    }
+    .mdl-navigation__link{
+        color: white;
+    }
+}
+
 body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
         color: $darkGreen;
@@ -31,6 +47,7 @@ body.green-title .mdl-layout .mdl-layout__inner-container{
         // font-family: 'Open Sans', sans-serif;
     }
 }
+
 
 body.white-drawer .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__drawer-button i{
@@ -54,12 +71,14 @@ body.hide-title .mdl-layout .mdl-layout__inner-container {
 }
 
 
+
 // Regular Navbar css
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
-        background: rgba(255,255,255,1);  
+        background: rgba(255,255,255,.8);  
         position:fixed;
         // height:100px;
+        z-index:500;
     }
     .mdl-navigation__link{
         position: relative;
@@ -150,9 +169,6 @@ body .mdl-layout .mdl-layout__inner-container{
             .header-nav{
                 display:none;
             }
-            a:hover {
-                // color: black;
-              }
         }
     }
 }

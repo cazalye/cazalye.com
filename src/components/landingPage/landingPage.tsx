@@ -25,7 +25,7 @@ class LandingPage extends Component<any, any> {
         // } else {
         return (
             <div id="landing">
-                <NavbarHider transparentRowHide={false} hamburgerMode={false} greenTitle={true} hideTitle={false}/>
+                <NavbarHider transparentRowHide={false} />
                 <div id="landing1">
                     <div className="mission">
                         <h2>Inspiration for your adventures</h2>
