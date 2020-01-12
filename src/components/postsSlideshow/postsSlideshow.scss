@@ -1,13 +1,13 @@
 @import "../../styles/colors";
 
 .posts-slideshow { 
-    height: 100%;
+    height: 110vh;
     .image-layer {
         transition: opacity 0.7s;
         position: absolute;
         background-size: cover;
         width: 100%;
-        height: 100%;
+        height: 110vh;
         opacity: 0;
         &.inactive-layer {
             z-index: -1;
@@ -20,8 +20,8 @@
         }
         .photo-diary-text {
             position: absolute;
-            right:50px;
-            bottom:20%;
+            right:200px;
+            bottom:30%;
             .photo-diary-title{
                 h3{
                     margin-top:5px;
@@ -40,19 +40,20 @@
     }
     .post-numbers-text{
         position: absolute;
-        top:276%;
-        right:120px;
+        top:310%;
+        right:123px;
         // bottom:45px;
         // left:30px;
         h1{
-            font-size: 20px;
+            font-size: 26px;
             color:white;
+            text-decoration: underline;
         }
     }
     .posts-numbers{
         position: absolute;
-        top:292%;
-        right:30px;
+        top:315%;
+        right:100px;
         // bottom:20px;
         // left:10px;
         display: flex;
@@ -65,7 +66,7 @@
             height: 40px;
             margin-right: 15px;
             &.active h4{
-                color:red;
+                color: green;
             }
         }
 

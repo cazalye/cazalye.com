@@ -103,7 +103,9 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
             <div className="posts-slideshow">
                 {imageLayers}
                 <div className="post-numbers-text">
-                    <h1>Browse Photo Diaries</h1>
+                    <Link to="/photoDiaries">
+                        <h1>Browse the Photo Diaries</h1>
+                    </Link>
                 </div>
                 <div className="posts-numbers">{postsNumbers}</div>
             </div>
