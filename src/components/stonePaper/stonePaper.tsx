@@ -18,7 +18,7 @@ class StonePaper extends Component {
         // } else {
         return (
             <div id="stone-paper-about">
-                <NavbarHider transparentRowHide={false} hamburgerMode={false} greenTitle={true} hideTitle={false}/>
+                <NavbarHider transparentRowHide={true} hamburgerMode={false} greenTitle={false} whiteTitle={true} hideTitle={false}/>
                 <div className="stone-paper-background"/>
                 <div className="stone-paper-header">
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>
