@@ -4,6 +4,8 @@ import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import "./photoDiariesList.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 import {Link} from "react-router-dom";
+import Spinner from '../spinner/spinner';
+
 
 class PhotoDiariesList extends Component<any, any> {
     // initialise empty array of posts, to be run while the data is loading
@@ -16,11 +18,19 @@ class PhotoDiariesList extends Component<any, any> {
         const posts = await getPhotoDiaries();
         this.setState({
             posts: posts
+            // NEED TO FIX SPINNER CODE
+            // dataLoaded: true
         });
     }
 
     // Build UI - create html array, loop through feature images and add them to the html object
     render() {
+
+        // if (!this.state.dataLoaded) {
+        //     return(
+        //         <Spinner/>
+        //     );
+        // } else {
 
         const photoDiariesHTML = [];
         for (const photoDiary of this.state.posts) {

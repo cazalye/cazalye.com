@@ -4,6 +4,7 @@ import "./photoDiariesDetail.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 import NotFound from '../404/404';
 import {Link} from "react-router-dom";
+import ScreenRotate from '../screen-rotate/screen-rotate';
 
 interface PhotoDiariesDetailState {
     photoDiary: Post | null;
@@ -205,6 +206,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             }
             return (
                 <div id="photo-diary-detail-page">
+                    <ScreenRotate/>
                     <NavbarHider hamburgerMode={true} greenTitle={false}/>
                     <div id="photo-diary-detail">
                         {leftArrow}

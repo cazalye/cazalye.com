@@ -286,50 +286,62 @@ body .mdl-layout .mdl-layout__inner-container{
 
 
 // PHONE: 0-768 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
 
-    // add note to flip phone
+    // TO flip phone
+    .mdl-layout__inner-container{
+        // transform: rotate(-90deg);
+        // transform-origin: left top;
+        // width: 100vh;
+        // height: 100vw;
+        // overflow-x: hidden;
+        // position: absolute;
+        // top: 100%;
+        // left: 0;
 
-    #photo-diary-detail-page #photo-diary-detail{
-        body .mdl-layout .mdl-layout__inner-container {
-            .mdl-layout__header .header-title{
-                display:none;
-            }
-        }
-        .fas.fa-chevron-right{
-            font-size: 40px;
-            color: black;
-            right: 5%;
-        }
-        .fas.fa-chevron-left{
-            font-size: 40px;
-            color: black;
-            left: 5%;
-        }
-        .cover-page{
-            padding-top: 265px;
-            .cover-photo h1{
-                font-size: 28px;
-                margin-top: 5px;
-            }
-        }
-        .double-page-spread.back-page-container .left-page-key-details .back-page{
-            h1{
-                font-size: 15px;
-                margin-top: 40px;
-                margin-bottom: 20px;
-                padding-left: 12px;
-                padding-right: 12px;
-            }
-            .photo-diary-preview{
-                height: 36%;
-                width: 66%;
-                margin-top:10px;
-                h2{
-                    font-size: 12px;
-                    line-height: 22px;
+        #photo-diary-detail-page{   
+            #photo-diary-detail{
+                body .mdl-layout .mdl-layout__inner-container {
+                    .mdl-layout__header .header-title{
+                        display:none;
+                    }
                 }
+                .fas.fa-chevron-right{
+                    font-size: 40px;
+                    color: black;
+                    right: 5%;
+                }
+                .fas.fa-chevron-left{
+                    font-size: 40px;
+                    color: black;
+                    left: 5%;
+                }
+                .cover-page{
+                    padding-top: 265px;
+                    .cover-photo h1{
+                        font-size: 28px;
+                        margin-top: 5px;
+                    }
+                }
+                .double-page-spread.back-page-container .left-page-key-details .back-page{
+                    h1{
+                        font-size: 15px;
+                        margin-top: 40px;
+                        margin-bottom: 20px;
+                        padding-left: 12px;
+                        padding-right: 12px;
+                    }
+                    .photo-diary-preview{
+                        height: 36%;
+                        width: 66%;
+                        margin-top:10px;
+                        h2{
+                            font-size: 12px;
+                            line-height: 22px;
+                        }
 
+                    }
+                }
             }
         }
     }
