@@ -3,6 +3,9 @@ import { getBlogPosts, Post } from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
 import NavbarHider from '../navbar-hider/NavbarHider';
+import Spinner from '../spinner/spinner';
+
+
 
 interface BlogState {
     posts: Post[];
@@ -85,7 +88,10 @@ class Blog extends Component<any, BlogState> {
     }
     render() {
         if (!this.state.dataLoaded) {
-            return (<h4>Loading....</h4>);
+            return(
+                <Spinner/>
+            );
+
         } else {
             const postsContent=[];
             for (const post of this.state.posts) {

@@ -6,9 +6,23 @@ import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import Blog from "../blog/blogList";
+import Spinner from '../spinner/spinner';
+
 
 class LandingPage extends Component<any, any> {
+
+// How do I write the spinner code when there is no API call?
+    // async componentDidMount() {
+    //     this.setState({
+    //         dataLoaded: true
+    //     });
+    // }
     render() {
+        // if (!this.state.dataLoaded) {
+        //     return(
+        //         <Spinner/>
+        //     );
+        // } else {
         return (
             <div id="landing">
                 <NavbarHider transparentRowHide={false} hamburgerMode={false} greenTitle={true} hideTitle={false}/>
