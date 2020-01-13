@@ -38,7 +38,7 @@ class PhotoDiariesList extends Component<any, any> {
                 backgroundImage: photoDiary.featureMedia ? `url("${photoDiary.featureMedia.sizes.large}")`: ""
             };
             photoDiariesHTML.push(
-                <Link className="photo-diary-title" to={`/photoDiaries/${photoDiary.slug}`}>
+                <Link className="photo-diary-link" to={`/photoDiaries/${photoDiary.slug}`}>
                     <div className="cover-photo" style={style}>
                     <h3 className="cover-title" dangerouslySetInnerHTML={{__html: photoDiary.title}}/>
                     <p>read the diary</p>
@@ -54,10 +54,14 @@ class PhotoDiariesList extends Component<any, any> {
                 {/* <PostsSlideshow/> */}
                 <div className="photo-diary-summary">
                     <h1>Photo Diaries</h1>
-                    <p>Summary of what the photo diaries are about <br/><br/><br/> Images to right are just examples. need to be linked to the api of photo diaries <br/><br/><br/> Also try to align to bottom and make some images go over multiple columns so that sizes vary more <br/><br/><br/> Play around with Navbar and text colours</p>
+                    <p>Visual Journeys Around the World</p>
                 </div>
-                    <div className="photo-mosaic">
-                        {photoDiariesHTML}
+                    <div className="masonry-layout">
+                        <div className="masonry-layout-panel">
+                            <div className="masonry-layout__panel-content">
+                                {photoDiariesHTML}
+                            </div>
+                        </div>
                     </div>
             </div>
         );
