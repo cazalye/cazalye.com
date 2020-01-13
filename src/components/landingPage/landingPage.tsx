@@ -7,9 +7,21 @@ import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import Blog from "../blog/blogList";
 import Spinner from '../spinner/spinner';
+import Popup from '../popup/popup';
 
 
 class LandingPage extends Component<any, any> {
+
+    // CODE FOR POPUP
+    // constructor(props){
+    //     super(props);
+    //     this.state = { showPopup: false };
+    // }
+    // togglePopup() {
+    //     this.setState({
+    //         showPopup: !this.state.showPopup
+    //     });
+    //         }
 
 // How do I write the spinner code when there is no API call?
     // async componentDidMount() {
@@ -24,6 +36,20 @@ class LandingPage extends Component<any, any> {
         //     );
         // } else {
         return (
+
+            // CODE FOR POPUP  -- not working
+            // <div>
+            //     <h1> Simple Popup Example In React Application </h1>
+            //     <button onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button>
+            //     {this.state.showPopup ?
+            //     <Popup
+            //             text='Click "Close Button" to hide popup'
+            //             closePopup={this.togglePopup.bind(this)}
+            //     />
+            //     : null
+            //     }
+            // </div>
+
             <div id="landing">
                 <NavbarHider transparentRowHide={false} />
                 <div id="landing1">
