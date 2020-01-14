@@ -39,7 +39,7 @@ class LandingPage extends Component<any, any> {
             // </div>
 
             <div id="landing">
-                <NavbarHider transparentRowHide={true} />
+                <NavbarHider transparentRowHide={false} />
                 <div id="landing1">
                     <div className="mission">
                         <h2>Inspiration for your adventures</h2>

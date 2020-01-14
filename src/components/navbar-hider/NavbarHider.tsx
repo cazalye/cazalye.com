@@ -19,11 +19,13 @@ class NavbarHider extends Component<NavbarHiderProps> {
         transparentRowHide: true,
     };
     componentDidMount() {
+        console.log("loading")
         document.body.classList.toggle('hamburger-mode', this.props.hamburgerMode);
         document.body.classList.toggle('green-title', this.props.greenTitle);
         document.body.classList.toggle('white-title', this.props.whiteTitle);
         document.body.classList.toggle('hide-title', this.props.hideTitle);
         document.body.classList.toggle('white-drawer', this.props.whiteDrawer);
+        console.log(this.props.transparentRowHide)
         document.body.classList.toggle('transparent-row-hide', this.props.transparentRowHide);
     }
     componentWillUnmount() {
