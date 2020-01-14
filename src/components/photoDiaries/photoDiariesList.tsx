@@ -18,53 +18,54 @@ class PhotoDiariesList extends Component<any, any> {
         const posts = await getPhotoDiaries();
         this.setState({
             posts: posts
-            // NEED TO FIX SPINNER CODE
-            // dataLoaded: true
         });
     }
 
-    // Build UI - create html array, loop through feature images and add them to the html object
     render() {
 
-        // if (!this.state.dataLoaded) {
-        //     return(
-        //         <Spinner/>
-        //     );
-        // } else {
-
-        const photoDiariesHTML = [];
-        for (const photoDiary of this.state.posts) {
-            const style = {
-                backgroundImage: photoDiary.featureMedia ? `url("${photoDiary.featureMedia.sizes.large}")`: ""
-            };
-            photoDiariesHTML.push(
-                <Link className="photo-diary-link" to={`/photoDiaries/${photoDiary.slug}`}>
-                    <div className="cover-photo" style={style}>
-                    <h3 className="cover-title" dangerouslySetInnerHTML={{__html: photoDiary.title}}/>
-                    <p>read the diary</p>
-                    </div>
-                </Link>
-            );
-        };
-
-
-        return (
-            <div id="photo-diary-list">
-                <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
-                {/* <PostsSlideshow/> */}
-                <div className="photo-diary-summary">
-                    <h1>Photo Diaries</h1>
-                    <p>Visual Journeys Around the World</p>
+        if (!this.state.posts.length) {
+            return (
+                <div id="photo-diary-list">
+                    <Spinner/>
                 </div>
-                    <div className="masonry-layout">
-                        <div className="masonry-layout-panel">
-                            <div className="masonry-layout__panel-content">
-                                {photoDiariesHTML}
+            );
+        }
+        else {
+            // Build UI - create html array, loop through feature images and add them to the html object
+            const photoDiariesHTML = [];
+            for (const photoDiary of this.state.posts) {
+                const style = {
+                    backgroundImage: photoDiary.featureMedia ? `url("${photoDiary.featureMedia.sizes.large}")`: ""
+                };
+                photoDiariesHTML.push(
+                    <Link className="photo-diary-link" to={`/photoDiaries/${photoDiary.slug}`}>
+                        <div className="cover-photo" style={style}>
+                        <h3 className="cover-title" dangerouslySetInnerHTML={{__html: photoDiary.title}}/>
+                        <p>read the diary</p>
+                        </div>
+                    </Link>
+                );
+            };
+
+
+            return (
+                <div id="photo-diary-list">
+                    <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
+                    {/* <PostsSlideshow/> */}
+                    <div className="photo-diary-summary">
+                        <h1>Photo Diaries</h1>
+                        <p>Visual Journeys Around the World</p>
+                    </div>
+                        <div className="masonry-layout">
+                            <div className="masonry-layout-panel">
+                                <div className="masonry-layout__panel-content">
+                                    {photoDiariesHTML}
+                                </div>
                             </div>
                         </div>
-                    </div>
-            </div>
-        );
+                </div>
+            );
+        }
     }
 }
 

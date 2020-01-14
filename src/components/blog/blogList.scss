@@ -2,12 +2,16 @@
 
 #blogs-page{
         background: linear-gradient(180deg, rgba(91, 80, 90, 0.3) 10%, rgba(91, 80, 90, 1)60%);
-        position: fixed;
-        height:100vh;
+        position: relative;
+        height: calc(100vh - 20px);
         width: 100%;
+        padding-top: 0px;
+        padding-bottom: 20px;
         
         h1{
             margin-bottom: 0px;
+            padding-top: 70px;
+            margin-top: 0px;
         }
         h3{
             color: $accentColor;

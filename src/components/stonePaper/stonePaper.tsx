@@ -2,20 +2,10 @@ import "./stonePaper.scss";
 import Footer from "../footer/footer";
 import NavbarHider from "../navbar-hider/NavbarHider";
 import React, { Component } from 'react';
-import Spinner from '../spinner/spinner';
 
 class StonePaper extends Component {
-    // NEED TO FIX SPINNER CODE
-    // this.setState({
-    //     dataLoaded: true
-    // });
     render() {
-        // if (!this.state.dataLoaded) {
-        //     return(
-        //         <Spinner/>
-        //     );
 
-        // } else {
         return (
             <div id="stone-paper-about">
                 <NavbarHider transparentRowHide={true} hamburgerMode={false} greenTitle={false} whiteTitle={true} hideTitle={false}/>

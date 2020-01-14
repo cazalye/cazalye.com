@@ -11,7 +11,6 @@ interface BlogState {
     posts: Post[];
     leftArrowClass: "disabled-arrow" | "";
     rightArrowClass: "disabled-arrow" | "";
-    dataLoaded: boolean;
 }
 
 class Blog extends Component<any, BlogState> {
@@ -21,8 +20,7 @@ class Blog extends Component<any, BlogState> {
         this.state = {
             posts: [],
             leftArrowClass: "disabled-arrow",
-            rightArrowClass: "",
-            dataLoaded: false
+            rightArrowClass: ""
         };
     }
     async componentDidMount() {
@@ -30,8 +28,7 @@ class Blog extends Component<any, BlogState> {
             limit: 100
         });
         this.setState({
-            posts: posts,
-            dataLoaded: true
+            posts: posts
         });
     }
 
@@ -87,7 +84,8 @@ class Blog extends Component<any, BlogState> {
         }
     }
     render() {
-        if (!this.state.dataLoaded) {
+        // in JS if the length of the array = 0 then it's cast to false, so we can use the shortcut below
+        if (!this.state.posts.length) {
             return(
                 <Spinner/>
             );

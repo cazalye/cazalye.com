@@ -2,21 +2,11 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './about.scss';
 import NavbarHider from '../navbar-hider/NavbarHider';
-import Spinner from '../spinner/spinner';
 
 class About extends Component {
-    // NEED TO FIX SPINNER CODE
-    // this.setState({
-    //     dataLoaded: true
-    // });
 
     render() {
-        // if (!this.state.dataLoaded) {
-        //     return(
-        //         <Spinner/>
-        //     );
-
-        // } else {
+  
         return (
             <div className="about">
                 <NavbarHider transparentRowHide={true} whiteTitle={true} greenTitle={false} hideTitle={false}/>

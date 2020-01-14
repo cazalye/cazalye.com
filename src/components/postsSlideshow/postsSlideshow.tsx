@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import {getPhotoDiaries, Post, getBlogPosts} from "../../API/posts";
 import {Link} from "react-router-dom";
 import "./postsSlideshow.scss";
+import Spinner from "../spinner/spinner";
 
 interface PostsSlideshowState {
     page: number;
-    initialized: boolean;
     posts: Post[];
 }
 interface PostsSlideshowProps {
@@ -18,7 +18,6 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
     interval: any;
     state: PostsSlideshowState = {
         page: 0,
-        initialized: false,
         posts: []
     };
     async componentDidMount() {
@@ -39,7 +38,6 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
         }
 
         this.setState({
-            initialized: true,
             posts: posts
         });
 
@@ -68,7 +66,13 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
     render() {
         let titleHtml = (null);
         const imageLayers = [];
-        if (this.state.initialized) {
+        if (!this.state.posts.length) {
+            return (
+                <div className="posts-slideshow">
+                    <Spinner/>
+                </div>
+            );
+        } else {
             const activePhotoDiary = this.state.posts[this.state.page];
             titleHtml = (<h3 dangerouslySetInnerHTML={{__html: this.state.posts[this.state.page].title}}/>);
 
