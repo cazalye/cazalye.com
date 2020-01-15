@@ -28,6 +28,21 @@ body.white-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
         color: white;
     }
 }
+body.light-green-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
+    .header-title{
+        color: $lightGreen;
+        position: fixed;
+        text-decoration: none;
+        left:20px;
+        top:6px;
+    }
+    .mdl-layout__drawer-button i{
+        color: $lightGreen;
+    }
+    .mdl-navigation__link{
+        color: $lightGreen;
+    }
+}
 
 body.green-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
