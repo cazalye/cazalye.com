@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { getBlogPosts, Post } from '../../API/posts';
 import "./blogList.scss";
 import { Link } from 'react-router-dom';
-import NavbarHider from '../navbar-hider/NavbarHider';
 import Spinner from '../spinner/spinner';
 
 

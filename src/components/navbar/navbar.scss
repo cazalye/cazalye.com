@@ -90,7 +90,8 @@ body.hide-title .mdl-layout .mdl-layout__inner-container {
 // Regular Navbar css
 body .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
-        background: rgba(255,255,255,.8);  
+        background: rgba(255,255,255,.6);  
+        // background: rgba(176, 204, 199, 0.5);
         position:fixed;
         // height:100px;
         z-index:500;

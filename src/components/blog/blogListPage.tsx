@@ -6,7 +6,7 @@ class BlogListPage extends Component<any, any> {
     render() {
         return (
             <div>
-                <NavbarHider transparentRowHide={true} hamburgerMode={false} greenTitle={false} hideTitle={false}/>
+                <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
                 <Blog/>
             </div>
         );

@@ -50,7 +50,7 @@ class PhotoDiariesList extends Component<any, any> {
 
             return (
                 <div id="photo-diary-list">
-                    <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
+                    <NavbarHider transparentRowHide={true} hamburgerMode={false} lightGreenTitle={true} hideTitle={false}/>
                     {/* <PostsSlideshow/> */}
                     <div className="photo-diary-summary">
                         <h1>Photo Diaries</h1>

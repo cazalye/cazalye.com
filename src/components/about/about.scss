@@ -14,6 +14,7 @@
         margin-top:80px;
     }
     .social-links{
+        display:none;
         text-align: left;
         position: fixed;
         bottom:10px;
@@ -28,7 +29,7 @@
     .about-content{
         width: 900px;
         // margin: auto;
-        margin-top: 172px;
+        margin-top: 180px;
         p{
             color:black;
             text-align: left;
@@ -93,7 +94,8 @@
             // font-size: 50px;
             font-size: 2em;
             color:white;
-            // text-decoration: underline;
+            // color: $lightGreen;
+            text-decoration: underline;
             }
         }
     }
@@ -101,9 +103,9 @@
     .mission{
         position:absolute;
         left: 23%;
-        top: 33px;
-        // color: $darkGreen;
-        color: black;
+        top: 50px;
+        color: $darkGreen;
+        // color: black;
         // color:rgba(28, 93, 105,0.5);
         h2{
             font-family: 'Cormorant Garamond';
