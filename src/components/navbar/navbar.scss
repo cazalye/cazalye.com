@@ -62,6 +62,25 @@ body.green-title .mdl-layout .mdl-layout__inner-container{
         // font-family: 'Open Sans', sans-serif;
     }
 }
+body.mixed-title .mdl-layout .mdl-layout__inner-container{
+    .header-title{
+        color: $darkGreen;
+        position: fixed;
+        text-decoration: none;
+        left:20px;
+        top:6px;
+    }
+    .mdl-layout__drawer-button i{
+        color: white;
+    }
+    .mdl-navigation .header-nav{
+        .mdl-navigation__link .where{
+            a{
+            color:red;
+            }
+        }
+    }
+}
 
 
 body.white-drawer .mdl-layout .mdl-layout__inner-container{

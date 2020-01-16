@@ -5,6 +5,7 @@ type NavbarHiderProps = {
     greenTitle: boolean;
     lightGreenTitle: boolean;
     whiteTitle: boolean;
+    mixedTitle: boolean;
     hideTitle: boolean;
     whiteDrawer: boolean;
     transparentRowHide: boolean;
@@ -16,6 +17,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         greenTitle: false,
         lightGreenTitle: false,
         whiteTitle: false,
+        mixedTitle: false,
         hideTitle: false,
         whiteDrawer: false,
         transparentRowHide: true,
@@ -26,6 +28,8 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.toggle('green-title', this.props.greenTitle);
         document.body.classList.toggle('light-green-title', this.props.lightGreenTitle);
         document.body.classList.toggle('white-title', this.props.whiteTitle);
+        console.log(this.props.mixedTitle)
+        document.body.classList.toggle('mixed-title', this.props.mixedTitle);
         document.body.classList.toggle('hide-title', this.props.hideTitle);
         document.body.classList.toggle('white-drawer', this.props.whiteDrawer);
         console.log(this.props.transparentRowHide)
@@ -36,6 +40,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.remove('green-title');
         document.body.classList.remove('light-green-title');
         document.body.classList.remove('white-title');
+        document.body.classList.remove('mixed-title');
         document.body.classList.remove('hide-title');
         document.body.classList.remove('white-drawer');
         document.body.classList.remove('transparent-row-hide');

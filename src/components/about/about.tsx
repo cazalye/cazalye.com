@@ -9,7 +9,7 @@ class About extends Component {
   
         return (
             <div className="about">
-                <NavbarHider transparentRowHide={false} greenTitle={true} hideTitle={false}/>
+                <NavbarHider transparentRowHide={true} mixedTitle={true} hideTitle={false}/>
                 <div className="social-links">
                     <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                         <i className="fab fa-instagram" aria-hidden="true" />

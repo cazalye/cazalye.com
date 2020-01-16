@@ -16,7 +16,7 @@ class Navbar extends Component {
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
                     <Navigation className="header-nav">
-                        <Link to="/map">Where to?</Link>
+                        <Link className="where" to="/map">Where to?</Link>
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
