@@ -7,8 +7,8 @@ class AboutMe extends Component{
     render(){
         return(
             <div className="about-me">
-                <NavbarHider hamburgerMode={true} whiteDrawer={true} greenTitle={true} hideTitle={false}/>
-                <h1>Who is Cazalye?</h1>
+                <NavbarHider whiteTitle={true} />
+                <h1>Who is cazalye?</h1>
                 <div className="mission">
                         <h2>Inspiration for your adventures</h2>
                         <h3>at home and abroad</h3>
@@ -16,9 +16,11 @@ class AboutMe extends Component{
 
                 </div>
                 <div className="about-me-content">
-                    <p> THIS NEEDS TO BE EDITED <br/>Hi- I'm Emma Cazaly, an Australian with a love of trvel and everything outdoors. cazalye is a combination of my surname and my first initial. <hr/>
-                        For longer than I can remember the urge to explore new places and go on adventures has been xxx. This passion has taken me around the world as a tourist and an expat living in Europe. <hr/> Sharing my love of travel has also been an important aspect of my explorations. I have worked as a travel agent for over 3 years and shortly after moving to Europe in 2017 I began a travel blog to share photos and tips about my favouorite places. <hr/> I have recently designed and created this new travel site from scratch- to allow me to share my travel experiences with my own personal style. I always welcome feedback and I'd love to hear your thoughts about my travel content, photos or website design. <hr/> You can find out for about this site <Link to="/about">here</Link></p>
-                        <h3>ALSO MENTION about 'adventures at home' that adventure is a state of mind</h3>
+                    <p> Hi- I'm Emma Cazaly, and as you can probably now tell, cazalye is a combination of my surname and first initial.<hr/>
+                    I'm an Australian, living in Finland with an unquenchable love of travel and everything outdoors. These two passions have led me to explore new places around the world and go on endless adventures. I believe that adventure is not only about exploring new places but also about a mindset of playfullness, curiosity and resilience. As Marcel Proust put it:</p>
+                    <h3> <i>"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes."</i></h3>
+
+                    <p> Sharing my love of travel is also an important aspect of my adventures. Recently I redesigned my travel blog- to allow me to share my experiences, tips and photograpy through my own personal style. I hope you enjoy my site and would welcome any  thoughts you have about my content or photography.</p>
                 </div>
             </div>
 
