@@ -4,6 +4,10 @@
     .mdl-layout__drawer-button{
         display:none;
     }
+    .popup-button {
+        position: fixed;
+        top: 100px;
+    }
     #landing1{
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.2)40%,transparent 70%), url("/tst_img/beachSepia.jpg");
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.2)40%,transparent 70%), url("/img/background_sepia_cropped.jpg");

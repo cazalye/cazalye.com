@@ -28,7 +28,6 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.toggle('green-title', this.props.greenTitle);
         document.body.classList.toggle('light-green-title', this.props.lightGreenTitle);
         document.body.classList.toggle('white-title', this.props.whiteTitle);
-        console.log(this.props.mixedTitle)
         document.body.classList.toggle('mixed-title', this.props.mixedTitle);
         document.body.classList.toggle('hide-title', this.props.hideTitle);
         document.body.classList.toggle('white-drawer', this.props.whiteDrawer);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'; 
 import './popup.scss';
 
 class Popup extends Component <any, any> {
@@ -6,8 +6,8 @@ class Popup extends Component <any, any> {
         return (
             <div className='popup'>
                 <div className='popup\_inner'>
-                    <h1>{this.props.text}</h1>
-                    <button onClick={this.props.closePopup}>close me</button>
+                    <h2>{this.props.text}</h2>
+                    <button onClick={this.props.closePopup}>X</button>
                 </div>
             </div>
         );
