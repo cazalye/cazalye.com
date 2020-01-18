@@ -62,7 +62,16 @@ class LandingPage extends Component<any, any> {
                             </Link>
                         </div>
                         <div className="stone-paper-link">
-                                <Link to="/stonePaper"><strong>What is Stone Paper?</strong> &emsp; Find out about eco-friendly travel postcards</Link>
+                            <Link to="/stonePaper"><strong>What is Stone Paper?</strong> &emsp; Find out about eco-friendly travel postcards</Link>
+                        </div>
+                        <div className="newsletter">
+                            <p>SUBSCRIBE TO THE NEWSLETTER</p>
+                            {/* <form id="newsletter-form" action="" method="" onsubmit="" name=""/> */}
+                            <form>
+                                <label>First Name: <input type="text"/></label>
+                                <label>E-mail Address: <input type="text"/></label>
+                                <input type="submit" value="GO"/>
+                            </form>
                         </div>
                     </div>
                     <div className="section-divider1"><hr/></div>
