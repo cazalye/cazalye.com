@@ -6,30 +6,29 @@ import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import Blog from "../blog/blogList";
-import Popup from '../popup/popup';
+// import Popup from '../popup/popup';
 
 
 class LandingPage extends Component<any, any> {
 
-    state = {
-        showPopup: false
-    };
+    // // CODE FOR POPUP
+    // state = {
+    //     showPopup: false
+    // };
+    // componentDidMount() {
+    //     setTimeout(() => {
+    //         this.setState({
+    //             showPopup: true
+    //         });
+    //     }, 2000);
+    // }
+    // togglePopup() {
+    //     this.setState({
+    //         showPopup: !this.state.showPopup
+    //     });
+    // }
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                showPopup: true
-            });
-        }, 2000);
-    }
-
-    // CODE FOR POPUP
-    togglePopup() {
-        this.setState({
-            showPopup: !this.state.showPopup
-        });
-    }
-
+    // CODE FOR changing opacity on scroll
     // pageScrolled() {
     //     console.log("scrolling landing");
     //   }
@@ -37,8 +36,8 @@ class LandingPage extends Component<any, any> {
     render() {
         return (
             <div id="landing">
-                <div>
-                    {/* <button className="popup-button" onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button> */}
+                {/* <div>
+                    <button className="popup-button" onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button>
                     {this.state.showPopup ?
                     <Popup
                             text='Subscribe to the Newsletter'
@@ -48,7 +47,7 @@ class LandingPage extends Component<any, any> {
                     }
                 </div>
 
-                {/* <div className="test" onScroll={e => {this.pageScrolled();}}> */}
+                 <div className="test" onScroll={e => {this.pageScrolled();}}> */}
 
                     <NavbarHider transparentRowHide={false} />
                     <div id="landing1">
@@ -59,7 +58,7 @@ class LandingPage extends Component<any, any> {
                         <div className="start-here">
                             <h3>First time exploring this site?</h3>
                             <Link to="/about">
-                                <p>Start Here <i className="fas fa-hiking"></i></p>
+                                <p>Start Here <i className="fas fa-hiking"/></p>
                             </Link>
                         </div>
                         <div className="stone-paper-link">
