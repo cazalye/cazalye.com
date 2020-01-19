@@ -154,6 +154,21 @@
             }
             .stone-paper-link{
                 bottom:8%;
+                left:5%;
+            }
+            .newsletter{
+                position: absolute;
+                bottom:0px;
+                right:1%;
+                form{
+                    position: absolute;
+                    left:0px;
+                    label{
+                        font-size: 14px;
+                        padding: 5px; 
+
+                    }
+                }
             }
         }
     }
