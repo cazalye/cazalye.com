@@ -3,6 +3,7 @@
 #landing{
     .mdl-layout__drawer-button{
         display:none;
+        z-index: 10;
     }
     .popup-button {
         position: fixed;

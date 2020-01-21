@@ -83,3 +83,19 @@
         }
     }
 }
+
+
+
+//  Phone: 0-420
+@media (max-width: 420px) {
+    .posts-slideshow { 
+        .post-numbers-text{
+            left:6px;
+        }
+
+        .posts-numbers{
+            left:10px;
+        }
+    }
+}
+

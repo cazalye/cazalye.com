@@ -12,7 +12,6 @@ body.transparent-row-hide{
     }
 }
 
-
 body.white-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
     .header-title{
         color: white;
@@ -183,15 +182,16 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // PHONE: 0-450
 @media (max-width: 450px) {
-    // ned to fx this so the transparent header layer stays there
     body .mdl-layout .mdl-layout__inner-container {  
-        .mdl-layout__drawer-button {
+        .mdl-layout__drawer-button{
+            // z-index: 10;
             display: block;
             position:fixed;
             top:0px;
             right: 0px;
-            color:$darkGreen;
-            // margin:0px;
+            i{
+            color:white;
+            }
         }
         .mdl-layout__header{
             display:block;
@@ -223,8 +223,8 @@ body .mdl-layout .mdl-layout__inner-container{
             position:fixed;
             top:7px;
             right: 25px;
-            color:$darkGreen;
             i{
+                color: white;
                 font-size:65px;
             }
         }

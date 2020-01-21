@@ -128,12 +128,12 @@
 }
 
 
-// iPhone 5: 0-320
+// iPhone 5: 0-360
 @media (max-width: 320px){
     .about{
+        height: 300vh;
         background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, rgba(0,0,0, 0.7) 50%), url("/img/rafting.jpg");
         position: absolute;
-        height: 300%;
         .social-links{
             position: absolute;
             top: 30%;
@@ -230,7 +230,7 @@
     .about{
         background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, rgba(0,0,0, 0.7) 50%), url("/img/rafting.jpg");
         position: absolute;
-        height: 200%;
+        height: 220vh;
         .social-links{
             position: absolute;
             top: 46%;
