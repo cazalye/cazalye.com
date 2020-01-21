@@ -55,15 +55,36 @@ class LandingPage extends Component<any, any> {
                             <h2>Inspiration for your adventures</h2>
                             <h3>at home and abroad</h3>
                         </div>
-                        <div className="start-here">
+                        {/* <div className="start-here">
                             <h3>First time exploring this site?</h3>
                             <Link to="/about">
                                 <p>Start Here <i className="fas fa-hiking"/></p>
                             </Link>
-                        </div>
-                        <div className="stone-paper-link">
+                        </div> */}
+
+                    <div className="start-here">
+                        <Link to="/about">
+                            <h3>First time exploring this site?</h3>
+                            <button className="mdl-button mdl-js-button mdl-button--raised">
+                                Start Here <i className="fas fa-hiking"/>
+                            </button>
+                        </Link>
+                    </div>
+
+
+                        {/* <div className="stone-paper-link">
                             <Link to="/stonePaper"><strong>What is Stone Paper?</strong> &emsp; Find out about eco-friendly travel postcards</Link>
+                        </div> */}
+
+                        <div className="stone-paper-link">
+                            <Link to="/stonePaper">
+                                    <p>What is eco-friendly Stone Paper?</p>
+                                    <button className="mdl-button mdl-js-button mdl-button--raised">
+                                    Find out here
+                                </button>
+                                </Link>
                         </div>
+
                         <div className="newsletter">
                             <p>SUBSCRIBE TO THE NEWSLETTER</p>
                             {/* <form id="newsletter-form" action="" method="" onsubmit="" name=""/> */}
