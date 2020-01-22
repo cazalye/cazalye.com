@@ -6,10 +6,24 @@ import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import Blog from "../blog/blogList";
-// import Popup from '../popup/popup';
+import axios from 'axios';
+import Popup from '../popup/popup';
+
+const baseUrl = "http://wordpress.cazalye.com/wp-json/";
+
+
 
 
 class LandingPage extends Component<any, any> {
+
+    state = {
+        newsletter: {
+            firstName: "",
+            email: ""
+        },
+        newsletterConfirmPopup: false,
+        newsletterLoading: false
+    };
 
     // // CODE FOR POPUP
     // state = {
@@ -33,21 +47,64 @@ class LandingPage extends Component<any, any> {
     //     console.log("scrolling landing");
     //   }
 
+    hideNewsletterPopup() {
+        this.setState({
+            newsletterConfirmPopup: false
+        });
+    }
+
+    async newsletterSubscribe(event: any) {
+        event.preventDefault();
+        let firstName = this.state.newsletter.firstName;
+        let email = this.state.newsletter.email;
+        this.setState({
+            newsletter: {
+                firstName: "",
+                email: ""
+            },
+            newsletterConfirmPopup: true,
+            newsletterLoading: true
+        });
+        await axios.post(`${baseUrl}newsletter/v1/subscribe`, {
+            name: firstName,
+            email: email
+        });
+        this.setState({
+            newsletterLoading: false
+        });
+    }
+
+    updateFirstName(event: any) {
+        this.setState({
+            newsletter: {
+                firstName: event.target.value,
+                email: this.state.newsletter.email
+            }
+        });
+    }
+    updateEmail(event: any) {
+        this.setState({
+            newsletter: {
+                email: event.target.value,
+                firstName: this.state.newsletter.firstName,
+            }
+        });
+    }
+
     render() {
         return (
             <div id="landing">
-                {/* <div>
-                    <button className="popup-button" onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button>
-                    {this.state.showPopup ?
+                <div>
+                    {this.state.newsletterConfirmPopup ?
                     <Popup
-                            text='Subscribe to the Newsletter'
-                            closePopup={this.togglePopup.bind(this)}
+                            text={this.state.newsletterLoading ? "Loading..." : "Thanks for subscribing"}
+                            closePopup={this.hideNewsletterPopup.bind(this)}
                     />
                     : null
                     }
                 </div>
 
-                 <div className="test" onScroll={e => {this.pageScrolled();}}> */}
+                 {/* <div className="test" onScroll={e => {this.pageScrolled();}}> */}
 
                     <NavbarHider transparentRowHide={false} />
                     <div id="landing1">
@@ -88,10 +145,10 @@ class LandingPage extends Component<any, any> {
                         <div className="newsletter">
                             <p>SUBSCRIBE TO THE NEWSLETTER</p>
                             {/* <form id="newsletter-form" action="" method="" onsubmit="" name=""/> */}
-                            <form>
-                                <label>First Name: <input type="text"/></label>
-                                <label>E-mail Address: <input type="text"/></label>
-                                <input type="submit" value="GO"/>
+                            <form onSubmit={this.newsletterSubscribe.bind(this)}>
+                                <input onChange={this.updateFirstName.bind(this)} value={this.state.newsletter.firstName} placeholder="First name" type="text"/>
+                                <input onChange={this.updateEmail.bind(this)} value={this.state.newsletter.email} placeholder="E-mail Address" type="text"/>
+                                <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
                             </form>
                         </div>
                     </div>
