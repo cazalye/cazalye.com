@@ -17,7 +17,7 @@
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 8%, rgba(255, 255, 255, 0.2)5%,transparent 70%), url("/img/rafting.jpg");
         background: url("/img/rafting.jpg");
         background-size: cover;
-        height: 110vh;
+        height: 105vh;
         width: 100%;
         .mission{
             z-index: 1;
@@ -45,7 +45,7 @@
         .start-here{
             position: absolute;
             top: 20%;
-            right: 3%;
+            right: 2%;
             text-align: center;
             padding: .6em;
             padding-top: 0px;
@@ -54,53 +54,48 @@
             // border-radius: 25px;
             // background-color: #0113109e;
             h3{
-                font-size:.6em;
+                font-size:16px;
                 color:white;
                 margin-bottom:0px;
                 margin-top:0px;
-            }
-            a{
-                // p{
-                //     font-size:.9em;
-                //     line-height: .7em;
-                // }
                 .fas .fa-hiking{
                     color:white;
                 }
+            }
+            a{
                 :hover{
-                    color:#cdcdcd;
+                    color:#777;
+                    background-color: white;
+                    border:none;
                 }
                 button{
+                    color:white;
+                    // color:black;
                     position: absolute;
                     top: 90%;
                     right: 20%;
-                    // background: rgba(158,158,158,.9);
-                    background: $darkPink;
-                    // background: $alternatePink;
+                    // background: black;
+                    background: $alternatePink;
                     box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
-                    // default mdl background and shadow:
                     // background: rgba(158,158,158,.2);
-                    // box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-
-
                     box-shadow: none;
-                    border-radius: 0px;
+                    border: 1px solid #222;
                     padding: 23px;
                     line-height: 0px;
-                    padding-top: 18px;
-                    padding-bottom: 32px;
-                    text-transform: lowercase;
-                    font-weight: bold;
-                    font-size: 16px;
-                    right: 8px;
+                    // padding-top: 18px;
+                    // padding-bottom: 32px;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    font-size: 14px;
+                    // right: 8px;
                 }
             }
         }
 
         .stone-paper-link{
             position: absolute;
-            left:0;
-            bottom:8%;
+            right:16%;
+            bottom:0%;
             margin: auto;
             font-family: 'Open Sans', sans-serif;
             font-weight: 100;
@@ -117,7 +112,7 @@
                     margin-bottom:5px;
                 }
                 button{
-                    background: rgba(158,158,158,.9);
+                    background:$alternatePink;
                     box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
                 }
                 :hover{

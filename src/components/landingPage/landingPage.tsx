@@ -120,10 +120,10 @@ class LandingPage extends Component<any, any> {
                         </div> */}
 
                     <div className="start-here">
+                        <h3>First time exploring this site? <i className="fas fa-hiking"/></h3>
                         <Link to="/about">
-                            <h3>First time exploring this site?</h3>
                             <button className="mdl-button mdl-js-button mdl-button--raised">
-                                Start Here <i className="fas fa-hiking"/>
+                                Start Here
                             </button>
                         </Link>
                     </div>
