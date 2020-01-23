@@ -55,8 +55,8 @@ class LandingPage extends Component<any, any> {
 
     async newsletterSubscribe(event: any) {
         event.preventDefault();
-        let firstName = this.state.newsletter.firstName;
-        let email = this.state.newsletter.email;
+        const firstName = this.state.newsletter.firstName;
+        const email = this.state.newsletter.email;
         this.setState({
             newsletter: {
                 firstName: "",
@@ -141,18 +141,19 @@ class LandingPage extends Component<any, any> {
                                 </button>
                                 </Link>
                         </div>
-
-                        <div className="newsletter">
-                            <p>SUBSCRIBE TO THE NEWSLETTER</p>
-                            {/* <form id="newsletter-form" action="" method="" onsubmit="" name=""/> */}
-                            <form onSubmit={this.newsletterSubscribe.bind(this)}>
-                                <input onChange={this.updateFirstName.bind(this)} value={this.state.newsletter.firstName} placeholder="First name" type="text"/>
-                                <input onChange={this.updateEmail.bind(this)} value={this.state.newsletter.email} placeholder="E-mail Address" type="text"/>
-                                <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
-                            </form>
-                        </div>
                     </div>
-                    <div className="section-divider1"><hr/></div>
+                    <div className="section-divider2"/>
+
+                    <div className="newsletter">
+                        <p>SUBSCRIBE TO THE NEWSLETTER</p>
+                        <form onSubmit={this.newsletterSubscribe.bind(this)}>
+                            <input onChange={this.updateFirstName.bind(this)} value={this.state.newsletter.firstName} placeholder="First name" type="text"/>
+                            <input onChange={this.updateEmail.bind(this)} value={this.state.newsletter.email} placeholder="E-mail Address" type="text"/>
+                            <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
+                        </form>
+                    </div>
+                    <div className="section-divider2"/>
+
                     <div className="landing2-map">
                         <Map/>
                     </div>
