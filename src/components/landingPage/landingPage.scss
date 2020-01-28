@@ -222,18 +222,40 @@
                 bottom:8%;
                 left:5%;
             }
-            .newsletter{
-                position: absolute;
-                bottom:0px;
-                right:1%;
-                form{
-                    position: absolute;
-                    left:0px;
-                    label{
-                        font-size: 14px;
-                        padding: 5px; 
+        }
+        .newsletter{
+            margin-top: 10px;
+            height: 30vh;
+            p{
+                position: relative;
+                text-align: center;
+                margin-top: 0px;
+                border: 0;
+                padding: 0;
+                float: none;
+                width: 100%;
+                margin-top: 0px;
+            }
 
-                    }
+            form{
+                margin-top:10px;
+                margin-right:50px;
+                margin-left:20px;
+                padding: 10px;
+                margin-bottom:50px;
+                input{
+                width: 100%;
+                margin-bottom: 10px;
+                }
+                input[type="submit"]{
+                    width: 108%;
+                    padding: 10px;
+                }
+                input[type="submit"]:hover{
+                    background: #fff;
+                    color: #777;
+                    border: 1px solid #777;
+                    cursor: pointer;
                 }
             }
         }
