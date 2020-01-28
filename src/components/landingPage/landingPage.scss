@@ -190,9 +190,12 @@
 }
 
 
-// PHONE: 0-767
+
+// PHONE plus: 0-767
 @media (max-width: 767px) {
+// @media (min-width:414px) and (max-width: 768px){
     #landing{ 
+        overflow-x: hidden;
         #landing1{
             .mission{
                 position: absolute;
@@ -217,38 +220,38 @@
                     }
                 }
             }
-
             .stone-paper-link{
                 bottom:8%;
                 left:5%;
             }
         }
         .newsletter{
-            margin-top: 10px;
+            margin-top: 15px;
             height: 30vh;
+            margin-bottom: 15px;
             p{
                 position: relative;
                 text-align: center;
                 margin-top: 0px;
+                margin-bottom: 5px;
                 border: 0;
-                padding: 0;
+                padding: 5px;
                 float: none;
                 width: 100%;
-                margin-top: 0px;
             }
 
             form{
-                margin-top:10px;
-                margin-right:50px;
-                margin-left:20px;
-                padding: 10px;
-                margin-bottom:50px;
+                margin-top:20px;
+                margin-right:1%;
+                margin-left:2%;
+                padding: 15px;
                 input{
-                width: 100%;
+                width: 90%;
                 margin-bottom: 10px;
+                // margin-top: .5%;
                 }
                 input[type="submit"]{
-                    width: 108%;
+                    width: 96%;
                     padding: 10px;
                 }
                 input[type="submit"]:hover{
@@ -261,6 +264,92 @@
         }
     }
 }
+
+// iPhone 6/7/8
+@media (min-width:321px) and (max-width: 413px){
+    #landing{ 
+        overflow-x: hidden;
+        .newsletter{
+            margin-bottom: 25px;
+            p{
+                padding: 0px;
+            }
+            form{
+                input[type="submit"]{
+                    width: 97%;
+                }
+            }
+        }
+    }
+}
+
+// Pixel 2 & Pixel 2XL
+@media (min-width:410px) and (max-width: 412px){
+    #landing{ 
+        overflow-x: hidden;
+        .newsletter{
+            margin-bottom: 0px;
+            margin-top:40px;
+            p{
+                padding: 0px;
+            }
+            form{
+                margin-left:5%;
+                margin-right:5%;
+                input[type="submit"]{
+                    width: 97%;
+                }
+            }
+        }
+    }
+}
+
+
+// iPhone 5: 0-320
+@media (max-width: 320px){
+    #landing{ 
+        overflow-x: hidden;
+        .newsletter{
+            margin-bottom: 50px;
+            margin-top:20px;
+            p{
+                padding: 0px;
+            }
+            form{
+                margin-left:1%;
+                margin-right:1%;
+                input[type="submit"]{
+                    width: 99%;
+                }
+            }
+        }
+    }
+}
+
+// iPhone X
+@media (min-width:370px) and (max-width: 375px){
+    #landing{ 
+        overflow-x: hidden;
+        .newsletter{
+            margin-bottom: 50px;
+            margin-top: 20px;
+            form{
+                margin-left:5%;
+                margin-right:5%;
+                margin-top: 5%;
+                input{
+                    margin-top:5%;
+                    margin-bottom:0px;
+                }
+                input[type="submit"]{
+                    width: 97%;
+                    // margin-top: 2%;
+                }
+            }
+        }
+    }
+}
+
 
 // TABLET: 768-1025
 @media (min-width: 768px) and (max-width: 1025px) {
@@ -275,6 +364,23 @@
                 font-size: 42px;
                 line-height: 62px;
                 padding-left: 10px;
+            }
+        }
+        .newsletter{
+            margin-bottom: 50px;
+            margin-top: 20px;
+            form{
+                margin-left:5%;
+                margin-right:5%;
+                margin-top: 5%;
+                input{
+                    margin-top:5%;
+                    margin-bottom:0px;
+                }
+                input[type="submit"]{
+                    width: 97%;
+                    // margin-top: 2%;
+                }
             }
         }
         .start-here{
@@ -306,5 +412,4 @@
 
 // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
 @media (min-width: 1026px) and (max-width: 1376px) {
-
 }
