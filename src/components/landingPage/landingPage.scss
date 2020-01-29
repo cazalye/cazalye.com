@@ -233,7 +233,7 @@
                 position: relative;
                 text-align: center;
                 margin-top: 0px;
-                margin-bottom: 5px;
+                // margin-bottom: 0px;
                 border: 0;
                 padding: 5px;
                 float: none;
@@ -241,14 +241,16 @@
             }
 
             form{
-                margin-top:20px;
+                // margin-top: 10px;
                 margin-right:1%;
                 margin-left:2%;
-                padding: 15px;
+                padding-left: 20px;
+                padding-top: 20px;
+                padding-right: 20px;
                 input{
                 width: 90%;
-                margin-bottom: 10px;
-                // margin-top: .5%;
+                margin-bottom: 15px;
+                margin-top: 5px;
                 }
                 input[type="submit"]{
                     width: 96%;
@@ -270,9 +272,9 @@
     #landing{ 
         overflow-x: hidden;
         .newsletter{
-            margin-bottom: 25px;
             p{
                 padding: 0px;
+                // margin-bottom: 5px;
             }
             form{
                 input[type="submit"]{
@@ -288,14 +290,18 @@
     #landing{ 
         overflow-x: hidden;
         .newsletter{
-            margin-bottom: 0px;
-            margin-top:40px;
+            margin-bottom: 10px;
+            margin-top:20px;
             p{
-                padding: 0px;
+                padding-bottom: 10px;
             }
             form{
-                margin-left:5%;
-                margin-right:5%;
+                margin-left:6.5%;
+                margin-right:6%;
+                margin-top:1%;
+                input{
+                    width: 90%;
+                }
                 input[type="submit"]{
                     width: 97%;
                 }
@@ -338,7 +344,7 @@
                 margin-right:5%;
                 margin-top: 5%;
                 input{
-                    margin-top:5%;
+                    margin-top:6%;
                     margin-bottom:0px;
                 }
                 input[type="submit"]{
