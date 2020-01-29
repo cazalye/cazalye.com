@@ -5,7 +5,7 @@ import "./photoDiariesList.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 import {Link} from "react-router-dom";
 import Spinner from '../spinner/spinner';
-
+ 
 
 class PhotoDiariesList extends Component<any, any> {
     // initialise empty array of posts, to be run while the data is loading
