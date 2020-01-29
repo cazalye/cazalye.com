@@ -14,7 +14,7 @@ interface PostsSlideshowProps {
 }
 
 class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState> {
-    numImages = 6;
+    numImages = 12;
     interval: any;
     state: PostsSlideshowState = {
         page: 0,
