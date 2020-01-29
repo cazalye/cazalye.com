@@ -94,15 +94,16 @@ body .mdl-layout .mdl-layout__inner-container{
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    margin:100px;
+                    // margin:60px;
+                    margin: 15%;
                     margin-top: 0px;
                     margin-bottom: 0px;
                     h3{
                         font-family: 'Cormorant Garamond';
                         font-weight: 100;
-                        font-size: 28px; 
-                        line-height:40px;
-                        font-size:25px;
+                        // font-size: 28px; 
+                        font-size: .65em; 
+                        line-height: 1.5em;
                         color:black;
                     }
                 }
@@ -116,12 +117,14 @@ body .mdl-layout .mdl-layout__inner-container{
                     .photo-diary-summary{
                         position: absolute;
                         top:17px;
-                        margin:80px;
+                        margin:15%;
                         padding-left:2%;
                         padding-right:2%;
                         p{
                             color:black;
-                            font-size: 18px;
+                            // font-size: 18px;
+                            font-size: .45em; 
+                            line-height: 1.1em;
                             text-align: left;
                             margin:none;
                         }
@@ -130,14 +133,14 @@ body .mdl-layout .mdl-layout__inner-container{
                             font-family: 'Cormorant Garamond';
                             font-weight: 500;
                             font-size: 30px;
-                            margin-top: 10px;
+                            margin-top: 1%;
                             text-align: center;
-                            padding-bottom:30px;
+                            padding-bottom: 1%;
                         }
                         .p5{
                             font-weight: 500;
                             text-align: center;
-                            padding-top: 30px;
+                            padding-top: 1%;
                         }
                     }
                 }
@@ -323,6 +326,7 @@ body .mdl-layout .mdl-layout__inner-container{
                         margin-top: 5px;
                     }
                 }
+
                 .double-page-spread.back-page-container .left-page-key-details .back-page{
                     h1{
                         font-size: 15px;
