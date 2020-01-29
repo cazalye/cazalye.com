@@ -33,8 +33,11 @@ class About extends Component {
                     <p className="para2">
                     Instead of trawling through long articles for a few key points of information, here you will find <strong>carefully curated, short posts </strong>with the most important and exciting information, each with a read time of less than 5 minutes.
                     </p>
-                    <p className="para3">
+                    {/* <p className="para3">
                     If you already have a destination in mind then head to the <Link to="/map">'Where to'</Link> section, where you can find all the places featured throughout the site on an interactive world map. If you would <strong>prefer to browse leisurely </strong> for inspiration, then follow the links below:
+                    </p> */}
+                    <p className="para3">
+                    If you already have a destination in mind then head to the search icon in the top right corner, where you can discover all the posts on your destination of interest. If you would <strong>prefer to browse leisurely </strong> for inspiration, then follow the links below:
                     </p>
                     <div className="post-icons">
                         <div className="photo-diaries-link">

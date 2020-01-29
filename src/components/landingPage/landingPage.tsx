@@ -154,9 +154,12 @@ class LandingPage extends Component<any, any> {
                     </div>
                     <div className="section-divider2"/>
 
-                    <div className="landing2-map">
+                        {/* ADD MAP BACK ONCE had time to work on -- AB test? */}
+                    {/* <div className="landing2-map">
                         <Map/>
-                    </div>
+                    </div> */}
+
+
                     <div className="section-divider2"/>
                     <div className="landing3-photo-diary">
                         <PostsSlideshow/>
