@@ -8,6 +8,7 @@ import AboutMe from './about/aboutMe';
 import PhotoDiariesDetail from './photoDiaries/photoDiariesDetail';
 import PhotoDiariesList from './photoDiaries/photoDiariesList';
 import StonePaper from './stonePaper/stonePaper';
+import SearchResults from './searchResults/searchResults';
 
 
 const View = () => (
@@ -20,6 +21,7 @@ const View = () => (
         <Route exact={true} path='/photoDiaries' component={PhotoDiariesList}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
         <Route exact={true} path='/stonePaper' component={StonePaper}/>
+        <Route exact={true} path='/searchResults' component={SearchResults}/>
     </Switch>
 );
 

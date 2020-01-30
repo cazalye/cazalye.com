@@ -2,6 +2,7 @@ import "./navbar.scss";
 import React, { Component } from 'react';
 import {Layout, Header, Navigation, Drawer, Textfield} from 'react-mdl';
 import {Link} from 'react-router-dom';
+// import SearchResult from '../searchResults/searchResults';
 
 class Navbar extends Component {
     hideToggle() {
@@ -9,7 +10,7 @@ class Navbar extends Component {
         if (selectorId) {
             selectorId.MaterialLayout.toggleDrawer();
         }
-    }
+    } 
     render() {
         const title = <Link to="/" className="header-title"> cazalye </Link> as any;
         return (
