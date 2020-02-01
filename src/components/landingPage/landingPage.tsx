@@ -128,7 +128,7 @@ class LandingPage extends Component<any, any> {
                             </Link>
                         </div>
                     </div>
-                    <div className="section-divider"/>
+                    {/* <div className="section-divider"/> */}
 
                     <div className="newsletter">
                         <p>SUBSCRIBE TO THE NEWSLETTER</p>
@@ -138,15 +138,13 @@ class LandingPage extends Component<any, any> {
                             <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
                         </form>
                     </div>
-                    <div className="section-divider"/>
+                    {/* <div className="section-divider"/> */}
 
                         {/* ADD MAP BACK ONCE had time to work on -- AB test? */}
                     {/* <div className="landing2-map">
                         <Map/>
                     </div> */}
 
-
-                    <div className="section-divider"/>
                     <div className="landing3-photo-diary">
                         <PostsSlideshow/>
                     </div>
