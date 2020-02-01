@@ -1,6 +1,6 @@
 import "./landingPage.scss";
 import React, { Component} from 'react';
-import Map from "../map/map";
+// import Map from "../map/map";
 import Footer from "../footer/footer";
 import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
@@ -119,30 +119,16 @@ class LandingPage extends Component<any, any> {
                             </Link>
                         </div> */}
 
-                    <div className="start-here">
-                        <h3>First time exploring this site? <i className="fas fa-hiking"/></h3>
-                        <Link to="/about">
-                            <button className="mdl-button mdl-js-button mdl-button--raised">
-                                Start Here
-                            </button>
-                        </Link>
-                    </div>
-
-
-                        {/* <div className="stone-paper-link">
-                            <Link to="/stonePaper"><strong>What is Stone Paper?</strong> &emsp; Find out about eco-friendly travel postcards</Link>
-                        </div> */}
-
-                        <div className="stone-paper-link">
-                            <Link to="/stonePaper">
-                                    <p>What is eco-friendly Stone Paper?</p>
-                                    <button className="mdl-button mdl-js-button mdl-button--raised">
-                                    Find out here
+                        <div className="start-here">
+                            <h3>First time exploring this site? <i className="fas fa-hiking"/></h3>
+                            <Link to="/about">
+                                <button className="mdl-button mdl-js-button mdl-button--raised">
+                                    Start Here
                                 </button>
-                                </Link>
+                            </Link>
                         </div>
                     </div>
-                    <div className="section-divider2"/>
+                    <div className="section-divider"/>
 
                     <div className="newsletter">
                         <p>SUBSCRIBE TO THE NEWSLETTER</p>
@@ -152,7 +138,7 @@ class LandingPage extends Component<any, any> {
                             <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
                         </form>
                     </div>
-                    <div className="section-divider2"/>
+                    <div className="section-divider"/>
 
                         {/* ADD MAP BACK ONCE had time to work on -- AB test? */}
                     {/* <div className="landing2-map">
@@ -160,16 +146,24 @@ class LandingPage extends Component<any, any> {
                     </div> */}
 
 
-                    <div className="section-divider2"/>
+                    <div className="section-divider"/>
                     <div className="landing3-photo-diary">
                         <PostsSlideshow/>
                     </div>
-                    <div className="section-divider2"/>
+                    <div className="section-divider"/>
                     <div className="landing4-blog">
                         <Blog/>
                     </div>
+                    {/* <div className="section-divider"/> */}
+                    <div className="stone-paper-link">
+                        <p>What is eco-friendly Stone Paper?</p>
+                        <Link to="/stonePaper">
+                            <button className="mdl-button mdl-js-button mdl-button--raised">
+                            Find out here
+                            </button>
+                        </Link>
+                    </div>
                     <Footer/>
-                {/* </div> */}
             </div>
         );
     }

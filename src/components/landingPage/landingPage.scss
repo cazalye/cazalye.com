@@ -91,35 +91,6 @@
                 }
             }
         }
-
-        .stone-paper-link{
-            position: absolute;
-            right:16%;
-            bottom:0%;
-            margin: auto;
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 100;
-            padding: .5em;
-            // border: 1px solid #333;
-            // border-radius: 25px;
-            // background-color: #0113109e;
-            a{
-                color:white;
-                // font-size: 20px;
-                font-size: .6em;
-                padding-top: 0px;
-                p{
-                    margin-bottom:5px;
-                }
-                button{
-                    background:$alternatePink;
-                    box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
-                }
-                :hover{
-                    color:#cdcdcd;
-                }
-            }
-        }
     }
     .newsletter{
         height:10vh;
@@ -177,14 +148,40 @@
         height:100vh;
         position: relative;
     }
-    .section-divider1{
-        hr{
-            border-top: .7px solid $darkGreen;
-            margin-top: 4px;
-            margin-bottom: 4px;
+
+    .stone-paper-link{
+        position: relative;
+        height:30vh;
+        background-color: $darkestGreen;
+        p{
+            color:white;
+            font-size: 30px;
+            padding-bottom:5px;
+            padding-top: 60px;
+        }
+        a{
+            button{
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%);
+                background:$alternatePink;
+                box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
+                margin-top:20px;
+            }
+            :hover{
+                color:#cdcdcd;
+            }
         }
     }
-    .section-divider2{
+
+    // .section-divider1{
+    //     hr{
+    //         border-top: .7px solid $darkGreen;
+    //         margin-top: 4px;
+    //         margin-bottom: 4px;
+    //     }
+    // }
+    .section-divider{
         height: 6px;
     }
 }
