@@ -1,4 +1,4 @@
-import {blogBaseUrl, wordpressBlogBaseUrl, Post, FeatureImageSizes, Media, Spread, baseUrlImages, PhotoDiaryData} from "./posts";
+import {blogBaseUrl, wordpressBlogBaseUrl, Post, FeatureImageSizes, Media, Spread, baseUrlImages, PhotoDiaryData, photoDiaryCatID, blogCatID} from "./posts";
 import { parse } from 'node-html-parser';
 
 /**
@@ -166,6 +166,11 @@ export function formatPost(postData: any): Post {
     let images: Media[] = postData.medias.map(formatMedia);
     images = filterAndSortMedia(images, postData.content.rendered);
 
+    let type: "BlogPost" | "PhotoDiary" = "BlogPost";
+    if (postData.categories.includes(photoDiaryCatID)) {
+        type = "PhotoDiary";
+    }
+
     return {
         id: postData.id,
         title: postData.title.rendered,
@@ -180,6 +185,7 @@ export function formatPost(postData: any): Post {
         featureMedia: postData.feature_image ? formatMedia(postData.feature_image): null,
         spreads: buildSpreadsFromImages(images),
         photoDiaryData: parsePhotoDiaryData(postData.content.rendered),
+        type: type
     };
 }
 

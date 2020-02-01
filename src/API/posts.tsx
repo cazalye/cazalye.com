@@ -5,7 +5,7 @@ export const wordpressBlogBaseUrl = "https://wordpress.cazalye.com/travel/";
 export const blogBaseUrl = "/blog/";
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 export const baseUrlImages = "https://wordpress.cazalye.com/wp-content/uploads/";
-const blogCatID = 200;
+export const blogCatID = 200;
 export const photoDiaryCatID = 655242675;
 
 export interface PostsFilter {
@@ -41,6 +41,7 @@ export interface Post {
     images: Media[];
     spreads: Spread[];
     photoDiaryData: PhotoDiaryData;
+    type: "BlogPost" | "PhotoDiary";
 }
 
 export interface Media {

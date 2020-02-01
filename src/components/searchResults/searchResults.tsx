@@ -22,8 +22,15 @@ class SearchResults extends Component<any, any> {
  // retrieve data
  async componentDidMount() {
     const posts = await getPosts();
+
+    // split blog posts and photo diaries
+    const blogPosts = posts.filter(post => post.type === "BlogPost");
+    const photoDiaries = posts.filter(post => post.type === "PhotoDiary");
+
     this.setState({
-        posts: posts
+        posts: posts,
+        blogPosts: blogPosts,
+        photoDiaries: photoDiaries
     });
 }
 // async componentDidMount() {
@@ -56,7 +63,7 @@ class SearchResults extends Component<any, any> {
 
             // WHY DOES THIS GIVE PHOTO DIARIES INSTEAD OF BLOG POSTS????
             const blogPostsHTML = [];
-            for (const post of this.state.posts) {
+            for (const post of this.state.blogPosts) {
                 const style = {
                     backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
                 };
@@ -70,7 +77,7 @@ class SearchResults extends Component<any, any> {
                     </Link>
                 );
             const photoDiariesHTML = [];
-            for (const post of this.state.posts) {
+            for (const post of this.state.photoDiaries) {
                 const style = {
                     backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
                 };
