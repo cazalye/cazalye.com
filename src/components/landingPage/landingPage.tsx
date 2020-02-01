@@ -8,6 +8,7 @@ import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import Blog from "../blog/blogList";
 import axios from 'axios';
 import Popup from '../popup/popup';
+import Button from '../button/button';
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
 
@@ -126,6 +127,10 @@ class LandingPage extends Component<any, any> {
                                     Start Here
                                 </button>
                             </Link>
+                        </div>
+                        <div className="down-arrow">
+                            {/* <i className="fas fa-angle-double-down"/> */}
+                            <i className="fas fa-arrow-down"/>
                         </div>
                     </div>
                     {/* <div className="section-divider"/> */}
