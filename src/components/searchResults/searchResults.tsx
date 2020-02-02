@@ -43,10 +43,13 @@ class SearchResults extends Component<any, any> {
                 blogPostsHTML.push(
                     <Link className="post-link" to={`/blog/${post.slug}`}>
                         <div className="post-cover-photo" style={style}>
+                        <div className="text-container">
                             <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
                             <p>read the post</p>
                         </div>
+                        </div>
                     </Link>
+                   
                 );
             const photoDiariesHTML = [];
             for (const post of this.state.photoDiaries) {
@@ -56,10 +59,13 @@ class SearchResults extends Component<any, any> {
                 photoDiariesHTML.push(
                     <Link className="post-link" to={`/photoDiaries/${post.slug}`}>
                         <div className="post-cover-photo" style={style}>
+                        <div className="text-container">
                             <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
                             <p>see the photo diary</p>
                         </div>
+                        </div>
                     </Link>
+                    
             );
         }
 
@@ -70,18 +76,10 @@ class SearchResults extends Component<any, any> {
                 <div className="search-results-title">
                     <h1> CATEGORY NAME </h1>
                 </div>
-                <div className="masonry-layout">
-                    <div className="masonry-layout__panel">
-                        <div className="masonry-layout__panel-content">
-                            {blogPostsHTML}
-                        </div>
-                    </div>
-                </div>
-                <div className="masonry-layout">
-                    <div className="masonry-layout__panel">
-                        <div className="masonry-layout__panel-content">
-                            {photoDiariesHTML}
-                        </div>
+                <div className="post-container">
+                    <div className="posts">
+                        {blogPostsHTML}
+                        {photoDiariesHTML}
                     </div>
                 </div>
             </div>
