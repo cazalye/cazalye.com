@@ -17,7 +17,7 @@ class Navbar extends Component {
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
                     <Navigation className="header-nav">
-                        <Link className="where" to="/map">Where to?</Link>
+                        {/* <Link className="where" to="/map">Where to?</Link> */}
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
@@ -28,10 +28,10 @@ class Navbar extends Component {
                         <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-instagram" aria-hidden="true" />
                         </a>
-                        <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
+                        {/* <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
-                        </a>
-                        {/* <Link to="/searchResults"> */}
+                        </a> */}
+                        <Link to="/searchResults">
                             <Textfield
                                 className="search"
                                 value=""
@@ -40,7 +40,7 @@ class Navbar extends Component {
                                 expandable={true}
                                 expandableIcon=""
                             />
-                        {/* </Link> */}
+                        </Link>
                     </Navigation>
                 </Header>
                 <Drawer title={<Link onClick={() => this.hideToggle()} to="/" className="header-title">cazalye</Link> as any}>
