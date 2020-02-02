@@ -7,17 +7,9 @@ import "./searchResults.scss";
 
 class SearchResults extends Component<any, any> {
   // initialise empty array of posts, to be run while the data is loading
-
     state: any = {
         posts: []
     };
-    // state: any = {
-    //     blogPosts: []
-    // };
-    // state: any = {
-    //     diaryPosts: []
-    // };
-
 
  // retrieve data
  async componentDidMount() {
@@ -33,24 +25,7 @@ class SearchResults extends Component<any, any> {
         photoDiaries: photoDiaries
     });
 }
-// async componentDidMount() {
-//     const blogPosts = await getBlogPosts({
-//         limit: 100
-//     });
-//     this.setState({
-//         blogPosts: blogPosts
-//     });
-// }
-//     async componentDidMount() {
-//         const diaryPosts = await getPhotoDiaries();
-//         this.setState({
-//             diaryPosts: diaryPosts
-//         });
-//     }
-
     render() {
-        // is this or statement ok??
-        // if (!this.state.diaryPosts.length) || (!this.state.blogPosts.length){
         if (!this.state.posts.length){
             return (
                 <div id="search-results">
@@ -60,8 +35,6 @@ class SearchResults extends Component<any, any> {
         }
         else {
             // Build UI - create html array, loop through feature images and add them to the html object
-
-            // WHY DOES THIS GIVE PHOTO DIARIES INSTEAD OF BLOG POSTS????
             const blogPostsHTML = [];
             for (const post of this.state.blogPosts) {
                 const style = {
@@ -69,10 +42,9 @@ class SearchResults extends Component<any, any> {
                 };
                 blogPostsHTML.push(
                     <Link className="post-link" to={`/blog/${post.slug}`}>
-                    {/* <Link className="post-link" to={"blog/" + post.slug}> */}
                         <div className="post-cover-photo" style={style}>
                             <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
-                            <p>read the diary</p>
+                            <p>read the post</p>
                         </div>
                     </Link>
                 );
@@ -85,7 +57,7 @@ class SearchResults extends Component<any, any> {
                     <Link className="post-link" to={`/photoDiaries/${post.slug}`}>
                         <div className="post-cover-photo" style={style}>
                             <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
-                            <p>read the diary</p>
+                            <p>see the photo diary</p>
                         </div>
                     </Link>
             );
@@ -95,13 +67,21 @@ class SearchResults extends Component<any, any> {
         return (
             <div id="search-results">
                 <NavbarHider transparentRowHide={true} hamburgerMode={false} lightGreenTitle={true} hideTitle={false}/>
-                <div className="search-result-summary">
+                <div className="search-results-title">
                     <h1> CATEGORY NAME </h1>
-                    <div className="blog">
-                        {blogPostsHTML}
+                </div>
+                <div className="masonry-layout">
+                    <div className="masonry-layout__panel">
+                        <div className="masonry-layout__panel-content">
+                            {blogPostsHTML}
+                        </div>
                     </div>
-                    <div className="photo">
-                        {photoDiariesHTML}
+                </div>
+                <div className="masonry-layout">
+                    <div className="masonry-layout__panel">
+                        <div className="masonry-layout__panel-content">
+                            {photoDiariesHTML}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -107,7 +107,7 @@ class LandingPage extends Component<any, any> {
 
                  {/* <div className="test" onScroll={e => {this.pageScrolled();}}> */}
 
-                    <NavbarHider transparentRowHide={false} />
+                    <NavbarHider transparentRowHide={true} whiteTitle={true} />
                     <div id="landing1">
                         <div className="mission">
                             <h2>Inspiration for your adventures</h2>

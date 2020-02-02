@@ -31,7 +31,7 @@ class Navbar extends Component {
                         <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
                         </a>
-                        <Link to="/searchResults">
+                        {/* <Link to="/searchResults"> */}
                             <Textfield
                                 className="search"
                                 value=""
@@ -40,7 +40,7 @@ class Navbar extends Component {
                                 expandable={true}
                                 expandableIcon=""
                             />
-                        </Link>
+                        {/* </Link> */}
                     </Navigation>
                 </Header>
                 <Drawer title={<Link onClick={() => this.hideToggle()} to="/" className="header-title">cazalye</Link> as any}>

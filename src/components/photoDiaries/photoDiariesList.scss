@@ -23,42 +23,177 @@
             // padding-right: 70px;
         }
     }
-    .masonry-layout{
-        /* position of mosaic  */
-        width:60%;
-        position: absolute;
-        left:49%;
-        top:10%;
 
-        /* vertical gaps */
-        line-height: 0;
-        column-count: 3;
-        column-gap:  0px;
-
-        .masonry-layout-panel{
-            break-inside: avoid;
-            // padding: 5px;
-            .masonry-layout__panel-content{
-                // padding: 10px;
-                // border-radius: 10px;
-            
-                .cover-photo{
-                width: 500px;
-                height: 10px;
-                background-size: cover;
-                border: solid black 3px;
-                padding-top: 100%;
-                }
-                .cover-title{
-                    position: absolute;
-                    font-size: 20px;
-                    p{
-                        position: absolute;
-                    }
-                }
-            }
-        }
+    .landscape-image-container {
+        background-size: cover;
+        padding-top: 67%;
     }
+    .masonry-layout-panel {
+        .portrait-image-container {
+            background-size: cover;
+            padding-top: 133%;
+        }
+
+    }
+
+    .masonry-layout {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        -webkit-column-count: 2;
+           -moz-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 0;
+           -moz-column-gap: 0;
+                column-gap: 0;
+        position: relative;
+
+    }
+    .masonry-layout * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .masonry-layout-panel {
+        margin: 0;
+        padding: 10px;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
+        p {
+            color: red;
+        }
+        img {
+            width: 100%;
+        }
+
+      }
+      
+    .masonry-layout-panel__content {
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    width: 100%;
+    }
+    .masonry-layout-cluster {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    p{
+        color:red;
+    }
+    }
+    
+    .masonry-layout-cluster--vertical {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    }
+    
+    .masonry-layout-cluster--horizontal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+    .masonry-layout-cluster__segment {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    overflow: hidden;
+    }
+    .masonry-layout-cluster__segment--row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    .masonry-layout-cluster__segment--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    }
+    
+    .masonry-layout-cluster__segment--half {
+    -webkit-flex-basis: 50%;
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+    }
+    .masonry-layout-cluster__segment--quarter {
+    -webkit-flex-basis: 25%;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    }
+    
+    
+    /**
+    * Color styles
+    */
+    .tx--white {
+    color: #fff;
+    }
+    .bg--red {
+    background-color: #e74c3c;
+    }
+    .bg--green {
+    background-color: #26a65b;
+    }
+    .bg--purple {
+    background-color: #8e44ad;
+    }
+    .bg--blue {
+    background-color: #1e8bc3;
+    }
+
+    // .masonry-layout{
+    //     /* position of mosaic  */
+    //     position: absolute;
+    //     width:60%;
+    //     left:49%;
+    //     top:10%;
+    //     /* vertical gaps */
+    //     line-height: 0;
+    //     column-count: 3;
+    //     column-gap:  0px;
+    //     .masonry-layout-panel{
+    //         break-inside: avoid;
+    //         // padding: 5px;
+    //         .masonry-layout__panel-content{
+    //             // padding: 10px;
+    //             // border-radius: 10px;
+    //             // width: 100px;
+    //             .cover-photo{
+    //             width: 500px;
+    //             height: 10px;
+    //             background-size: cover;
+    //             border: solid black 3px;
+    //             padding-top: 100%;
+    //             }
+    //             .cover-title{
+    //                 position: absolute;
+    //                 font-size: 20px;
+    //                 p{
+    //                     position: absolute;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 
