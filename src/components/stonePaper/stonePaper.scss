@@ -2,13 +2,13 @@
 
 #stone-paper-about{
     position: absolute;
-    height: 150vh;
+    height: 200vh;
     width: 100%;
     overflow: hidden;
     .stone-paper-background{
     position: absolute;
     // background: url("/img/rafting.jpg");
-    background: linear-gradient(123deg, rgba(0, 0, 0, 0.8) 53%, transparent 53.5%), url(/img/rafting.jpg);
+    // background: linear-gradient(123deg, rgba(0, 0, 0, 0.8) 53%, transparent 53.5%), url(/img/rafting.jpg);
     background-size: cover;
     height: 250vh;
     width: 100%;
@@ -18,16 +18,17 @@
         h1{
            position: relative;
            left: 20px;
-           color:white;
+           color:black;
            font-size: 50px;
            text-align: left;
            margin-bottom:0px;
+           margin-top: 100px;
         }
         h2{
             position: relative;
             text-align: left;
             left: 40px;
-            color:white;
+            color:black;
             font-size: 25px; 
             font-family: "Cormorant Garamond"; 
             font-weight: 100;
@@ -35,22 +36,30 @@
             text-align: left;
             margin-top:0px;
         }
+        .etsy-images-adventure{
+            position: relative;
+            display: flex;
+            left: 10%;
+            img{
+                padding: 10px;
+            }
+        }
+        .etsy-images-vintage{
+            position: relative;
+            display: flex;
+            img{
+                padding: 10px;
+            }
+        }
     } 
-    // .etsy-link{ 
-    //     font-size: 25px; 
-    //     line-height: 35px;
-    //     text-align: center;
-    //     color: white; 
-    //     position: absolute;
-    //     top: 60%;
-    //     right:3%;
-    // }
+
+
     a{
         position: fixed;
         top: 13%;
         right:12%;
         :hover{
-            color:#cdcdcd;
+            color:$darkGreen;
         }
         button{
             // color:white;
@@ -67,15 +76,11 @@
             font-weight: 100;
             font-size: 14px;
         } 
-        // background-color: white;
-        // border: 2px solid #ffffff;
-        // border-radius: 25px;
-        // padding:10px;
     }
 
     .stone-paper-body{
         h3{
-            color:white;
+            color:black;
             position: relative;
             left:45px;
             margin-right:800px;
@@ -83,18 +88,18 @@
             text-align: left;
         } 
         p{
-           color:white;
+           color:black;
            position: relative;
            left:40px;
            margin-right:800px;
            text-align: left;
         }
         ul{
-            color:white;
+            color:black;
             position: relative;
         }
         li{
-            color:white;
+            color:black;
             position: relative;
             left:40px;
         }

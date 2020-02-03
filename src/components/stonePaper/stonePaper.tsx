@@ -8,12 +8,25 @@ class StonePaper extends Component {
 
         return (
             <div id="stone-paper-about">
-                <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
+                <NavbarHider transparentRowHide={true} hamburgerMode={false}  hideTitle={false}/>
                 <div className="stone-paper-background"/>
+               
                 <div className="stone-paper-header">
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>
                     <h2>Adventure-inspired travel photography printed on the most eco-friendly paper in existence</h2>
+                    <div className="etsy-images-adventure">
+                        <img src='/img/postcards/ivy.jpg' alt="travel postcards of ivy covered building" width="20%"/>
+                        <img src='/img/postcards/canyon.jpg' alt="travel postcard of bridge over deep canyon" width="20%"/>
+                        <img src='/img/postcards/river.jpg' alt="travel postcard of wild river" width="20%"/>
+                    </div>
+                    <div className="etsy-images-vintage">
+                        <img src='/img/postcards/car2.jpg' alt="travel postcards of vintage car" width="20%"/>
+                        <img src='/img/postcards/boat.jpg' alt="travel postcard of vintage boat" width="20%"/>
+                        <img src='/img/postcards/shoes.jpg' alt="postcard of shoes with plants in them" width="20%"/>
+                        <img src='/img/postcards/stone_wall.jpg' alt="travel postcard of stone wall" width="20%"/>
+                    </div>
                 <div/>
+                
                 <a className="etsy-link" href="https://www.etsy.com/au/shop/cazalye"> 
                     <button className="mdl-button mdl-js-button mdl-button--raised">
                         Order Here!
@@ -34,7 +47,6 @@ First, limestone is crushed to make Calcium Carbonate powder which is then combi
                     <ul><li>Velvety smooth writing experience with no grain</li><li>Water and tear resistant</li><li>Ink does not bleed through to next page</li><li>Colors are more vibrant</li></ul>
                     <hr/>
                 </div>
-
                 </div>
                 {/* <Footer/> */}
             </div>
