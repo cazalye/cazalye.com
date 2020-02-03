@@ -45,28 +45,34 @@ class SearchResults extends Component<any, any> {
                         <div className="post-cover-photo" style={style}>
                         <div className="text-container">
                             <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
-                            <p>read the post</p>
+                            {/* <p>read the post</p> */}
                         </div>
                         </div>
                     </Link>
+                    // <div className="post-container"  style={style}>
+                    // <Link className="post-link" to={`/blog/${post.slug}`}/>
+                    //     <div className="text-container">
+                    //         <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={'blog/${post.slug}'}/>
+                    //     </div>
+                    // </div>
                    
                 );
-            const photoDiariesHTML = [];
-            for (const post of this.state.photoDiaries) {
-                const style = {
-                    backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
-                };
-                photoDiariesHTML.push(
-                    <Link className="post-link" to={`/photoDiaries/${post.slug}`}>
-                        <div className="post-cover-photo" style={style}>
-                        <div className="text-container">
-                            <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
-                            <p>see the photo diary</p>
-                        </div>
-                        </div>
-                    </Link>
-                    
-            );
+            // const photoDiariesHTML = [];
+            // for (const post of this.state.photoDiaries) {
+            //     const style = {
+            //         backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
+            //     };
+            //     photoDiariesHTML.push(
+            //         <div className="post-container"  style={style}>
+            //             <Link className="post-link" to={`/photoDiaries/${post.slug}`}/>
+            //                 {/* <div className="post-cover-photo" style={style}> */}
+            //                 <div className="text-container">
+            //                     {/* <Link className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/> */}
+            //                     <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={"photoDiaries/" + post.slug}/>
+            //                 </div>
+            //                 {/* </div> */}
+            //         </div>
+            // );
         }
 
 
@@ -79,7 +85,7 @@ class SearchResults extends Component<any, any> {
                 <div className="post-container">
                     <div className="posts">
                         {blogPostsHTML}
-                        {photoDiariesHTML}
+                        {/* {photoDiariesHTML} */}
                     </div>
                 </div>
             </div>
@@ -87,6 +93,6 @@ class SearchResults extends Component<any, any> {
     }
 }
 }
-}
+// }
 
 export default SearchResults;
