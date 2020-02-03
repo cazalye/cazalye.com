@@ -98,7 +98,7 @@ class LandingPage extends Component<any, any> {
                 <div>
                     {this.state.newsletterConfirmPopup ?
                     <Popup
-                            text={this.state.newsletterLoading ? "Loading..." : "Thanks for subscribing"}
+                            text={this.state.newsletterLoading ? "Submitting..." : "Thanks for subscribing"}
                             closePopup={this.hideNewsletterPopup.bind(this)}
                     />
                     : null
