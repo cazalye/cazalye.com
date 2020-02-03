@@ -9,6 +9,8 @@ import PhotoDiariesDetail from './photoDiaries/photoDiariesDetail';
 import PhotoDiariesList from './photoDiaries/photoDiariesList';
 import StonePaper from './stonePaper/stonePaper';
 import SearchResults from './searchResults/searchResults';
+import Categories from './categories/categories';
+
 
 
 const View = () => (
@@ -22,6 +24,7 @@ const View = () => (
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
         <Route exact={true} path='/stonePaper' component={StonePaper}/>
         <Route exact={true} path='/searchResults' component={SearchResults}/>
+        <Route exact={true} path='/categories' component={Categories}/>
     </Switch>
 );
 
