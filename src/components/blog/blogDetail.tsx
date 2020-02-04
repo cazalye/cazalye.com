@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getPostDetailBySlug } from '../../API/posts';
 import "./blogDetail.scss";
 import {Link} from 'react-router-dom';
+import {Breadcrumbs, Typography} from '@material-ui/core';
 
 class BlogDetail extends Component<any,any>{
 
@@ -35,6 +36,15 @@ class BlogDetail extends Component<any,any>{
             return (
                 // <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
                 <div id="blog-detail">
+                    <Breadcrumbs maxItems={4} aria-label="breadcrumb">
+                    <Link to="" color="inherit" href="#">
+                        Home
+                    </Link>
+                    <Link to="" color="inherit" href="#">
+                        Blog
+                    </Link>
+                    <Typography color="inherit" dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
+                    </Breadcrumbs>
                     <div className="blog-title">
                         <h1 dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
                         <h3 className="post-date">
