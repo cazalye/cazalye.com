@@ -23,7 +23,7 @@ const View = () => (
         <Route exact={true} path='/photoDiaries' component={PhotoDiariesList}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
         <Route exact={true} path='/stonePaper' component={StonePaper}/>
-        <Route exact={true} path='/searchResults' component={SearchResults}/>
+        <Route exact={true} path='/search/:searchQuery' component={SearchResults}/>
         <Route exact={true} path='/categories' component={Categories}/>
     </Switch>
 );
