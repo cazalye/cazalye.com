@@ -2,9 +2,25 @@ import "./navbar.scss";
 import React, { Component } from 'react';
 import {Layout, Header, Navigation, Drawer, Textfield} from 'react-mdl';
 import {Link} from 'react-router-dom';
+import { Route } from 'react-router-dom'
 // import SearchResult from '../searchResults/searchResults';
 
-class Navbar extends Component {
+class Navbar extends Component<any, any> {
+    state = {
+        searchQuery: ""
+    }
+    updateSearchQuery(e: any) {
+        this.setState({
+            searchQuery: e.target.value
+        });
+    }
+    search(history: any, e: any) {
+        e.preventDefault();
+        history.push(`/search/${this.state.searchQuery}`);
+        this.setState({
+            searchQuery: ""
+        });
+    }
     hideToggle() {
         const selectorId = document.querySelector('.mdl-layout') as any;
         if (selectorId) {
@@ -31,16 +47,23 @@ class Navbar extends Component {
                         {/* <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
                         </a> */}
-                        <Link to="/searchResults">
-                            <Textfield
-                                className="search"
-                                value=""
-                                label="search"
-                                placeholder="search"
-                                expandable={true}
-                                expandableIcon=""
-                            />
-                        </Link>
+                        {/* <Link to="/searchResults"> */}
+
+                        <Route render={({ history}) => (
+                            <form onSubmit={(e) => { this.search(history, e) }}>
+                                <Textfield
+                                    className="search"
+                                    value={this.state.searchQuery}
+                                    label="search"
+                                    placeholder="search"
+                                    expandable={true}
+                                    expandableIcon=""
+                                    onChange={this.updateSearchQuery.bind(this)}
+                                />
+                            </form>
+                            )}
+                        />
+                        {/* </Link> */}
                     </Navigation>
                 </Header>
                 <Drawer title={<Link onClick={() => this.hideToggle()} to="/" className="header-title">cazalye</Link> as any}>
