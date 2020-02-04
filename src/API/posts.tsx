@@ -12,6 +12,7 @@ export interface PostsFilter {
     categories?: number[];
     page?: number;
     limit?: number;
+    searchQuery?: string;
 }
 
 export interface PhotoDiaryData {
@@ -102,6 +103,9 @@ export async function getPosts(filter: PostsFilter = {}): Promise<Post[]> {
     }
     if (filter.page) {
         filterString += `&page=${filter.page}`;
+    }
+    if (filter.searchQuery) {
+        filterString += `&search=${filter.searchQuery}`;
     }
     const posts = await axios.get(`${baseUrl}wp/v2/posts${filterString}`);
     return posts.data.map(formatPost);
