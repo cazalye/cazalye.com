@@ -8,91 +8,89 @@ import "./searchResults.scss";
 class SearchResults extends Component<any, any> {
   // initialise empty array of posts, to be run while the data is loading
     state: any = {
-        posts: []
+        posts: null
     };
 
- // retrieve data
- async componentDidMount() {
-    const posts = await getPosts();
+    componentDidMount() {
+        this.initialize();
+    }
 
-    // split blog posts and photo diaries
-    const blogPosts = posts.filter(post => post.type === "BlogPost");
-    const photoDiaries = posts.filter(post => post.type === "PhotoDiary");
+    componentDidUpdate(prevProps: any, prevState: any, snapshot: any){
+        if (this.props.match.params.searchQuery !== prevProps.match.params.searchQuery) {
+            this.initialize();
+        }
+    }
 
-    this.setState({
-        posts: posts,
-        blogPosts: blogPosts,
-        photoDiaries: photoDiaries
-    });
-}
+    // retrieve data
+    async initialize() {
+        const searchQuery = this.props.match.params.searchQuery;
+        const posts = await getPosts({
+            searchQuery: searchQuery
+        });
+
+        // split blog posts and photo diaries
+        const blogPosts = posts.filter(post => post.type === "BlogPost");
+        const photoDiaries = posts.filter(post => post.type === "PhotoDiary");
+
+        this.setState({
+            posts: posts,
+            blogPosts: blogPosts,
+            photoDiaries: photoDiaries
+        });
+    }
     render() {
-        if (!this.state.posts.length){
+        if (!this.state.posts){
             return (
                 <div id="search-results">
                     <Spinner/>
                 </div>
             );
+        } else if (!this.state.posts.length) {
+            return (
+                <h1>No results</h1>
+            );
         }
-        else {
-            // Build UI - create html array, loop through feature images and add them to the html object
-            const blogPostsHTML = [];
-            for (const post of this.state.blogPosts) {
-                const style = {
-                    backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
-                };
-                blogPostsHTML.push(
-                    <Link className="post-link" to={`/blog/${post.slug}`}>
-                        <div className="post-cover-photo" style={style}>
-                        <div className="text-container">
-                            <h3 className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/>
-                            {/* <p>read the post</p> */}
-                        </div>
-                        </div>
-                    </Link>
-                    // <div className="post-container"  style={style}>
-                    // <Link className="post-link" to={`/blog/${post.slug}`}/>
-                    //     <div className="text-container">
-                    //         <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={'blog/${post.slug}'}/>
-                    //     </div>
-                    // </div>
-                   
-                );
-            // const photoDiariesHTML = [];
-            // for (const post of this.state.photoDiaries) {
-            //     const style = {
-            //         backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
-            //     };
-            //     photoDiariesHTML.push(
-            //         <div className="post-container"  style={style}>
-            //             <Link className="post-link" to={`/photoDiaries/${post.slug}`}/>
-            //                 {/* <div className="post-cover-photo" style={style}> */}
-            //                 <div className="text-container">
-            //                     {/* <Link className="post-title" dangerouslySetInnerHTML={{__html: post.title}}/> */}
-            //                     <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={"photoDiaries/" + post.slug}/>
-            //                 </div>
-            //                 {/* </div> */}
-            //         </div>
-            // );
+
+        // Build UI - create html array, loop through feature images and add them to the html object
+        const blogPostsHTML = [];
+        for (const post of this.state.posts) {
+            const style = {
+                backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
+            };
+            let urlPrefix = "blog";
+            if (post.type === "PhotoDiary") {
+                urlPrefix = "photoDiaries";
+            }
+            blogPostsHTML.push(
+                <div className="post-container">
+                    <Link className="post-image" style={style} to={`/${urlPrefix}/${post.slug}`}/>
+                    <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={`${urlPrefix}/${post.slug}`}/>
+                </div>
+            );
         }
+        // const photoDiariesHTML = [];
+        // for (const post of this.state.photoDiaries) {
+        //     const style = {
+        //         backgroundImage: post.featureMedia ? `url("${post.featureMedia.sizes.large}")`: ""
+        //     };
+        //     photoDiariesHTML.push(
+        //         <div className="post-container">
+        //             <Link className="post-link" style={style} to={`/photoDiaries/${post.slug}`}/>
+        //             <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={"photoDiaries/" + post.slug}/>
+        //         </div>
+        // );
 
 
         return (
             <div id="search-results">
                 <NavbarHider transparentRowHide={true} hamburgerMode={false} lightGreenTitle={true} hideTitle={false}/>
-                <div className="search-results-title">
-                    <h1> CATEGORY NAME </h1>
-                </div>
-                <div className="post-container">
-                    <div className="posts">
+                <div className="posts">
                         {blogPostsHTML}
                         {/* {photoDiariesHTML} */}
-                    </div>
                 </div>
             </div>
         );
     }
 }
-}
-// }
 
 export default SearchResults;
