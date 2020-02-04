@@ -44,7 +44,7 @@
 
         .start-here{
             position: absolute;
-            top: 24%;
+            bottom: 20px;
             right: 1%;
             text-align: center;
             padding: .6em;
@@ -54,10 +54,11 @@
             // border-radius: 25px;
             // background-color: #0113109e;
             h3{
-                font-size:16px;
+                font-size:18px;
+                font-weight: 500;
                 color:white;
                 margin-bottom:0px;
-                margin-top:0px;
+                margin-top:10px;
                 .fas .fa-hiking{
                     color:white;
                 }
@@ -71,7 +72,7 @@
                 button{
                     color:white;
                     position: absolute;
-                    top: 90%;
+                    bottom: 90%;
                     right: 20%;
                     background: $alternatePink;
                     box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
@@ -86,7 +87,7 @@
         }
         .down-arrow{
             position: absolute;
-            top: 96%;
+            bottom: 20px;
             left:50%;
             // color: $lightGreen;
             font-size: 30px;

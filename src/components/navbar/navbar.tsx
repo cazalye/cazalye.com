@@ -17,7 +17,7 @@ class Navbar extends Component {
             <Layout>
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
                     <Navigation className="header-nav">
-                        <Link className="where" to="/categories">Destinations</Link>
+                        {/* <Link className="where" to="/categories">Destinations</Link> */}
                         <Link to="/photoDiaries">Photo Diaries</Link>
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
@@ -45,7 +45,7 @@ class Navbar extends Component {
                 </Header>
                 <Drawer title={<Link onClick={() => this.hideToggle()} to="/" className="header-title">cazalye</Link> as any}>
                     <Navigation className="drawer-nav" >
-                        <Link onClick={() => this.hideToggle()} to="/categories">Destinations</Link>
+                        {/* <Link onClick={() => this.hideToggle()} to="/categories">Destinations</Link> */}
                         <Link onClick={() => this.hideToggle()} to="/photoDiaries">Photo Diaries</Link>
                         <Link onClick={() => this.hideToggle()} to="/blog">Blog</Link>
                         <Link onClick={() => this.hideToggle()} to="/about">About</Link>
