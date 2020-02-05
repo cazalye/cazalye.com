@@ -5,6 +5,8 @@ import NavbarHider from '../navbar-hider/NavbarHider';
 import NotFound from '../404/404';
 import {Link} from "react-router-dom";
 import ScreenRotate from '../screen-rotate/screen-rotate';
+import {Breadcrumbs, Typography} from '@material-ui/core';
+
 
 interface PhotoDiariesDetailState {
     photoDiary: Post | null;
@@ -208,6 +210,15 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 <div id="photo-diary-detail-page">
                     <ScreenRotate/>
                     <NavbarHider hamburgerMode={true} greenTitle={false}/>
+                    <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
+                        <Link to="/" color="inherit">
+                            Home
+                        </Link>
+                        <Link to="/photoDiaries" color="inherit">
+                            Photo Diaries
+                        </Link>
+                        {/* <Typography className="current-page" color="inherit" dangerouslySetInnerHTML={{__html: this.state.detail.title}}/> */}
+                    </Breadcrumbs>
                     <div id="photo-diary-detail">
                         {leftArrow}
                         {rightArrow}

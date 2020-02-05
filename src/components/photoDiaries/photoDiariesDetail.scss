@@ -12,6 +12,21 @@ body .mdl-layout .mdl-layout__inner-container{
 #photo-diary-detail-page { 
     height: 100vh;
     background: #666;
+    .breadcrumbs{
+        position: fixed;
+        top:8%;
+        left: 20px;
+        color: #444;
+        a{
+            color: #333;
+        }
+        a:hover{
+            color:#888;
+        }
+        .current-page{
+            color: #777;
+        }
+    }
     #photo-diary-detail {
         .cover-page{
             $wid: 68;
@@ -123,7 +138,7 @@ body .mdl-layout .mdl-layout__inner-container{
                         p{
                             color:black;
                             // font-size: 18px;
-                            font-size: .45em; 
+                            font-size: .45em;  
                             line-height: 1.1em;
                             text-align: left;
                             margin:none;

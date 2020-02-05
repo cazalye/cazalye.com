@@ -8,6 +8,21 @@
         overflow-x: hidden;
         // background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 50%, rgba(91, 80, 90, 1)50%);
         background: cover;
+        .breadcrumbs{
+            position: fixed;
+            top:8%;
+            left: 20px;
+            color: #444;
+            a{
+                color: #333;
+            }
+            a:hover{
+                color:#888;
+            }
+            .current-page{
+                color: #777;
+            }
+        }
         .blog-title{
            h1{
                 position: relative;
