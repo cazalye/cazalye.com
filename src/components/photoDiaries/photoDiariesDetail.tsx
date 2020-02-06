@@ -4,8 +4,9 @@ import "./photoDiariesDetail.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 import NotFound from '../404/404';
 import {Link} from "react-router-dom";
-import ScreenRotate from '../screen-rotate/screen-rotate';
-import {Breadcrumbs, Typography} from '@material-ui/core';
+// import ScreenRotate from '../screen-rotate/screen-rotate';
+import {Breadcrumbs} from '@material-ui/core';
+import Spinner from '../spinner/spinner';
 
 
 interface PhotoDiariesDetailState {
@@ -22,7 +23,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             "photoDiary": null,
             error: false,
             relatedPhotoDiaries: [],
-            page: 0
+            page: 0,
         };
     }
 
@@ -98,7 +99,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                         </div>
                         <div className="right-page-summary book-page">
                             <div className="photo-page-container">
-                                <div className="photo-diary-summary"> 
+                                <div className="photo-diary-summary">
                                     <p className="p1">{this.state.photoDiary.photoDiaryData.summary1}</p>
                                     <p className="p2">{this.state.photoDiary.photoDiaryData.summary2}</p>
                                     <p className="p3">{this.state.photoDiary.photoDiaryData.summary3}</p>
@@ -197,6 +198,10 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             return (<NotFound/>);
         } else if (!this.state.photoDiary) {
             return (null);
+        // } else if (!this.state.photoDiary.length) {
+        //         return(
+        //             <Spinner/>
+        //         );
         } else {
             let leftArrow = (null);
             if (this.state.page > 0) {
@@ -208,7 +213,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             }
             return (
                 <div id="photo-diary-detail-page">
-                    <ScreenRotate/>
+                    {/* <ScreenRotate/> */}
                     <NavbarHider hamburgerMode={true} greenTitle={false}/>
                     <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                         <Link to="/" color="inherit">
