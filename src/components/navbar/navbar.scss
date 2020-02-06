@@ -129,7 +129,7 @@ body .mdl-layout .mdl-layout__inner-container{
         }
     }
     .search{
-        color:black;
+        color:white;
         // color: #4d5d54;
         i {
             -webkit-font-smoothing: antialiased;
@@ -146,6 +146,19 @@ body .mdl-layout .mdl-layout__inner-container{
             }
         } 
     }
+    .mdl-textfield__label:after{
+        background-color:white;
+    }
+    .mdl-textfield__input{
+        border-bottom: none;
+        color:white;
+    }
+    .placeholder{
+        color:red;
+    }
+
+
+
     .header-title{
         position: fixed;
         color: black;

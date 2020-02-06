@@ -31,7 +31,7 @@ class SearchResults extends Component<any, any> {
         });
     }
     render() {
-        if (!this.state.posts){
+        if (!this.state.posts){ 
             return (
                 <div id="search-results">
                     <Spinner/>
@@ -76,7 +76,7 @@ class SearchResults extends Component<any, any> {
 
         return (
             <div id="search-results">
-                <NavbarHider transparentRowHide={true} hamburgerMode={false} lightGreenTitle={true} hideTitle={false}/>
+                <NavbarHider transparentRowHide={true} hamburgerMode={false} hideTitle={false}/>
                 <div className="posts">
                     {postsContent}
                 </div>
