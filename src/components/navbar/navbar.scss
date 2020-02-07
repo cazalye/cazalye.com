@@ -122,6 +122,9 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
     .mdl-layout__header .mdl-navigation__link {
         display: none;
     }
+    .search{
+        display: none;
+    }
 }
 
 body.hide-title .mdl-layout .mdl-layout__inner-container {
@@ -149,15 +152,10 @@ body .mdl-layout .mdl-layout__inner-container{
         .drawer-nav{
             padding-top:80px;
         }
-        // need to fix the function
-        .mdl-textfield__label:after{
-            background-color: $darkGreen;
-            height:1.5px;
-        }
     }
     .search{
         color:black;
-        // color: #4d5d54;
+        padding-left:15px;
         i {
             -webkit-font-smoothing: antialiased;
             display: inline-block;

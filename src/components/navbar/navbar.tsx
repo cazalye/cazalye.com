@@ -34,16 +34,16 @@ class Navbar extends Component<any, any> {
                 <Header transparent={true} title={<Link to="/" className="header-title">cazalye </Link>}>
                     <Navigation className="header-nav">
                         {/* <Link className="where" to="/categories">Destinations</Link> */}
-                        <Link to="/photoDiaries">Photo Diaries</Link>
+                        <Link to="/photoDiaries">Photo Diaries</Link> 
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
                         <Link to="/stonePaper">Shop</Link>
-                        <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
+                        {/* <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                             <i className="fa fa-envelope" aria-hidden="true" />
                         </a>
                         <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-instagram" aria-hidden="true" />
-                        </a>
+                        </a> */}
                         {/* <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
                         </a> */}
@@ -73,7 +73,7 @@ class Navbar extends Component<any, any> {
                         <Link onClick={() => this.hideToggle()} to="/blog">Blog</Link>
                         <Link onClick={() => this.hideToggle()} to="/about">About</Link>
                         <Link onClick={() => this.hideToggle()} to="/stonePaper">Shop</Link>
-                        <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
+                        {/* <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                             <i className="fa fa-envelope" aria-hidden="true" />
                         </a>
                         <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
@@ -81,7 +81,7 @@ class Navbar extends Component<any, any> {
                         </a>
                         <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                             <i className="fab fa-pinterest-p" aria-hidden="true" />
-                        </a>
+                        </a> */}
                     </Navigation>
                 </Drawer>
             </Layout>

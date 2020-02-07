@@ -8,14 +8,15 @@ class Footer extends Component{
                 <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                     <i className="fab fa-instagram" aria-hidden="true" />
                 </a>
-                <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
+                {/* <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                     <i className="fab fa-pinterest-p" aria-hidden="true" />
-                </a>
-                <a href="https://github.com/cazalye" rel="noopener noreferrer" target="_blank">
+                </a> */}
+                {/* <a href="https://github.com/cazalye" rel="noopener noreferrer" target="_blank">
                     <i className="fab fa-github" aria-hidden="true" />
-                </a>
+                </a> */}
                 <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
                     <i className="fa fa-envelope" aria-hidden="true" />
+                    {/* <p className="contact-us"> Contact Us </p> */}
                 </a>
                 {/* <p className="footer-newsletter"> SIGN UP TO NEWSLETTER BOX HERE</p> */}
             </div>
