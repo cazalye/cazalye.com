@@ -121,13 +121,14 @@ class LandingPage extends Component<any, any> {
                         </div> */}
 
                         <div className="start-here">
-                            <h3>First time exploring this site? <i className="fas fa-hiking"/></h3>
+                            <h3>First time exploring? </h3>
                             <Link to="/about">
-                                <button className="mdl-button mdl-js-button mdl-button--raised">
-                                    Start Here
-                                </button>
+                                <h3> <i className="fas fa-hiking"/> Start Here</h3>
+                                {/* <button className="mdl-button mdl-js-button mdl-button--raised">
+                                </button> */}
                             </Link>
                         </div>
+
                         <div className="down-arrow">
                             {/* <i className="fas fa-angle-double-down"/> */}
                             <i className="fas fa-arrow-down"/>
