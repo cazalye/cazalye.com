@@ -16,7 +16,7 @@ class StonePaper extends Component {
                     <h2>Adventure-inspired travel photography printed on the most eco-friendly paper in existence</h2>
                     <div className="etsy-images-adventure">
                         <img src='/img/postcards/ivy.jpg' alt="travel postcards of ivy covered building" width="20%"/>
-                        <img src='/img/postcards/canyon.jpg' alt="travel postcard of bridge over deep canyon" width="20%"/>
+                        <img src='/img/postcards/new/Cemetery.png' alt="travel postcard of bridge over deep canyon" width="20%"/>
                         <img src='/img/postcards/river.jpg' alt="travel postcard of wild river" width="20%"/>
                     </div>
                     <div className="etsy-images-vintage">
