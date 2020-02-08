@@ -14,23 +14,37 @@ class StonePaper extends Component {
                 <div className="stone-paper-header">
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>
                     <h2>Adventure-inspired travel photography printed on the most eco-friendly paper in existence</h2>
-                    <div className="etsy-images-adventure">
-                        <img src='/img/postcards/ivy.jpg' alt="travel postcards of ivy covered building" width="20%"/>
-                        <img src='/img/postcards/new/Cemetery.png' alt="travel postcard of bridge over deep canyon" width="20%"/>
-                        <img src='/img/postcards/river.jpg' alt="travel postcard of wild river" width="20%"/>
-                    </div>
-                    <div className="etsy-images-vintage">
-                        <img src='/img/postcards/car2.jpg' alt="travel postcards of vintage car" width="20%"/>
-                        <img src='/img/postcards/boat.jpg' alt="travel postcard of vintage boat" width="20%"/>
-                        <img src='/img/postcards/shoes.jpg' alt="postcard of shoes with plants in them" width="20%"/>
-                        <img src='/img/postcards/stone_wall.jpg' alt="travel postcard of stone wall" width="20%"/>
+                    <div className="postcard-images">
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_feat_3" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/ivy.jpg' alt="travel postcards of ivy covered building" width="20%"/>
+                        </a>
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_5" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/river.jpg' alt="raging river in montenegro with forest either side" width="20%"/>
+                        </a>
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_4" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/bridge.jpg' alt="tall arched bridge over river in montenegro" width="20%"/>
+                        </a>
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_12" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/car.jpg' alt="travel postcards of vintage car" width="20%"/>
+                        </a>
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_2" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/boat.jpg' alt="travel postcard of vintage boat" width="20%"/>
+                        </a>
+
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_12" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/shoes.jpg' alt="postcard of shoes with plants in them" width="20%"/>
+                        </a>
+                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_8" rel="noopener noreferrer" target="_blank">
+                            <img src='/img/postcards/wall.jpg' alt="travel postcard of stone wall" width="20%"/>
+                        </a>
+
                     </div>
                 <div/>
-                <a className="etsy-link" href="https://www.etsy.com/au/shop/cazalye"> 
+                {/* <a className="etsy-link" href="https://www.etsy.com/au/shop/cazalye"> 
                     <button className="mdl-button mdl-js-button mdl-button--raised">
                         Order Here!
                         </button>
-                    </a>
+                    </a> */}
                 <div className="stone-paper-body">
                     <h3>What is Stone Paper?</h3>
                     <p>Stone Paper is a revolutionary new way to make paper!
