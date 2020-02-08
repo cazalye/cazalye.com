@@ -58,7 +58,8 @@ class SearchResults extends Component<any, any> {
             }
             const categoriesNamesHTML = [];
             for(const category of post.categories){
-                categoriesNamesHTML.push(<span>{category.name}</span>);
+                // categoriesNamesHTML.push(<span>{category.name}</span>);
+                categoriesNamesHTML.push(<Link to={`/blog/category/${category.name}`}>{category.name}</Link>);
             }
             postsContent.push(
                 <div className="post-container">
