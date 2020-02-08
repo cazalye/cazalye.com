@@ -8,9 +8,9 @@ class StonePaper extends Component {
 
         return (
             <div id="stone-paper-about">
-                <NavbarHider transparentRowHide={true} hamburgerMode={false}  hideTitle={false}/>
+            <NavbarHider blackTitle={true}/>
+
                 <div className="stone-paper-background"/>
-               
                 <div className="stone-paper-header">
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>
                     <h2>Adventure-inspired travel photography printed on the most eco-friendly paper in existence</h2>
@@ -26,7 +26,6 @@ class StonePaper extends Component {
                         <img src='/img/postcards/stone_wall.jpg' alt="travel postcard of stone wall" width="20%"/>
                     </div>
                 <div/>
-                
                 <a className="etsy-link" href="https://www.etsy.com/au/shop/cazalye"> 
                     <button className="mdl-button mdl-js-button mdl-button--raised">
                         Order Here!

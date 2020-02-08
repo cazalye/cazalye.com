@@ -88,9 +88,33 @@ body.green-title .mdl-layout .mdl-layout__inner-container{
         }
     }
 }
+body.black-title .mdl-layout .mdl-layout__inner-container{
+    .header-title{
+        color: black;
+        position: fixed;
+        text-decoration: none;
+        left:20px;
+        top:6px;
+    }
+    .mdl-layout__drawer-button i{
+        color: black;
+    }
+    .mdl-navigation__link{
+        color: black;
+    }
+    .search{
+        color: black;
+        .mdl-textfield__label:after{
+            background-color: black;
+        }
+        .mdl-textfield__input{
+            border-bottom: none;
+        }
+    }
+}
 body.mixed-title .mdl-layout .mdl-layout__inner-container{
     .header-title{
-        color: $darkGreen;
+        color: black;
         position: fixed;
         text-decoration: none;
         left:20px;
@@ -99,14 +123,13 @@ body.mixed-title .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__drawer-button i{
         color: white;
     }
-    .mdl-navigation .header-nav{
-        .mdl-navigation__link .where{
-            a{
-            color:red;
-            }
+    .mdl-navigation__link{
+        a{
+        color:white;
         }
     }
 }
+body .mdl-layout .mdl-layout__inner-container .mdl-navigation__link
 
 
 body.white-drawer .mdl-layout .mdl-layout__inner-container{
@@ -182,8 +205,6 @@ body .mdl-layout .mdl-layout__inner-container{
         // color:red;
     }
 
-
-
     .header-title{
         position: fixed;
         color: black;
@@ -228,16 +249,20 @@ body .mdl-layout .mdl-layout__inner-container{
             top:0px;
             right: 0px;
             i{
+            // color:black;
             color:white;
             }
         }
+
         .mdl-layout__header{
             display:block;
+            // color:black;
             .header-title{
                 display:block;
                 left:15px;
                 top:2px;
                 position: fixed;
+                // color:black;
             }
             .header-nav{
                 display:none;
@@ -271,12 +296,14 @@ body .mdl-layout .mdl-layout__inner-container{
         }
         .mdl-layout__header{
             display:block;
+            // color:black;
             .header-title{
                 display:block;
                 left:25px;
                 top:7px;
                 position: fixed;
                 font-size:67px;
+                // color:black;
             }
             .header-nav{
                 display:none;
