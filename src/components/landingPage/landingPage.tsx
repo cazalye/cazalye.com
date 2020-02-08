@@ -44,9 +44,10 @@ class LandingPage extends Component<any, any> {
     // }
 
     // CODE FOR changing opacity on scroll
-    // pageScrolled() {
-    //     console.log("scrolling landing");
-    //   }
+    // This seems to work when scrolling horizontally but not vertically...
+    pageScrolled() {
+        console.log("scrolling landing");
+      }
 
     hideNewsletterPopup() {
         this.setState({
@@ -105,7 +106,7 @@ class LandingPage extends Component<any, any> {
                     }
                 </div>
 
-                 {/* <div className="test" onScroll={e => {this.pageScrolled();}}> */}
+                 <div className="test" onScroll={e => {this.pageScrolled();}}/>
 
                     <NavbarHider transparentRowHide={true} whiteTitle={true} />
                     <div id="landing1">
