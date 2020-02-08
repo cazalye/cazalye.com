@@ -9,6 +9,7 @@ type NavbarHiderProps = {
     hideTitle: boolean;
     whiteDrawer: boolean;
     transparentRowHide: boolean;
+    // opaqueOnScroll: boolean;
 };
 
 class NavbarHider extends Component<NavbarHiderProps> {
@@ -21,6 +22,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         hideTitle: false,
         whiteDrawer: false,
         transparentRowHide: true,
+        // opaqueOnScroll: false,
     };
     componentDidMount() {
         console.log("loading")
@@ -33,6 +35,8 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.toggle('white-drawer', this.props.whiteDrawer);
         console.log(this.props.transparentRowHide)
         document.body.classList.toggle('transparent-row-hide', this.props.transparentRowHide);
+        // document.body.classList.scroll('opaque-on-scroll', this.props.opaqueOnScroll);
+
     }
     componentWillUnmount() {
         document.body.classList.remove('hamburger-mode');
@@ -43,6 +47,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.remove('hide-title');
         document.body.classList.remove('white-drawer');
         document.body.classList.remove('transparent-row-hide');
+        // document.body.classList.remove('opaque-on-scroll');
     }
     render() {
         return null;
