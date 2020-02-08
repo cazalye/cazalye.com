@@ -31,7 +31,7 @@ class SearchResults extends Component<any, any> {
         });
     }
     render() {
-        if (!this.state.posts){ 
+        if (!this.state.posts){
             return (
                 <div id="search-results">
                     <Spinner/>
