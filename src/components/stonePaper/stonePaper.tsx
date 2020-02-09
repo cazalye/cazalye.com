@@ -45,8 +45,12 @@ class StonePaper extends Component {
                         Order Here!
                         </button>
                     </a> */}
+
+                {/* <div className="down-arrow">
+                    <i className="fas fa-arrow-down"/>
+                </div> */}
                 <div className="stone-paper-body">
-                    <h3>What is Stone Paper?</h3>
+                    <h3>What is Stone Paper? <i className="fas fa-arrow-down"/></h3>
                     <p>Stone Paper is a revolutionary new way to make paper!
 First, limestone is crushed to make Calcium Carbonate powder which is then combined with high quality non-toxic polymer resin. This mixture is then processed under high pressure to produce smooth, velvety paper. Unlike regular paper-making, no trees or clean water are used to make Stone Paper. The final product is around 70-80% limestone and 20-30% resin.</p>
                     <hr/>
