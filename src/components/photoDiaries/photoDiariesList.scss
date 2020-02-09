@@ -2,203 +2,71 @@
 
 #photo-diary-list{
     // background-color: #222;
+    background: linear-gradient(180deg, rgba(5, 30, 28, .8) 5%, rgba(5, 30, 28, 1) 50%);
     width:100%;
-    height:100vh;
+    height: 400vh;
     background-size: cover;
+    overflow-y: auto;
 
     .photo-diary-summary{
-        /* position of text  */
-        width:45%;
         position: absolute;
-        left:1%;
-        top:5%;
+        // top:5%;
+        left:50%;
+        transform: translate(-50%);
+        padding-bottom: 40px;
         h1{
             color: rgb(176, 204, 199);
+            font-size: 66px;
+            margin-bottom: 0px;
         }
         p{
-            // text-align: justify;
             display: block;
-            margin: auto;
-            // padding-left: 70px;
-            // padding-right: 70px;
+            margin-top: 0px;
         }
     }
-
-    .landscape-image-container {
-        background-size: cover;
-        padding-top: 67%;
-    }
-    .masonry-layout-panel {
-        
-        .portrait-image-container {
-            background-size: cover;
-            padding-top: 133%;
+    .posts{
+        position: absolute;
+        top:35%;
+        $padding: 60px;
+        .post-container{
+            // width: calc(33.333% - 120px);
+            width: calc(50% - 120px);
+            // height:
+            margin-left: $padding;
+            margin-right: $padding;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 30px;
+            .post-image{
+                width: 100%;
+                padding-top: 65%;
+                display: block;
+                background-size: cover;
+            }
+            .cover-title{
+                color: white;
+                padding-top:20px;
+                display: inline-block;
+                // height: 60px;
+                font-family: 'Playfair Display', serif;
+                font-weight: normal;
+                font-size: 1.9rem;
+                // line-height: 1;
+                margin: .3em 0.4em 0em;
+                vertical-align: middle;
+            }
+            hr{
+                background-color: $lightGreen;
+                font-size: 20px;
+                height: 1px;
+                width: 15%;
+                margin: 0em 0.5em 0em;
+                margin-bottom: 40px;
+                margin-top: 20px;
+            }
         }
-
     }
-
-    .masonry-layout {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        -webkit-column-count: 2;
-           -moz-column-count: 2;
-                column-count: 2;
-        -webkit-column-gap: 0;
-           -moz-column-gap: 0;
-                column-gap: 0;
-        position: relative;
-
-    }
-    .masonry-layout * {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    .masonry-layout-panel {
-        margin: 0;
-        padding-bottom: 20px;
-        -webkit-column-break-inside: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid;
-        p {
-            color: red;
-        }
-        img {
-            width: 100%;
-        }
-
-      }
-      
-    .masonry-layout-panel__content {
-    border-radius: 10px;
-    overflow: hidden;
-    // padding: 5px;
-    width: 100%;
-    }
-    .masonry-layout-cluster {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    // padding: 5px;
-    p{
-        color:red;
-    }
-    }
-    
-    .masonry-layout-cluster--vertical {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    // padding: 10px;
-    }
-    
-    .masonry-layout-cluster--horizontal {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    }
-    .masonry-layout-cluster__segment {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-    overflow: hidden;
-    padding-right: 20px;
-    }
-    .masonry-layout-cluster__segment--row {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: row;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
-    .masonry-layout-cluster__segment--column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-            // padding-left: 10px;
-    }
-    
-    .masonry-layout-cluster__segment--half {
-    -webkit-flex-basis: 50%;
-    -ms-flex-preferred-size: 50%;
-    flex-basis: 50%;
-    // padding: 10px;
-    }
-    .masonry-layout-cluster__segment--quarter {
-    -webkit-flex-basis: 25%;
-    -ms-flex-preferred-size: 25%;
-    flex-basis: 25%;
-    }
-    
-    
-    /**
-    * Color styles
-    */
-    .tx--white {
-    color: #fff;
-    }
-    .bg--red {
-    background-color: #e74c3c;
-    }
-    .bg--green {
-    background-color: #26a65b;
-    }
-    .bg--purple {
-    background-color: #8e44ad;
-    }
-    .bg--blue {
-    background-color: #1e8bc3;
-    }
-
-    // .masonry-layout{
-    //     /* position of mosaic  */
-    //     position: absolute;
-    //     width:60%;
-    //     left:49%;
-    //     top:10%;
-    //     /* vertical gaps */
-    //     line-height: 0;
-    //     column-count: 3;
-    //     column-gap:  0px;
-    //     .masonry-layout-panel{
-    //         break-inside: avoid;
-    //         // padding: 5px;
-    //         .masonry-layout__panel-content{
-    //             // padding: 10px;
-    //             // border-radius: 10px;
-    //             // width: 100px;
-    //             .cover-photo{
-    //             width: 500px;
-    //             height: 10px;
-    //             background-size: cover;
-    //             border: solid black 3px;
-    //             padding-top: 100%;
-    //             }
-    //             .cover-title{
-    //                 position: absolute;
-    //                 font-size: 20px;
-    //                 p{
-    //                     position: absolute;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 }
+    
 
 
