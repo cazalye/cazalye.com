@@ -4,6 +4,7 @@ import NavbarHider from '../navbar-hider/NavbarHider';
 import {Link} from "react-router-dom";
 import Spinner from '../spinner/spinner';
 import "./searchResults.scss";
+import { TIMEOUT } from 'dns';
 
 class SearchResults extends Component<any, any> {
   // initialise empty array of posts, to be run while the data is loading
@@ -15,6 +16,8 @@ class SearchResults extends Component<any, any> {
     }
     componentDidUpdate(prevProps: any, prevState: any, snapshot: any){
         if (this.props.match.params.searchQuery !== prevProps.match.params.searchQuery) {
+             // is this where I can SET TIME OUT FOR search query??
+            // setTimeout(function(){ this.initialize(); }, 3000);
             this.initialize();
         }
     }
