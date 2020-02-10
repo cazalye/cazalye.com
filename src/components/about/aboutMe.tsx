@@ -17,12 +17,16 @@ class AboutMe extends Component{
 
                     </div>
                     <div className="about-me-content">
-                        <p> Hi- I'm Emma Cazaly, and as you can probably now tell, cazalye is a combination of my surname and first initial.<hr/>
-                        I'm an Australian, living in Finland with an unquenchable love of travel and everything outdoors. These two passions have led me to explore new places around the world and go on endless adventures. I believe that adventure is not only about exploring new places but also about a mindset of playfullness, curiosity and resilience. As Marcel Proust put it:</p>
-                        <h3> <i>"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes."</i></h3>
+                        <p>Hi- I'm Emma Cazaly- an Australian with a love of travel and everything outdoors. <strong> Cazalye is a combination of my surname and first initial.</strong><hr/>
+                        My love of travel and outdoor adventures have led me to explore countless destinations around the world, yet I believe that adventure is not only about exploring new places but also a mindset of curiosity, playfullness and resilience. </p>
 
-                        <p className="para3"> Sharing my love of travel is also an important aspect of my adventures. Recently I redesigned my travel blog- to allow me to share my experiences, tips and photograpy through my own personal style. I hope you enjoy my site and would welcome any  thoughts you have about my content or photography.</p>
+                        <p className="para3"> I designed this travel blog to share my favourite photos and tips about places I've been- especially the things I wish I'd known before arriving in a new place. <hr/> <strong>Enjoy Exploring!</strong></p>
                     </div>
+                    <div className="quote">
+                        <h3> <i>"The real voyage of discovery consists <br/>not in seeking new landscapes, <br/>but in having new eyes."</i></h3>
+                        <h4><i>~Marcel Proust</i></h4>
+                    </div>
+                   
                 </div>
             </div>
 

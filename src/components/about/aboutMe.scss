@@ -4,7 +4,7 @@
 .about-me{ 
     // background: linear-gradient(180deg, rgba(0,0,0, 0.6) 10%, transparent 80%), url("/img/rafting.jpg"); 
     // background: linear-gradient(120deg, rgba(255,255,255, 0.75) 49%, transparent 49%), url("/img/rafting.jpg");
-    background: linear-gradient(120deg, rgba(0, 0, 0, 0.7) 50%, transparent 50%), url(/img/rafting.jpg);
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.6) 50%, transparent 52%), url(/img/rafting.jpg);
     background-size: cover;
     opacity: 0.9;
     position: fixed;
@@ -13,11 +13,11 @@
     width: 100%;
     .about-me-text{
         padding-left: 40px;
-        padding-right: 800px;
+        padding-right: 850px;
         h1 {
             color:$lightGreen;
-            margin-bottom:30px;
-            margin-top:90px;
+            margin-bottom:10px;
+            margin-top:130px;
             font-size: 60px;
         }
         .about-me-content{
@@ -31,43 +31,60 @@
                 text-align: justify;
                 font-size: 18px;
                 font-weight: 300;
+                padding-top: 20px;
+                line-height: 26px;;
                 strong{
                     font-weight: 400;
                 }
-            }
-            h3{
-                font-family: 'Cormorant Garamond', serif;
-                font-size: 35px;
-                line-height: 50px;
-                margin-top:30px;
-                margin-bottom: 30px;
-                margin-left:50px;
-                margin-right:100px;
-                text-align: center;
             }
             hr{
                 border-top: none;
             }
             .para3{
-                padding-right: 170px;
+                padding-top: 20px;
+                padding-right: 50px;
+            }
+        }
+        .quote{
+            position: absolute;
+            left: 63%;
+            top: 75%;
+            h3{
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 32px;
+                line-height: 47px;
+                margin-top:0px;
+                margin-bottom: 0px;
+                margin-left:0px;
+                margin-right:0px;
+                text-align: left;
+            }
+            h4{
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 22px;
+                line-height: 30px;
+                margin-top: 5px;
+                margin-left: 30px;
+                text-align: left;
             }
         }
     }
     .mission{
+        display: none;
         position:fixed;
-        right:1%;
-        bottom:10px;
+        right:4%;
+        bottom:5px;
         color: white; 
         font-family: 'Cormorant Garamond', serif;
         h2{
             font-family: 'Cormorant Garamond';
             font-weight: 300;
-            font-size: 50px;
+            font-size: 45px;
             margin-bottom: 0px;
         }
         h3{
             font-family: 'Cormorant Garamond', serif;
-            font-size: 40px;
+            font-size: 35px;
             margin-top:0px;
             margin-left:40px;
             margin-bottom:0;
