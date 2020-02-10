@@ -17,33 +17,33 @@
     .stone-paper-header{
         h1{
            position: relative;
-           left: 20px;
+        //    left: 20px;
            color:$darkGreen;
            font-size: 50px;
            text-align: left;
+           left:45px;
            margin-bottom:0px;
            margin-top: 110px;
         }
         h2{
             position: relative;
             text-align: left;
-            left: 40px;
+            left: 65px;
             color:$darkGreen;
             font-size: 25px; 
             font-family: "Cormorant Garamond"; 
             font-weight: 100;
             font-style: italic; 
-            text-align: left;
             margin-top:0px;
             margin-bottom: 0px;
         }
         .postcard-images{
             position: relative;
             display: block;
-            left: 10%;
             a{
                 img{
                     padding: 10px;
+                    
                 }
             }
         }
@@ -123,7 +123,7 @@
             h1{
                 position: relative;
                 left: 20px;
-                color:white;
+                // color:$darkGreen;
                 font-size: 30px;
                 text-align: left;
                 margin-bottom:0px;
@@ -135,21 +135,34 @@
                 left: 12%;
                 padding-right:50px;
                 margin-top: 10px;
-                margin-bottom:0px;
-                color:white;
+                // margin-bottom: 10px;
+                color:$darkGreen;
                 font-size: 20px; 
                 line-height: 25px;
             }
-        }
-        a{ 
-            // font-size: 20px; 
-            // line-height: 30px;
-            top:33%;
-            position: absolute;
-            :hover{
-                color:#cdcdcd;
+            .postcard-images{
+
+                // FIGURE OUT HOW TO BREAK the line after 2 images
+                position: relative;
+                display: inline-block;
+                left: 10%;
+                align-items: center;
+                a{
+                    img{
+                        // padding: 100px;
+                    }
+                }
             }
         }
+        // a{ 
+        //     font-size: 20px; 
+        //     line-height: 30px;
+        //     top:33%;
+        //     position: absolute;
+        //     :hover{
+        //         color:#cdcdcd;
+        //     }
+        // }
         .stone-paper-body{
             h3{
                 left:40px;
@@ -160,7 +173,7 @@
                 font-size: 20px;
             } 
             p{
-               color:white;
+            //    color:black;
                position: relative;
                left:40px;
                margin-right:80px;
@@ -168,12 +181,12 @@
                font-size: 16px;
             }
             ul{
-                color:white;
+                // color:black;
                 position: relative;
                 margin-right:80px;
             }
             li{
-                color:white;
+                // color:black;
                 position: relative;
                 left:40px;
             }
@@ -193,7 +206,7 @@
             h1{
                 position: relative;
                 left: 20px;
-                color:white;
+                // color:white;
                 font-size: 30px;
                 text-align: left;
                 margin-bottom:0px;
@@ -206,17 +219,27 @@
                 padding-right:50px;
                 margin-top: 10px;
                 margin-bottom:0px;
-                color:white;
+                // color:white;
                 font-size: 20px; 
                 line-height: 25px;
             }
+            // .postcard-images{
+            //     position: relative;
+            //     display: block;
+            //     left: 10%;
+            //     a{
+            //         img{
+            //             padding: 10px;
+            //         }
+            //     }
+            // }
         }
-        a{ 
-            // font-size: 20px; 
-            // line-height: 30px;
-            top:23.5%;
-            position: absolute;
-        }
+        // a{ 
+        //     // font-size: 20px; 
+        //     // line-height: 30px;
+        //     top:23.5%;
+        //     position: absolute;
+        // }
         .stone-paper-body{
             h3{
                 left:40px;
@@ -227,7 +250,7 @@
                 font-size: 20px;
             } 
             p{
-               color:white;
+            //    color:white;
                position: relative;
                left:40px;
                margin-right:80px;
@@ -235,12 +258,12 @@
                font-size: 16px;
             }
             ul{
-                color:white;
+                // color:white;
                 position: relative;
                 margin-right:80px;
             }
             li{
-                color:white;
+                // color:white;
                 position: relative;
                 left:40px;
             }
@@ -257,11 +280,11 @@
 @media (min-height: 800px) and (max-height: 850px) {
     #stone-paper-about{
         .stone-paper-header{
-            .etsy-link{ 
-                font-size: 20px; 
-                line-height: 30px;
-                top:20%;
-            }
+            // .etsy-link{ 
+            //     font-size: 20px; 
+            //     line-height: 30px;
+            //     top:20%;
+            // }
         }
     }
 }
@@ -270,15 +293,6 @@
 @media (min-width: 768px) and (max-width: 1024px) {
     #stone-paper-about{
         height: 100%;
-        .stone-paper-header{
-            a{ 
-                // font-size: 40px; 
-                // line-height: 60px;
-                top:20%;
-                right:5%;
-                position: fixed;
-            }
-        }
         .stone-paper-body{
             p{
                 margin-right: 280px;
