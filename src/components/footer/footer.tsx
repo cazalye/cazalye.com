@@ -8,9 +8,9 @@ class Footer extends Component{
                 <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                     <i className="fab fa-instagram" aria-hidden="true" />
                 </a>
-                {/* <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
+                <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
                     <i className="fab fa-pinterest-p" aria-hidden="true" />
-                </a> */}
+                </a>
                 {/* <a href="https://github.com/cazalye" rel="noopener noreferrer" target="_blank">
                     <i className="fab fa-github" aria-hidden="true" />
                 </a> */}
