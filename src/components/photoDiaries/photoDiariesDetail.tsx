@@ -214,7 +214,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             return (
                 <div id="photo-diary-detail-page">
                     {/* <ScreenRotate/> */}
-                    <NavbarHider hamburgerMode={true} greenTitle={false}/>
+                    <NavbarHider hamburgerMode={true} blackTitle={true}/>
                     <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                         <Link to="/" color="inherit">
                             Home

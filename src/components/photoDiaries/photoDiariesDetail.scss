@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@import "../../styles/colors"; 
 
 // Need to fix the nav bar colors so that can change between green and black and white for different pages
 body .mdl-layout .mdl-layout__inner-container{
@@ -95,6 +95,7 @@ body .mdl-layout .mdl-layout__inner-container{
                 left: percentage((50 - $wid)/100);
                 transform: translateX(1px);
                 border-right: none;
+                // border:none;
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
                 .photo-page-container:before {
@@ -122,7 +123,7 @@ body .mdl-layout .mdl-layout__inner-container{
                         color:black;
                     }
                 }
-            }
+            } 
             .book-page.right-page-summary{
                 right: percentage((50 - $wid)/100);
                 border-left: none;
@@ -279,6 +280,7 @@ body .mdl-layout .mdl-layout__inner-container{
 
     // FIX so that first section doesn't have bak arrow and last doesn't have forward 
     .fas.fa-chevron-right {
+        color: black;
         font-size:70px;
         // text-shadow: 5px 5px 5px black;
         position: fixed;
@@ -289,7 +291,8 @@ body .mdl-layout .mdl-layout__inner-container{
             cursor: pointer;
         }
     }
-    .fas.fa-chevron-left {   
+    .fas.fa-chevron-left { 
+        color: black;  
         font-size:70px;
         // text-shadow: 5px 5px 5px black;
         position: fixed;
@@ -305,61 +308,52 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // PHONE: 0-768 
 @media (max-width: 768px) and (orientation: portrait) {
-
-    // TO flip phone
-    .mdl-layout__inner-container{
-        // transform: rotate(-90deg);
-        // transform-origin: left top;
-        // width: 100vh;
-        // height: 100vw;
-        // overflow-x: hidden;
-        // position: absolute;
-        // top: 0;
-        // left: 0;
-
-        #photo-diary-detail-page{   
-            #photo-diary-detail{
-                body .mdl-layout .mdl-layout__inner-container {
-                    .mdl-layout__header .header-title{
-                        display:none;
-                    }
-                }
-                .fas.fa-chevron-right{
-                    font-size: 40px;
-                    color: black;
-                    right: 5%;
-                }
-                .fas.fa-chevron-left{
-                    font-size: 40px;
-                    color: black;
-                    left: 5%;
-                }
-                .cover-page{
-                    padding-top: 265px;
-                    .cover-photo h1{
-                        font-size: 28px;
-                        margin-top: 5px;
-                    }
-                }
-
-                .double-page-spread.back-page-container .left-page-key-details .back-page{
+    #photo-diary-detail-page{   
+        #photo-diary-detail{
+            .fas.fa-chevron-right{
+                font-size: 40px;
+                color: black;
+                right: 2%;
+            }
+            .fas.fa-chevron-left{
+                font-size: 40px;
+                color: black;
+                left: 2%;
+            }
+            .cover-page{
+                top: 33.333%;
+                border: none;
+                background-color: transparent;
+                padding-top: 65%;
+                width: 100%;
+                left: 0px;
+                .cover-photo{ 
                     h1{
-                        font-size: 15px;
-                        margin-top: 40px;
-                        margin-bottom: 20px;
-                        padding-left: 12px;
-                        padding-right: 12px;
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-top: 5px;
+                        color:black;
                     }
-                    .photo-diary-preview{
-                        height: 36%;
-                        width: 66%;
-                        margin-top:10px;
-                        h2{
-                            font-size: 12px;
-                            line-height: 22px;
-                        }
+                }
+            }
 
+            .double-page-spread.back-page-container .left-page-key-details .back-page{
+                h1{
+                    font-size: 15px;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+                .photo-diary-preview{
+                    height: 36%;
+                    width: 66%;
+                    margin-top:10px;
+                    h2{
+                        font-size: 12px;
+                        line-height: 22px;
                     }
+
                 }
             }
         }
