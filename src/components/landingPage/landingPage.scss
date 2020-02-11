@@ -1,9 +1,9 @@
 @import "../../styles/colors"; 
 
-.test{
-    // opacity: 1;
-    background-color: red;
-}
+// .test{
+//     // opacity: 1;
+//     background-color: red;
+// }
 
 #landing{
     .mdl-layout__drawer-button{
@@ -207,6 +207,9 @@
 
 
 
+
+
+
 // PHONE plus: 0-767
 @media (max-width: 767px) {
 // @media (min-width:414px) and (max-width: 768px){
@@ -243,26 +246,24 @@
             }
         }
         .newsletter{
-            margin-top: 15px;
+            margin-top: 0px;
+            padding-top: 10px;
             height: 30vh;
-            margin-bottom: 15px;
+            padding-bottom: 10px;
             p{
                 position: relative;
                 text-align: center;
-                margin-top: 0px;
-                // margin-bottom: 0px;
                 border: 0;
                 padding: 5px;
                 float: none;
                 width: 100%;
             }
-
             form{
-                // margin-top: 10px;
+                margin-top: 0px;
                 margin-right:1%;
                 margin-left:2%;
                 padding-left: 20px;
-                padding-top: 20px;
+                padding-top: 0px;
                 padding-right: 20px;
                 input{
                 width: 90%;
@@ -352,8 +353,8 @@
     #landing{ 
         overflow-x: hidden;
         .newsletter{
-            margin-bottom: 50px;
-            margin-top:20px;
+            margin-bottom: 55px;
+            margin-top:0px;
             p{
                 padding: 0px;
             }
@@ -367,6 +368,7 @@
         }
     }
 }
+
 
 // iPhone X
 @media (min-width:370px) and (max-width: 375px){
@@ -409,8 +411,8 @@
             }
         }
         .newsletter{
-            margin-bottom: 50px;
-            margin-top: 20px;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
             form{
                 margin-left:5%;
                 margin-right:5%;

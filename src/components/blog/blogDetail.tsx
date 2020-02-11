@@ -37,7 +37,7 @@ class BlogDetail extends Component<any,any>{
             return (
                 // <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
                 <div id="blog-detail">
-                    <NavbarHider transparentRowHide={true} />
+                    <NavbarHider transparentRowHide={true} blackTitle={true}/>
                     <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                         <Link to="/" color="inherit">
                             Home

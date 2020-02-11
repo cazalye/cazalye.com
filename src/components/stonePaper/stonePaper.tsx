@@ -24,7 +24,7 @@ class StonePaper extends Component {
                         <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_4" rel="noopener noreferrer" target="_blank">
                             <img src='/img/postcards/bridge.jpg' alt="tall arched bridge over river in montenegro" width="20%"/>
                         </a>
-                        <br/>
+                        {/* <br/> */}
                         <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_12" rel="noopener noreferrer" target="_blank">
                             <img src='/img/postcards/car.jpg' alt="travel postcards of vintage car" width="20%"/>
                         </a>

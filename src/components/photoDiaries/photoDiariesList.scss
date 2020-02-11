@@ -1,6 +1,6 @@
 @import "../../styles/colors";
 
-#photo-diary-list{
+#photo-diary-list{ 
     // background-color: #222;
     background: linear-gradient(180deg, rgba(5, 30, 28, .8) 5%, rgba(5, 30, 28, 1) 50%);
     width:100%;
@@ -9,7 +9,7 @@
     overflow-y: auto;
 
     .photo-diary-summary{
-        position: absolute;
+        position: relative;
         // top:5%;
         left:50%;
         transform: translate(-50%);
@@ -25,8 +25,8 @@
         }
     }
     .posts{
-        position: absolute;
-        top:35%;
+        position: relative;
+        // top:35%;
         $padding: 60px;
         .post-container{
             // width: calc(33.333% - 120px);
@@ -51,7 +51,7 @@
                 font-family: 'Playfair Display', serif;
                 font-weight: normal;
                 font-size: 1.9rem;
-                // line-height: 1;
+                line-height: 2.2rem;
                 margin: .3em 0.4em 0em;
                 vertical-align: middle;
             }
@@ -67,6 +67,26 @@
         }
     }
 }
-    
 
-
+// PHONE up to plus: 0-767
+@media (max-width: 767px) {
+    #photo-diary-list{ 
+        .posts{
+            .post-container{
+                width: 90%;
+                margin-left: 20px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                .post-image{
+                }
+                .cover-title{
+                    padding-top:10px;
+                    font-size: 20px;
+                }
+                hr{
+                    width: 15%;
+                }
+            }
+        }
+    }
+}

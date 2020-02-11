@@ -129,17 +129,31 @@
         .blog-title{
             padding-left:5%;
             padding-right:5%;
-        }
-        .post-date{
-            margin-bottom: 5px;
-        }
-        .post-categories{
-            margin-bottom: 20px;
+            h1{
+                font-size: 45px;
+                padding-top: 30px;
+                margin-bottom: 15px;
+            }
+            .post-date{
+                left:0%;
+                margin-bottom: 5px;
+                margin-top: 0px;
+                margin-left:0px;
+                text-align: center;
+            }
+            .post-categories{
+                left: 0%;
+                margin-bottom: 40px;
+                text-align: center;
+            }
         }
         .blog-content{
             padding-left:12%;
             padding-right:12%;
             padding-top:1%;
+            h2{
+                font-size: 32px;
+            }
             p{
                 padding:0px;
             }
@@ -152,6 +166,9 @@
 // TABLET: 769-1024
 @media (min-width: 451px) and (max-width: 1024px) {
     #blog-detail{
+        .blog-title{
+            padding-top:5%;
+        }
         .blog-content{
             padding-left:10%;
             padding-right:10%;

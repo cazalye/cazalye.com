@@ -2,18 +2,17 @@
 
 #stone-paper-about{
     position: absolute;
-    height: 200vh;
+    // height: 200vh;
+    overflow-y: scroll;
     width: 100%;
     overflow: hidden;
-    .stone-paper-background{
-    position: absolute;
+    // .stone-paper-background{
+    // position: absolute;
     // background: url("/img/rafting.jpg");
     // background: linear-gradient(123deg, rgba(0, 0, 0, 0.8) 53%, transparent 53.5%), url(/img/rafting.jpg);
-    background-size: cover;
-    height: 250vh;
-    width: 100%;
-    opacity: 0.8;
-    }
+    // background-size: cover;
+    // opacity: 0.8;
+    // }
     .stone-paper-header{
         h1{
            position: relative;
@@ -40,51 +39,25 @@
         .postcard-images{
             position: relative;
             display: block;
+            padding-top: 10px;
             a{
                 img{
-                    padding: 10px;
+                    // padding: 10px;
+                    width: 50%;
                     
                 }
             }
         }
     } 
 
-    // .down-arrow{
-    //     color:$darkGreen;
-    //     position: absolute;
-    //     left: 20%;
-    // }
-
-    // a{
-    //     position: fixed;
-    //     top: 13%;
-    //     right:12%;
-    //     :hover{
-    //         color:$darkGreen;
-    //     }
-    //     button{
-    //         // color:white;
-    //         // font-size: 16px; 
-    //         // background: rgba(158,158,158,.9);
-    //         // box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
-
-    //         background: $alternatePink;
-    //         box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
-    //         box-shadow: none;
-    //         padding: 23px;
-    //         line-height: 0px;
-    //         text-transform: uppercase;
-    //         font-weight: 100;
-    //         font-size: 14px;
-    //     } 
-    // }
 
     .stone-paper-body{
+        margin-bottom: 50px;
         h3{
             color:$darkGreen;
             position: relative;
             left:45px;
-            margin-right:800px;
+            // margin-right:800px;
             margin-top:0px;
             text-align: left;
         } 
@@ -92,7 +65,7 @@
            color:black;
            position: relative;
            left:40px;
-           margin-right:800px;
+           margin-right: 150px;
            text-align: left;
         }
         ul{
@@ -115,15 +88,15 @@
 }
 
 
-// iPhone 5: 0-320
-@media (max-width: 320px){
+// phones: 0-768
+@media (max-width: 768px){
     #stone-paper-about{
         overflow-y: scroll;
         .stone-paper-header{
             h1{
                 position: relative;
                 left: 20px;
-                // color:$darkGreen;
+                // color:white;
                 font-size: 30px;
                 text-align: left;
                 margin-bottom:0px;
@@ -135,104 +108,22 @@
                 left: 12%;
                 padding-right:50px;
                 margin-top: 10px;
-                // margin-bottom: 10px;
-                color:$darkGreen;
+                margin-bottom:0px;
+                // color:white;
                 font-size: 20px; 
                 line-height: 25px;
             }
             .postcard-images{
-
-                // FIGURE OUT HOW TO BREAK the line after 2 images
                 position: relative;
-                display: inline-block;
-                left: 10%;
-                align-items: center;
+                display: block;
+                // left: 10%;
                 a{
                     img{
-                        // padding: 100px;
+                        width: 110%;
+                        padding: 0;
                     }
                 }
             }
-        }
-        // a{ 
-        //     font-size: 20px; 
-        //     line-height: 30px;
-        //     top:33%;
-        //     position: absolute;
-        //     :hover{
-        //         color:#cdcdcd;
-        //     }
-        // }
-        .stone-paper-body{
-            h3{
-                left:40px;
-                margin-right: 80px;
-                margin-top:80px;
-                margin-bottom:5px;
-                text-align: left;
-                font-size: 20px;
-            } 
-            p{
-            //    color:black;
-               position: relative;
-               left:40px;
-               margin-right:80px;
-               text-align: left;
-               font-size: 16px;
-            }
-            ul{
-                // color:black;
-                position: relative;
-                margin-right:80px;
-            }
-            li{
-                // color:black;
-                position: relative;
-                left:40px;
-            }
-            hr{
-                display:none;
-                left:40px;
-            }
-        }
-    }
-}
-
-// iPhone 6/7/8 & plus: 321-768
-@media (min-width:321px) and (max-width: 768px){
-    #stone-paper-about{
-        overflow-y: scroll;
-        .stone-paper-header{
-            h1{
-                position: relative;
-                left: 20px;
-                // color:white;
-                font-size: 30px;
-                text-align: left;
-                margin-bottom:0px;
-                padding-right: 50px;
-             }
-            h2{
-                position: relative;
-                text-align: left;
-                left: 12%;
-                padding-right:50px;
-                margin-top: 10px;
-                margin-bottom:0px;
-                // color:white;
-                font-size: 20px; 
-                line-height: 25px;
-            }
-            // .postcard-images{
-            //     position: relative;
-            //     display: block;
-            //     left: 10%;
-            //     a{
-            //         img{
-            //             padding: 10px;
-            //         }
-            //     }
-            // }
         }
         // a{ 
         //     // font-size: 20px; 
@@ -292,11 +183,16 @@
 // TABLET: 768-1024
 @media (min-width: 768px) and (max-width: 1024px) {
     #stone-paper-about{
-        height: 100%;
+        // height: 100%;
+        overflow-y: scroll;
         .stone-paper-body{
+            h3{
+                padding-bottom: 20px;
+            }
             p{
-                margin-right: 280px;
-                margin-left:30px;
+                margin-right: 80px;
+                // margin-left:30px;
+                padding-bottom: 20px;
             }
         }
     }

@@ -226,7 +226,7 @@
     }
 }
 
-//  iPhone 6/7/8: 321-413 
+//  iPhone 6/7/8: 321-413  
 @media (min-width: 321px) and (max-width: 413px) {
     .about{
         background: linear-gradient(120deg, rgba(255,255,255, 0.8) 50%, rgba(0,0,0, 0.7) 50%), url("/img/rafting.jpg");
@@ -240,7 +240,7 @@
         .mission{
             color:white;
             position: absolute;
-            top: 36%;
+            top: 33%;
             text-align: right;
             right:10px;
             h2{
@@ -282,7 +282,7 @@
             }
             .para3{
                 color: white;
-                padding-top: 296px;
+                padding-top: 350px;
                 padding-right: 11px;
                 padding-left: 133px;
                 font-size: 16px;
@@ -293,7 +293,7 @@
             .post-icons{
                 padding-left: 15px;
                 padding-right: 5px;
-                padding-top: 30px;
+                padding-top: 60px;
                 h3{
                     color:white;
                 }
@@ -310,7 +310,7 @@
                 }
             }
             .about-me-link{
-                bottom: 1%;
+                bottom: 2%;
                 left:50%;
                 transform: translate(-50%);
                 width: 100%;
@@ -420,11 +420,16 @@
 @media (min-height: 800px) and (max-height: 850px) {
     .about{
         .mission{
-            top: 39%;
+            top: 33%;
+            right: 2%;
         }
         .about-content{
             .para3{
-                padding-top: 450px;
+                padding-top: 550px;
+                padding-right:20px;
+            }
+            .post-icons{
+                padding-top:100px;
             }
         }
     }
@@ -442,8 +447,10 @@
     .about{ 
         height:200%;
         width: 100%;
+        overflow-x: hidden;
         .mission{
-            top: 43%;
+            top: 45%;
+            right: 5%;
         }
         .about-content{ 
             padding-left: 30px;
