@@ -140,13 +140,16 @@ body.white-drawer .mdl-layout .mdl-layout__inner-container{
 
 body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
     .mdl-layout__drawer-button {
-        display: block;
+        display: inline-block;
+        margin-top: 40px;
     }
     .mdl-layout__header .mdl-navigation__link {
         display: none;
     }
     .search{
-        display: none;
+        display: inline-block;
+        margin-right: 10px;
+        margin-top: 0px;
     }
 }
 
@@ -244,17 +247,19 @@ body .mdl-layout .mdl-layout__inner-container{
 @media (max-width: 450px) {
     body .mdl-layout .mdl-layout__inner-container {  
         .mdl-layout__drawer-button{
-            // z-index: 10;
             display: block;
             position:fixed;
             top:0px;
             right: 0px;
             i{
-            // color:black;
             color:white;
             }
         }
-
+        .search{
+            display: inline-block;
+            margin-right: 10px;
+            margin-top: 0px;
+        }
         .mdl-layout__header{
             display:block;
             // color:black;

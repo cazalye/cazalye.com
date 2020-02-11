@@ -46,7 +46,7 @@ class PhotoDiariesList extends Component<any, any> {
 
             return (
                 <div id="photo-diary-list">
-                    <NavbarHider transparentRowHide={true} hamburgerMode={false} lightGreenTitle={true} hideTitle={false}/>
+                    <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
                     <div className="photo-diary-summary">
                         <h1>Photo Diaries</h1>
                         <p>Visual Journeys Around the World</p>

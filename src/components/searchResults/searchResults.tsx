@@ -80,7 +80,7 @@ class SearchResults extends Component<any, any> {
 
         return (
             <div id="search-results">
-                <NavbarHider transparentRowHide={true} hamburgerMode={false} hideTitle={false}/>
+                <NavbarHider transparentRowHide={true} blackTitle={true}/>
                 <div className="posts">
                     {postsContent}
                 </div>
