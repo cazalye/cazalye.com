@@ -39,14 +39,23 @@
         .postcard-images{
             position: relative;
             display: block;
-            padding-top: 10px;
-            a{
-                img{
-                    // padding: 10px;
-                    width: 50%;
-                    
+            // padding-top: 10px;
+            .image{
+                position: relative;
+                a{
+                    img{
+                        // padding: 10px;
+                        width: 50%;
+                    }
+                    p{
+                        color:black;
+                        position: absolute;
+                        bottom: 90px;
+                        left: 200px;
+                    }
                 }
             }
+           
         }
     } 
 

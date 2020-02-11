@@ -3,7 +3,7 @@ import Footer from "../footer/footer";
 import NavbarHider from "../navbar-hider/NavbarHider";
 import React, { Component } from 'react';
 
-class StonePaper extends Component {
+class StonePaper extends Component { 
     render() {
 
         return (
@@ -15,29 +15,48 @@ class StonePaper extends Component {
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>
                     <h2>Adventure-inspired travel photography printed on the most eco-friendly paper in existence</h2>
                     <div className="postcard-images">
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_feat_3" rel="noopener noreferrer" target="_blank">
-                            <img src='/img/postcards/ivy.jpg' alt="travel postcards of ivy covered building" width="20%"/>
-                        </a>
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_5" rel="noopener noreferrer" target="_blank">
-                            <img src='/img/postcards/river.jpg' alt="raging river in montenegro with forest either side" width="20%"/>
-                        </a>
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_4" rel="noopener noreferrer" target="_blank">
-                            <img src='/img/postcards/bridge.jpg' alt="tall arched bridge over river in montenegro" width="20%"/>
-                        </a>
-                        {/* <br/> */}
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_12" rel="noopener noreferrer" target="_blank">
-                            <img src='/img/postcards/car.jpg' alt="travel postcards of vintage car" width="20%"/>
-                        </a>
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_2" rel="noopener noreferrer" target="_blank">
+                        <div className='image'>
+                            <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_feat_3" rel="noopener noreferrer" target="_blank">
+                                <img src='/img/postcards/ivy.jpg' alt="travel postcards of ivy covered building" width="20%"/>
+                                <p> Ivy Covered Cemetery, Croatia</p>
+                            </a>
+                        </div>
+                        <div className='image'>
+                            <a href="https://www.etsy.com/au/listing/749981052/tara-river-eco-friendly-stone-paper?ref=shop_home_active_5" rel="noopener noreferrer" target="_blank">
+                                <img src='/img/postcards/river.jpg' alt="raging river in montenegro with forest either side" width="20%"/>
+                                <p> Tara River, Montenegro</p>
+                            </a>
+                        </div>
+                        <div className='image'>
+                            <a href="https://www.etsy.com/au/listing/749981584/tara-bridge-eco-friendly-stone-paper?ref=shop_home_active_4" rel="noopener noreferrer" target="_blank">
+                                <img src='/img/postcards/bridge.jpg' alt="tall arched bridge over river in montenegro" width="20%"/>
+                                <p> Tara Bridge & Canyon, Montenegro</p>
+                            </a>
+                        </div>
+                        <div className='image'>
+                            <a href="https://www.etsy.com/au/listing/749864346/vintage-car-in-cornwall-eco-friendly?ref=shop_home_active_12" rel="noopener noreferrer" target="_blank">
+                                <img src='/img/postcards/car.jpg' alt="travel postcards of vintage car" width="20%"/>
+                                <p>Vintage Car, Cornwall</p>
+                            </a>
+                        </div>
+                        <div className='image'>
+                        <a href="https://www.etsy.com/au/listing/763826797/vintage-boat-in-venice-eco-friendly?ref=shop_home_active_2" rel="noopener noreferrer" target="_blank">
                             <img src='/img/postcards/boat.jpg' alt="travel postcard of vintage boat" width="20%"/>
+                            <p>Vintage Boat, Venice</p>
                         </a>
-
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_12" rel="noopener noreferrer" target="_blank">
+                        </div>
+                        <div className='image'>
+                        <a href="https://www.etsy.com/au/listing/749953720/cornwall-vintage-boots-eco-friendly?ref=shop_home_active_8" rel="noopener noreferrer" target="_blank">
                             <img src='/img/postcards/shoes.jpg' alt="postcard of shoes with plants in them" width="20%"/>
+                            <p>Vintage Boots, Cornwall</p>
                         </a>
-                        <a href="https://www.etsy.com/au/listing/749982312/ivy-covered-cemetery-eco-friendly-stone?ref=shop_home_active_8" rel="noopener noreferrer" target="_blank">
+                        </div>
+                        <div className='image'>
+                        <a href="https://www.etsy.com/au/listing/749953148/cornwall-stone-wall-eco-friendly-stone?ref=shop_home_active_9" rel="noopener noreferrer" target="_blank">
                             <img src='/img/postcards/wall.jpg' alt="travel postcard of stone wall" width="20%"/>
+                            <p>Stone Wall, Cornwall</p>
                         </a>
+                        </div>
 
                     </div>
                 <div/>
