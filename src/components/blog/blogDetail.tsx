@@ -56,9 +56,10 @@ class BlogDetail extends Component<any,any>{
                                 day: '2-digit'
                             }).format(this.state.detail.date)}
                         </h3>
-                        <div className="post-categories">
+                        {/* need to make a page foe the categories to link to... like search results page */}
+                        {/* <div className="post-categories">
                             {categoriesNamesHTML}
-                        </div>
+                        </div> */}
                         {/* <div className="blog-summary">
                             <h4></h4>
                         </div> */}
