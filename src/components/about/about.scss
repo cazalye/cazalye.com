@@ -1,10 +1,9 @@
 @import "../../styles/colors";
 
 .about{ 
-    background: linear-gradient(120deg, rgba(255,255,255, 0.75) 48.5%, transparent 48.5%), url("/img/rafting.jpg");
-    // background-image: url("/img/rafting.jpg");
+    background: linear-gradient(121deg, rgba(255,255,255, 0.75) 48.5%, transparent 48.5%), url("/img/rafting.jpg");
     background-size: cover;
-    opacity: .9;
+    // opacity: .9;
     position: fixed;
     height:100vh;
     width: 100%;

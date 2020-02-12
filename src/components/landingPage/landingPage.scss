@@ -21,7 +21,9 @@
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 8%, rgba(255, 255, 255, 0.2)5%,transparent 70%), url("/img/rafting.jpg");
         // background: url("/img/rafting.jpg");
         // background: url("/img/rafting_bright.jpg");
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 4%, rgba(0, 0, 0, 0.2)6%, rgba(0, 0, 0, 0.1) 8%, transparent 10%), url("/img/rafting_bright.jpg");
+        // background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 4%, rgba(0, 0, 0, 0.2)6%, rgba(0, 0, 0, 0.1) 8%, transparent 10%), url("/img/rafting_bright.jpg");
+        background: linear-gradient(120deg, rgba(0,0,0, 0.5) 44%, transparent 51%), url("/img/rafting.jpg");
+        // background: linear-gradient(120deg, rgba(0,0,0, 0.5) 44%, transparent 79%), url("/img/rafting.jpg");
         background-size: cover;
         height: 105vh;
         width: 100%;
@@ -96,6 +98,7 @@
             position: absolute;
             bottom: 20px;
             left:50%;
+            // right: 1%;
             // color: $lightGreen;
             font-size: 30px;
         }
@@ -457,3 +460,4 @@
 // TABLET LANDSCAPE / SMALL NOTEBOOKS: 1025: 1376
 @media (min-width: 1026px) and (max-width: 1376px) {
 }
+ 

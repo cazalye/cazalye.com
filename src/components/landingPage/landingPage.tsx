@@ -110,10 +110,12 @@ class LandingPage extends Component<any, any> {
 
                     <NavbarHider transparentRowHide={true} whiteTitle={true} />
                     <div id="landing1">
-                        <div className="mission">
+                        {/* <div className="mission"> */}
+                        <Link className='mission' to="/about">
                             <h2>Inspiration for your adventures</h2>
                             <h3>at home and abroad</h3>
-                        </div>
+                        </Link>
+                        {/* </div> */}
                         {/* <div className="start-here">
                             <h3>First time exploring this site?</h3>
                             <Link to="/about">
