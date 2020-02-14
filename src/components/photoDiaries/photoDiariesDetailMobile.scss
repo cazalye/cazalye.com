@@ -1,0 +1,38 @@
+#photo-diary-detail-page{
+    background-size: cover;
+    height: 100vh;
+    overflow-y: hidden;
+    .breadcrumbs{
+        position: fixed;
+        left: 10px;
+        top: 60px;
+    }
+    #photo-diary-detail{
+        height: 100vh;
+        position: relative;
+        .fas .fa-chevron-left{
+
+        }
+        .fas .fa-chevron-right{
+            color:black;
+        }
+        .cover-page{
+            background-size: cover;
+                height: 100%;
+                // padding: 10%;
+                // padding-top: 0px;
+                margin: 10%;
+                margin-top: 0px;
+            .cover-photo{
+                background-size: cover;
+                height: 100%;
+                // padding-top: 10%;
+            }
+        }
+        .photo-diary-metadata{}
+        .photo-diary-summary{}
+        .photos{}
+        .back-page{}
+
+    }
+}

@@ -6,6 +6,7 @@ import BlogDetail from './blog/blogDetail';
 import About from './about/about';
 import AboutMe from './about/aboutMe';
 import PhotoDiariesDetail from './photoDiaries/photoDiariesDetail';
+// import PhotoDiariesDetailMobile from './photoDiaries/photoDiariesDetailMobile';
 import PhotoDiariesList from './photoDiaries/photoDiariesList';
 import StonePaper from './stonePaper/stonePaper';
 import SearchResults from './searchResults/searchResults';
@@ -22,6 +23,7 @@ const View = () => (
         <Route exact={true} path='/blog/:slug' component={BlogDetail}/>
         <Route exact={true} path='/photoDiaries' component={PhotoDiariesList}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
+        {/* <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetailMobile}/> */}
         <Route exact={true} path='/stonePaper' component={StonePaper}/>
         <Route exact={true} path='/search/:searchQuery' component={SearchResults}/>
         <Route exact={true} path='/categories' component={Categories}/>
