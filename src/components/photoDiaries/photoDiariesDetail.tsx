@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 // import ScreenRotate from '../screen-rotate/screen-rotate';
 import {Breadcrumbs} from '@material-ui/core';
 import Spinner from '../spinner/spinner';
+import PhotoDiariesDetailMobile from "../photoDiaries/photoDiariesDetailMobile";
 
 
 interface PhotoDiariesDetailState {
@@ -31,23 +32,21 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
         if (this.props.match.params.slug !== prevProps.match.params.slug) {
             this.initialize();
         }
-    }
+        }
     componentDidMount() {
         this.initialize();
     }
     async initialize() {
         this.setState({
-            page: 0
+            page: 0,
+            photoDiary: null
         });
         try {
             const photoDiary = await getPostDetailBySlug(this.props.match.params.slug);
-            this.setState({
-                "photoDiary": photoDiary
-            });
-
             const relatedPhotoDiaries = await getRelatedPhotoDiaries(photoDiary.id);
 
             this.setState({
+                "photoDiary": photoDiary,
                 relatedPhotoDiaries: relatedPhotoDiaries
             });
 
@@ -197,11 +196,10 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
         if (this.state.error) {
             return (<NotFound/>);
         } else if (!this.state.photoDiary) {
-            return (null);
-        // } else if (!this.state.photoDiary.length) {
-        //         return(
-        //             <Spinner/>
-        //         );
+            // return (null);
+            return(
+                <Spinner/>
+            );
         } else {
             let leftArrow = (null);
             if (this.state.page > 0) {
@@ -214,7 +212,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
             return (
                 <div id="photo-diary-detail-page">
                     {/* <ScreenRotate/> */}
-                    <NavbarHider hamburgerMode={true} blackTitle={true}/>
+                    <NavbarHider hamburgerMode={true} whiteTitle={true}/>
                     <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                         <Link to="/" color="inherit">
                             Home
@@ -229,6 +227,7 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                         {rightArrow}
                         {this.renderSection()}
                     </div>
+                    <PhotoDiariesDetailMobile photoDiary={this.state.photoDiary} relatedPhotoDiaries={this.state.relatedPhotoDiaries}/>
                 </div>
             );
         }
