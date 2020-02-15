@@ -129,8 +129,6 @@ body.mixed-title .mdl-layout .mdl-layout__inner-container{
         }
     }
 }
-body .mdl-layout .mdl-layout__inner-container .mdl-navigation__link
-
 
 body.white-drawer .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__drawer-button i{
@@ -224,6 +222,7 @@ body .mdl-layout .mdl-layout__inner-container{
     }
     .mdl-layout__drawer-button{
         color: black;
+        // color: white;
         z-index: 4;
         left: auto;
         right:30px;
@@ -235,7 +234,8 @@ body .mdl-layout .mdl-layout__inner-container{
         width: 48px;
         border:none;
             i{
-            color:black;
+            // color:black;
+            color:white;
             font-size: 40px;   
             }
     }

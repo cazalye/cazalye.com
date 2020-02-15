@@ -36,9 +36,9 @@ class SearchResults extends Component<any, any> {
     render() {
         if (!this.state.posts){
             return (
-                <div id="search-results">
+                // <div id="search-results">
                     <Spinner/>
-                </div>
+                // </div> 
             );
         } else if (!this.state.posts.length) {
             return (
@@ -80,7 +80,7 @@ class SearchResults extends Component<any, any> {
 
         return (
             <div id="search-results">
-                <NavbarHider transparentRowHide={true} blackTitle={true}/>
+                <NavbarHider transparentRowHide={true} lightGreenTitle={true}/>
                 <div className="posts">
                     {postsContent}
                 </div>
