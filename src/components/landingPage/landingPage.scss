@@ -20,9 +20,10 @@
         // background: linear-gradient(180deg, rgba(91, 80, 90, 0.3) 10%, rgba(91, 80, 90, 1)60%);
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 8%, rgba(255, 255, 255, 0.2)5%,transparent 70%), url("/img/rafting.jpg");
         // background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 4%, rgba(0, 0, 0, 0.2)6%, rgba(0, 0, 0, 0.1) 8%, transparent 10%), url("/img/rafting_bright.jpg");
-        background: linear-gradient(120deg, rgba(0,0,0, 0.5) 40%, rgba(0,0,0, 0.3) 45%, rgba(0,0,0, 0.1) 48%), url("/img/rafting_bright.jpg");
         // background: linear-gradient(120deg, rgba(0,0,0, 0.5) 40%, rgba(0,0,0, 0.3) 45%, transparent 48%), url("/img/rafting.jpg");
         // opacity: 0.9;
+        background: linear-gradient(120deg, rgba(0,0,0, 0.2) 40%, rgba(0,0,0, 0) 48%), url("/img/rafting_bright.jpg");
+        // background: linear-gradient(120deg, rgba(0,0,0, 0.3) 40%,rgba(0,0,0, 0.2) 44%, rgba(0,0,0, 0.1) 48%), url("/img/rafting_bright.jpg");
         background-size: cover;
         height: 105vh;
         width: 100%;
