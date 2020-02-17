@@ -68,7 +68,8 @@ class PhotoDiariesDetailMobile extends Component<PhotoDiariesDetailProps, PhotoD
             // COVER PAGE
             return (
                 <div className="cover-page">
-                    <div className="cover-photo" style={style}>
+                    <div className="cover-photo" style={style}/>
+                    <div className="cover-title">
                         <h1 dangerouslySetInnerHTML={{__html: this.state.photoDiary.title}}/>
                     </div>
                 </div>
@@ -95,7 +96,7 @@ class PhotoDiariesDetailMobile extends Component<PhotoDiariesDetailProps, PhotoD
             </div>
             );
         } else if (this.state.page <= this.state.photoDiary.images.length + 1) {
-            const image = this.state.photoDiary.images[this.state.page - 2];
+            const image = this.state.photoDiary.images[this.state.page - 3];
                 return (
                     <div className={`photos ${image.aspectRatio}`} style={{backgroundImage: `url(${image.sizes.large})`}}/>
                 );

@@ -317,8 +317,9 @@ body .mdl-layout .mdl-layout__inner-container{
 }
 
 
-// PHONE plus: 0-767
-@media (max-width: 767px) {
+// PHONE + TABLET
+// @media (max-width: 767px) {
+@media (max-width: 1030px) {
     #photo-diary-detail{
         display:none;
     }
