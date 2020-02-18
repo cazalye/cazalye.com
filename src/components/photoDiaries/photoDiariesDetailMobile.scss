@@ -25,14 +25,14 @@
             position: relative;
             overflow-y: scroll;
             .fas.fa-chevron-left{
-                color: #f7f3e7;
+                color: $cream;
                 opacity: 0.8;
                 font-size: 40px;
                 left: 1%;
                 // top: 25%;
             }
             .fas.fa-chevron-right{
-                color: #f7f3e7;
+                color: $cream;
                 opacity: 0.8;
                 font-size: 40px;
                 right: 1%;
@@ -60,7 +60,7 @@
                     h1{
                         // color:white;
                         // color: $lightGreen;
-                        color: #f7f3e7  ;
+                        color: $cream  ;
                         font-size: 34px;
                     }
                 }
@@ -116,7 +116,7 @@
             .back-page{
                 height: 100%;
                 h1{
-                    color: #f7f3e7;
+                    color: $cream;
                     font-size: 24px;
                     padding-left: 55px;
                     padding-right: 55px;
@@ -170,14 +170,14 @@
             position: relative;
             overflow-y: scroll;
             .fas.fa-chevron-left{
-                color: #f7f3e7;
+                color: $cream;
                 opacity: 0.8;
                 font-size: 60px;
                 left: 2%;
                 top: 55%;
             }
             .fas.fa-chevron-right{
-                color: #f7f3e7;
+                color: $cream;
                 opacity: 0.8;
                 font-size: 60px;
                 right: 2%;
@@ -203,7 +203,7 @@
                     left: 50%;
                     transform: translate(-50%);
                     h1{
-                        color: #f7f3e7  ;
+                        color: $cream;
                         font-size: 64px;
                     }
                 }
@@ -256,7 +256,7 @@
                 height: 100%;
                 overflow-y: hidden;
                 h1{
-                    color: #f7f3e7;
+                    color: $cream;
                     font-size: 32px;
                     padding-left: 55px;
                     padding-right: 55px;

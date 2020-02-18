@@ -109,8 +109,7 @@
         position: relative;
         padding-top:50px;
         // background-color: $darkestGreen;
-        // background-color: $lightestGreen;
-        // background-color: rgb(240,255,255);
+        // background-color: $cream;
         p{
             // color:black;
             color:$darkestGreen;
@@ -139,10 +138,15 @@
                 font-weight: normal;
                 border: 1px solid $darkestGreen;
                 background-color: rgba(176, 204, 199, 0);
+                // background-color: white;
+            }
+            input[type="text"]{
+                color:$darkestGreen;
             }
             input[type="submit"]{
                 // background: #222;
                 background: $darkestGreen;
+                // background: $lightGreen;
                 color: #fff;
                 width:7%;
                 border: 1px solid #777;
@@ -222,7 +226,14 @@
             .mission{
                 position: absolute;
                 left: 15px;
+                // top: 12%;
                 margin: auto;
+                // h2{
+                //     font-size: 40px;
+                // }
+                // h3{
+                //     font-size: 30px;
+                // }
             }
             .start-here{
                 top: 270px;
@@ -244,7 +255,8 @@
             }
             .down-arrow{
                 position: absolute;
-                top: 93%;
+                // top: 93%;
+                bottom: 17px;
                 left:90%;
             }
         }

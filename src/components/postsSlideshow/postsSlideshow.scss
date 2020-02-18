@@ -105,6 +105,20 @@
 
         .posts-numbers{
             left:10px;
+            .number-container {
+                background-color: white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-right: 18px;
+                h4{
+                    padding-left: 10px;
+                    padding-right: 11px;
+                    margin-top: 0px;
+                    padding-top: 6px;
+                    text-align: left;
+                }
+                }
         }
     }
 }

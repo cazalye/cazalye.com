@@ -45,7 +45,7 @@ class BlogDetail extends Component<any,any>{
                         <Link to="/blog" color="inherit">
                             Blog
                         </Link>
-                        <Typography className="current-page" color="inherit" dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>
+                        {/* <Typography className="current-page" color="inherit" dangerouslySetInnerHTML={{__html: this.state.detail.title}}/> */}
                     </Breadcrumbs>
                     <div className="blog-title">
                         <h1 dangerouslySetInnerHTML={{__html: this.state.detail.title}}/>

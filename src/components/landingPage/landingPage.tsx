@@ -137,8 +137,8 @@ class LandingPage extends Component<any, any> {
                             <i className="fas fa-arrow-down"/>
                         </div>
                     </div>
-                    {/* <div className="section-divider"/> */}
 
+                    {/* <div className="section-divider"/> */}
                     <div className="newsletter">
                         <p>SUBSCRIBE TO THE NEWSLETTER</p>
                         <form onSubmit={this.newsletterSubscribe.bind(this)}>
