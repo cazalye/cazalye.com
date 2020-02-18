@@ -154,14 +154,14 @@ class LandingPage extends Component<any, any> {
                         <Map/>
                     </div> */}
 
-                    {/* <div className="landing3-photo-diary">
+                    <div className="landing3-photo-diary">
                         <PostsSlideshow/>
-                    </div> */}
-                    {/* <div className="section-divider"/>
+                    </div>
+                    <div className="section-divider"/>
                     <div className="landing4-blog">
                         <Blog/>
-                    </div> */}
-                    {/* <div className="section-divider"/> */}
+                    </div>
+                    <div className="section-divider"/>
                     <div className="stone-paper-link">
                         <p>What is eco-friendly Stone Paper?</p>
                         <Link to="/stonePaper">
