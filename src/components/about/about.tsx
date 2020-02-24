@@ -50,7 +50,7 @@ class About extends Component {
                         <div className="blog-post-link">
                             <Link to="/blog"><h3>Blog Posts</h3></Link>
                             <Link to="/blog"><p className="blog-post-text">The best activities, <br/>sites & coffee spots</p></Link>
-                            <div className="diary-icon" >
+                            <div className="blog-icon" >
                                 <Link to="/blog"><i className="fas fa-list"/></Link>
                             </div>
                         </div>
