@@ -253,8 +253,9 @@ body .mdl-layout .mdl-layout__inner-container{
 
 // PHONE: 0-450
 @media (max-width: 450px) {
-    body .mdl-layout .mdl-layout__inner-container {  
+    body .mdl-layout .mdl-layout__inner-container {
         .mdl-layout__drawer-button{
+            z-index: 10;
             display: block;
             position:fixed;
             top:0px;
@@ -264,11 +265,13 @@ body .mdl-layout .mdl-layout__inner-container{
             }
         }
         .search{
+            z-index: 10;
             display: inline-block;
             margin-right: 10px;
             margin-top: 0px;
         }
         .mdl-layout__header{
+            z-index: 10;
             display:block;
             // color:black;
             .header-title{
@@ -293,9 +296,11 @@ body .mdl-layout .mdl-layout__inner-container{
 @media (min-width: 451px) and (max-width: 1024px) {
     body .mdl-layout .mdl-layout__inner-container { 
         .mdl-layout__header-row{
+            z-index: 10;
             height: 80px;
         }
         .mdl-layout__drawer-button {
+            z-index: 10;
             display: block;
             position:fixed;
             top:7px;
@@ -306,9 +311,11 @@ body .mdl-layout .mdl-layout__inner-container{
             }
         }
         .mdl-layout__drawer-button:focus{
+            z-index: 10;
                 outline:none;
         }
         .mdl-layout__header{
+            z-index: 10;
             display:block;
             // color:black;
             .header-title{
@@ -327,11 +334,13 @@ body .mdl-layout .mdl-layout__inner-container{
               }
         }
         .mdl-navigation__link{
+            z-index: 10;
             font-size: 18px;
             line-height: 50px;
             padding-left: 20px;
         }
         .mdl-layout__drawer.is-visible{
+            z-index: 10;
             width: 270px;
             .mdl-layout-title{
                 padding-top: 18px;
@@ -350,6 +359,7 @@ body .mdl-layout .mdl-layout__inner-container{
 @media (min-width: 1025px) and (max-width: 1376px) {
     body .mdl-layout .mdl-layout__inner-container { 
         .mdl-layout__header{
+            z-index: 10;
             display:block;
             .header-title{
                 display:block;
@@ -365,9 +375,11 @@ body .mdl-layout .mdl-layout__inner-container{
             }
         }
         .mdl-button .mdl-js-button .mdl-button--icon{
+            z-index: 10;
             padding-top: 5px;
         }
         .search i{
+            z-index: 10;
             font-size: 20px;
             // padding-top: 2px;
         }
