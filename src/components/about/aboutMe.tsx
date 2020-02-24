@@ -23,10 +23,9 @@ class AboutMe extends Component{
                         <p className="para3"> I designed this travel blog to share my favourite photos and tips about places I've been- especially the things I wish I'd known before arriving in a new destination. I also hope that my images and words inspire you to seek out adventure everyday- whether that be in small moments in your day-to-day life, or on big adventures out in the world. <hr/> <strong>Enjoy Exploring!</strong></p>
                     </div>
                     <div className="quote">
-                        <h3> <i>"The real voyage of discovery consists <br/>not in seeking new landscapes, <br/>but in having new eyes."</i></h3>
-                        <h4><i>~Marcel Proust</i></h4>
+                        <h3> <i>"The real voyage of discovery consists not in seeking new landscapes, but in having new eyes."</i></h3>
+                        <h4><i> ~ Marcel Proust</i></h4>
                     </div>
-                   
                 </div>
             </div>
 

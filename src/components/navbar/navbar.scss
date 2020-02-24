@@ -13,6 +13,7 @@ body.transparent-row-hide{
 }
 
 body.white-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
+    z-index: 10;
     .header-title{
         color: white;
         position: fixed;
@@ -37,6 +38,7 @@ body.white-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
     }
 }
 body.light-green-title .mdl-layout .mdl-layout__inner-container .mdl-layout__header{
+    z-index: 10;
     .header-title{
         color: $lightGreen;
         position: fixed;
@@ -62,6 +64,7 @@ body.light-green-title .mdl-layout .mdl-layout__inner-container .mdl-layout__hea
 }
 
 body.green-title .mdl-layout .mdl-layout__inner-container{
+    z-index: 10;
     .header-title{
         color: $darkGreen;
         position: fixed;
@@ -89,6 +92,7 @@ body.green-title .mdl-layout .mdl-layout__inner-container{
     }
 }
 body.black-title .mdl-layout .mdl-layout__inner-container{
+    z-index: 10;
     .header-title{
         color: black;
         position: fixed;
@@ -113,6 +117,7 @@ body.black-title .mdl-layout .mdl-layout__inner-container{
     }
 }
 body.mixed-title .mdl-layout .mdl-layout__inner-container{
+    z-index: 10;
     .header-title{
         color: black;
         position: fixed;
@@ -134,9 +139,11 @@ body.white-drawer .mdl-layout .mdl-layout__inner-container{
     .mdl-layout__drawer-button i{
         color: white;
     }
+    z-index: 10;
 }
 
 body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
+    z-index: 10;
     .mdl-layout__drawer-button {
         display: inline-block;
         margin-top: 10px;
@@ -152,6 +159,7 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
 }
 
 body.hide-title .mdl-layout .mdl-layout__inner-container {
+    z-index: 10;
     .mdl-layout__header .header-title{
         display:none;
     }
