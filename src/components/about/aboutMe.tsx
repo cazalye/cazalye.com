@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import NavbarHider from '../navbar-hider/NavbarHider';
 import './aboutMe.scss';
 import {Link} from 'react-router-dom';
+import {Helmet} from "react-helmet";
 class AboutMe extends Component{
 
     render(){
         return(
             <div className="about-me">
+                 <Helmet>
+                    <title>cazalye | who is cazalye</title>
+                </Helmet>
                 <NavbarHider whiteTitle={true} />
                 <div className="about-me-text">
                     <h1>Who is cazalye?</h1>

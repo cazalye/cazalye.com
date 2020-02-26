@@ -4,7 +4,7 @@ import "./blogList.scss";
 import { Link } from 'react-router-dom';
 import Spinner from '../spinner/spinner';
 import NavbarHider from '../navbar-hider/NavbarHider';
-
+import {Helmet} from "react-helmet";
 
 
 interface BlogState {
@@ -123,6 +123,10 @@ class Blog extends Component<any, BlogState> {
             }
             return (
                 <div id="blogs-page">
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>cazalye | BLOG</title>
+                    </Helmet>
                     <NavbarHider transparentRowHide={true} whiteTitle={true}/>
                     <h1>Travel Blog</h1>
                     <h3>The Best Activities, Sites and Coffee Spots Around the World</h3>

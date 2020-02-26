@@ -4,7 +4,7 @@ import "./photoDiariesList.scss";
 import NavbarHider from '../navbar-hider/NavbarHider';
 import {Link} from "react-router-dom";
 import Spinner from '../spinner/spinner';
- 
+import {Helmet} from "react-helmet"; 
 
 class PhotoDiariesList extends Component<any, any> {
     // initialise empty array of posts, to be run while the data is loading
@@ -46,6 +46,10 @@ class PhotoDiariesList extends Component<any, any> {
 
             return (
                 <div id="photo-diary-list">
+                     <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>cazalye | PHOTO DIARIES</title>
+                    </Helmet>
                     <NavbarHider transparentRowHide={true} hamburgerMode={false} whiteTitle={true} hideTitle={false}/>
                     <div className="photo-diary-summary">
                         <h1>Photo Diaries</h1>

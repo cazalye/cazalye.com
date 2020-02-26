@@ -6,6 +6,7 @@ import {Breadcrumbs, Typography} from '@material-ui/core';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import Spinner from '../spinner/spinner';
 import NotFound from '../404/404';
+import {Helmet} from "react-helmet";
 
 
 class BlogDetail extends Component<any,any>{
@@ -51,6 +52,11 @@ class BlogDetail extends Component<any,any>{
         return (
             // <div className="content" dangerouslySetInnerHTML={{__html: this.state.detail.content}}/>
             <div id="blog-detail">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <meta name="description" content={this.state.detail.description} />
+                    <title>{this.state.detail.title}</title>
+                </Helmet>
                 <NavbarHider transparentRowHide={true} blackTitle={true}/>
                 <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                     <Link to="/" color="inherit">

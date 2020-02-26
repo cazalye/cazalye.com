@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import {Breadcrumbs} from '@material-ui/core';
 import Spinner from '../spinner/spinner';
 import PhotoDiariesDetailMobile from "../photoDiaries/photoDiariesDetailMobile";
+import {Helmet} from "react-helmet";
 
 
 interface PhotoDiariesDetailState {
@@ -213,6 +214,11 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                 <div id="photo-diary-detail-page">
                     {/* <ScreenRotate/> */}
                     <NavbarHider hamburgerMode={true} whiteTitle={true}/>
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <meta name="description" content={this.state.photoDiary.description} />
+                        <title>{this.state.photoDiary.title}</title>
+                    </Helmet>
                     <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                         <Link to="/" color="inherit">
                             Home

@@ -2,14 +2,18 @@ import "./stonePaper.scss";
 import Footer from "../footer/footer";
 import NavbarHider from "../navbar-hider/NavbarHider";
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 
 class StonePaper extends Component { 
     render() {
 
         return (
             <div id="stone-paper-about">
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title>cazalye | SHOP</title>
+                </Helmet>
             <NavbarHider blackTitle={true} transparentRowHide={false}/>
-
                 <div className="stone-paper-background"/>
                 <div className="stone-paper-header">
                     <h1>Eco-friendly Stone Paper Travel Postcards</h1>

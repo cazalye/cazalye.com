@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './about.scss';
 import NavbarHider from '../navbar-hider/NavbarHider';
+import {Helmet} from "react-helmet";
+
 
 class About extends Component {
 
@@ -9,6 +11,9 @@ class About extends Component {
   
         return (
             <div className="about">
+                 <Helmet>
+                    <title>cazalye | ABOUT</title>
+                </Helmet>
                 <NavbarHider transparentRowHide={true} whiteTitle={true} hideTitle={false}/>
                 <div className="social-links">
                     <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">

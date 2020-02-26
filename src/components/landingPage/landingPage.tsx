@@ -9,10 +9,9 @@ import Blog from "../blog/blogList";
 import axios from 'axios';
 import Popup from '../popup/popup';
 import Button from '../button/button';
+import {Helmet} from "react-helmet";
 
 const baseUrl = "http://wordpress.cazalye.com/wp-json/";
-
-
 
 
 class LandingPage extends Component<any, any> {
@@ -96,6 +95,9 @@ class LandingPage extends Component<any, any> {
     render() {
         return (
             <div id="landing">
+                 <Helmet>
+                        <title>cazalye | Inspiration for your adventures</title>
+                    </Helmet>
                 <div>
                     {this.state.newsletterConfirmPopup ?
                     <Popup
@@ -107,7 +109,6 @@ class LandingPage extends Component<any, any> {
                 </div>
 
                  <div className="test" onScroll={e => {this.pageScrolled();}}/>
-
                     <NavbarHider transparentRowHide={true} whiteTitle={true} />
                     <div id="landing1">
                         {/* <div className="mission"> */}
