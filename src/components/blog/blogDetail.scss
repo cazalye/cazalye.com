@@ -9,8 +9,9 @@
         // background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 50%, rgba(91, 80, 90, 1)50%);
         background: cover;
         .breadcrumbs{
+            z-index: 11;
             position: fixed;
-            top:8%;
+            top:10%;
             left: 20px;
             color: #444;
             a{
@@ -168,6 +169,9 @@
 // TABLET: 769-1024
 @media (min-width: 451px) and (max-width: 1024px) {
     #blog-detail{
+        .breadcrumbs{
+            top:7%;
+        }
         .blog-title{
             padding-top:5%;
         }

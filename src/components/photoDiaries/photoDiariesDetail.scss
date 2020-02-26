@@ -14,8 +14,9 @@ body .mdl-layout .mdl-layout__inner-container{
     background: #666;
     background: linear-gradient(180deg, rgba(5, 30, 28, .8) 5%, rgba(5, 30, 28, 1) 50%);
     .breadcrumbs{
+        z-index: 11;
         position: fixed;
-        top:10%;
+        top:12%;
         left: 20px;
         // color: #444;
         color: white;
