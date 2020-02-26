@@ -1,6 +1,7 @@
 @import "../../styles/colors";
 
 .about{ 
+
     // background: linear-gradient(121deg, rgba(255,255,255, 0.8) 48.5%, transparent 48.5%), url("/img/rafting.jpg");
     // background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting.jpg");
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 52%), url(/img/rafting.jpg);
@@ -136,6 +137,7 @@
 }
 
 
+
 // PHONE
 @media (max-width: 699px){
     .about{
@@ -144,9 +146,10 @@
         position: absolute;
         overflow-y: scroll;
         .mission{
+            z-index: 0;
             color:$lightGreen;
             opacity: 0.7;
-            position: fixed;
+            position: absolute;
             top: 7%;
             text-align: right;
             right:10px;

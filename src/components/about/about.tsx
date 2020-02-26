@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import './about.scss';
 import NavbarHider from '../navbar-hider/NavbarHider';
+import Navbar from '../navbar/navbar';
 import {Helmet} from "react-helmet";
 
 
 class About extends Component {
 
     render() {
-  
         return (
             <div className="about">
                  <Helmet>
                     <title>cazalye | ABOUT</title>
                 </Helmet>
-                <NavbarHider transparentRowHide={true} whiteTitle={true} hideTitle={false}/>
+                {/* <NavbarHider transparentRowHide={true} whiteTitle={true}/> */}
+                <Navbar/>
                 <div className="social-links">
                     <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                         <i className="fab fa-instagram" aria-hidden="true" />
