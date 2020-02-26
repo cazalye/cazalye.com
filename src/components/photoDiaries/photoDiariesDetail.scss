@@ -286,7 +286,6 @@ body .mdl-layout .mdl-layout__inner-container{
         }
     }
 
-    // FIX so that first section doesn't have bak arrow and last doesn't have forward 
     .fas.fa-chevron-right {
         // color: black;
         color: white;
@@ -295,7 +294,7 @@ body .mdl-layout .mdl-layout__inner-container{
         position: fixed;
         right: 6%;
         top: 50%;
-        z-index:2;
+        z-index:12;
         &:hover {
             cursor: pointer;
         }
@@ -308,7 +307,7 @@ body .mdl-layout .mdl-layout__inner-container{
         position: fixed;
         left: 6%;
         top: 50%;
-        z-index:2;
+        z-index:12;
         &:hover {
             cursor: pointer;
         } 

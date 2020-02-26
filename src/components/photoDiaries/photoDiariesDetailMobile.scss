@@ -25,6 +25,7 @@
             position: relative;
             overflow-y: scroll;
             .fas.fa-chevron-left{
+                z-index:12;
                 color: $cream;
                 opacity: 0.8;
                 font-size: 40px;
@@ -32,6 +33,7 @@
                 // top: 25%;
             }
             .fas.fa-chevron-right{
+                z-index: 12;
                 color: $cream;
                 opacity: 0.8;
                 font-size: 40px;
@@ -49,18 +51,20 @@
                     background-size: cover;
                     width: 100%;
                     top: 33.333%;
+                    // top: 40%;
                     left: 50%;
                     transform: translate(-50%);
                 }
                 .cover-title{
                     position: fixed;
-                    top: 2%;
+                    top: 1%;
                     left: 50%;
                     transform: translate(-50%);
+                    width: 80%;
                     h1{
                         // color:white;
                         // color: $lightGreen;
-                        color: $cream  ;
+                        color: $cream;
                         font-size: 24px;
                         padding-bottom: 10px;
                     }
@@ -69,7 +73,8 @@
             .photo-diary-metadata{
                 position: absolute;
                 color: white;
-                top: 20%;
+                top: 15%;
+                overflow-y: hidden;
                 // left: 50%;
                 // transform: translate(-50%);
                 h3{

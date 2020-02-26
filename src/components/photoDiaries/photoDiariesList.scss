@@ -71,6 +71,7 @@
 // PHONE up to plus: 0-767
 @media (max-width: 767px) {
     #photo-diary-list{ 
+        overflow-x: hidden;
         .posts{
             .post-container{
                 width: 90%;

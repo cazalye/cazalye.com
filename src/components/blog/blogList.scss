@@ -183,37 +183,54 @@
 // PHONE: 0-450
 @media (max-width: 450px) {
     #blogs-page{
+        // margin-bottom: 10px;
         h1{
-            font-size: 50px;
-            margin-top:5%;
+            font-size: 46px;
+            margin-top: 2%;
         }
         h3{
-            margin-bottom:50px;
+            font-size: 18px;
+            margin-bottom: 20px;
             margin-left: 10px;
             margin-right:10px;
         }
         .blog-container{
-            flex-direction: column;
-            overflow-x: hidden;
-            overflow-y: auto;        
+            flex-direction: row;
+            // overflow-x: hidden;
+            // overflow-y: auto;   
+            overflow-y: hidden;
+            overflow-x: auto;     
             .post-container{
                 width:calc(90% - 40px);
+                // margin-right: 8%;
+                // margin-left: 11%;
+                margin-right: 40px;
+                margin-left: 40px;
                 .text-container{
-                    height: 25%;
+                    height: 17%;
                     .post-title{
                         top:45%;
-                        font-size:20px;
-                        line-height: 30px;
-                        max-height: 200px;
+                        font-size: 18px;
+                        line-height: 28px;
+                        max-height: 180px;
+                        padding-top: 10px;
                     } 
                 }
             }
         }
         .scroll-button-right{
-            display:none;
+            // display:none;
+            position: absolute;
+            font-size: 48px;
+            right: 0px;
+            top: 55%;
         }
         .scroll-button-left{
-            display:none;
+            // display:none;
+            position: absolute;
+            font-size: 48px;
+            left: 0px;
+            top: 55%;
         }
     }    
 }       
@@ -221,18 +238,28 @@
 // // PHONE LANDSCAPE: 451-767
 @media (min-width: 451px) and (max-width: 767px) {
     #blogs-page{
+        h1{
+            font-size: 46px;
+            margin-top: 1%;
+        }
+        h3{
+            font-size: 18px;
+            margin-bottom: 20px;
+            margin-left: 10px;
+            margin-right:10px;
+        }
         .blog-container{
-            flex-direction: column;
-            overflow-x: hidden;
+            flex-direction: row;
+            overflow-x: auto;
             overflow-y: auto;    
             height: 100%;    
             .post-container{
                 width:calc(85% - 40px);
                 height: 100%;
                 .text-container{
-                    height: 25%;
+                    height: 15%;
                     .post-title{
-                        top:45%;
+                        top:25%;
                         font-size:20px;
                         line-height: 30px;
                         max-height: 200px;
@@ -251,18 +278,19 @@
         //     font-size: 40px;
         // }
         .blog-container{
-            flex-direction: column;
-            overflow-x: hidden;
-            overflow-y: auto;        
+            flex-direction: row;
+            overflow-x: auto;
+            overflow-y: hidden;        
             .post-container{
                 width:calc(90% - 40px);
                 .text-container{
-                    height: 25%;
+                    height: 15%;
                     .post-title{
+                        padding-top: 20px;
                         top:45%;
-                        font-size:50px;
-                        line-height: 60px;
-                        max-height: 200px;
+                        font-size: 42px;
+                        line-height: 52px;
+                        max-height: 180px;
                     }
                 }
             }

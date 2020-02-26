@@ -87,7 +87,9 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
                         <div className="photo-diary-text">
                             <Link className="photo-diary-title" to={`/photoDiaries/${photoDiary.slug}`}>
                                 <h3 dangerouslySetInnerHTML={{__html: photoDiary.title}}/>
-                                <p>read the diary</p>
+                                <button className="mdl-button mdl-js-button mdl-button--raised">
+                                    read the diary
+                                </button>
                             </Link>
                         </div>
                     </div>
@@ -108,7 +110,9 @@ class PostsSlideshow extends Component<PostsSlideshowProps, PostsSlideshowState>
                 {imageLayers}
                 <div className="post-numbers-text">
                     <Link to="/photoDiaries">
-                        <h1>Browse the Photo Diaries</h1>
+                        <button className="mdl-button mdl-js-button mdl-button--raised">
+                        Browse Photo Diaries
+                        </button>
                     </Link>
                 </div>
                 <div className="posts-numbers">{postsNumbers}</div>

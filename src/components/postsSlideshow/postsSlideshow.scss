@@ -23,8 +23,8 @@
         }
         .photo-diary-text {
             position: absolute;
-            right:200px;
-            bottom:30%;
+            left: 8%;
+            top:15%;
             .photo-diary-title{
                 h3{
                     margin-top:5px;
@@ -34,12 +34,24 @@
                     font-size: 1.5em;
                     color: white;
                 }
-                p{
-                    font-size: 1em;
-                    margin-top:2px;
+                button{
+                    color: #333;
+                    position: relative;
+                    margin-top: 15px;
+                    // bottom: 90%;
+                    left: 65%;
+                    background: $lightGreen;
+                    box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
+                    // box-shadow: none;
+                    padding: 18px;
+                    line-height: 0px;
+                    text-transform: uppercase;
+                    font-weight: 100;
+                    font-size: 12px;
                 }
-                p:hover {
-                    color:$lightGreen;
+                button:hover {
+                    background: $cream;
+                    color: black;
                 }
             }
         }
@@ -50,14 +62,36 @@
         right:123px;
         // bottom:45px;
         // left:30px;
-        h1{
-            font-size: 26px;
-            color:white;
-            text-decoration: underline;
+
+        // change the h1 to a button as below
+        // h1{
+        //     font-size: 26px;
+        //     color:white;
+        //     text-decoration: underline;
+        // }
+        // h1:hover {
+        //     color:$lightGreen;
+        // }
+        button{
+            color: #333;
+            position: relative;
+            margin-top: 15px;
+            margin-bottom: 12%;
+            right: 5%;
+            background: $lightGreen;
+            box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
+            // box-shadow: none;
+            padding: 18px;
+            line-height: 0px;
+            text-transform: uppercase;
+            font-weight: 100;
+            font-size: 12px;
         }
-        h1:hover {
-            color:$lightGreen;
+        button:hover {
+            background: $cream;
+            color: black;
         }
+
     }
     .posts-numbers{
         position: absolute;
@@ -75,7 +109,7 @@
             height: 40px;
             margin-right: 15px;
             &.active h4{
-                color: red;
+                color: $lightGreen;
             }
         }
 
@@ -88,7 +122,7 @@
 
         h4:hover {
             cursor: pointer;
-            color:red;
+            color:$lightGreen;
             // background-color: $darkGreen;
         }
     }
@@ -99,10 +133,51 @@
 //  Phone: 0-420
 @media (max-width: 420px) {
     .posts-slideshow { 
+        .image-layer {
+            .photo-diary-text {
+                right: 15%;
+                .photo-diary-title{
+                    h3{
+                        margin-top:5px;
+                        margin-left: 20px;
+                        font-weight: 400;
+                        font-size: 1.5em;
+                        color: white;
+                    }
+                    button{
+                        color: #333;
+                        position: relative;
+                        margin-top: 10px;
+                        left: 15%;
+                        background: $lightGreen;
+                        box-shadow: 0 2px 2px 0 rgba(0,0,0,.7), 0 3px 1px -2px rgba(0,0,0,.9), 0 1px 5px 0 rgba(0,0,0,.7);
+                        // box-shadow: none;
+                        padding: 12px;
+                        line-height: 0px;
+                        text-transform: uppercase;
+                        font-weight: 100;
+                        font-size: 12px;
+                    }
+                    button:hover {
+                        background: $cream;
+                        color: black;
+                    }
+                }
+            }
+        }
         .post-numbers-text{
             left:6px;
+            button{
+                margin-bottom: 10%;
+                left: 50%;
+                padding: 18px;
+                font-size: 12px;
+            }
+            button:hover {
+                background: $cream;
+                color: black;
+            }
         }
-
         .posts-numbers{
             left:10px;
             .number-container {
@@ -118,7 +193,7 @@
                     padding-top: 6px;
                     text-align: left;
                 }
-                }
+            }
         }
     }
 }
