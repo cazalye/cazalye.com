@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {getPostDetailBySlug, Post, getRelatedPhotoDiaries} from '../../API/posts';
 import "./photoDiariesDetailMobile.scss";
-import NavbarHider from '../navbar-hider/NavbarHider';
 import NotFound from '../404/404';
 import {Link} from "react-router-dom";
 // import ScreenRotate from '../screen-rotate/screen-rotate';
