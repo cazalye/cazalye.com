@@ -5,6 +5,7 @@ import Footer from "../footer/footer";
 import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
+import PhotoDiariesList from "../photoDiaries/photoDiariesList";
 import Blog from "../blog/blogList";
 import axios from 'axios';
 import Popup from '../popup/popup';
@@ -156,7 +157,8 @@ class LandingPage extends Component<any, any> {
                     </div> */}
 
                     <div className="landing3-photo-diary">
-                        <PostsSlideshow/>
+                        {/* <PostsSlideshow/> */}
+                        <PhotoDiariesList/>
                     </div>
                     <div className="section-divider"/>
                     <div className="landing4-blog">
