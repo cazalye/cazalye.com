@@ -225,18 +225,25 @@
     #landing{ 
         overflow-x: hidden;
         #landing1{
+            background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting_mobile1.jpg");
+            background-size: cover;
             .mission{
                 z-index: 0;
                 position: absolute;
                 left: 15px;
                 // top: 12%;
                 margin: auto;
-                // h2{
-                //     font-size: 40px;
-                // }
-                // h3{
-                //     font-size: 30px;
-                // }
+                h2{
+                    font-size: 48px;
+                    line-height: 48px;
+                    padding-left: 1%;
+                    padding-right: 2%;
+                }
+                h3{
+                    font-size: 34px;
+                    line-height: 38px;
+                    padding-left: 4%;
+                }
             }
             .start-here{
                 top: 270px;
@@ -371,6 +378,21 @@
 @media (max-width: 320px){
     #landing{ 
         overflow-x: hidden;
+        #landing1{
+            .mission{
+                h2{
+                    font-size: 38px;
+                    line-height: 38px;
+                    padding-left: 2%;
+                    padding-right: 3%;
+                }
+                h3{
+                    font-size: 28px;
+                    line-height: 38px;
+                    padding-left: 4%;
+                }
+            }
+        }
         .newsletter{
             margin-bottom: 55px;
             margin-top:0px;

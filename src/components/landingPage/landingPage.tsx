@@ -5,7 +5,7 @@ import Footer from "../footer/footer";
 import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
 import PostsSlideshow from "../postsSlideshow/postsSlideshow";
-import PhotoDiariesList from "../photoDiaries/photoDiariesList";
+import PhotoDiariesList from "../photoDiaries/photoDiariesListScroll";
 import Blog from "../blog/blogList";
 import axios from 'axios';
 import Popup from '../popup/popup';
