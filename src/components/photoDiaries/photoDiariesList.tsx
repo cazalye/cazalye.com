@@ -54,6 +54,7 @@ class PhotoDiariesList extends Component<any, any> {
                     <div className="photo-diary-summary">
                         <h1>Photo Diaries</h1>
                         <p>Visual Journeys Around the World</p>
+                        {/* {photoDiariesHTML} */}
                     </div>
                     <div className="posts">
                         {photoDiariesHTML}
