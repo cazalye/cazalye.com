@@ -57,7 +57,7 @@
                 }
                 .cover-title{
                     position: fixed;
-                    top: 1%;
+                    top: 2%;
                     left: 50%;
                     transform: translate(-50%);
                     width: 80%;
@@ -67,6 +67,8 @@
                         color: $cream;
                         font-size: 24px;
                         padding-bottom: 10px;
+                        padding-right: 5%;
+                        padding-left: 5%;
                     }
                 }
             }
@@ -205,12 +207,12 @@
                 }
                 .cover-title{
                     position: fixed;
-                    top: 2%;
+                    top: 6%;
                     left: 50%;
                     transform: translate(-50%);
                     h1{
                         color: $cream;
-                        font-size: 49px;
+                        font-size: 44px;
                     }
                 }
             }
