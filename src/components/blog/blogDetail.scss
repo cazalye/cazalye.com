@@ -7,6 +7,7 @@
         overflow-x: hidden;
         // background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 50%, rgba(91, 80, 90, 1)50%);
         background: cover;
+        // position: unset;
         .breadcrumbs{
             z-index: 1;
             position: relative;
@@ -132,11 +133,13 @@
 // PHONE: 0-450
 @media (max-width: 450px) {
     #blog-detail{
-        // position: unset;
+        position: unset;
+        padding-top: 25%;
         .breadcrumbs{
-            z-index: 1;
+            display:none;
+            z-index: 100;
             position: relative;
-            padding-top:20%;
+            padding-top:25%;
             left: 20px;
             color: #444;
             a{
@@ -150,9 +153,11 @@
             }
         }
         .blog-title{
+            // position: unset;
             padding-left:5%;
             padding-right:5%;
             h1{
+                // position: unset;
                 font-size: 40px;
                 padding-top: 30px;
                 margin-bottom: 5px;
@@ -161,6 +166,7 @@
                 padding-right: 3%;
             }
             .post-date{
+                // position: unset;
                 left:0%;
                 margin-bottom: 5px;
                 text-align: left;
@@ -169,12 +175,14 @@
                 padding-right: 3%;
             }
             .post-categories{
+                // position: unset;
                 left: 0%;
                 margin-bottom: 40px;
                 text-align: center;
             }
         }
         .blog-content{
+            // position: unset;
             padding-left: 8%;
             padding-right: 8%;
             padding-top:1%;
@@ -197,10 +205,11 @@
 @media (min-width: 451px) and (max-width: 1024px) {
     #blog-detail{
         .breadcrumbs{
+            display:none;
             top:7%;
         }
         .blog-title{
-            padding-top:5%;
+            padding-top: 15%;
             h1{
                 padding-left: 13%;
                 padding-right: 13%;
