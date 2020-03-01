@@ -49,8 +49,10 @@ body.light-green-title .mdl-layout .mdl-layout__inner-container .mdl-layout__hea
         color: $lightGreen;
         position: fixed;
         text-decoration: none;
-        left:20px;
-        top:6px;
+        // left:20px;
+        // top:6px;
+        left: 14px;
+        top: 0px;
     }
     .mdl-layout__drawer-button i{
         z-index: 10;

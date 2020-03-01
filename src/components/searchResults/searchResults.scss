@@ -84,7 +84,9 @@
         }
     }
     #search-results{ 
+        position: unset;
         .posts{
+            padding-top: 35%;
             .post-container{
                 width: 90%;
                 margin-left: 20px;
@@ -135,6 +137,7 @@
     }
     #search-results{ 
         .posts{
+            padding-top: 25%;
             .post-container{
                 width: 90%;
                 margin-left: 20px;
