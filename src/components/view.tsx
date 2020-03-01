@@ -8,7 +8,7 @@ import AboutMe from './about/aboutMe';
 import PhotoDiariesDetail from './photoDiaries/photoDiariesDetail';
 // import PhotoDiariesDetailMobile from './photoDiaries/photoDiariesDetailMobile';
 // import PhotoDiariesList from './photoDiaries/photoDiariesList';
-import PhotoDiariesList from './photoDiaries/photoDiariesListScroll';
+import PhotoDiariesListPage from './photoDiaries/photoDiariesListPage';
 import StonePaper from './stonePaper/stonePaper';
 import SearchResults from './searchResults/searchResults';
 import Categories from './categories/categories';
@@ -22,7 +22,7 @@ const View = () => (
         <Route exact={true} path='/about' component={About}/>
         <Route exact={true} path='/aboutMe' component={AboutMe}/>
         <Route exact={true} path='/blog/:slug' component={BlogDetail}/>
-        <Route exact={true} path='/photoDiaries' component={PhotoDiariesList}/>
+        <Route exact={true} path='/photoDiaries' component={PhotoDiariesListPage}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
         {/* <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetailMobile}/> */}
         <Route exact={true} path='/stonePaper' component={StonePaper}/>
