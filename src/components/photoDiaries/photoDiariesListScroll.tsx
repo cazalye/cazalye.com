@@ -4,7 +4,6 @@ import "./photoDiariesListScroll.scss";
 import { Link } from 'react-router-dom';
 import Spinner from '../spinner/spinner';
 import NavbarHider from '../navbar-hider/NavbarHider';
-import {Helmet} from "react-helmet";
 
 
 interface BlogState {
@@ -123,10 +122,6 @@ class PhotoDiariesList extends Component<any, BlogState> {
             }
             return (
                 <div id="diary-page">
-                    <Helmet>
-                        <meta charSet="utf-8" />
-                        <title>cazalye | PHOTO DIARIES </title>
-                    </Helmet>
                     <NavbarHider transparentRowHide={true} whiteTitle={true}/>
                     <h1>Photo Diaries</h1>
                     <h3>Visual Journeys Around the World</h3>
