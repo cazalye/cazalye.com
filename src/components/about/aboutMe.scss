@@ -8,9 +8,7 @@
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 52%), url(/img/rafting.jpg);
     // background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting.jpg");
     background-size: cover;
-    // opacity: 0.9;
     position: fixed;
-    // overflow-y: scroll;
     height:100vh;
     width: 100%;
     .about-me-text{
@@ -99,9 +97,14 @@
 // phones: 0-414
 @media (max-width: 414px) {
     .about-me{ 
-        overflow-y: scroll;
-        overflow-x: hidden;
+        position: unset;
+        height: 250vh;
+        background-size: cover;
+        background: linear-gradient(120deg, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.4) 52%), url(/img/rafting.jpg);
+
+      
         .about-me-text{
+            overflow-y: scroll;
             padding-right: 50px;
             h1{
                 text-align: center;

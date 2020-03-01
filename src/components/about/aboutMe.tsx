@@ -17,8 +17,6 @@ class AboutMe extends Component{
                     <div className="mission">
                             <h2>Inspiration for your adventures</h2>
                             <h3>at home and abroad</h3>
-
-
                     </div>
                     <div className="about-me-content">
                         <p>Hi- I'm Emma Cazaly- an Australian with a love of travel and everything outdoors. <strong> Cazalye is a combination of my surname and first initial.</strong><hr/>

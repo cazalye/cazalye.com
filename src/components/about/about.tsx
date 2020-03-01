@@ -14,8 +14,8 @@ class About extends Component {
                  <Helmet>
                     <title>cazalye | ABOUT</title>
                 </Helmet>
-                {/* <NavbarHider transparentRowHide={true} whiteTitle={true}/> */}
-                <Navbar/>
+                <NavbarHider whiteTitle={true}/> 
+                {/* <Navbar/> */}
                 <div className="social-links">
                     <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
                         <i className="fab fa-instagram" aria-hidden="true" />

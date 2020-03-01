@@ -4,7 +4,7 @@ import React, { Component} from 'react';
 import Footer from "../footer/footer";
 import {Link} from 'react-router-dom';
 import NavbarHider from "../navbar-hider/NavbarHider";
-import PostsSlideshow from "../postsSlideshow/postsSlideshow";
+// import PostsSlideshow from "../postsSlideshow/postsSlideshow";
 import PhotoDiariesList from "../photoDiaries/photoDiariesListScroll";
 import Blog from "../blog/blogList";
 import axios from 'axios';
@@ -109,31 +109,15 @@ class LandingPage extends Component<any, any> {
                     }
                 </div>
 
-                 <div className="test" onScroll={e => {this.pageScrolled();}}/>
+                 {/* <div className="test" onScroll={e => {this.pageScrolled();}}/> */}
                     <NavbarHider transparentRowHide={true} whiteTitle={true} />
                     <div id="landing1">
-                        {/* <div className="mission"> */}
-                        <Link className='mission' to="/about">
-                            <h2>Inspiration for your adventures</h2>
-                            <h3>at home and abroad</h3>
-                        </Link>
-                        {/* </div> */}
-                        {/* <div className="start-here">
-                            <h3>First time exploring this site?</h3>
-                            <Link to="/about">
-                                <p>Start Here <i className="fas fa-hiking"/></p>
-                            </Link>
-                        </div> */}
-
-                        <div className="start-here">
-                            <h3>First time exploring? </h3>
-                            <Link to="/about">
-                                <h3> <i className="fas fa-hiking"/> Start Here</h3>
-                                {/* <button className="mdl-button mdl-js-button mdl-button--raised">
-                                </button> */}
+                        <div className="landing-text">
+                            <Link className='mission' to="/about">
+                                <h2>Inspiration for your adventures</h2>
+                                <h3>at home and abroad</h3>
                             </Link>
                         </div>
-
                         <div className="down-arrow">
                             {/* <i className="fas fa-angle-double-down"/> */}
                             <i className="fas fa-arrow-down"/>

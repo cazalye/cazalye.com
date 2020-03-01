@@ -3,15 +3,14 @@
 
 // .mdl-layout__inner-container{
     #blog-detail{
-        position: absolute;
         width: 100%;
         overflow-x: hidden;
         // background: linear-gradient(180deg, rgba(91, 80, 90, 0.2) 50%, rgba(91, 80, 90, 1)50%);
         background: cover;
         .breadcrumbs{
-            z-index: 11;
-            position: fixed;
-            top:10%;
+            z-index: 1;
+            position: relative;
+            padding-top:5%;
             left: 20px;
             color: #444;
             a{
@@ -30,9 +29,10 @@
                 left:50%;
                 transform: translate(-50%);
                 color:$accentColor;
-                padding-top:4%;
+                padding-top: 4%;
                 padding-bottom:0px;
                 margin-bottom: 2%;
+                margin-top: 0%;
                 padding-left: 20%;
                 padding-right: 20%;
                 text-align: left;
@@ -132,6 +132,23 @@
 // PHONE: 0-450
 @media (max-width: 450px) {
     #blog-detail{
+        // position: unset;
+        .breadcrumbs{
+            z-index: 1;
+            position: relative;
+            padding-top:20%;
+            left: 20px;
+            color: #444;
+            a{
+                color: #333;
+            }
+            a:hover{
+                color:#888;
+            }
+            .current-page{
+                color: #777;
+            }
+        }
         .blog-title{
             padding-left:5%;
             padding-right:5%;

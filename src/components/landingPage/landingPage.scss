@@ -1,10 +1,5 @@
 @import "../../styles/colors"; 
 
-// .test{
-//     // opacity: 1;
-//     background-color: red;
-// }
-
 #landing{
     .mdl-layout__drawer-button{
         display:none;
@@ -22,10 +17,11 @@
         // background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 4%, rgba(0, 0, 0, 0.2)6%, rgba(0, 0, 0, 0.1) 8%, transparent 10%), url("/img/rafting_bright.jpg");
         // background: linear-gradient(120deg, rgba(0,0,0, 0.5) 40%, rgba(0,0,0, 0.3) 45%, transparent 48%), url("/img/rafting.jpg");
         // opacity: 0.9;
-        background: linear-gradient(160deg, rgba(0,0,0, 0.35) 30%,rgba(0,0,0, 0.15) 60%, rgba(0,0,0, 0.1) 80%,), url("/img/rafting_bright_low_res.jpg");
+        background: linear-gradient(160deg, rgba(0,0,0, 0.4) 30%,rgba(0,0,0, 0.3) 60%, rgba(0,0,0, 0.2) 95%,), url("/img/rafting_bright_low_res.jpg");
         // background: linear-gradient(120deg, rgba(0,0,0, 0.2) 40%, rgba(0,0,0, 0) 48%), url("/img/rafting_bright_low_res.jpg");
         // background: linear-gradient(180deg, rgba(0,0,0, 0.3) 10%, rgba(0,0,0, 0.1) 60%), url("/img/rafting.jpg");
         background-size: cover;
+        // opacity: .98;
         height: 105vh;
         width: 100%;
         .mission{
@@ -34,7 +30,7 @@
             // left:230px;
             left:15%;
             // top:80px;
-            top:10%;
+            top:3%;
             color:white;
             font-family: 'Cormorant Garamond', serif;
             h2{
@@ -227,41 +223,27 @@
         #landing1{
             background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting_mobile1.jpg");
             background-size: cover;
-            .mission{
-                z-index: 0;
+            .landing-text{
                 position: absolute;
-                left: 15px;
-                // top: 12%;
-                margin: auto;
-                h2{
-                    font-size: 48px;
-                    line-height: 48px;
-                    padding-left: 1%;
-                    padding-right: 2%;
-                }
-                h3{
-                    font-size: 34px;
-                    line-height: 38px;
-                    padding-left: 4%;
-                }
-            }
-            .start-here{
-                top: 270px;
-                // p{
-                // font-size: 25px;
-                // font-weight: 500;
-                    // }
-                a{
-                    :hover{
-                        color:#cdcdcd;
+                left: 28%;
+                top: 14%;
+                     .mission{
+                        z-index: 0;
+                        position: unset;
+                        // top: 12%;
+                        margin: auto;
+                        h2{
+                            font-size: 34px;
+                            line-height: 32px;
+                            padding-right: 1%;
+                            // color: $lightGreen;
+                        }
+                        h3{
+                            font-size: 22px;
+                            line-height: 24px;
+                            margin-left: 13%;
+                        }
                     }
-                    button{
-                        position: absolute;
-                        top: 90%;
-                        right: 7%;
-                        font-size: 14px;
-                    }
-                }
             }
             .down-arrow{
                 position: absolute;

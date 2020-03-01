@@ -57,7 +57,7 @@ class BlogDetail extends Component<any,any>{
                     <meta name="description" content={this.state.detail.description} />
                     <title>{this.state.detail.title}</title>
                 </Helmet>
-                <NavbarHider transparentRowHide={true} blackTitle={true}/>
+                <NavbarHider blackTitle={true}/>
                 <Breadcrumbs maxItems={4} aria-label="breadcrumb" className="breadcrumbs">
                     <Link to="/" color="inherit">
                         Home

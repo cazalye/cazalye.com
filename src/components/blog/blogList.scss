@@ -1,5 +1,10 @@
 @import "../../styles/colors";
 
+.blogListPage{
+    .breadcrumbs{
+       display: none;
+    }
+}
 #blogs-page{
         // background: linear-gradient(180deg, rgba(91, 80, 90, 0.3) 10%, rgba(91, 80, 90, 1)60%); 
         background: linear-gradient(180deg, rgba(5, 30, 28, .8) 5%, rgba(5, 30, 28, 1) 50%);
@@ -9,7 +14,7 @@
         padding-top: 0px;
         padding-bottom: 20px;
         overflow-y: hidden;
-        
+
         h1{
             margin-bottom: 0px;
             padding-top: 70px;
@@ -183,12 +188,33 @@
 
 // PHONE: 0-450
 @media (max-width: 450px) {
+    
+// .blogListPage{
+//     .breadcrumbs{
+//         display: block;
+//         position: absolute;
+//         padding-top: 17%;
+//         left: 20px;
+//         color: #444;
+//         a{
+//             color: #333;
+//         }
+//         a:hover{
+//             color:#888;
+//         }
+//         .current-page{
+//             color: #777;
+//         }
+//     }
+// }
+   
     #blogs-page{
+        // position: unset;
         // margin-bottom: 10px;
         h1{
             font-size: 42px;
             line-height: 62px;
-            margin-top: 2%;
+            margin-top: 3%;
         }
         h3{
             font-size: 16px;
@@ -199,11 +225,10 @@
         }
         .blog-container{
             flex-direction: row;
-            // overflow-x: hidden;
-            // overflow-y: auto;   
             overflow-y: hidden;
-            overflow-x: auto;     
+            overflow-x: auto;   
             .post-container{
+                // height: 100vh;
                 width:calc(90% - 40px);
                 // margin-right: 8%;
                 // margin-left: 11%;
