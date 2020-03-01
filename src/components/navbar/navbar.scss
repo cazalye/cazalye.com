@@ -314,16 +314,9 @@ body .mdl-layout .mdl-layout__inner-container{
             color:white;
             }
         }
-        .search{
-            z-index: 100;
-            display: inline-block;
-            margin-right: 10px;
-            margin-top: 0px;
-        }
         .mdl-layout__header{
             z-index: 100;
             display:block;
-            // color:black;
             .header-title{
                 display:block;
                 left:15px;
@@ -333,6 +326,14 @@ body .mdl-layout .mdl-layout__inner-container{
             }
             .header-nav{
                 display:none;
+            }
+            .search{
+                display: block;
+                margin-right: 5px;
+                margin-top: 100px;
+                i{
+                    // color: $lightGreen;
+                }
             }
         }
     }
@@ -382,6 +383,11 @@ body .mdl-layout .mdl-layout__inner-container{
             a:hover {
                 color: black;
               }
+            .search{
+            display: block;
+            margin-right: 25px;
+            margin-top: 150px;
+            }
         }
         .mdl-navigation__link{
             z-index: 10;
