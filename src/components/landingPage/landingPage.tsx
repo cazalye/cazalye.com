@@ -101,7 +101,7 @@ class LandingPage extends Component<any, any> {
                     </Helmet>
                 <div>
                     {this.state.newsletterConfirmPopup ?
-                    <Popup
+                    <Popup className="newsletter-popup"
                             text={this.state.newsletterLoading ? "Submitting..." : "Thanks for subscribing"}
                             closePopup={this.hideNewsletterPopup.bind(this)}
                     />
@@ -126,7 +126,7 @@ class LandingPage extends Component<any, any> {
 
                     {/* <div className="section-divider"/> */}
                     <div className="newsletter">
-                        <p>SUBSCRIBE TO THE NEWSLETTER</p>
+                        <p>SUBSCRIBE TO THE NEWSLETTER <br/> for monthly travel ideas and the best of the blog</p>
                         <form onSubmit={this.newsletterSubscribe.bind(this)}>
                             <input onChange={this.updateFirstName.bind(this)} value={this.state.newsletter.firstName} placeholder="First name" type="text"/>
                             <input onChange={this.updateEmail.bind(this)} value={this.state.newsletter.email} placeholder="E-mail Address" type="text"/>
@@ -149,14 +149,15 @@ class LandingPage extends Component<any, any> {
                         <Blog/>
                     </div>
                     <div className="section-divider"/>
-                    <div className="stone-paper-link">
+                    <div className="section-divider"/>
+                    {/* <div className="stone-paper-link">
                         <p>What is eco-friendly Stone Paper?</p>
                         <Link to="/stonePaper">
                             <button className="mdl-button mdl-js-button mdl-button--raised">
                             Find out here
                             </button>
                         </Link>
-                    </div>
+                    </div> */}
                     <Footer/>
             </div>
         );

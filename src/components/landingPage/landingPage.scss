@@ -5,10 +5,13 @@
         display:none;
         z-index: 10;
     }
-    .popup-button {
-        position: fixed;
-        top: 100px;
+    .newsletter-popup{
+        h2{
+            font-size: 24px;
+            color: red;
+        }
     }
+
     #landing1{
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.2)40%,transparent 70%), url("/tst_img/beachSepia.jpg");
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.2)40%,transparent 70%), url("/img/background_sepia_cropped.jpg");
@@ -16,10 +19,12 @@
         // background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 8%, rgba(255, 255, 255, 0.2)5%,transparent 70%), url("/img/rafting.jpg");
         // background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 4%, rgba(0, 0, 0, 0.2)6%, rgba(0, 0, 0, 0.1) 8%, transparent 10%), url("/img/rafting_bright.jpg");
         // background: linear-gradient(120deg, rgba(0,0,0, 0.5) 40%, rgba(0,0,0, 0.3) 45%, transparent 48%), url("/img/rafting.jpg");
-        // opacity: 0.9;
-        background: linear-gradient(160deg, rgba(0,0,0, 0.4) 30%,rgba(0,0,0, 0.3) 60%, rgba(0,0,0, 0.2) 95%,), url("/img/rafting_bright_low_res.jpg");
+        // background: linear-gradient(160deg, rgba(0,0,0, 0.4) 30%,rgba(0,0,0, 0.3) 60%, rgba(0,0,0, 0.2) 95%,), url("/img/rafting_bright_low_res.jpg");
+        // background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting.jpg");
         // background: linear-gradient(120deg, rgba(0,0,0, 0.2) 40%, rgba(0,0,0, 0) 48%), url("/img/rafting_bright_low_res.jpg");
-        // background: linear-gradient(180deg, rgba(0,0,0, 0.3) 10%, rgba(0,0,0, 0.1) 60%), url("/img/rafting.jpg");
+        background: linear-gradient(180deg, rgba(0,0,0, 0.3) 8%, transparent 18%), url("/img/rafting_cinematic-1.jpg");
+        // background: url("/img/rafting_cinematic-1.jpg");
+
         background-size: cover;
         // opacity: .98;
         height: 105vh;
@@ -105,22 +110,15 @@
         width:100%;
         position: relative;
         padding-top:50px;
-        // background-color: $darkestGreen;
-        // background-color: $cream;
         p{
-            // color:black;
             color:$darkestGreen;
-            // color:white;
-            // letter-spacing: 1.5px;
-            // font-size: 14px;
-            // font-weight: 100;
             float: left;
             font-size: 12px;
-            text-transform: uppercase;
+            // text-transform: uppercase;
             width: 33%;
-            letter-spacing: 2.5px;
+            letter-spacing: 2px;
             text-align: right;
-            margin: 8px 25px 0 0;
+            margin: 0px 25px 0 0;
             font-family: 'Montserrat', sans-serif;
             -webkit-font-smoothing: subpixel-antialiased;
         }
@@ -132,6 +130,7 @@
                 width: 17%;
                 padding: 10px;
                 font-size: 12px;
+                line-height: 20px;
                 font-weight: normal;
                 border: 1px solid $darkestGreen;
                 background-color: rgba(176, 204, 199, 0);
@@ -205,7 +204,7 @@
     //     }
     // }
     .section-divider{
-        height: 6px;
+        height: 20px;
         background-color: $darkestGreen;
     }
 }
@@ -226,7 +225,7 @@
             .landing-text{
                 position: absolute;
                 left: 26%;
-                top: 15%;
+                top: 13%;
                      .mission{
                         z-index: 0;
                         position: unset;

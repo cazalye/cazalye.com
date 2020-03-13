@@ -173,10 +173,15 @@ body.white-drawer .mdl-layout .mdl-layout__inner-container{
 }
 
 body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
-    // .mdl-layout__drawer.is-visible{
-    //     // z-index: 1000;
-    // }
-   
+    .mdl-layout__drawer .mdl-navigation{
+        position: relative;
+        padding-top:70px;
+        height: 300vh;
+        .search{
+            color:black;
+            padding-left:15px;
+        }
+    }
     .mdl-layout__drawer-button {
         // z-index: 100;
         display: inline-block;
@@ -189,7 +194,8 @@ body.hamburger-mode .mdl-layout .mdl-layout__inner-container {
     }
     .search{
         z-index: 100;
-        display: inline-block;
+        // display: inline-block;
+        display: none;
         margin-right: 10px;
         margin-top: 120px;
     }
@@ -253,7 +259,6 @@ body .mdl-layout .mdl-layout__inner-container{
                 text-decoration: none;
                 left: 14px;
                 top: 0px;
-                // color: black;
             }
         }
     }
@@ -270,12 +275,16 @@ body .mdl-layout .mdl-layout__inner-container{
         }
     }
     .mdl-layout__drawer .mdl-navigation{
-        // z-index: 1000;
+        position: relative;
         padding-top:70px;
         height: 300vh;
-        // color:red;
+        .search{
+            color:black;
+            padding-left:15px;
+        }
     }
     .search{
+        // display: none;
         color:white;
         padding-left:15px;
         i {
@@ -315,7 +324,6 @@ body .mdl-layout .mdl-layout__inner-container{
 // PHONE: 0-450
 @media (max-width: 450px) {
     body .mdl-layout .mdl-layout__inner-container {
-        // z-index: 100;
         .mdl-layout__drawer-button{
             z-index: 100;
             display: block;
@@ -340,7 +348,8 @@ body .mdl-layout .mdl-layout__inner-container{
                 display:none;
             }
             .search{
-                display: block;
+                // display: block;
+                display: none;
                 margin-right: 5px;
                 margin-top: 100px;
                 i{

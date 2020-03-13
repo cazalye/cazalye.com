@@ -140,10 +140,11 @@
                 }
                 a:hover{
                     opacity:0.85;
+                    // position: unset;
                 }
                 .photo-diary-preview{
                     display:block;
-                    position: unset;
+                    // position: unset;
                     border: 3px solid black;
                     height: calc(50% - 92px);
                     width:90%;
@@ -153,7 +154,7 @@
                     opacity:1;
                     // position: relative;
                     h2{
-                        position: unset;
+                        // position: unset;
                         font-size: 15px;
                         font-weight: 300;
                         color: black;  

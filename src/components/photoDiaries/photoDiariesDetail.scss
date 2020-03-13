@@ -13,6 +13,7 @@
     height: 100vh;
     background: #666;
     background: linear-gradient(180deg, rgba(5, 30, 28, .8) 5%, rgba(5, 30, 28, 1) 50%);
+    overflow-x: hidden;
     .breadcrumbs{
         z-index: 1;
         position: relative;
@@ -261,7 +262,7 @@
                 opacity:0.85;
             }
             .photo-diary-preview{
-                display:block;
+                // display: unset;
                 border: 3px solid black;
                 height: calc(50% - 92px);
                 width:60%;

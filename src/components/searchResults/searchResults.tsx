@@ -59,18 +59,18 @@ class SearchResults extends Component<any, any> {
             if (post.type === "PhotoDiary") {
                 urlPrefix = "photoDiaries";
             }
-            const categoriesNamesHTML = [];
-            for(const category of post.categories){
-                // categoriesNamesHTML.push(<span>{category.name}</span>);
-                categoriesNamesHTML.push(<Link to={`/blog/category/${category.name}`}>{category.name}</Link>);
-            }
+            // const categoriesNamesHTML = [];
+            // for(const category of post.categories){
+            //     // categoriesNamesHTML.push(<span>{category.name}</span>);
+            //     categoriesNamesHTML.push(<Link to={`/blog/category/${category.name}`}>{category.name}</Link>);
+            // }
             postsContent.push(
                 <div className="post-container">
                     <Link className="post-image" style={style} to={`/${urlPrefix}/${post.slug}`}/>
-                    <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={`${urlPrefix}/${post.slug}`}/>
-                    <div className="post-categories">
+                    <Link dangerouslySetInnerHTML={{__html: post.title}} className="post-title" to={`/${urlPrefix}/${post.slug}`}/>
+                    {/* <div className="post-categories">
                         {categoriesNamesHTML}
-                    </div>
+                    </div> */}
                     <hr className="break"/>
                 </div>
             );
@@ -80,7 +80,7 @@ class SearchResults extends Component<any, any> {
 
         return (
             <div id="search-results">
-                <NavbarHider transparentRowHide={true} lightGreenTitle={true}/>
+                <NavbarHider transparentRowHide={true} whiteTitle={true}/>
                 <div className="posts">
                     {postsContent}
                 </div>

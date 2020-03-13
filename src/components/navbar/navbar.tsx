@@ -37,7 +37,7 @@ class Navbar extends Component<any, any> {
                         <Link to="/photoDiaries">Photo Diaries</Link> 
                         <Link to="/blog">Blog</Link>
                         <Link to="/about">About</Link>
-                        <Link to="/stonePaper">Shop</Link>
+                        {/* <Link to="/stonePaper">Shop</Link> */}
                     </Navigation>
                     <Route render={({ history}) => (
                         <form onSubmit={(e) => { this.search(history, e) }}>
@@ -60,16 +60,21 @@ class Navbar extends Component<any, any> {
                         <Link onClick={() => this.hideToggle()} to="/photoDiaries">Photo Diaries</Link>
                         <Link onClick={() => this.hideToggle()} to="/blog">Blog</Link>
                         <Link onClick={() => this.hideToggle()} to="/about">About</Link>
-                        <Link onClick={() => this.hideToggle()} to="/stonePaper">Shop</Link>
-                        {/* <a href="mailto:e.cazaly7@gmail.com" rel="noopener noreferrer" target="_blank">
-                            <i className="fa fa-envelope" aria-hidden="true" />
-                        </a>
-                        <a href="https://www.instagram.com/cazalye" rel="noopener noreferrer" target="_blank">
-                            <i className="fab fa-instagram" aria-hidden="true" />
-                        </a>
-                        <a href="https://www.pinterest.com.au/cazalye/" rel="noopener noreferrer" target="_blank">
-                            <i className="fab fa-pinterest-p" aria-hidden="true" />
-                        </a> */}
+                        {/* <Link onClick={() => this.hideToggle()} to="/stonePaper">Shop</Link> */}
+                        <Route render={({ history}) => (
+                            <form onSubmit={(e) => { this.search(history, e) }}>
+                                <Textfield
+                                    className="search"
+                                    value={this.state.searchQuery}
+                                    label="search"
+                                    placeholder="search"
+                                    expandable={true}
+                                    expandableIcon=""
+                                    onChange={this.updateSearchQuery.bind(this)}
+                                />
+                            </form>
+                            )}
+                        />
                     </Navigation>
                 </Drawer>
             </Layout>

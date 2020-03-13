@@ -4,10 +4,7 @@ import View from './components/view';
 import Navbar from './components/navbar/navbar';
 
 
-
-// const App: React.FC = () => {
 class App extends Component<any, any> {
-
   pageScrolled() {
     console.log("scrolling")
   }
