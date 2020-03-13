@@ -2,25 +2,38 @@ import React, { Component} from 'react';
 import './styles/App.scss';
 import View from './components/view';
 import Navbar from './components/navbar/navbar';
+import ReactGA from 'react-ga';
+import { withRouter } from "react-router";
 
+ReactGA.initialize('UA-159926883-1', {debug: false});
 
-
-// const App: React.FC = () => {
 class App extends Component<any, any> {
 
-  pageScrolled() {
-    console.log("scrolling")
+  unlisten: any;
+
+  componentWillMount() {
+    // detect page changes and send info to google analytics
+    ReactGA.pageview(this.props.location.pathname);
+    this.unlisten = this.props.history.listen((location: any, action: any) => {
+      ReactGA.pageview(location.pathname);
+    });
+  }
+
+  componentWillUnmount() {
+    if (this.unlisten) {
+      this.unlisten();
+    }
   }
 
   render() {
     return (
-      <div onScroll={e => {this.pageScrolled();}} className="App">
+      <div className="App">
           <Navbar/>
           <View/>
       </div>
     );
 
   }
-};
+}
 
-export default App;
+export default withRouter(App);
