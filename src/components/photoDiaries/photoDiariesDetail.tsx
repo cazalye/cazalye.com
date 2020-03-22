@@ -159,12 +159,12 @@ class PhotoDiariesDetail extends Component<any, PhotoDiariesDetailState> {
                     const backgroundImage1 = this.state.relatedPhotoDiaries[1].featureMedia ? this.state.relatedPhotoDiaries[1].featureMedia.sizes.large : "";
                     relatedPosthtml = [
                         (
-                                <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${backgroundImage0})`}}>
+                                <Link className="photo-diary-preview-1" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[0].slug} style={{backgroundImage: `url(${backgroundImage0})`}}>
                                     <h2 dangerouslySetInnerHTML={{__html: this.state.relatedPhotoDiaries[0].title}}/>
                                 </Link>
                         ),
                         (
-                            <Link className="photo-diary-preview" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${backgroundImage1})`}}>
+                            <Link className="photo-diary-preview-2" to={"/photoDiaries/" + this.state.relatedPhotoDiaries[1].slug} style={{backgroundImage: `url(${backgroundImage1})`}}>
                                 <h2 dangerouslySetInnerHTML={{__html: this.state.relatedPhotoDiaries[1].title}}/>
                             </Link>
                         )
