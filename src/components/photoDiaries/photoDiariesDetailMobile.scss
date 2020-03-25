@@ -28,7 +28,7 @@
                 color: $cream;
                 opacity: 0.8;
                 font-size: 40px;
-                left: 1%;
+                left: 3%;
                 // top: 25%;
             }
             .fas.fa-chevron-right{
@@ -36,7 +36,7 @@
                 color: $cream;
                 opacity: 0.8;
                 font-size: 40px;
-                right: 1%;
+                right: 3%;
                 // top: 25%;
             }
             .cover-page{
@@ -79,7 +79,7 @@
                 color: white;
                 // top: 15%;
                 margin-top: 20%;
-                overflow-y: hidden;
+                overflow-y: scroll;
                 // left: 50%;
                 // transform: translate(-50%);
                 h3{
@@ -92,11 +92,14 @@
                 }
             }
             .photo-diary-summary{
-                // position: absolute;
-                position: unset;
+                position: absolute;
+                // position: unset;
                 color: white;
                 margin-top: 25%;
+                height: 115vh;
+                background: linear-gradient(180deg, rgba(5, 30, 28, 0) 10%, rgba(5, 30, 28, 1) 50%);
                 p{
+                    overflow-y: scroll;
                     font-size: 16px;
                     line-height: 26px;
                     text-align: left;
@@ -104,7 +107,9 @@
                     margin-right: 15%;
                 }
                 .p1{
-                    display: none;
+                    // display: none;
+                    font-weight: bold;
+                    margin-bottom: 25px;
                 }
             }
             .photos {
@@ -113,18 +118,23 @@
                 // margin-left: 10px;
                 // margin-right: 10px;
                 &.portrait{
-                    position: relative;
-                    padding-top: 180%;
+                    position: absolute;
+                    // position: unset;
+                    // padding-top: 180%;
                     background-size: cover;
-                    // top: 10%;
-                    // padding-top: 150%;
+                    top: 12%;
+                    padding-top: 145%;
+                    width: 89%;
+                    left: 5.5%;
                 }
                 &.landscape{
-                    // position: relative;
-                    position: unset;
+                    position: absolute;
+                    // position: unset;
                     padding-top: 67%;
                     top: 33.333%;
-                    margin-top: 50%;
+                    // margin-top: 50%;
+                    width: 95%;
+                    left: 2.5%;
                 }
             }
             .back-page{
@@ -245,7 +255,10 @@
                 position: absolute;
                 color: white;
                 top: 20%;
+                height: 135vh;
+                background: linear-gradient(180deg, rgba(5, 30, 28, 0) 10%, rgba(5, 30, 28, 1) 50%);
                 p{
+                    overflow-y: scroll;
                     font-size: 32px;
                     line-height: 62px;
                     text-align: left;
@@ -253,9 +266,12 @@
                     margin-right: 15%;
                 }
                 .p1{
-                    display: none;
+                   // display: none;
+                   font-weight: bold;
+                   margin-bottom: 25px;
                 }
             }
+
             .photos {
                 width: 100%;
                 background-size: cover;
