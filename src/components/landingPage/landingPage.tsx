@@ -101,7 +101,7 @@ class LandingPage extends Component<any, any> {
                     </Helmet>
                 <div>
                     {this.state.newsletterConfirmPopup ?
-                    <Popup className="newsletter-popup"
+                    <Popup
                             text={this.state.newsletterLoading ? "Submitting..." : "Thanks for subscribing"}
                             closePopup={this.hideNewsletterPopup.bind(this)}
                     />
