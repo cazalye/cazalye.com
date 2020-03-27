@@ -9,9 +9,9 @@
         background: cover;
         // position: unset;
         .breadcrumbs{
-            z-index: 1;
+            z-index: 100;
             position: relative;
-            padding-top:5%;
+            padding-top: 5%;
             left: 20px;
             color: #444;
             a{
