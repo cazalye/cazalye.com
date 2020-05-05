@@ -12,10 +12,10 @@ import PhotoDiariesListPage from './photoDiaries/photoDiariesListPage';
 // import StonePaper from './stonePaper/stonePaper';
 import SearchResults from './searchResults/searchResults';
 import Categories from './categories/categories';
-import Portfolio from './portfolio/portfolio';
-import PortfolioContact from './portfolio/portfolioContact';
-import PortfolioAbout from './portfolio/portfolioAbout';
-import PhotographyTravel from './portfolio/photographyTravel';
+// import Portfolio from './portfolio/portfolio';
+// import PortfolioContact from './portfolio/portfolioContact';
+// import PortfolioAbout from './portfolio/portfolioAbout';
+// import PhotographyTravel from './portfolio/photographyTravel';
 // import Resume from './portfolio/resume';
 
 
@@ -33,10 +33,10 @@ const View = () => (
         {/* <Route exact={true} path='/stonePaper' component={StonePaper}/> */}
         <Route exact={true} path='/search/:searchQuery' component={SearchResults}/>
         <Route exact={true} path='/categories' component={Categories}/>
-        <Route exact={true} path='/portfolio' component={Portfolio}/>
-        <Route exact={true} path='/contact' component={PortfolioContact}/>
-        <Route exact={true} path='/portfolioabout' component={PortfolioAbout}/>
-        <Route exact={true} path='/photography' component={PhotographyTravel}/>
+        {/* <Route exact={true} path='/portfolio' component={Portfolio}/> */}
+        {/* <Route exact={true} path='/contact' component={PortfolioContact}/> */}
+        {/* <Route exact={true} path='/portfolioabout' component={PortfolioAbout}/> */}
+        {/* <Route exact={true} path='/photography' component={PhotographyTravel}/> */}
         {/* <Route exact={true} path='/resume' component={Resume}/> */}
     </Switch>
 );
