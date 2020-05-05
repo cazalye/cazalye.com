@@ -216,6 +216,17 @@ body.hide-menu .mdl-layout .mdl-layout__inner-container {
         display:none;
     }
 }
+body.hide-all .mdl-layout .mdl-layout__inner-container {
+    .mdl-layout__header .header-title{
+        display:none;
+    }
+    .mdl-navigation__link{
+        display:none;
+    }
+    .search{
+        display:none;
+    }
+}
 
 
 

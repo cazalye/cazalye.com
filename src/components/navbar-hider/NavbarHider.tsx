@@ -9,6 +9,7 @@ type NavbarHiderProps = {
     mixedTitle: boolean;
     hideTitle: boolean;
     hideMenu: boolean;
+    hideAll: boolean;
     whiteDrawer: boolean;
     transparentRowHide: boolean;
     // opaqueOnScroll: boolean;
@@ -24,6 +25,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         mixedTitle: false,
         hideTitle: false,
         hideMenu: false,
+        hideAll: false,
         whiteDrawer: false,
         transparentRowHide: true,
         // opaqueOnScroll: false,
@@ -38,6 +40,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.toggle('mixed-title', this.props.mixedTitle);
         document.body.classList.toggle('hide-title', this.props.hideTitle);
         document.body.classList.toggle('hide-menu', this.props.hideMenu);
+        document.body.classList.toggle('hide-all', this.props.hideAll);
         document.body.classList.toggle('white-drawer', this.props.whiteDrawer);
         console.log(this.props.transparentRowHide)
         document.body.classList.toggle('transparent-row-hide', this.props.transparentRowHide);
@@ -53,6 +56,7 @@ class NavbarHider extends Component<NavbarHiderProps> {
         document.body.classList.remove('mixed-title');
         document.body.classList.remove('hide-title');
         document.body.classList.remove('hide-menu');
+        document.body.classList.remove('hide-all');
         document.body.classList.remove('white-drawer');
         document.body.classList.remove('transparent-row-hide');
         // document.body.classList.remove('opaque-on-scroll');

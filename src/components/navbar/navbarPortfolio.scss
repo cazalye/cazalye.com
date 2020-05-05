@@ -1,0 +1,28 @@
+//  Can't affect the navbar
+
+.header-title{
+    .portfolio-nav{
+        .portfolio-nav-link{
+            color: red;
+            z-index: 10000;
+        }
+    }
+}
+
+body .mdl-layout .mdl-layout__inner-container{
+    .mdl-layout__header.mdl-layout__header--transparent.is-casting-shadow{
+        position:fixed;
+        z-index:1000;
+        color: red;
+    }   
+    .mdl-navigation__link{
+        z-index: 100;
+        color: red;
+        font-size: 18px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 100;
+    }
+}
+
+
+// RESPONSIVE  : 

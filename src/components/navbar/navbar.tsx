@@ -2,13 +2,13 @@ import "./navbar.scss";
 import React, { Component } from 'react';
 import {Layout, Header, Navigation, Drawer, Textfield} from 'react-mdl';
 import {Link} from 'react-router-dom';
-import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom';
 // import SearchResult from '../searchResults/searchResults';
 
 class Navbar extends Component<any, any> {
     state = {
         searchQuery: ""
-    }
+    };
     updateSearchQuery(e: any) {
         this.setState({
             searchQuery: e.target.value
@@ -26,7 +26,7 @@ class Navbar extends Component<any, any> {
         if (selectorId) {
             selectorId.MaterialLayout.toggleDrawer();
         }
-    } 
+    }
     render() {
         const title = <Link to="/" className="header-title"> cazalye </Link> as any;
         return (
