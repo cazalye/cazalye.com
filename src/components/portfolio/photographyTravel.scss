@@ -1,0 +1,23 @@
+.photography{
+    background: linear-gradient(180deg, rgba(5, 30, 28, .8) 5%, rgba(5, 30, 28, 1) 50%);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: fixed;
+    .travel{
+        position: relative;
+        top: 10%;
+        margin-left: 2%;
+        margin-right: 2%;
+        img{
+            width: auto;
+            padding: 10px;
+        }
+    }
+    .portraits{
+        position: relative;
+        img{
+
+        }
+    }
+}
