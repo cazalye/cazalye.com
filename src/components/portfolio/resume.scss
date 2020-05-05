@@ -1,0 +1,125 @@
+/* Resume Page */
+.mdl-layout__content{
+    height:100%;
+  }
+  
+  .mdl-grid.resume-grid{
+    filter: saturate(1);
+    background-image: url("/img/Background_Mountains_muted.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity:0.8;
+    z-index: -1;
+    padding: 0px;
+  }
+  .resume-grid .resume-left-col{
+    height: auto;
+    padding: 4em;
+    padding-top: 1em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    background-color:#fb9073;
+    opacity: 0.9;
+    margin-top: 64px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 3px;
+    width: 33.3333%;
+  }
+  
+  
+  .resume-grid .resume-right-col {
+    /* background: rgb(0,0,0,0.9); */
+    background: linear-gradient(180deg, rgb(0,0,0,0.9) 80%,rgba(0,0,0, 0.8) 92%, rgba(0,0,0, 0.4)) 95%;
+  
+    color: white; 
+    padding: 4em;
+    padding-top: 1em;
+    margin-top: 64px;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow-y: scroll;
+    height: calc(100% - 65px);
+    width: 66.6667%;
+  }
+  .resume-grid .resume-right-col h2{
+    color: #fb9073;
+  }
+  .resume-grid .resume-right-col h4{
+    margin-top: 0px;
+    color: #fb9073;
+  }
+  
+  .resume-grid .resume-right-col .material-icons{
+    font-size: 36px;
+    margin-left: -42px;
+    /* color: #ffc9b9; */
+    color: #fb9073;
+    opacity: 0.7;
+    z-index: 0;
+  }
+  .arrow-tooltip{
+  display: inline-block;
+  position: fixed;
+  bottom: 0px;
+  }
+  
+  .resume-grid .resume-left-col h1{
+    color: black;
+    line-height: 58px;
+    padding-bottom: 30px;
+    width: 200px;
+  }
+  .resume-grid .resume-left-col h2{
+    font-weight: 100;
+    font-size: 36px;
+    padding-right: 43px;
+  }
+  .resume-col-content {
+    text-align: center;
+  }
+  .resume-col hr {
+    color: grey;
+    border-top: none;
+    border-bottom: 1.5px solid rgb(70, 85, 88);
+    width:64%;
+  }
+  .resume-skill-col{
+    display: flex;
+  }
+  .resume-skill-col span {
+    width: 100px;
+    color:#eee;
+  }
+  .resume-grid .resume-right-col span, .resume-grid .resume-right-col p{
+    font-size: 16px;
+    color: white;
+  }
+  .resume-grid .resume-right-col a{
+  color:#fb9073;
+  }
+  .resume-grid .resume-right-col .publication-year a{
+  color:white;
+  }
+  
+  
+  .resume-skill-col .mdl-progress .progressbar {
+    /* background-color: rgb(63,81,181); */
+    background-color:#fb9073; 
+    z-index: 1;
+    left: 0;
+  }
+  .resume-skill-col .mdl-progress .bufferbar {
+    background-image: none;
+    background-color:rgba(255, 175, 151,0.2);
+    z-index: 0;
+    left: 0;
+  } 
+  .resume-skill-progress {
+    margin: auto;
+    width: 75%;
+  }
