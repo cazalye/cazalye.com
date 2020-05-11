@@ -34,7 +34,8 @@
         // background: linear-gradient(160deg, rgba(0,0,0, 0.4) 30%,rgba(0,0,0, 0.3) 60%, rgba(0,0,0, 0.2) 95%,), url("/img/rafting_bright_low_res.jpg");
         // background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting.jpg");
         // background: linear-gradient(120deg, rgba(0,0,0, 0.2) 40%, rgba(0,0,0, 0) 48%), url("/img/rafting_bright_low_res.jpg");
-        background: linear-gradient(180deg, rgba(0,0,0, 0.3) 8%, transparent 18%), url("/img/rafting_cinematic-1.jpg");
+        // background: linear-gradient(180deg, rgba(0,0,0, 0.3) 8%, transparent 18%), url("/img/rafting_cinematic-1.jpg");
+        background: linear-gradient(180deg, rgba(0,0,0, 0.3) 8%, transparent 18%), url("/img/desktop_cinematic_60.jpg");
         // background: url("/img/rafting_cinematic-1.jpg");
 
         background-size: cover;
@@ -232,7 +233,8 @@
     #landing{ 
         overflow-x: hidden;
         #landing1{
-            background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting_mobile1.jpg");
+            // background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting_mobile1.jpg");
+            background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/mobile_cinematic_70.jpg");
             background-size: cover;
             .landing-text{
                 position: absolute;
