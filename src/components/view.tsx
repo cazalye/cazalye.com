@@ -29,15 +29,8 @@ const View = () => (
         <Route exact={true} path='/blog/:slug' component={BlogDetail}/>
         <Route exact={true} path='/photoDiaries' component={PhotoDiariesListPage}/>
         <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetail}/>
-        {/* <Route exact={true} path='/photoDiaries/:slug' component={PhotoDiariesDetailMobile}/> */}
-        {/* <Route exact={true} path='/stonePaper' component={StonePaper}/> */}
         <Route exact={true} path='/search/:searchQuery' component={SearchResults}/>
         <Route exact={true} path='/categories' component={Categories}/>
-        {/* <Route exact={true} path='/portfolio' component={Portfolio}/> */}
-        {/* <Route exact={true} path='/contact' component={PortfolioContact}/> */}
-        {/* <Route exact={true} path='/portfolioabout' component={PortfolioAbout}/> */}
-        {/* <Route exact={true} path='/photography' component={PhotographyTravel}/> */}
-        {/* <Route exact={true} path='/resume' component={Resume}/> */}
     </Switch>
 );
 
