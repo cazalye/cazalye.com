@@ -344,6 +344,10 @@ body .mdl-layout .mdl-layout__inner-container{
 // PHONE: 0-450
 @media (max-width: 450px) {
     body .mdl-layout .mdl-layout__inner-container {
+        .mdl-layout__drawer{
+            // background-color: red;
+            position: absolute;
+        }
         .mdl-layout__drawer-button{
             z-index: 100;
             display: block;
