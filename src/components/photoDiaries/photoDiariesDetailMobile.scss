@@ -99,7 +99,7 @@
                 height: 115vh;
                 background: linear-gradient(180deg, rgba(5, 30, 28, 0) 10%, rgba(5, 30, 28, 1) 50%);
                 p{
-                    overflow-y: scroll;
+                    // overflow-y: scroll;
                     font-size: 16px;
                     line-height: 26px;
                     text-align: left;
@@ -117,24 +117,30 @@
                 background-size: cover;
                 // margin-left: 10px;
                 // margin-right: 10px;
+                // position: unset;
+                // z-index: 0;
+
                 &.portrait{
-                    position: absolute;
+                    // position: absolute;
                     // position: unset;
                     // padding-top: 180%;
                     background-size: cover;
-                    top: 12%;
-                    padding-top: 145%;
-                    width: 89%;
-                    left: 5.5%;
+                    // top: 12%;
+                    padding-top: 150%;
+                    // margin-top: 15%;
+                    // width: 98%;
+                    // left: 5.5%;
                 }
                 &.landscape{
-                    position: absolute;
+                    // position: absolute;
                     // position: unset;
                     padding-top: 67%;
-                    top: 33.333%;
-                    // margin-top: 50%;
-                    width: 95%;
-                    left: 2.5%;
+                    // top: 33.333%;
+                    margin-top: 42%;
+                    // margin-left: 2.5%;
+                    // margin-right: 2.2%;
+                    // width: 95%;
+                    // left: 2.5%;
                 }
             }
             .back-page{
@@ -147,6 +153,9 @@
                     padding-right: 55px;
                     margin-top: 20%;
                     margin-bottom: 3%; 
+                }
+                a{
+                    position: relative;
                 }
                 a:hover{
                     opacity:0.85;
@@ -162,7 +171,7 @@
                     margin-top: 1%;
                     background-size: cover;
                     opacity:1;
-                    position: relative;
+                    // position: relative;
                     h2{
                         // position: unset;
                         font-size: 15px;
@@ -258,7 +267,7 @@
                 height: 135vh;
                 background: linear-gradient(180deg, rgba(5, 30, 28, 0) 10%, rgba(5, 30, 28, 1) 50%);
                 p{
-                    overflow-y: scroll;
+                    // overflow-y: scroll;
                     font-size: 32px;
                     line-height: 62px;
                     text-align: left;
