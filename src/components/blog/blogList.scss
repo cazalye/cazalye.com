@@ -228,7 +228,9 @@
         .blog-container{
             flex-direction: row;
             overflow-y: hidden;
-            overflow-x: auto;   
+            overflow-x: auto;
+            height: 75%;   
+            // width: 90%;
             .post-container{
                 // height: 100vh;
                 width:calc(90% - 40px);
@@ -237,13 +239,14 @@
                 margin-right: 40px;
                 margin-left: 40px;
                 .text-container{
-                    height: 17%;
+                    height: 18%;
                     .post-title{
-                        top:45%;
-                        font-size: 18px;
+                        top: 48%;
+                        font-size: 17px;
                         line-height: 28px;
                         max-height: 180px;
-                        padding-top: 10px;
+                        padding-top: 2%;
+                        padding-bottom: 2%;
                     } 
                 }
             }
