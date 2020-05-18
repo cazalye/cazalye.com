@@ -99,17 +99,16 @@ class LandingPage extends Component<any, any> {
                  <Helmet>
                         <title>cazalye | Inspiration for your adventures</title>
                     </Helmet>
-                {/* <div>
+                <div>
                     {this.state.newsletterConfirmPopup ?
                     <Popup
-                            text={this.state.newsletterLoading ? "Submitting..." : "Thanks for subscribing"}
-                            closePopup={this.hideNewsletterPopup.bind(this)}
+                        text={this.state.newsletterLoading ? "Submitting..." : "Thanks for subscribing"}
+                        closePopup={this.hideNewsletterPopup.bind(this)}
                     />
                     : null
                     }
-                </div> */}
+                </div>
 
-                 {/* <div className="test" onScroll={e => {this.pageScrolled();}}/> */}
                     <NavbarHider transparentRowHide={true} whiteTitle={true} />
                     <div id="landing1">
                         <div className="landing-text">
@@ -119,20 +118,19 @@ class LandingPage extends Component<any, any> {
                             </Link>
                         </div>
                         <div className="down-arrow">
-                            {/* <i className="fas fa-angle-double-down"/> */}
                             <i className="fas fa-arrow-down"/>
                         </div>
                     </div>
 
-                    <div className="section-divider"/>
-                    {/* <div className="newsletter">
+                    {/* <div className="section-divider"/> */}
+                    <div className="newsletter">
                         <p>SUBSCRIBE TO THE NEWSLETTER <br/> for monthly travel ideas and the best of the blog</p>
                         <form onSubmit={this.newsletterSubscribe.bind(this)}>
                             <input onChange={this.updateFirstName.bind(this)} value={this.state.newsletter.firstName} placeholder="First name" type="text"/>
                             <input onChange={this.updateEmail.bind(this)} value={this.state.newsletter.email} placeholder="E-mail Address" type="text"/>
                             <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
                         </form>
-                    </div> */}
+                    </div>
                     {/* <div className="section-divider"/> */}
 
                         {/* ADD MAP BACK ONCE had time to work on -- AB test? */}
@@ -143,24 +141,13 @@ class LandingPage extends Component<any, any> {
                         <Blog/>
                     </div>
                     <div className="section-divider"/>
-
                     <div className="landing4-photo-diary">
                         {/* <PostsSlideshow/> */}
                         <PhotoDiariesList/>
                     </div>
-
                     <div className="section-divider"/>
                     <div className="section-divider"/>
                     <div className="section-divider"/>
-
-                    {/* <div className="stone-paper-link">
-                        <p>What is eco-friendly Stone Paper?</p>
-                        <Link to="/stonePaper">
-                            <button className="mdl-button mdl-js-button mdl-button--raised">
-                            Find out here
-                            </button>
-                        </Link>
-                    </div> */}
                     <Footer/>
             </div>
         );
