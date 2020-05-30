@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = "http://wordpress.cazalye.com/wp-json/";
+const baseUrl = "https://wordpress.cazalye.com/wp-json/";
 
 export interface Category {
     id: number;

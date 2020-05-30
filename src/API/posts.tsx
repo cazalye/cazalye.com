@@ -3,7 +3,7 @@ import {formatPost, shuffleArray} from "./utils";
 
 export const wordpressBlogBaseUrl = "https://wordpress.cazalye.com/travel/";
 export const blogBaseUrl = "/blog/";
-const baseUrl = "http://wordpress.cazalye.com/wp-json/";
+const baseUrl = "https://wordpress.cazalye.com/wp-json/";
 export const baseUrlImages = "https://wordpress.cazalye.com/wp-content/uploads/";
 export const blogCatID = 200;
 export const photoDiaryCatID = 655242675;
