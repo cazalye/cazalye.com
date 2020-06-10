@@ -35,7 +35,7 @@ class About extends Component {
                         <h3>at home and abroad</h3>
                 </div>
                 <div className="about-content">
-                    <p className="para1"> When searching for travel and adventure inspiration, we're often faced with an overwhelming flood of information, leaving us feeling more lost than when we started.<strong className="opp-aim"> This site aims to do the opposite.</strong> </p>
+                    <p className="para1"> When searching for travel and adventure inspiration online, we're often faced with an overwhelming flood of information, which can leave you feeling more overwhelmed than when you started.<strong className="opp-aim"> This site aims to do the opposite.</strong> </p>
                     <p className="para2">
                     Instead of trawling through long articles for a few key points of information, here you will find <strong>carefully curated, short posts </strong>with the most important and exciting information, each with a read time of less than 5 minutes.
                     </p>
