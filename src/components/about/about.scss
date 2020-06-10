@@ -1,21 +1,12 @@
 @import "../../styles/colors";
 
 .about{ 
-
-    // background: linear-gradient(121deg, rgba(255,255,255, 0.8) 48.5%, transparent 48.5%), url("/img/rafting.jpg");
-    // background: linear-gradient(180deg, rgba(0,0,0, 0.4) 10%, rgba(0,0,0, 0.2) 60%), url("/img/rafting.jpg");
-    // background: linear-gradient(120deg, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 52%), url(/img/rafting_cinematic-1.jpg);
     background: linear-gradient(120deg, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.2) 52%), url(/img/desktop_cinematic_60.jpg);
     position: absolute; 
     background-size: cover;
     overflow-x: hidden;
-    // position: fixed;
     height:100vh;
     width: 100%;
-    // h1 {
-    //     margin-bottom:30px;
-    //     margin-top:80px;
-    // }
     .social-links{
         display:none;
         text-align: left;
@@ -30,63 +21,57 @@
         }
     }
     .about-content{
-        width: 900px;
-        // margin: auto;
-        margin-top: 80px;
+        width: 60%;
+        margin-top: 5%;
         p{
-            // color:black;
             color:white;
             text-align: left;
-            font-size: 18px;
-            font-weight: 300;
-            padding-right:155px;
-            padding-left: 40px;
+            font-size: 1.2vw;
+            line-height: 2.2vw;
+            padding-right: 10%;
+            padding-left: 4%;
             padding-top: 10px;
-            margin: auto;
-            line-height: 27px;
-            margin-bottom:50px;
+            margin-bottom: 20px;
             strong{
             font-weight: 500;
             }
             a{
-                // color:black;
                 color:white;
             }
         }
         .para3{
-        padding-right:220px;
-        margin-bottom: 20px;
+        margin-bottom: 4%;
         }
         .post-icons{
             display: flex;
             margin:auto;
-            // padding-top:10px;
-            padding-left: 150px;
-            padding-right:0px;
+            padding-left: 20%;
+            padding-right: 0%;
             text-align: center;
             h3{
-                // color:$darkGreen;
                 color: white;
                 margin-bottom:0px;
                 padding-left:0px;
                 text-align:center;
                 text-decoration: underline;
+                font-size: 1.4vw;
+                line-height: 2.4vw;
             }
             .blog-post-text{
-                font-size:16px;
+                font-size: 1vw;
+                line-height: 1.4vw;
                 text-align: center;
                 margin:auto;
                 margin-top:0px;
                 margin-bottom:10px;
                 padding-left:0px;
                 padding-right:0px;
-                line-height:20px;
                 padding-top: 5px;
             }
             i {
-                // color:$darkGreen;
                 color: white;
-                font-size: 40px;
+                font-size: 2vw;
+                line-height: 3vw;
                 padding-top: 10px;
             }
             .photo-diaries-link{
@@ -110,27 +95,24 @@
     }
 
     .mission{
-        // z-index: -1;
         position: relative;
-        left: 23%;
+        left: 22%;
         top: 50px;
-        // color: $darkGreen;
         color: white;
-        // color: black;
-        // color:rgba(28, 93, 105,0.5);
         h2{
             font-family: 'Cormorant Garamond';
             font-weight: 500;
-            font-size: 40px;
+            font-size: 2.5vw;
+            line-height: 3.5vw;
             margin-bottom: 0px;
         }
         h3{
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
-            font-size: 35px;
-            line-height: 30px;
-            margin-top:0px;
-            margin-left:40px;
+            font-size: 1.5vw;
+            line-height: 1vw;
+            margin-top: 0px;
+            margin-left: 2.5%;
         }
     }
     // .footer-links{
@@ -145,8 +127,6 @@
     .about{
         position: unset;
         height: 150vh;
-        // background: linear-gradient(180deg, rgba(255,255,255, 0.2) 10%, rgba(0,0,0, 0.4) 30%, rgba(0,0,0, 0.5) 60%), url("/img/rafting.jpg");
-        // position: relative;
         overflow-y: scroll;
         .mission{
             color:$lightGreen;
@@ -170,11 +150,12 @@
         }
         .about-content{
             width:100%;
-            margin-top: 40%;
+            margin-top: 25%;
             p{
                 color: white;
                 font-size: 14px;
-                padding-top:10px;
+                line-height: 24px;
+                padding-top: 10px;
                 padding-right: 30px;
                 padding-left: 30px;
                 margin-bottom: 10px;
@@ -197,14 +178,13 @@
                 color: white;
                 padding-right: 30px;
                 padding-left: 30px;
-                // padding-top: 200px;
                 font-size: 14px;
                 a{
                     color:white;
                 }
             }
             .post-icons{
-                padding-left: 7%;
+                padding-left: 12%;
                 padding-right: 5%;
                 padding-top: 10px;
                 h3{
@@ -217,24 +197,35 @@
                 .photo-diaries-link{
                     margin-right: 10%;
                     h3{
-                        font-size: 24px;
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-top: 10px;
                     }
                     .diary-icon{
                         i{
                             margin-top: 20px;
                             color:white;
+                            font-size: 40px;
                         }
                     }
                 }
                 .blog-post-link{
-                    // margin-top: 35px;
                     h3{
-                        font-size: 24px;
+                        font-size: 22px;
+                    }
+                    p{
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin-top: 10px;
                     }
                     .blog-icon{
                         i{
                             margin-top: 20px;
                             color:white;
+                            font-size: 40px;
                         }
                     }
                 }
