@@ -123,14 +123,14 @@ class LandingPage extends Component<any, any> {
                     </div>
 
                     {/* <div className="section-divider"/> */}
-                    <div className="newsletter">
+                    {/* <div className="newsletter">
                         <p>SUBSCRIBE TO THE NEWSLETTER <br/> for monthly travel ideas and the best of the blog</p>
                         <form onSubmit={this.newsletterSubscribe.bind(this)}>
                             <input onChange={this.updateFirstName.bind(this)} value={this.state.newsletter.firstName} placeholder="First name" type="text"/>
                             <input onChange={this.updateEmail.bind(this)} value={this.state.newsletter.email} placeholder="E-mail Address" type="text"/>
                             <input disabled={!this.state.newsletter.email || !this.state.newsletter.firstName} type="submit" value="GO"/>
                         </form>
-                    </div>
+                    </div> */}
                     {/* <div className="section-divider"/> */}
 
                         {/* ADD MAP BACK ONCE had time to work on -- AB test? */}
