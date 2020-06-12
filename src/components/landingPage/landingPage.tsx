@@ -122,7 +122,7 @@ class LandingPage extends Component<any, any> {
                         </div>
                     </div>
 
-                    {/* <div className="section-divider"/> */}
+                    <div className="section-divider"/>
                     {/* <div className="newsletter">
                         <p>SUBSCRIBE TO THE NEWSLETTER <br/> for monthly travel ideas and the best of the blog</p>
                         <form onSubmit={this.newsletterSubscribe.bind(this)}>
